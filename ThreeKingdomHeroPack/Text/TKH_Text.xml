@@ -6619,5 +6619,230 @@
 				巨象铠甲：防御时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给夏侯渊
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_XIAHOU_YUAN_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给夏侯渊
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_XIAHOU_YUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄夏侯渊。完成后，夏侯渊将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				夏侯渊史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				夏侯渊
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_XIAHOU_YUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				夏侯渊描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				白毦军神
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_XIAHOU_YUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				5个单元格以内的白毦兵+1攻击距离。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给吕玲绮
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_LINGQI_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给吕玲绮
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_LINGQI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄吕玲绮。完成后，吕玲绮将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				吕玲绮史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				吕玲绮
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_LV_LINGQI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				吕玲绮描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				白毦军神
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_LV_LINGQI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				5个单元格以内的白毦兵+1攻击距离。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给董卓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_DONG_ZHUO_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给董卓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_DONG_ZHUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄董卓。完成后，董卓将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				董卓史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				董卓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_DONG_ZHUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				董卓描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				白毦军神
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DONG_ZHUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				5个单元格以内的白毦兵+1攻击距离。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
+			</Text>
+		</Replace>
+				<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给太史慈
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_TAISHI_CI_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给太史慈
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_TAISHI_CI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄太史慈。完成后，太史慈将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				太史慈史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				太史慈
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_TAISHI_CI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				太史慈描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				白毦军神
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_TAISHI_CI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				5个单元格以内的白毦兵+1攻击距离。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
+			</Text>
+		</Replace>
+				<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给袁绍
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_YUAN_SHAO_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给袁绍
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_YUAN_SHAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄袁绍。完成后，袁绍将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				袁绍史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				袁绍
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_YUAN_SHAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				袁绍描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				白毦军神
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_YUAN_SHAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				5个单元格以内的白毦兵+1攻击距离。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
+			</Text>
+		</Replace>
 	</LocalizedText>
 </GameData>

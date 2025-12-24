@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameInfo>
+	<Parameters>
+
+		
+		<Row ParameterId="EQUIPMENT_DEBUG_MODE" Name="LOC_EQUIPMENT_DEBUG_MODE_NAME" Description="LOC_EQUIPMENT_DEBUG_MODE_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="EQUIPMENT_DEBUG_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2071" />
+		<Row ParameterId="LUXURY_TAX_MODE" Name="LOC_LUXURY_TAX_MODE_NAME" Description="LOC_LUXURY_TAX_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="LUXURY_TAX_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2072" />
+		<Row ParameterId="LUXURY_TAX_MODE_CITY" Name="LOC_LUXURY_TAX_MODE_CITY_NAME" Description="LOC_LUXURY_TAX_MODE_CITY_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="LUXURY_TAX_MODE_CITY" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2072" />
+		<Row ParameterId="UNIT_HIGH_COST_MODE" Name="LOC_UNIT_HIGH_COST_MODE_NAME" Description="LOC_UNIT_HIGH_COST_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="UNIT_HIGH_COST_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2073" />
+		<Row ParameterId="UNIT_COST_POPULATION" Name="LOC_UNIT_COST_POPULATION_NAME" Description="LOC_UNIT_COST_POPULATION_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="UNIT_COST_POPULATION" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2074" />
+		<Row ParameterId="UNIT_LIMIT_MODE" Name="LOC_UNIT_LIMIT_MODE_NAME" Description="LOC_UNIT_LIMIT_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="UNIT_LIMIT_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2075" />
+		
+		
+		<Row ParameterId="AiEnhanceLevelSelect" Name="LOC_AiEnhanceLevelSelect_NAME" Description="LOC_AiEnhanceLevelSelect_DESCRIPTION" Domain="AiEnhanceLevels" Hash="0" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="TKH_AI_ENHANCE_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2076" />
+		<!-- <Row ParameterId="AI_INFERNO_MODE" Name="LOC_AI_INFERNO_MODE_NAME" Description="LOC_AI_INFERNO_MODE_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="AI_INFERNO_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2077" /> -->
+		<Row ParameterId="AI_MAINTAINCE_FREE_MODE" Name="LOC_AI_MAINTAINCE_FREE_MODE_NAME" Description="LOC_AI_MAINTAINCE_FREE_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="AI_MAINTAINCE_FREE_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2077" />
+		<Row ParameterId="EQUIPMENT_UPGRADE_MODE" Name="LOC_EQUIPMENT_UPGRADE_MODE_NAME" Description="LOC_EQUIPMENT_UPGRADE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="EQUIPMENT_UPGRADE_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2078" />
+		<Row ParameterId="AI_BAN_GPP_MODE" Name="LOC_AI_BAN_GPP_MODE_NAME" Description="LOC_AI_BAN_GPP_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="AI_BAN_GPP_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2079" />
+		<Row ParameterId="ONLY_HUMAN_SUMMON_HERO_MODE" Name="LOC_ONLY_HUMAN_SUMMON_HERO_MODE_NAME" Description="LOC_ONLY_HUMAN_SUMMON_HERO_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="ONLY_HUMAN_SUMMON_HERO_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2079" />
+		<Row ParameterId="LUXURY_HEAVEN_MODE" Name="LOC_LUXURY_HEAVEN_MODE_NAME" Description="LOC_LUXURY_HEAVEN_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="LUXURY_HEAVEN_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2079" />
+		<Row ParameterId="WAR_AND_CHAOS_MODE" Name="LOC_WAR_AND_CHAOS_MODE_NAME" Description="LOC_WAR_AND_CHAOS_MODE_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="WAR_AND_CHAOS_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2080" />
+		<Row ParameterId="WAR_AND_CHAOS_LOWER_MODE" Name="LOC_WAR_AND_CHAOS_LOWER_MODE_NAME" Description="LOC_WAR_AND_CHAOS_LOWER_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="WAR_AND_CHAOS_LOWER_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2080" />
+		<Row ParameterId="GIFT_EQUIPMENT_COUNT" Name="LOC_GIFT_EQUIPMENT_COUNT_NAME" Description="LOC_GIFT_EQUIPMENT_COUNT_DESCRIPTION" Domain="GiftEquipmentCountRange" ConfigurationGroup="Game" DefaultValue="0" ConfigurationId="GIFT_EQUIPMENT_COUNT" Hash="0" GroupId="AdvancedOptions" SortIndex="2081" />
+		<!-- <Row ParameterId="TKH_EXTENSION1" Name="LOC_TKH_EXTENSION1_NAME" Description="LOC_TKH_EXTENSION1_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="TKH_EXTENSION1" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2077" /> -->
+		<Update>
+			<Where ParameterId="GameMode_Heroes" />
+			<Set DefaultValue="1" />
+		</Update>
+	</Parameters>
+	<DomainRanges>
+		<Row Domain="GiftEquipmentCountRange" MinimumValue="0" MaximumValue="10" />
+	</DomainRanges>
+	<DomainValues>
+		<Row Domain="AiEnhanceLevels" Value="0" Name="LOC_AI_NO_ENHANCE_NAME" Description="LOC_AI_NO_ENHANCE_DESCRIPTION" SortIndex="1"/>
+		<Row Domain="AiEnhanceLevels" Value="1" Name="LOC_AI_ENHANCE_MODE_NAME" Description="LOC_AI_ENHANCE_MODE_DESCRIPTION" SortIndex="2"/>
+		<Row Domain="AiEnhanceLevels" Value="2" Name="LOC_AI_INFERNO_MODE_NAME" Description="LOC_AI_INFERNO_MODE_DESCRIPTION" SortIndex="3"/>
+	</DomainValues>
+</GameInfo>

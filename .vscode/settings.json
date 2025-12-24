@@ -1,0 +1,16 @@
+{
+    "Lua.diagnostics.disable": [
+        "lowercase-global",
+        "redundant-parameter",
+        "undefined-global"
+    ],
+    "Lua.diagnostics.globals": [
+        "ExposedMembers",
+        "InstanceManager",
+        "InterfaceModeMessageHandler",
+        "INTERFACEMODE_ENTER",
+        "INTERFACEMODE_LEAVE",
+        "OnPlacementKeyUp",
+        "g_HexColoringAttack"
+    ]
+}

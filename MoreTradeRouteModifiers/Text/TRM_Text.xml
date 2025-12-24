@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_NEW_TRADE_ROUTE_CREATED" Language="zh_Hans_CN">
+			<Text>
+				{1_oCity}建立了一条与{2_dCity}的贸易路线
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRADE_ROUTE_DESTROY_CREATED" Language="zh_Hans_CN">
+			<Text>
+				{1_oCity}与{2_dCity}的贸易路线已取消
+			</Text>
+		</Row>
+		<Row Tag="LOC_CALCULATION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				{1_amount} {2_yieldIconString} {3_yieldName}来自{4_extendString}
+			</Text>
+		</Row>
+		<Row Tag="LOC_PLOT_NAME" Language="zh_Hans_CN">
+			<Text>
+				单元格
+			</Text>
+		</Row>
+		<Row Tag="LOC_DEFAULT_NAME" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_IN_COMING" Language="zh_Hans_CN">
+			<Text>
+				来自{1_leader}的贸易路线
+			</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_OUT_GOING" Language="zh_Hans_CN">
+			<Text>
+				通往{1_leader}的贸易路线
+			</Text>
+		</Row>
+		<Row Tag="LOC_NEW_TRADE_ROUTE_CREATED" Language="zh_Hant_HK">
+			<Text>
+				{1_oCity}建立了一条与{2_dCity}的贸易路线
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRADE_ROUTE_DESTROY_CREATED" Language="zh_Hant_HK">
+			<Text>
+				{1_oCity}与{2_dCity}的贸易路线已取消
+			</Text>
+		</Row>
+		<Row Tag="LOC_CALCULATION_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>
+				{1_amount} {2_yieldIconString} {3_yieldName}来自{4_extendString}
+			</Text>
+		</Row>
+		<Row Tag="LOC_PLOT_NAME" Language="zh_Hant_HK">
+			<Text>
+				单元格
+			</Text>
+		</Row>
+		<Row Tag="LOC_DEFAULT_NAME" Language="zh_Hant_HK">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_IN_COMING" Language="zh_Hant_HK">
+			<Text>
+				来自{1_leader}的贸易路线
+			</Text>
+		</Row>
+		<Row Tag="LOC_HUD_REPORTS_TRADE_OUT_GOING" Language="zh_Hant_HK">
+			<Text>
+				通往{1_leader}的贸易路线
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRIBUTARY_NAME" Language="zh_Hans_CN">
+			<Text>
+				附属城邦
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRIBUTARY_NAME" Language="zh_Hant_HK">
+			<Text>
+				附属城邦
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRADE_ROUTE_MODIFIER_ADD_1GOLD_FROM_ORIGINATION_CITY_EACH_TERRAIN_DESERT" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个沙漠平原单元格
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRADE_ROUTE_MODIFIER_ADD_1FOOD_FROM_ORIGINATION_CITY_EACH_TERRAIN_HILL" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个山脉单元格
+			</Text>
+		</Row>
+		<Row Tag="LOC_CITY_SPECIALTY_DISTRICT" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个特色区域
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRADE_ROUTE_PATH_EACH_CIVILIZATION" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个外国文明
+			</Text>
+		</Row>
+		<Row Tag="LOC_DESTINATION_CITY_EACH_LUXUY_RESOURCE" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个奢侈品资源
+			</Text>
+		</Row>
+		<Row Tag="LOC_EACH_IMPROVEMENT_TRADING_DOME" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个圆顶市集
+			</Text>
+		</Row>
+		<Row Tag="LOC_ORIGINATION_CITY_EACH_FOLLOWER_OF_RELIGION" Language="zh_Hant_HK">
+			<Text>
+				的{1_itemName} 个宗教信徒
+			</Text>
+		</Row>
+		<Row Tag="LOC_FROM_RANGE3_CITY_PLOT_RESOURCES" Language="zh_Hant_HK">
+			<Text>
+				3个单元格以内的{1_itemName} 个加成资源
+			</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

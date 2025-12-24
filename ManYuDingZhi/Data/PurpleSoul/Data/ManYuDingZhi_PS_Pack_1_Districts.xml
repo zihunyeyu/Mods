@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Districts -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 7:51:31 PM -->
+<GameData>
+	<Districts>
+		<!-- <Update>
+			<Where DistrictType="DISTRICT_CANAL"/>
+			<Set PrereqTech="TECH_BUTTRESS" />
+		</Update> -->
+	</Districts>
+</GameData>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Database>
+	<Colors>
+		<Row>
+			<Type>COLOR_NOT_OWNER</Type>
+			<Color>128,128,128,255</Color>
+		</Row>
+		<Row>
+			<Type>COLOR_EQUIPMENT_SUIT</Type>
+			<Color>120,255,30,255</Color>
+		</Row>
+	</Colors>
+</Database>

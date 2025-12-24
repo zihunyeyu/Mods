@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Icon_Resources -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 12:42:07 PM -->
+<GameData>
+	<IconTextureAtlases>
+		<!--添加资源：郁金香图标 purple soul-->
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA" IconSize="38" Filename="ICON_RESOURCE_TULIPA_38"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA" IconSize="50" Filename="ICON_RESOURCE_TULIPA_50"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA" IconSize="64" Filename="ICON_RESOURCE_TULIPA_64"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA" IconSize="256" Filename="ICON_RESOURCE_TULIPA_256"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA_FOW" IconSize="38" Filename="ICON_RESOURCE_TULIPA_FOW_38"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA_FOW" IconSize="50" Filename="ICON_RESOURCE_TULIPA_FOW_50"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA_FOW" IconSize="64" Filename="ICON_RESOURCE_TULIPA_FOW_64"/>
+		<Row Name="ATLAS_ICON_RESOURCE_TULIPA_FOW" IconSize="256" Filename="ICON_RESOURCE_TULIPA_FOW_256"/>
+	</IconTextureAtlases>
+	<IconDefinitions>
+		<!--添加资源：郁金香图标 purple soul-->
+		<Row Name="ICON_RESOURCE_TULIPA" Atlas="ATLAS_ICON_RESOURCE_TULIPA" Index="0"/>
+		<Row Name="ICON_RESOURCE_TULIPA_FOW" Atlas="ATLAS_ICON_RESOURCE_TULIPA_FOW" Index="0"/>
+	</IconDefinitions>
+</GameData>

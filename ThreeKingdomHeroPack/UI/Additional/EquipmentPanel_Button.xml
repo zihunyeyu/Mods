@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context FontStyle="Stroke">
+	<Instance Name="EquipmentsItem">
+		<Button ID="EquipmentsButton" Anchor="L,C" Size="49,49" Texture="LaunchBar_Hook_GovernorsButton" Style="ButtonNormalText" StateOffsetIncrement="0,49" ToolTip="LOC_EQUIPMENTS_BUTTON">
+			<Image ID="EquipmentsIcon" Size="35,35" Anchor="C,C" Offset="-2,0" Texture="LaunchBar_Hook_Equipments" />
+			<!-- <Label ID="ReminderAlertIndicator" String="[ICON_New]" Anchor="R,T" AnchorSide="O,O" Offset="-18,-18" ToolTip="LOC_KNM_REMINDER_LAUNCH_NAME" Hidden="1"/> -->
+		</Button>
+	</Instance>
+	<Instance Name="EquipmentsPinInstance">
+		<Image ID="ReminderPin" Anchor="L,C" Offset="0,-2" Size="7,7" Texture="LaunchBar_TrackPip" Color="255,255,255,200" />
+	</Instance>
+</Context>

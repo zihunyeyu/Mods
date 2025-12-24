@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_GreatPersons -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/6/2024 2:51:15 PM -->
+<GameData>
+	<Types>
+		<Row Type="UNIT_EXTRA_GENERAL" Kind="KIND_UNIT" />
+		<Row Type="GREAT_PERSON_CLASS_EXTRA_GENERAL" Kind="KIND_GREAT_PERSON_CLASS" />
+		<Row Type="GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT" Kind="KIND_GREAT_PERSON_INDIVIDUAL" />
+	</Types>
+	<TypeTags>
+		<Row Type="UNIT_EXTRA_GENERAL" Tag="CLASS_LANDCIVILIAN" />
+		<Row Type="UNIT_EXTRA_GENERAL" Tag="CLASS_ALL_ERAS" />
+	</TypeTags>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_EXTRA_GENERAL" AiType="UNITTYPE_CIVILIAN_LEADER" />
+		<Row UnitType="UNIT_EXTRA_GENERAL" AiType="UNITAI_LEADER" />
+	</UnitAiInfos>
+	<Units_XP2>
+		<Row UnitType="UNIT_EXTRA_GENERAL" CanEarnExperience="false" CanFormMilitaryFormation="false" />
+	</Units_XP2>
+	<Units>
+		<Row UnitType="UNIT_EXTRA_GENERAL" Cost="1" BaseMoves="4" BaseSightRange="2" ZoneOfControl="false" Domain="DOMAIN_LAND" FormationClass="FORMATION_CLASS_CIVILIAN" Name="LOC_UNIT_EXTRA_GENERAL_NAME" Description="LOC_UNIT_EXTRA_GENERAL_DESCRIPTION" CanCapture="False" CanRetreatWhenCaptured="True" CanTrain="False" />
+	</Units>
+	<GreatPersonClasses>
+		<Row GreatPersonClassType="GREAT_PERSON_CLASS_EXTRA_GENERAL" Name="LOC_GREAT_PERSON_CLASS_EXTRA_GENERAL_NAME" UnitType="UNIT_EXTRA_GENERAL" DistrictType="DISTRICT_ENCAMPMENT" AvailableInTimeline="false" GenerateDuplicateIndividuals="true" PseudoYieldType="PSEUDOYIELD_GPP_GENERAL" IconString="[ICON_GreatGeneral]" ActionIcon="ICON_UNIT_EXTRA_GENERAL" />
+	</GreatPersonClasses>
+	<GreatPersonIndividuals>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT" Name="LOC_GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_EXTRA_GENERAL" EraType="ERA_ANCIENT" Gender="M" ActionCharges="0" ActionNameTextOverride="LOC_GREATPERSON_ACTION_NAME_RETIRE" AreaHighlightRadius="2" />
+	</GreatPersonIndividuals>
+	<GreatPersonIndividualBirthModifiers>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT" ModifierId="GREATPERSON_COMBAT_STRENGTH_AOE_CLASSICAL_LAND" />
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT" ModifierId="GREATPERSON_MOVEMENT_AOE_CLASSICAL_LAND" />
+	</GreatPersonIndividualBirthModifiers>
+</GameData>

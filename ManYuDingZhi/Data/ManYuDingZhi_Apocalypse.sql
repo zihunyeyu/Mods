@@ -1,0 +1,7 @@
+
+INSERT INTO BeliefModifiers (BeliefType, ModifierId) VALUES 
+('BELIEF_MYN_HEBO', 'MYN_HEBO_AVOID_TRIGGERED_FLOOD');
+INSERT INTO Modifiers (ModifierId, ModifierType, RunOnce, Permanent, NewOnly, OwnerRequirementSetId, SubjectRequirementSetId) VALUES 
+('MYN_HEBO_AVOID_TRIGGERED_FLOOD', 'MODIFIER_MYN_ALL_PLAYERS_ADJUST_AVOID_RANDOM_EVENT', 0, 0, 0, NULL, 'PLAYER_HAS_PANTHEON_REQUIREMENTS');
+INSERT INTO ModifierArguments (ModifierId, Name, Value) VALUES 
+('MYN_HEBO_AVOID_TRIGGERED_FLOOD', 'RandomEventType', 'RANDOM_EVENT_FLOOD_TRIGGERED');

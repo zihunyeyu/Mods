@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="85c10201-fecb-45ef-9af8-6b6e23179af6" version="1">
+  <Properties>
+    <Name>MoreTradeRouteModifiers</Name>
+    <Description>This is a brief description of the mod.</Description>
+    <Created>1760979085</Created>
+    <Teaser>This is a brief description of the mod.</Teaser>
+    <Authors>purple soul</Authors>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="Expansion: Rise and Fall" />
+    <Mod id="3dd83d47-17c2-409e-8681-659a5a81923f" title="碧蓝航线·DLL核心" />
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="Expansion2">
+      <GameCoreInUse>Expansion2</GameCoreInUse>
+    </Criteria>
+    <Criteria id="BetterTradeModInUse">
+      <ModInUse>8d4fa23a-ef43-440c-8422-2bec11f8f5d7</ModInUse>
+    </Criteria>
+    <Criteria id="BetterReportScreenModInUse">
+      <ModInUse>6f2888d4-79dc-415f-a8ff-f9d81d7afb53</ModInUse>
+    </Criteria>
+  </ActionCriteria>
+  <FrontEndActions />
+  <InGameActions>
+    <UpdateDatabase id="UpdateDatabase">
+      <Criteria>Expansion2</Criteria>
+      <File>Data/TRM_Cores.sql</File>
+    </UpdateDatabase>
+    <ImportFiles id="ReplaceUIScript">
+      <Properties>
+        <LoadOrder>200201</LoadOrder>
+      </Properties>
+      <Criteria>BetterTradeModInUse</Criteria>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Replacements/BetterTradeFix/TradeSupport.lua</File>
+      <File>Scripts/UI/Replacements/BetterTradeFix/TradeRouteChooser.lua</File>
+    </ImportFiles>
+    <ImportFiles id="ImportScripts">
+      <Properties>
+        <LoadOrder>200201</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/TRM_UIScript.lua</File>
+      <File>Scripts/TRM_Constants.lua</File>
+      <File>Scripts/TRM_Helper.lua</File>
+      <File>Scripts/TRM_TradeRouteModifierInstance.lua</File>
+    </ImportFiles>
+    <UpdateText id="UpdateText">
+      <Criteria>Expansion2</Criteria>
+      <File>Text/TRM_Text.xml</File>
+    </UpdateText>
+    <AddGameplayScripts id="AddGameplayScripts">
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/Gameplay/TRM_TradeRouteModifierOperator.lua</File>
+    </AddGameplayScripts>
+    <AddUserInterfaces id="AddUserInterfaces">
+      <Properties>
+        <LoadOrder>100100</LoadOrder>
+        <Context>InGame</Context>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/TRM_UIScript.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="ReplaceUIScripts">
+      <Properties>
+        <LoadOrder>200200</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Replacements/TradeSupport.lua</File>
+    </ImportFiles>
+    <UpdateIcons id="UpdateIcons">
+      <File>Icons/TRM_Icons.xml</File>
+    </UpdateIcons>
+    <UpdateArt id="UpdateArt">
+      <File>MoreTradeRouteModifiers.dep</File>
+    </UpdateArt>
+    <ReplaceUIScript id="ReplaceUIScriptUnitPanel">
+      <Properties>
+        <LuaContext>UnitPanel</LuaContext>
+        <LuaReplace>Scripts/UI/Replacements/UnitPanel_TRM.lua</LuaReplace>
+        <LoadOrder>200201</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+    </ReplaceUIScript>
+    <ImportFiles id="ReplaceScripts">
+      <Properties>
+        <LoadOrder>200200</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Replacements/UnitPanel_TRM.lua</File>
+      <File>Scripts/UI/Replacements/CitySupport.lua</File>
+      <File>Scripts/UI/Replacements/ReportScreen_TRM.lua</File>
+    </ImportFiles>
+    <ReplaceUIScript id="ReplaceUIScriptReportScreen">
+      <Properties>
+        <LuaContext>ReportScreen</LuaContext>
+        <LuaReplace>Scripts/UI/Replacements/ReportScreen_TRM.lua</LuaReplace>
+        <LoadOrder>1000</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+    </ReplaceUIScript>
+    <ImportFiles id="ReplaceBetterReportScreen">
+      <Properties>
+        <LoadOrder>1030</LoadOrder>
+      </Properties>
+      <Criteria>BetterReportScreenModInUse</Criteria>
+      <File>Scripts/UI/Replacements/BetterReportScreen/BRSPage_Yields.lua</File>
+      <File>Scripts/UI/Replacements/BetterReportScreen/BRSPage_Units.lua</File>
+    </ImportFiles>
+  </InGameActions>
+  <Files>
+    <File>ArtDefs/UserInterfaces.artdef</File>
+    <File>Data/TRM_Cores.sql</File>
+    <File>Icons/TRM_Icons.xml</File>
+    <File>MoreTradeRouteModifiers.Art.xml</File>
+    <File>MoreTradeRouteModifiers.dep</File>
+    <File>Platforms/MacOS/BLPs/UITextures.blp</File>
+    <File>Platforms/Windows/BLPs/UITextures.blp</File>
+    <File>Scripts/Gameplay/TRM_TradeRouteModifierOperator.lua</File>
+    <File>Scripts/TRM_Constants.lua</File>
+    <File>Scripts/TRM_Helper.lua</File>
+    <File>Scripts/TRM_TradeRouteModifierInstance.lua</File>
+    <File>Scripts/UI/Replacements/BetterReportScreen/BRSPage_Units.lua</File>
+    <File>Scripts/UI/Replacements/BetterReportScreen/BRSPage_Yields.lua</File>
+    <File>Scripts/UI/Replacements/BetterTradeFix/TradeRouteChooser.lua</File>
+    <File>Scripts/UI/Replacements/BetterTradeFix/TradeSupport.lua</File>
+    <File>Scripts/UI/Replacements/CitySupport.lua</File>
+    <File>Scripts/UI/Replacements/ReportScreen_TRM.lua</File>
+    <File>Scripts/UI/Replacements/TradeSupport.lua</File>
+    <File>Scripts/UI/Replacements/UnitPanel_TRM.lua</File>
+    <File>Scripts/UI/TRM_UIScript.lua</File>
+    <File>Scripts/UI/TRM_UIScript.xml</File>
+    <File>Text/TRM_Text.xml</File>
+  </Files>
+</Mod>

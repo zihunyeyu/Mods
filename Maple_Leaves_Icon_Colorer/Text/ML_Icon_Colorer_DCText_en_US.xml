@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ML_Icon_Colorer_DCText_en_US -->
+<!-- Author: yiboy -->
+<!-- DateCreated: 9/29/2024 10:20:42 PM -->
+<GameData>
+	<BaseGameText>
+		<Replace Tag="LOC_COLOR_BLACK_NAME">
+			<Text>Black</Text>
+		</Replace>
+
+		<Replace Tag="LOC_COLOR_STANDARD_RED_LT_NAME">
+			<Text>Red-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_RED_MD_NAME">
+			<Text>Red-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_RED_DK_NAME">
+			<Text>Red-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_ORANGE_LT_NAME">
+			<Text>Orange-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_ORANGE_MD_NAME">
+			<Text>Orange-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_ORANGE_DK_NAME">
+			<Text>Orange-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_YELLOW_LT_NAME">
+			<Text>Yellow-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_YELLOW_MD_NAME">
+			<Text>Yellow-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_YELLOW_DK_NAME">
+			<Text>Yellow-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_GREEN_LT_NAME">
+			<Text>Green-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_GREEN_MD_NAME">
+			<Text>Green-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_GREEN_DK_NAME">
+			<Text>Green-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_AQUA_LT_NAME">
+			<Text>Aqua-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_AQUA_MD_NAME">
+			<Text>Aqua-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_AQUA_DK_NAME">
+			<Text>Aqua-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_BLUE_LT_NAME">
+			<Text>Blue-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_BLUE_MD_NAME">
+			<Text>Blue-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_BLUE_DK_NAME">
+			<Text>Blue-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_PURPLE_LT_NAME">
+			<Text>Purple-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_PURPLE_MD_NAME">
+			<Text>Purple-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_PURPLE_DK_NAME">
+			<Text>Purple-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_MAGENTA_LT_NAME">
+			<Text>Magenta-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_MAGENTA_MD_NAME">
+			<Text>Magenta-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_MAGENTA_DK_NAME">
+			<Text>Magenta-Dark</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_LT_NAME">
+			<Text>White-Light</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_MD_NAME">
+			<Text>White-Medium</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_MD2_NAME">
+			<Text>White-Medium2</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_DK_NAME">
+			<Text>White-Dark</Text>
+		</Replace>
+	</BaseGameText>
+</GameData>

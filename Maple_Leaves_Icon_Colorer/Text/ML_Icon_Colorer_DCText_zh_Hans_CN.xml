@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ML_Icon_Colorer_DCText_zh_Hans_CN -->
+<!-- Author: yiboy -->
+<!-- DateCreated: 9/29/2024 11:30:22 AM -->
+<GameData>
+	<LocalizedText>
+		<Replace Tag="LOC_COLOR_BLACK_NAME" Language="zh_Hans_CN">
+			<Text>黑</Text>
+		</Replace>
+
+		<Replace Tag="LOC_COLOR_STANDARD_RED_LT_NAME" Language="zh_Hans_CN">
+			<Text>红-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_RED_MD_NAME" Language="zh_Hans_CN">
+			<Text>红-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_RED_DK_NAME" Language="zh_Hans_CN">
+			<Text>红-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_ORANGE_LT_NAME" Language="zh_Hans_CN">
+			<Text>橙-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_ORANGE_MD_NAME" Language="zh_Hans_CN">
+			<Text>橙-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_ORANGE_DK_NAME" Language="zh_Hans_CN">
+			<Text>橙-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_YELLOW_LT_NAME" Language="zh_Hans_CN">
+			<Text>黄-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_YELLOW_MD_NAME" Language="zh_Hans_CN">
+			<Text>黄-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_YELLOW_DK_NAME" Language="zh_Hans_CN">
+			<Text>黄-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_GREEN_LT_NAME" Language="zh_Hans_CN">
+			<Text>绿-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_GREEN_MD_NAME" Language="zh_Hans_CN">
+			<Text>绿-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_GREEN_DK_NAME" Language="zh_Hans_CN">
+			<Text>绿-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_AQUA_LT_NAME" Language="zh_Hans_CN">
+			<Text>青-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_AQUA_MD_NAME" Language="zh_Hans_CN">
+			<Text>青-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_AQUA_DK_NAME" Language="zh_Hans_CN">
+			<Text>青-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_BLUE_LT_NAME" Language="zh_Hans_CN">
+			<Text>蓝-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_BLUE_MD_NAME" Language="zh_Hans_CN">
+			<Text>蓝-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_BLUE_DK_NAME" Language="zh_Hans_CN">
+			<Text>蓝-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_PURPLE_LT_NAME" Language="zh_Hans_CN">
+			<Text>紫-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_PURPLE_MD_NAME" Language="zh_Hans_CN">
+			<Text>紫-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_PURPLE_DK_NAME" Language="zh_Hans_CN">
+			<Text>紫-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_MAGENTA_LT_NAME" Language="zh_Hans_CN">
+			<Text>洋红-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_MAGENTA_MD_NAME" Language="zh_Hans_CN">
+			<Text>洋红-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_MAGENTA_DK_NAME" Language="zh_Hans_CN">
+			<Text>洋红-深</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_LT_NAME" Language="zh_Hans_CN">
+			<Text>白-浅</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_MD_NAME" Language="zh_Hans_CN">
+			<Text>白-中等</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_MD2_NAME" Language="zh_Hans_CN">
+			<Text>白-中等2</Text>
+		</Replace>
+		<Replace Tag="LOC_COLOR_STANDARD_WHITE_DK_NAME" Language="zh_Hans_CN">
+			<Text>白-深</Text>
+		</Replace>
+	</LocalizedText>
+</GameData>

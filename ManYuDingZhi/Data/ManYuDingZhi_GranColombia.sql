@@ -1,0 +1,5 @@
+
+INSERT OR REPLACE INTO StartBiasResources (CivilizationType, ResourceType, Tier) VALUES
+('CIVILIZATION_POLAND', 'RESOURCE_HONEY', 2),
+('CIVILIZATION_PERSIA', 'RESOURCE_HONEY', 1);
+

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Buildings -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 7:51:38 PM -->
+<GameData>
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_FLOOD_BARRIER" />
+			<Set PrereqTech="TECH_BUTTRESS" />
+		</Update>
+	</Buildings>
+	<Building_GreatPersonPoints>
+		<!-- 更改海军学校大预言家点数 -->
+		<Update>
+			<Where BuildingType="BUILDING_NAVIGATION_SCHOOL" GreatPersonClassType="GREAT_PERSON_CLASS_ADMIRAL" />
+			<Set PointsPerTurn="2" />
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_NAVIGATION_SCHOOL" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" />
+			<Set PointsPerTurn="2" />
+		</Update>
+		<!-- 木板教堂每回合多增加一点大预言家点书 -->
+		<Update>
+			<Where BuildingType="BUILDING_STAVE_CHURCH" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" />
+			<Set PointsPerTurn="2" />
+		</Update>
+		<!-- 庙堂+2大预言家点数 -->
+		<Update>
+			<Where BuildingType="BUILDING_SHRINE" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" />
+			<Set PointsPerTurn="2" />
+		</Update>
+		<!-- 高棉教堂+1大预言家点数 -->
+		<Update>
+			<Where BuildingType="BUILDING_PRASAT" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" />
+			<Set PointsPerTurn="1" />
+		</Update>
+	</Building_GreatPersonPoints>
+</GameData>

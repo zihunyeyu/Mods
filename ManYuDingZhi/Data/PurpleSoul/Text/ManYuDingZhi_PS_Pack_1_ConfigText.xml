@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_ConfigText -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 12:43:47 PM -->
+<GameData>
+	<LocalizedText>
+		<!-- purple soul -->
+		<!-- 荷兰 -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_GROTE_RIVIEREN_NAME" Language="zh_Hans_CN">
+			<Text>
+				这是不跑商就无法生存的烂地之国！
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_GROTE_RIVIEREN_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				泛滥平原为商业中心提供+1额外相邻加成。帝国境内的泛滥平原、沼泽和浅海单元格+1 [ICON_Production] 生产力。市中心处于泛滥平原单元格时，该城市水磨、圩田获得+1 [ICON_Production] 生产力、+1 [ICON_Culture] 文化。你的单位处于泛滥平原、沼泽、风车花海和圩田上时加5战斗力，若回合开始时处于这些单元格上，则加3移动力。
+				[NEWLINE][NEWLINE]建造商业中心和港口的时间减半，建成商业中心或港口后可对相邻单元格施放文化炸弹。
+				[NEWLINE][NEWLINE]宫殿建立时获得两份“郁金香”资源，解锁制造图学和科学理论时分别会再额外获得一份。每份“郁金香”提供6点 [ICON_Amenities] 宜居度，为宫殿提供+6 [ICON_Faith] 信仰值。
+				[NEWLINE][NEWLINE]首次建造灯塔时解锁扶壁，解锁扶壁时可以建造运河和拦洪坝，建造堤坝、水渠、水磨、拦洪坝和运河的时间减半。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_GROTE_RIVIEREN_EXPANSION2_MONOPOLIES_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				泛滥平原为商业中心提供+1额外相邻加成。帝国境内的泛滥平原、沼泽和浅海单元格+1 [ICON_Production] 生产力。市中心处于泛滥平原单元格时，该城市水磨、圩田获得+1 [ICON_Production] 生产力、+1 [ICON_Culture] 文化。你的单位处于泛滥平原、沼泽、风车花海和圩田上时加5战斗力，若回合开始时处于这些单元格上，则加3移动力。
+				[NEWLINE][NEWLINE]建造商业中心和港口的时间减半，建成商业中心或港口后可对相邻单元格施放文化炸弹。
+				[NEWLINE][NEWLINE]宫殿建立时获得两份“郁金香”资源，解锁制造图学和科学理论时分别会再额外获得一份。每份“郁金香”提供6点 [ICON_Amenities] 宜居度，为宫殿提供+6 [ICON_Faith] 信仰值。
+				[NEWLINE][NEWLINE]首次建造灯塔时解锁扶壁，解锁扶壁时可以建造运河和拦洪坝，建造堤坝、水渠、水磨、拦洪坝和运河的时间减半。
+				[NEWLINE][NEWLINE]非首都所在的大陆，行业和公司提供的收益翻倍。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_RADIO_ORANJE_NAME" Language="zh_Hans_CN">
+			<Text>
+				抵抗之母
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_RADIO_ORANJE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				若在过去10回合内遭到宣战，则帝国内城市+5 [ICON_Strength] 防御力，+5 [ICON_Ranged] 远程攻击力。你的对外 [ICON_TradeRoute] 贸易路线为双方城市提供+1 [ICON_SCiENCE] 科技值、+1 [ICON_CULTURE] 文化值和+2 [ICON_GOLD] 金币，以你的城市为终点的其它文明的贸易路线为双方城市提供+2 [ICON_Culture] 文化值，进入中世纪后，以上加成翻倍。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PEDIA_RESOURCES_PAGE_RESOURCE_TULIPA_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>
+				郁金香是荷兰、伊朗、匈牙利、土耳其、阿富汗、土库曼斯坦等国的国花。每年的5月5日，被定为荷兰人的“郁金香节”，郁金香在荷兰人眼中成了美好、庄严、华贵和成功的象征。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_RESOURCE_TULIPA_NAME" Language="zh_Hans_CN">
+			<Text>
+				郁金香
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_DE_ZEVEN_PROVINCIEN_NAME" Language="zh_Hans_CN">
+			<Text>
+				七省号风帆战列舰
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_DE_ZEVEN_PROVINCIEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				荷兰文艺复兴特色单位，取代护卫舰。攻击防御区域时+5 [ICON_Strength] 战斗力，与单位作战时+5 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_DUTCH_ZEVEN_PROVINCIEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				攻击防御区域时+5 [ICON_Strength] 战斗力，与单位作战时+5 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_POLDER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				解锁建造者建造荷兰特色改良设施“圩田”的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+1 [ICON_Production] 生产力、+1 [ICON_Housing] 住房。如与圩田或风车花海改良设施相邻，则+1 [ICON_GOLD] 金币。解锁更多市政和科技后即可获得更多 [ICON_PRODUCTION] 生产力、[ICON_GOLD] 金币和 [ICON_FOOD] 食物。研究完“飞行”后将提供更多 [ICON_TOURISM] 旅游业绩。单元格的 [ICON_Movement] 移动力消耗增至3点。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_POLDER_LAND_NAME" Language="zh_Hans_CN">
+			<Text>
+				风车花海
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_POLDER_LAND_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				解锁建造者建造荷兰特色改良设施“风车花海”的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+1 [ICON_Production] 生产力、+1 [ICON_Housing] 住房。如与风车花海或圩田改良设施相邻，则+1 [ICON_GOLD] 金币。解锁更多市政和科技后即可获得更多 [ICON_PRODUCTION] 生产力、[ICON_GOLD] 金币和 [ICON_FOOD] 食物。研究完“飞行”后将提供更多 [ICON_TOURISM] 旅游业绩。单元格的 [ICON_Movement] 移动力消耗增至3点。
+			</Text>
+		</Replace>
+		<!-- 拜占庭 -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_BYZANTIUM_NAME" Language="zh_Hans_CN">
+			<Text>
+				如闪电般归来
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_BYZANTIUM_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				在城市中建造圣地建筑时+50% [ICON_Production] 生产力。创建宗教后，单位额外获得+5 [ICON_Strength] 战斗力或 [ICON_Religion] 宗教战斗力。击杀敌方文明或城邦的单位时，拜占庭的宗教将传播到附近的城市。
+				[NEWLINE][NEWLINE]宫殿获得额外10点战略资源容量，每回合收集的石油额外增加3点，进入古典时代后解锁“塑料”科技。
+				[NEWLINE][NEWLINE]海军远程单位与单位作战时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_NAME" Language="zh_Hans_CN">
+			<Text>
+				希腊火油井
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				解锁建造者建造拜占庭特色改良设施“希腊火油井”的能力。[NEWLINE][NEWLINE]只能建在拥有 [ICON_RESOURCE_OIL] 石油的陆地单元格上。解锁油井后会自动迭代。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_BYZANTIUM_COMBAT_BONUS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				作战时+{1_AMOUNT} [ICON_Strength] 战斗力（宗教信仰）。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_BASIL_NAME" Language="zh_Hans_CN">
+			<Text>
+				保加利亚正宗两脚羊批发商
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_BASIL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与巴兹尔二世交战的文明额外获得+25%厌战情绪，所有城市-2 [ICON_FOOD] 食物。帝国内厌战情绪-25%，所有城市+4忠诚度。进入中世纪后，获得两个 [ICON_Governor] 总督头衔，军事单位+2 [ICON_Strength] 战斗力。获得的 [ICON_GreatGeneral] 大将军点数减半（向下取整），每点减少的大将军点数转变为20 [ICON_GOLD] 金币。
+				[NEWLINE][NEWLINE]对所信仰宗教与拜占庭相同的城市发起进攻时，轻重骑兵将输出全额伤害。解锁“王权神授”市政后将获得特色单位“甲胄骑兵”。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_THEODORA_NAME" Language="zh_Hans_CN">
+			<Text>
+				妇女能顶帝国半边天
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_THEODORA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				建造圣地的时间减半，圣地提供等于其相邻加成的 [ICON_CULTURE] 文化值；若圣地未与任何区域相邻时，获得+2 [ICON_Faith] 信仰值；圣地为所在城市提供1点 [ICON_Amenities] 宜居度、8点忠诚度和+2 [ICON_PRODUCTION] 生产力。
+				[NEWLINE][NEWLINE]宫殿获得1个额外巨作槽位、+2 [ICON_PRODUCTION] 生产力、+4 [ICON_GOLD] 金币、+2 [ICON_Faith] 信仰值和+1 [ICON_CULTURE] 文化值。
+				[NEWLINE][NEWLINE]游戏开始时解锁“法典”政策，进入古典时代后获得特殊大将军“查士丁尼一世”（古典时代及以后时代开局，则会在开局时自动获得该伟人），该伟人可生成特殊巨作《查士丁尼法典》，该巨作可使所在城市的商业中心和港口区域+1 [ICON_GOLD] 金币加成。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_VARANGIANS_NAME" Language="zh_Hans_CN">
+			<Text>
+				瓦兰吉卫队
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_VARANGIANS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				迪奥多拉特色中世纪单位，替代披甲战士。位于国境内时，回合结束时即便已进行移动或遭到攻击也能恢复生命值，防御攻击时+10 [ICON_Strength] 战斗力；若该单位从国境外领土开始回合，+1 [ICON_Movement] 移动力，进攻时+10 [ICON_Strength] 战斗力。每回合维护费为5 [ICON_GOLD] 金币。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_BYZANTINE_DROMON_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				拜占庭特色古典时代单位，替代四段帆船。拥有更高射程。
+			</Text>
+		</Replace>
+		<!-- 英国 -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_INDUSTRIAL_REVOLUTION_NAME" Language="zh_Hans_CN">
+			<Text>
+				工铺的荣光
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_INDUSTRIAL_REVOLUTION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				每回合收集的战略资源额外增加2点。生产军事工程师时+100% [ICON_PRODUCTION] 生产力。军事工程师+2建造次数。拥有电力供给时，建筑的额外产出+4。建造工业区及建筑时+100% [ICON_PRODUCTION] 生产力。[ICON_RESOURCE_SHEEP] 羊资源额外获得+2 [ICON_GOLD] 金币。港口使战略资源储备+10（标准速度下）。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_PAX_BRITANNICA_NAME" Language="zh_Hans_CN">
+			<Text>
+				日不落帝国
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_PAX_BRITANNICA_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				在新大陆（非首都所在大陆）建造城市时免费获得1个商人与1条 [ICON_TradeRoute] 贸易路线容量。水运与海军单位+2 [ICON_Movement] 移动力，开拓者无上下船移动力损耗。跨越大陆的 [ICON_TradeRoute] 贸易路线+4 [ICON_GOLD] 金币和+2 [ICON_PRODUCTION] 生产力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_VICTORIA_ALT_NAME" Language="zh_Hans_CN">
+			<Text>
+				工业革命
+			</Text>
+		</Replace>
+		<!-- 葡萄牙 -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_PORTUGAL_NAME" Language="zh_Hans_CN">
+			<Text>
+				天主殖民帝国
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_PORTUGAL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				国际 [ICON_TradeRoute] 贸易路线必须起源于海岸城市，并只能通往处于海岸上或拥有港口的城市，但所有产出+50%，并且施加的宗教压力翻倍。商人单位在水域中的行动范围+50%，且解锁之后可立即在水域中行动。[NEWLINE][NEWLINE]建造港口的时间减半。国内 [ICON_TradeRoute] 贸易路线+2 [ICON_Faith] 信仰。与信仰其他宗教的单位进行战斗时，战斗和宗教单位+5 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_JOAO_III_NAME" Language="zh_Hans_CN">
+			<Text>
+				海上马里
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_JOAO_III_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				所有单位+1视野。与1个文明相遇便+1 [ICON_TradeRoute] 贸易路线容量。对所有城邦开放边界。建造圣地的时间减半。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_NAVIGATION_SCHOOL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				葡萄牙特色建筑。在此城中生产海军单位时+25%生产力。此城中每拥有2个海岸或湖泊单元格，则+1 [ICON_SCiENCE] 科技值。每回合+2 [ICON_GreatAdmiral] 海军统帅点数、+2 [ICON_GreatScientist] 大科学家点数。
+			</Text>
+		</Replace>
+		<!-- 克里 -->
+		<Replace Tag="LOC_LEADER_POUNDMAKER_ABILITY_NAME" Language="zh_Hans_CN">
+			<Text>
+				毛皮贸易
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LEADER_POUNDMAKER_ABILITY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				商业同盟为贸易路线提供的加成翻倍，所有同盟类型均可形成共享视野。[NEWLINE]你输出的[ICON_TradeRoute] 贸易路线始发地城市中的每座牧场可为庞德梅克提供+2 [ICON_GOLD] 金币，为目的地城市+1 [ICON_FOOD] 食物；每座营地可为庞德梅克提供+2 [ICON_GOLD] 金币，为目的地城市+1 [ICON_PRODUCTION] 生产力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_MEKEWAP_NAME" Language="zh_Hans_CN">
+			<Text>
+				克里棚屋
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_IMPROVEMENT_MEKEWAP_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				解锁建造者建造棚屋（克里特色改良设施）的能力。[NEWLINE][NEWLINE]+1 [ICON_FOOD] 食物、+1 [ICON_PRODUCTION] 生产力、+2 [ICON_GOLD] 金币、+1 [ICON_Housing] 住房。每与一个牧场相邻则+1 [ICON_FOOD] 食物、每与一个营地相邻则+1 [ICON_PRODUCTION] 生产力、每与一个奢侈品资源相邻，则+2 [ICON_GOLD] 金币。解锁更多市政和科技后即可获得更多 [ICON_PRODUCTION] 生产力、[ICON_FOOD] 食物。必须建在与加成或奢侈品资源相邻的单元格上。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_CREE_TRADE_GAIN_TILES_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				+1 [ICON_TradeRoute] 贸易路线容量，拥有制陶术科技后获得1个免费商人。商人首次进入克里城市3个单元格内的无主单元格后，这些单元格将划入克里领土中。[NEWLINE][NEWLINE]牧场和营地获得+1 [ICON_FOOD] 食物，+1 [ICON_PRODUCTION] 生产力，+2 [ICON_GOLD] 金币
+			</Text>
+		</Replace>
+		<!-- 挪威 -->
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_NAME" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉的召唤
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				帝国境内没有厌战情绪，战斗单位掠夺只消耗1个 [ICON_Movement] 移动力，死亡后提供+9 [ICON_Faith] 信仰值。陆地近战单位+5 [ICON_Strength] 战斗力，生产所有陆地近战单位时+100% [ICON_PRODUCTION] 生产力。位于冻土上的单位+4 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_EARLY_OCEAN_NAVIGATION_HERO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				帝国境内没有厌战情绪，战斗单位掠夺只消耗1个 [ICON_Movement] 移动力，死亡后提供+9 [ICON_Faith] 信仰值。陆地近战单位+5 [ICON_Strength] 战斗力，生产所有陆地近战单位时+100% [ICON_PRODUCTION] 生产力。位于冻土上的单位+4 [ICON_Strength] 战斗力。
+				[NEWLINE][NEWLINE]所有英雄单位+9 [ICON_Strength] 战斗力，召回英雄所花费的 [ICON_Faith] 信仰值减半，执行与英雄相关的项目时+100% [ICON_Production] 生产力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_THUNDERBOLT_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				使所有海军近战单位均能发动海岸突袭，+5 [ICON_Strength] 战斗力。近战单位可无视城墙直接对城市发起进攻。掠夺收益翻倍。生产海军近战单位时+100% [ICON_PRODUCTION] 生产力。劫掠改良设施时获得额外收益。解锁“航海术”科技后即可获得特色单位维京长船。
+				[NEWLINE][NEWLINE]征集单位的费用减少80%，征集单位+5 [ICON_Strength] 战斗力。每建成一个木板教堂后获得一个 [ICON_Envoy] 使者。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_NORWEGIAN_BERSERKER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				中世纪挪威特色近战单位，替代披甲战士。若该单位从敌方领土开始回合，则+2 [ICON_Movement] 移动力。进攻时+10 [ICON_Strength] 战斗力，防御时-5 [ICON_Strength] 战斗力。解锁“战术”科技后+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_NORWEGIAN_LONGSHIP_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				取代桨帆船的挪威远古时代特色海军单位。通过海岸扫荡能力，可掠夺敌方海岸土地，并俘获附近的平民。能在中立领土上恢复。回合开始时若位于海岸水域，则+1 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_STAVE_CHURCH_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				挪威特色建筑。建成后可使用 [ICON_Faith] 信仰值购买使徒和审判官。圣地区域可从树林获得额外的标准相邻加成。此城市生产的所有近战类单位+9 [ICON_Strength] 战斗力。每回合+1 [ICON_GreatAdmiral] 大预言家点数。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_STAVE_CHURCH_HEROES_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				挪威特色建筑。建成后方可使用 [ICON_Faith] 信仰值购买使徒和审判官。圣地区域可从树林获得额外的标准相邻加成。此城市生产的所有近战类单位+9 [ICON_Strength] 战斗力。每回合+1 [ICON_GreatAdmiral] 大预言家点数。在此城中召回英雄所花费的 [ICON_Faith] 信仰值-15%。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_LEADER_MONASTERIES_KING_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				建造圣地时+50% [ICON_PRODUCTION] 生产力，圣地将拥有以下效果：与河流相邻时将获得大量相邻加成、可施放1次文化炸弹、将提供等同于其相邻加成的 [ICON_FOOD] 食物、处于河流之上时+2 [ICON_Housing] 住房。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_TRAIT_CIVILIZATION_KHMER_BARAYS_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				拥有“水渠”的城市 [ICON_AMENITIES] 宜居度+1；每有1点 [ICON_CITIZEN] 人口，则+1 [ICON_FAITH] 信仰值。农场与水渠相邻时+2 [ICON_FOOD] 食物，与圣地相邻时+1 [ICON_FAITH] 信仰值。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_PRASAT_EXPANSION2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				+6 [ICON_FAITH] 信仰值。高棉特色建筑。替代寺庙，建成后获得一个 [ICON_GreatWork_Relic] 遗物。拥有此建筑后才能用 [ICON_Faith] 信仰值购买使徒和审判官。此城中每有1点 [ICON_CITIZEN] 人口，便+0.5 [ICON_Culture] 文化值。研究完“飞行”之后，如城市拥有10点或以上的 [ICON_CITIZEN] 人口，则+10 [ICON_Tourism] 旅游业绩；如城市拥有20点或以上的 [ICON_CITIZEN] 人口，则+20 [ICON_Tourism] 旅游业绩。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_BUILDING_PRASAT_HEROES_XP2_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				+6 [ICON_FAITH] 信仰值。高棉特色建筑。替代寺庙，建成后获得一个 [ICON_GreatWork_Relic] 遗物。拥有此建筑后才能用 [ICON_Faith] 信仰值购买使徒和审判官。此城中每有1点 [ICON_CITIZEN] 人口，便+0.5 [ICON_Culture] 文化值。研究完“飞行”之后，如城市拥有10点或以上的 [ICON_CITIZEN] 人口，则+10 [ICON_Tourism] 旅游业绩；如城市拥有20点或以上的 [ICON_CITIZEN] 人口，则+20 [ICON_Tourism] 旅游业绩。在此城中召回英雄所花费的 [ICON_Faith] 信仰值-15%。
+			</Text>
+		</Replace>
+		<!-- purple soul -->
+	</LocalizedText>
+</GameData>

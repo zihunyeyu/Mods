@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Icon_Leaders -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/3/2024 2:29:35 PM -->
+<GameData>
+	<IconTextureAtlases>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="32" Filename="ICON_LEADER_WILHELMINA_YOUNGH_32"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="45" Filename="ICON_LEADER_WILHELMINA_YOUNGH_45"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="48" Filename="ICON_LEADER_WILHELMINA_YOUNGH_48"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="50" Filename="ICON_LEADER_WILHELMINA_YOUNGH_50"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="55" Filename="ICON_LEADER_WILHELMINA_YOUNGH_55"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="64" Filename="ICON_LEADER_WILHELMINA_YOUNGH_64"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="80" Filename="ICON_LEADER_WILHELMINA_YOUNGH_80"/>
+		<Row Name="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" IconSize="256" Filename="ICON_LEADER_WILHELMINA_YOUNGH_256"/>
+	</IconTextureAtlases>
+	<IconDefinitions>
+		<Update>
+			<Where Name="ICON_LEADER_WILHELMINA" Atlas="ICON_ATLAS_EXPANSION_1_LEADERS" />
+			<Set Name="ICON_LEADER_WILHELMINA" Atlas="ATLAS_ICON_LEADER_WILHELMINA_YOUNGH" Index="0"/>
+		</Update>
+	</IconDefinitions>
+</GameData>

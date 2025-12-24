@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GovernorPanel_ManYuDingZhi -->
+<!-- Author: admin -->
+<!-- DateCreated: 11/12/2023 5:35:16 PM -->
+<Context>
+	<Container ID="GovernorPointsExchangeButtonContainer" Size="auto,22" AutoSizePadding="30">
+		<GridButton ID="GovernorPointsExchangeButton" Anchor="L,C" Offset="0,-10" Size="250,30" Style="ButtonControl" String="LOC_GOVERNORS_POINTS_EXCHANGE"/>
+	</Container>
+</Context>

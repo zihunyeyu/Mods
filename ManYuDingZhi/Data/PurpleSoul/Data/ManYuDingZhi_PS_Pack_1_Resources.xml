@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Resources -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 12:41:16 PM -->
+<GameData>
+	<Types>
+		<Row Type="RESOURCE_TULIPA" Kind="KIND_RESOURCE" />
+	</Types>
+	<Resources>
+		<!-- <Update>
+			<Where ResourceType="RESOURCE_OIL" />
+			<Set PrereqTech="TECH_SAILING" />
+		</Update> -->
+		<Row ResourceType="RESOURCE_TULIPA" Name="LOC_RESOURCE_TULIPA_NAME" ResourceClassType="RESOURCECLASS_LUXURY" Happiness="6" Frequency="0" />
+	</Resources>
+</GameData>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Civilizations -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/5/2024 1:25:33 AM -->
+<GameData>
+	<Types>
+		<Row Type="GREATWORK_CORPUS_JURIS_CIVILIS" Kind="KIND_GREATWORK"/>
+	</Types>
+	<GreatWorks>
+		<Row GreatWorkType="GREATWORK_CORPUS_JURIS_CIVILIS" GreatWorkObjectType="GREATWORKOBJECT_WRITING" GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT" Name="LOC_GREATWORK_CORPUS_JURIS_CIVILIS_NAME" Quote="LOC_GREATWORK_CORPUS_JURIS_CIVILIS_QUOTE" Tourism="4"/>
+	</GreatWorks>
+	<GreatWork_YieldChanges>
+		<Row GreatWorkType="GREATWORK_CORPUS_JURIS_CIVILIS" YieldType="YIELD_CULTURE" YieldChange="4"/>
+		<Row GreatWorkType="GREATWORK_CORPUS_JURIS_CIVILIS" YieldType="YIELD_GOLD" YieldChange="8"/>
+	</GreatWork_YieldChanges>
+</GameData>

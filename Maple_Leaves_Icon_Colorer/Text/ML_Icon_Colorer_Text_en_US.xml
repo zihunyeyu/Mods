@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ML_Icon_Colorer_Text_en_US -->
+<!-- Author: yiboy -->
+<!-- DateCreated: 9/28/2024 1:59:22 AM -->
+<GameData>
+	<BaseGameText>
+		<!--en_US-->
+		<Replace Tag="LOC_ML_ICON_COLORER_LAUNCH_BUTTON_NAME" >
+			<Text>Icon Colorer[NEWLINE][NEWLINE]Choose unique colors for your new civilization!</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_PANEL_TITLE" >
+			<Text>Icon Colorer</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_CIV_ICON_TITLE" >
+			<Text>Select a civilization icon:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_UNIT_ICON_TITLE" >
+			<Text>Select a unit icon:</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_PULLDOWN_ERROR" >
+			<Text>Error: The selected civilization does not exist</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_EDIT_LEADER_NAME" >
+			<Text>LeaderType:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_EDIT_LEADER_NAME_EDIT_TT" >
+			<Text>Edit LeaderType</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CONFIRM_LEADER_NAME_BUTTON" >
+			<Text>Confirm</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_DEFAULT_PRIMARY_TITLE" >
+			<Text>Use a default PrimaryColor:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_DEFAULT_SECONDARY_TITLE" >
+			<Text>Use a default SecondaryColor:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_DEFAULT_COLOR_TITLE" >
+			<Text>Use a default color</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_BLOCK_TITLE" >
+			<Text>Color Block:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_USE_AS_PRIMARY" >
+			<Text>Use as PrimaryColor</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_USE_AS_SECONDARY" >
+			<Text>Use as SecondaryColor</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_PRIMARY_COLOR_LABEL" >
+			<Text>PrimaryColor:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_SECONDARY_COLOR_LABEL" >
+			<Text>SecondaryColor:</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_R_LABEL" >
+			<Text>R  :</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_G_LABEL" >
+			<Text>G  :</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_B_LABEL" >
+			<Text>B  :</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_A_LABEL" >
+			<Text>A  :</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_SWAP_COLOR" >
+			<Text>Swap Primary/Secondary Colors</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_COLOER_SCHEME" >
+			<Text>Choose a color scheme:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_PREFIX" >
+			<Text>Color Scheme:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_BASE" >
+			<Text>Default</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_ALT_1" >
+			<Text>Alt1</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_ALT_2" >
+			<Text>Alt2</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_ALT_3" >
+			<Text>Alt3</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_LABEL" >
+			<Text>Codes:</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_COPY" >
+			<Text>Click to copy</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_CONTENT_DEFAULT" >
+			<Text>default codes</Text>
+		</Replace>
+
+
+
+	</BaseGameText>
+</GameData>

@@ -1,0 +1,46 @@
+-- TKH_ONLY_HUMAN_HERO
+-- Author: PurpleSoul
+-- DateCreated: 7/4/2025 8:24:53 AM
+--------------------------------------------------------------
+
+INSERT OR IGNORE INTO Types(Type, Kind)
+VALUES
+('BUILDING_HERO_MONUMENT_TKH', 'KIND_BUILDING');
+
+INSERT OR IGNORE INTO Buildings(BuildingType, Name, Mustpurchase, Cost)
+VALUES
+('BUILDING_HERO_MONUMENT_TKH', 'LOC_BUILDING_HERO_MONUMENT_TKH_NAME', 1, 0);
+
+INSERT OR IGNORE INTO CivilopediaPageExcludes(SectionId, PageId)
+VALUES
+('BUILDINGS', 'BUILDING_HERO_MONUMENT_TKH');
+
+INSERT INTO Projects_XP2
+	(ProjectType, RequiredBuilding)
+SELECT ProjectType, 'BUILDING_HERO_MONUMENT_TKH'
+FROM Projects WHERE ProjectType LIKE 'PROJECT_CREATE_HERO_%';
+
+INSERT INTO Project_BuildingCosts
+	(ProjectType, ConsumedBuildingType)
+SELECT ProjectType, 'BUILDING_HERO_MONUMENT_TKH'
+FROM Projects WHERE ProjectType LIKE 'PROJECT_CREATE_HERO_%';
+
+
+INSERT INTO Modifiers 
+	(ModifierId, ModifierType, RunOnce, Permanent, SubjectRequirementSetId)
+VALUES	
+	('ONLY_HUMAN_CAN_GET_HERO_TKH', 'MODIFIER_SINGLE_CITY_ATTACH_MODIFIER', 0, 0, 'PLAYER_IS_HUMAN') ,
+	('ONLY_HUMAN_CAN_GET_HERO_TKH_MODIFIER', 'MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE', 1, 1, NULL) ;
+
+INSERT INTO ModifierArguments
+	(ModifierId, Name, Value)
+VALUES	
+	('ONLY_HUMAN_CAN_GET_HERO_TKH', 'ModifierId', 'ONLY_HUMAN_CAN_GET_HERO_TKH_MODIFIER') ,
+	('ONLY_HUMAN_CAN_GET_HERO_TKH_MODIFIER', 'BuildingType', 'BUILDING_HERO_MONUMENT_TKH') ;
+
+
+INSERT OR IGNORE INTO  DistrictModifiers(DistrictType, ModifierId)
+VALUES
+('DISTRICT_CITY_CENTER', 'ONLY_HUMAN_CAN_GET_HERO_TKH');
+
+DELETE FROM TypeProperties WHERE Name = 'LIFESPAN';

@@ -1,0 +1,7 @@
+<GameData>
+	<LocalizedText>
+		<Replace Tag="LOC_BUILDING_APADANA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+2 [ICON_ENVOY] 使者。每建造一个奇观（不包括阿帕达纳宫）+1 [ICON_ENVOY] 使者，若拥有外交区则改为2个。[NEWLINE][NEWLINE]必须建造在 [ICON_CAPITAL] 首都旁。</Text>
+		</Replace>
+	</LocalizedText>	
+</GameData>

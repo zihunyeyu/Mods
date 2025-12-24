@@ -1,0 +1,446 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GameData1 -->
+<!-- Author: hnoyy -->
+<!-- DateCreated: 12/6/2023 4:02:55 PM -->
+<GameData>
+	<Governors>
+		<Update>
+			<Where TransitionStrength="150"/>
+			<Set TransitionStrength="250"/>
+		</Update>
+		<Update>
+			<Where TransitionStrength="100"/>
+			<Set TransitionStrength="150"/>
+		</Update>
+	</Governors>
+	
+	<!--<ModifierArguments>
+		<Update>
+			<Where ModifierId="LIBRARIAN_SCIENCE_YIELD_BONUS" Name="Amount"/>
+			<Set Value="15"/>
+		</Update>
+		<Update>
+			<Where ModifierId="LIBRARIAN_CULTURE_YIELD_BONUS" Name="Amount"/>
+			<Set Value="10"/>
+		</Update>
+	</ModifierArguments>-->
+	<GovernorPromotions>
+		<!--<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN_DESCRIPTION"/>
+		</Update>-->
+		<!--Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN_DESCRIPTION"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR_DESCRIPTION"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER_DESCRIPTION"/>
+		</Update-->
+
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_SPACE_INITIATIVE"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_EDUCATOR_SPACE_INITIATIVE_DESCRIPTION"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_MERCHANT_CURATOR"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_MERCHANT_CURATOR_DESCRIPTION"/>
+		</Update>
+		
+		
+	</GovernorPromotions>
+	<!--<GovernorPromotionModifiers>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN" ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS1" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_LIBRARIAN" ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS2" />
+		
+	</GovernorPromotionModifiers>-->
+	<!--GovernorPromotionModifiers>
+		<Delete GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR"/>
+
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9_ATTACH" />
+
+
+		<Delete GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER"/>
+
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8_ATTACH" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER" ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9_ATTACH" />
+	</GovernorPromotionModifiers-->
+	<Modifiers>
+	
+		<Row ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS1" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_MODIFIER"     SubjectRequirementSetId="BUILDING_IS_LIBRARY" />
+		<Row ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS2" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_MODIFIER"     SubjectRequirementSetId="BUILDING_IS_AMPHITHEATER"/>
+		
+		
+		
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_1" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_2" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_3" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_4" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_5" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_6" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_7" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_8" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_9" />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" />
+		
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_1_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_1" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_2_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_2" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_3_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_3" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_4_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_4" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_5_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_5" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_6_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_6" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_7_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_7" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_8_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_8" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_9_ATTACH" ModifierType="MODIFIER_PLAYER_CITIES_ATTACH_MODIFIER"     SubjectRequirementSetId="REQSET_MANYU_BP_ERA_9" />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_1" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_2" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_3" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_4" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_5" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_6" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_7" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_8" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_9" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_CITY_YIELD_PER_POPULATION"     OwnerRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		<!--Update>
+			<Where ModifierId="LIBRARIAN_SCIENCE_YIELD_BONUS"/>
+			<Set  SubjectRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="LIBRARIAN_CULTURE_YIELD_BONUS"/>
+			<Set  SubjectRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_THEATER" />
+		</Update-->
+		<Update>
+			<Where ModifierId="GOVERNOR_PROMOTION_EDUCATOR_RESEARCHER"/>
+			<Set  SubjectRequirementSetId="CITY_HAS_CAMPUS_MACEDON" />
+		</Update>
+		
+		<Update>
+			<Where ModifierId="GOVERNOR_PROMOTION_EDUCATOR_CONNOISSEUR"/>
+			<Set  SubjectRequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_THEATER" />
+		</Update>
+		<Update>
+			<Where ModifierId="CURATOR_DOUBLE_SCULPTURE_TOURISM"/>
+			<Set ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_TOURISM"  SubjectRequirementSetId="REQSET_MANYU_BP_OWNER_0_6" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="CURATOR_DOUBLE_PORTRAIT_TOURISM"/>
+			<Set ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_TOURISM"  SubjectRequirementSetId="REQSET_MANYU_BP_OWNER_0_6" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="CURATOR_DOUBLE_LANDSCAPE_TOURISM"/>
+			<Set ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_TOURISM"  SubjectRequirementSetId="REQSET_MANYU_BP_OWNER_0_6" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="CURATOR_DOUBLE_RELIGIOUS_TOURISM"/>
+			<Set ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_TOURISM"  SubjectRequirementSetId="REQSET_MANYU_BP_OWNER_0_6" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="CURATOR_DOUBLE_WRITING_TOURISM"/>
+			<Set ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_TOURISM"  SubjectRequirementSetId="REQSET_MANYU_BP_OWNER_0_6" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="CURATOR_DOUBLE_MUSIC_TOURISM"/>
+			<Set ModifierType="MODIFIER_PLAYER_CITIES_ADJUST_TOURISM"  SubjectRequirementSetId="REQSET_MANYU_BP_OWNER_0_6" />
+		</Update>
+	</Modifiers>
+	<ModifierArguments>
+	
+		<Row ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS1" Name="Amount" Value="10" />
+		<Row ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS2" Name="Amount" Value="10"/>
+		
+		<Row ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS1" Name="YieldType" Value="YIELD_SCIENCE" />
+		<Row ModifierId="MODIF_MANYU_BP_LIBRARIAN_SCIENCE_YIELD_BONUS2" Name="YieldType" Value="YIELD_CULTURE"/>
+		
+		
+		
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_1"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_2"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_3"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_4"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_6"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_7"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_8"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_CULTURE_9"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_1_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_1"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_2_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_2"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_3_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_3"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_4_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_4"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_5_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_6_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_6"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_7_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_7"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_8_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_8"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_9_ATTACH"  Name="ModifierId" Value="MODIF_MANYU_BP_CITIZEN_SCIENCE_9"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9"  Name="Amount" Value="0.5"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_1"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_2"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_3"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_4"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_5"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_6"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_7"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_8"  Name="YieldType" Value="YIELD_CULTURE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_CULTURE_9"  Name="YieldType" Value="YIELD_CULTURE"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_1"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_2"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_3"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_4"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_5"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_6"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_7"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_8"  Name="Amount" Value="0.5"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_9"  Name="Amount" Value="0.5"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_1"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_2"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_3"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_4"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_5"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_6"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_7"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_8"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITIZEN_SCIENCE_9"  Name="YieldType" Value="YIELD_SCIENCE"  />
+		<Update>
+			<Where ModifierId="EDUCATOR_FASTER_SPACE_RACE_PRODUCTION"/>
+			<Set  Value="100" />
+		</Update>
+
+		<!--Update>
+			<Where ModifierId="LIBRARIAN_SCIENCE_YIELD_BONUS"/>
+			<Set  Value="20" />
+		</Update>
+
+		<Update>
+			<Where ModifierId="LIBRARIAN_CULTURE_YIELD_BONUS"/>
+			<Set  Value="20" />
+		</Update-->
+	</ModifierArguments>
+	<Requirements>
+	
+	
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_1" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_2" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_3" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_4" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_5" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_6" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_7" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_8" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_9" RequirementType="REQUIREMENT_GAME_ERA_IS" />
+	</Requirements>
+	<RequirementArguments>
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_1" Name="EraType"  Value="ERA_ANCIENT" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_2" Name="EraType"  Value="ERA_CLASSICAL" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_3" Name="EraType"  Value="ERA_MEDIEVAL" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_4" Name="EraType"  Value="ERA_RENAISSANCE" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_5" Name="EraType"  Value="ERA_INDUSTRIAL" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_6" Name="EraType"  Value="ERA_MODERN" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_7" Name="EraType"  Value="ERA_ATOMIC" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_8" Name="EraType"  Value="ERA_INFORMATION" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_9" Name="EraType"  Value="ERA_FUTURE" />
+	</RequirementArguments>
+	<RequirementSets>
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_1"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_2"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_3"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_4"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_5"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_6"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_7"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_8"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_ERA_9"  />
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_1" RequirementSetId="REQSET_MANYU_BP_ERA_1"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_2" RequirementSetId="REQSET_MANYU_BP_ERA_2"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_3" RequirementSetId="REQSET_MANYU_BP_ERA_3"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_4" RequirementSetId="REQSET_MANYU_BP_ERA_4"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_5" RequirementSetId="REQSET_MANYU_BP_ERA_5"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_6" RequirementSetId="REQSET_MANYU_BP_ERA_6"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_7" RequirementSetId="REQSET_MANYU_BP_ERA_7"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_8" RequirementSetId="REQSET_MANYU_BP_ERA_8"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_ERA_9" RequirementSetId="REQSET_MANYU_BP_ERA_9"  />
+	</RequirementSetRequirements>
+	<Requirements>
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" RequirementType="REQUIREMENT_CITY_HAS_BUILDING" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" RequirementType="REQUIREMENT_CITY_HAS_DISTRICT" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_DISTRICT_THEATER" RequirementType="REQUIREMENT_CITY_HAS_DISTRICT" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_OWNER_0_6" RequirementType="REQUIREMENT_PLOT_ADJACENT_TO_OWNER" />
+	</Requirements>
+	<RequirementArguments>
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" Name="BuildingType"  Value="BUILDING_MONUMENT" />
+
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" Name="DistrictType"  Value="DISTRICT_CAMPUS" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_DISTRICT_THEATER" Name="DistrictType"  Value="DISTRICT_THEATER" />
+
+		<Row  RequirementId="REQUIRES_MANYU_BP_OWNER_0_6" Name="MinDistance"  Value="0" />
+		<Row  RequirementId="REQUIRES_MANYU_BP_OWNER_0_6" Name="MaxDistance"  Value="6" />
+	</RequirementArguments>
+	<RequirementSets>
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS"  />
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_THEATER"  />
+		
+		<Row  RequirementSetType="REQUIREMENTSET_TEST_ALL" RequirementSetId="REQSET_MANYU_BP_OWNER_0_6"  />
+	</RequirementSets>
+	<RequirementSetRequirements>
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_BUILDING_MONUMENT" RequirementSetId="REQSET_MANYU_BP_CITY_HAS_BUILDING_MONUMENT"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS" RequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_CAMPUS"  />
+		<Row  RequirementId="REQUIRES_MANYU_BP_CITY_HAS_DISTRICT_THEATER" RequirementSetId="REQSET_MANYU_BP_CITY_HAS_DISTRICT_THEATER"  />
+
+		<Row  RequirementId="REQUIRES_MANYU_BP_OWNER_0_6" RequirementSetId="REQSET_MANYU_BP_OWNER_0_6"  />
+	</RequirementSetRequirements>
+	<GovernorPromotions>
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS_DESCRIPTION"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER_DESCRIPTION"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST"/>
+			<Set Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_RESOURCE_MANAGER_INDUSTRIALIST_DESCRIPTION"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION"/>
+			<Set Name="LOC_MANYU_BP_GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION_NAME" Description="LOC_MANYU_BP_GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION_DESCRIPTION"/>
+		</Update>
+	</GovernorPromotions>
+	<GovernorPromotions>
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS"/>
+			<Set Level="2" Column="2"/>
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER"/>
+			<Set Level="1" Column="0"/>
+		</Update>
+	</GovernorPromotions>
+	<GovernorPromotionPrereqs>
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER"/>
+			<Set PrereqGovernorPromotion="GOVERNOR_PROMOTION_RESOURCE_MANAGER_GROUNDBREAKER"/>
+		</Update>
+		<Update>
+			<Where GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS"/>
+			<Set PrereqGovernorPromotion="GOVERNOR_PROMOTION_RESOURCE_MANAGER_EXPEDITION"/>
+		</Update>
+	</GovernorPromotionPrereqs>
+	<GovernorPromotionModifiers>
+		<Delete GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS"  ModifierId="SURPLUS_LOGISTICS_EXTRA_GROWTH"/>
+
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS" ModifierId="MODIF_MANYU_BP_CITY_FOOD" />
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_SURPLUS_LOGISTICS" ModifierId="MODIF_MANYU_BP_CITY_TRADE_PRODUCTION" />
+
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_HORSES"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_IRON"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_NITER"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_COAL"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_ALUMINUM"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_OIL"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_BLACK_MARKETEER" ModifierId="MYN_JEBEL_BARKAL_GRANT_URANIUM"/>
+
+		<Delete GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION" />
+
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION" ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_PRODUCTION"/>
+		<Row GovernorPromotionType="GOVERNOR_PROMOTION_RESOURCE_MANAGER_VERTICAL_INTEGRATION" ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_POWER"/>
+	</GovernorPromotionModifiers>
+	<Modifiers>
+		<Row ModifierId="MODIF_MANYU_BP_CITY_FOOD" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_YIELD_CHANGE"      />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITY_TRADE_PRODUCTION" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_TRADE_ROUTE_YIELD_TO_OTHERS"     />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_PRODUCTION" ModifierType="MODIFIER_CITY_DISTRICTS_ADJUST_YIELD_MODIFIER"  SubjectRequirementSetId="DISTRICT_IS_INDUSTRIAL_ZONE"   />
+		<Row ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_POWER" ModifierType="MODIFIER_SINGLE_CITY_ADJUST_FREE_POWER"    />
+	</Modifiers>
+	<ModifierArguments>
+		<Row ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_POWER"  Name="SourceType" Value="FREE_POWER_SOURCE_SOLAR"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_POWER"  Name="Amount" Value="5"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_PRODUCTION"  Name="YieldType" Value="YIELD_PRODUCTION"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITY_INDUSTRIAL_PRODUCTION"  Name="Amount" Value="100"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITY_FOOD"  Name="YieldType" Value="YIELD_FOOD"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITY_FOOD"  Name="Amount" Value="6"  />
+
+		<Row ModifierId="MODIF_MANYU_BP_CITY_TRADE_PRODUCTION"  Name="YieldType" Value="YIELD_PRODUCTION"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITY_TRADE_PRODUCTION"  Name="Amount" Value="2"  />
+		<Row ModifierId="MODIF_MANYU_BP_CITY_TRADE_PRODUCTION"  Name="Domestic" Value="1"  />
+		<Update>
+			<Where GovernorPromotionType="BLACK_MARKETEER_STRATEGIC_RESOURCE_COST_DISCOUNT"/>
+			<Set Name="Amount" Value="80" />
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="INDUSTRIALIST_RESOURCE_POWER_PROVIDED" Name="Amount"/>
+			<Set Value="5" />
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="INDUSTRIALIST_OIL_POWER_PLANT_PRODUCTION" Name="Amount"/>
+			<Set Value="5" />
+		</Update>
+
+		<Update>
+			<Where GovernorPromotionType="INDUSTRIALIST_COAL_POWER_PLANT_PRODUCTION" Name="Amount"/>
+			<Set Value="5" />
+		</Update>
+	</ModifierArguments>
+</GameData>

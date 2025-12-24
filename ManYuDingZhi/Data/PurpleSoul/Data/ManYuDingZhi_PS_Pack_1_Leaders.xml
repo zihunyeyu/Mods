@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Civilizations -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/5/2024 1:25:33 AM -->
+<GameData>
+	<LeaderTraits>
+		<Row LeaderType="LEADER_THEODORA" TraitType="TRAIT_CIVILIZATION_UNIT_VARANGIANS" />
+	</LeaderTraits>
+</GameData>

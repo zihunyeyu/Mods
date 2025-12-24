@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+    <Types>
+        <Delete Type='BELIEF_INITIATION_RITES' Kind='KIND_BELIEF'/>
+    </Types>
+    
+	<BeliefModifiers>
+        <Row>
+            <BeliefType>BELIEF_MONUMENT_TO_THE_GODS</BeliefType>
+            <ModifierId>OTHERWONDERPRODUCTION</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_DIVINE_SPARK</BeliefType>
+            <ModifierId>MOREWEIRENDIAN</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_LADY_OF_THE_REEDS_AND_MARSHES</BeliefType>
+            <ModifierId>PINGFAN</ModifierId>
+        </Row>
+        <Row>
+            <BeliefType>BELIEF_LADY_OF_THE_REEDS_AND_MARSHES</BeliefType>
+            <ModifierId>CAOFAN</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_GOD_OF_THE_FORGE</BeliefType>
+            <ModifierId>OTHERUNITPRODUCTION</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_GOD_OF_HEALING</BeliefType>
+            <ModifierId>QIANGZHIHUIXUE</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_GOD_OF_WAR</BeliefType>
+            <ModifierId>DANWEIJIALI</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_FERTILITY_RITES</BeliefType>
+            <ModifierId>SONGLIANGCANG</ModifierId>
+        </Row>
+        <Row>
+            <BeliefType>BELIEF_FERTILITY_RITES</BeliefType>
+            <ModifierId>LIANGCANGJIAQIANG</ModifierId>
+        </Row>
+
+        <Row>
+            <BeliefType>BELIEF_GODDESS_OF_FESTIVALS</BeliefType>
+            <ModifierId>ZZYGOLD</ModifierId>
+        </Row>
+    </BeliefModifiers>
+
+    <Modifiers>
+        <Row>
+            <ModifierId>OTHERWONDERPRODUCTION</ModifierId>
+            <ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>OTHERWONDERPRODUCTION_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_WONDER_ERA_PRODUCTION</ModifierType>
+        </Row>
+
+        <Row>
+            <ModifierId>MOREWEIRENDIAN</ModifierId>
+            <ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>MOREWEIRENDIAN_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_PLAYER_GOVERNMENT_FLAT_BONUS</ModifierType>
+        </Row>
+
+        <Row>
+            <ModifierId>PINGFAN</ModifierId>
+            <ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>PINGFAN_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+            <SubjectRequirementSetId>yaoqiupingfan</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>CAOFAN</ModifierId>
+            <ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>CAOFAN_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+            <SubjectRequirementSetId>yaoqiucaofan</SubjectRequirementSetId>
+        </Row>
+
+        <Row>
+            <ModifierId>OTHERUNITPRODUCTION</ModifierId>
+            <ModifierType>MODIFIER_ALL_PLAYERS_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>OTHERUNITPRODUCTION_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_MILITARY_UNITS_PRODUCTION</ModifierType>
+        </Row>
+
+        <Row>
+            <ModifierId>QIANGZHIHUIXUE</ModifierId>
+            <ModifierType>MODIFIER_ALL_UNITS_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>QIANGZHIHUIXUE_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_PLAYER_UNIT_GRANT_HEAL_AFTER_ACTION</ModifierType>
+        </Row>
+
+        <Row>
+            <ModifierId>DANWEIJIALI</ModifierId>
+            <ModifierType>MODIFIER_ALL_UNITS_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>DANWEIJIALI_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH</ModifierType>
+        </Row>
+
+        <Row>
+            <ModifierId>SONGLIANGCANG</ModifierId>
+            <ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>SONGLIANGCANG_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_SINGLE_CITY_GRANT_BUILDING_IN_CITY_IGNORE</ModifierType>
+            <SubjectRequirementSetId>LIANGCANGTIAOJIAN</SubjectRequirementSetId>
+            <RunOnce>true</RunOnce>
+			<Permanent>true</Permanent>
+        </Row>
+        <Row>
+            <ModifierId>LIANGCANGJIAQIANG</ModifierId>
+            <ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+            <SubjectRequirementSetId>PLAYER_HAS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+        </Row>
+        <Row>
+            <ModifierId>LIANGCANGJIAQIANG_MODIFIER</ModifierId>
+            <ModifierType>MODIFIER_BUILDING_YIELD_CHANGE</ModifierType>
+        </Row>
+
+        <Row>
+			<ModifierId>ZZYGOLD</ModifierId>
+			<ModifierType>MODIFIER_ALL_CITIES_ATTACH_MODIFIER</ModifierType>
+			<SubjectRequirementSetId>CITY_FOLLOWS_PANTHEON_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+		<Row>
+			<ModifierId>ZZYGOLD_MODIFIER</ModifierId>
+			<ModifierType>MODIFIER_CITY_PLOT_YIELDS_ADJUST_PLOT_YIELD</ModifierType>
+			<SubjectRequirementSetId>PLOT_HAS_PLANTATION_REQUIREMENTS</SubjectRequirementSetId>
+		</Row>
+    </Modifiers>
+
+    <ModifierArguments>
+    	<Row>
+            <ModifierId>OTHERWONDERPRODUCTION</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>OTHERWONDERPRODUCTION_MODIFIER</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERWONDERPRODUCTION_MODIFIER</ModifierId>
+            <Name>Amount</Name>
+            <Value>15</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERWONDERPRODUCTION_MODIFIER</ModifierId>
+            <Name>EndEra</Name>
+            <Value>ERA_INFORMATION</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERWONDERPRODUCTION_MODIFIER</ModifierId>
+            <Name>IsWonder</Name>
+            <Value>1</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERWONDERPRODUCTION_MODIFIER</ModifierId>
+            <Name>StartEra</Name>
+            <Value>ERA_MEDIEVAL</Value>
+        </Row>
+
+        <Row>
+            <ModifierId>MOREWEIRENDIAN</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>MOREWEIRENDIAN_MODIFIER</Value>
+        </Row>
+        <Row>
+            <ModifierId>MOREWEIRENDIAN_MODIFIER</ModifierId>
+            <Name>BonusType</Name>
+            <Value>GOVERNMENTBONUS_GREAT_PEOPLE</Value>
+        </Row>
+        <Row>
+            <ModifierId>MOREWEIRENDIAN_MODIFIER</ModifierId>
+            <Name>Amount</Name>
+            <Value>15</Value>
+        </Row>
+
+        <Row>
+            <ModifierId>PINGFAN</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>PINGFAN_MODIFIER</Value>
+        </Row>
+        <Row>
+            <ModifierId>PINGFAN_MODIFIER</ModifierId>
+            <Name>YieldType</Name>
+            <Value>YIELD_PRODUCTION</Value>
+        </Row>
+        <Row>
+            <ModifierId>PINGFAN_MODIFIER</ModifierId>
+            <Name>Amount</Name>
+            <Value>1</Value>
+        </Row>
+        <Row>
+            <ModifierId>CAOFAN</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>CAOFAN_MODIFIER</Value>
+        </Row>
+        <Row>
+            <ModifierId>CAOFAN_MODIFIER</ModifierId>
+            <Name>YieldType</Name>
+            <Value>YIELD_PRODUCTION</Value>
+        </Row>
+        <Row>
+            <ModifierId>CAOFAN_MODIFIER</ModifierId>
+            <Name>Amount</Name>
+            <Value>1</Value>
+        </Row>
+
+        <Row>
+            <ModifierId>OTHERUNITPRODUCTION</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>OTHERUNITPRODUCTION_MODIFIER</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERUNITPRODUCTION_MODIFIER</ModifierId>
+            <Name>Amount</Name>
+            <Value>15</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERUNITPRODUCTION_MODIFIER</ModifierId>
+            <Name>StartEra</Name>
+            <Value>ERA_MEDIEVAL</Value>
+        </Row>
+        <Row>
+            <ModifierId>OTHERUNITPRODUCTION_MODIFIER</ModifierId>
+            <Name>EndEra</Name>
+            <Value>ERA_INFORMATION</Value>
+        </Row>
+
+        <Row>
+            <ModifierId>QIANGZHIHUIXUE</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>QIANGZHIHUIXUE_MODIFIER</Value>
+        </Row>
+
+        <Row>
+            <ModifierId>DANWEIJIALI</ModifierId>
+            <Name>ModifierId</Name>
+            <Value>DANWEIJIALI_MODIFIER</Value>
+        </Row>
+        <Row>
+            <ModifierId>DANWEIJIALI_MODIFIER</ModifierId>
+            <Name>Amount</Name>
+            <Value>2</Value>
+        </Row>
+
+        <Row>
+        	<ModifierId>SONGLIANGCANG</ModifierId>
+        	<Name>ModifierId</Name>
+        	<Value>SONGLIANGCANG_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>SONGLIANGCANG_MODIFIER</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_GRANARY</Value>
+		</Row>
+        <Row>
+			<ModifierId>LIANGCANGJIAQIANG</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>LIANGCANGJIAQIANG_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>LIANGCANGJIAQIANG_MODIFIER</ModifierId>
+			<Name>BuildingType</Name>
+			<Value>BUILDING_GRANARY</Value>
+		</Row>
+		<Row>
+			<ModifierId>LIANGCANGJIAQIANG_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_FOOD</Value>
+		</Row>
+		<Row>
+			<ModifierId>LIANGCANGJIAQIANG_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>1</Value>
+		</Row>
+
+		<Row>
+			<ModifierId>ZZYGOLD</ModifierId>
+			<Name>ModifierId</Name>
+			<Value>ZZYGOLD_MODIFIER</Value>
+		</Row>
+		<Row>
+			<ModifierId>ZZYGOLD_MODIFIER</ModifierId>
+			<Name>YieldType</Name>
+			<Value>YIELD_GOLD</Value>
+		</Row>
+		<Row>
+			<ModifierId>ZZYGOLD_MODIFIER</ModifierId>
+			<Name>Amount</Name>
+			<Value>2</Value>
+		</Row>
+    </ModifierArguments>
+
+    <RequirementSets>
+        <Row>
+            <RequirementSetId>yaoqiupingfan</RequirementSetId>
+            <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+        </Row>
+
+        <Row>
+            <RequirementSetId>yaoqiucaofan</RequirementSetId>
+            <RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+        </Row>
+
+        <Row>
+        	<RequirementSetId>LIANGCANGTIAOJIAN</RequirementSetId>
+        	<RequirementSetType>REQUIREMENTSET_TEST_ALL</RequirementSetType>
+        </Row>
+    </RequirementSets>
+
+    <RequirementSetRequirements>
+        <Row>
+            <RequirementSetId>yaoqiupingfan</RequirementSetId>
+            <RequirementId>HAS_PINGFAN</RequirementId>
+        </Row>
+
+        <Row>
+            <RequirementSetId>yaoqiucaofan</RequirementSetId>
+            <RequirementId>HAS_CAOFAN</RequirementId>
+        </Row>
+
+        <Row>
+        	<RequirementSetId>LIANGCANGTIAOJIAN</RequirementSetId>
+        	<RequirementId>SHOUDU</RequirementId>
+        </Row>
+    </RequirementSetRequirements>
+
+    <Requirements>
+        <Row>
+            <RequirementId>HAS_PINGFAN</RequirementId>
+            <RequirementType>REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES</RequirementType>
+        </Row>
+
+        <Row>
+            <RequirementId>HAS_CAOFAN</RequirementId>
+            <RequirementType>REQUIREMENT_PLOT_FEATURE_TYPE_MATCHES</RequirementType>
+        </Row>
+
+        <Row>
+        	<RequirementId>SHOUDU</RequirementId>
+        	<RequirementType>REQUIREMENT_CITY_HAS_BUILDING</RequirementType>
+        </Row>
+    </Requirements>
+
+    <RequirementArguments>
+        <Row>
+            <RequirementId>HAS_PINGFAN</RequirementId>
+            <Name>FeatureType</Name>
+            <Value>FEATURE_FLOODPLAINS_PLAINS</Value>
+        </Row>
+
+        <Row>
+            <RequirementId>HAS_CAOFAN</RequirementId>
+            <Name>FeatureType</Name>
+            <Value>FEATURE_FLOODPLAINS_GRASSLAND</Value>
+        </Row>
+
+        <Row>
+        	<RequirementId>SHOUDU</RequirementId>
+        	<Name>BuildingType</Name>
+        	<Value>BUILDING_PALACE</Value>
+        </Row>
+    </RequirementArguments>
+</GameData>

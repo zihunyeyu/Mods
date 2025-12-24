@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\..\CivTech\Libs\ForgeUI\ForgeUI_Assets\Controls.xsd">
+	<Include File="CivilizationIcon" />
+	<!--
+	<StyleSheet>
+	<GreatPeopleTextA Style="FontNormalMedium14" LeadingOffset="2" ColorSet="GreatPeopleCS" />
+	<GreatPeopleSmallTextA Style="FontNormal11" ColorSet="GreatPeopleCS" />
+	<GreatPeopleLargeTextA Style="FontFlair14" ColorSet="GreatPeopleCS" SmallCaps="20" SmallCapsType="EveryWord" />
+	<GreatPeopleChartHeadeAr Style="FontNormal15" Color0="184,178,163,255" Color1="0,0,0,200" Align="center" FontStyle="Shadow" />
+	</StyleSheet>
+	-->
+	<!-- ================================================================== -->
+	<!-- Instances -->
+	<!-- ================================================================== -->
+	<ToolTipType Name="EquipmentSuitTooltip">
+		<Grid Size="250,auto" Color="0,0,0" Style="TTGrid" InnerPadding="25,25" InnerOffset="10,10">
+			<Stack ID="ESTInfoStack" StackGrowth="Down" StackPadding="4">
+				<Label ID="EquipmentSuitName" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" />
+				<Box Anchor="C,C" Offset="0,5" Size="parent,2" Color="GreatPeopleRow" />
+				<Label ID="EquipmentSuitWeapon" Size="parent,40" Offset="0,5" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+				<Label ID="EquipmentSuitArmor" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+				<Label ID="EquipmentSuitMount" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+				<Label ID="EquipmentSuitArtifact" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+				<Box ID="EquipmentSuitBox" Anchor="C,C" Offset="0,5" Size="parent,2" Color="GreatPeopleRow" />
+				<Stack ID="EquipmentSuitEffectStack1" StackGrowth="Down" StackPadding="4" Hidden="1">
+					<Label ID="EffectEAmount1" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_SUIT_NEED_AMOUNT" />
+					<Label ID="EffectDescription1" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Left" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_PROMOTION_TK_ZI_YU_DESCRIPTION" />
+					<Box ID="split1" Anchor="C,C" Offset="0,0" Size="1,20" Color="0,0,0,0" />
+				</Stack>
+				<Stack ID="EquipmentSuitEffectStack2" StackGrowth="Down" StackPadding="4" Hidden="1">
+					<Label ID="EffectEAmount2" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_SUIT_NEED_AMOUNT" />
+					<Label ID="EffectDescription2" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Left" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_PROMOTION_TK_ZI_YU_DESCRIPTION" />
+					<Box ID="split2" Anchor="C,C" Offset="0,0" Size="1,20" Color="0,0,0,0" />
+				</Stack>
+				<Stack ID="EquipmentSuitEffectStack3" StackGrowth="Down" StackPadding="4" Hidden="1">
+					<Label ID="EffectEAmount3" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_SUIT_NEED_AMOUNT" />
+					<Label ID="EffectDescription3" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Left" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_PROMOTION_TK_ZI_YU_DESCRIPTION" />
+					<Box ID="split3" Anchor="C,C" Offset="0,0" Size="1,20" Color="0,0,0,0" />
+				</Stack>
+				<Stack ID="EquipmentSuitEffectStack4" StackGrowth="Down" StackPadding="4" Hidden="1">
+					<Label ID="EffectEAmount4" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_SUIT_NEED_AMOUNT" />
+					<Label ID="EffectDescription4" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Left" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_PROMOTION_TK_ZI_YU_DESCRIPTION" />
+					<Box ID="split4" Anchor="C,C" Offset="0,0" Size="1,20" Color="0,0,0,0" />
+				</Stack>
+			</Stack>
+		</Grid>
+	</ToolTipType>
+	<ToolTipType Name="EquipmentTooltip">
+		<Grid Size="400,150" Color="0,0,0" Style="TTGrid" InnerPadding="25,25" InnerOffset="10,10">
+			<Image ID="Icon" Offset="0,0" Anchor="L,C" Size="130,130" IconSize="130" Icon="ICON_EQUIPMENT_WEAPON" />
+			<Container ID="Msg" Size="270,parent" Offset="130,0">
+				<Label ID="Name" Size="200,40" Offset="0,15" Anchor="C,T" Align="Center" WrapWidth="260" Style="GreatPeopleLargeText" String="My New Screen" />
+				<Label ID="Descritpion" Size="200,80" Offset="0,30" Anchor="C,C" Align="Center" WrapWidth="180" Style="GreatPeopleLargeText" String="My New Screen" />
+			</Container>
+		</Grid>
+	</ToolTipType>
+	<Instance Name="StatInstance">
+		<Container ID="Top" Size="parent,auto">
+			<Image ID="StatIcon" Anchor="R,T" Offset="10,0" Size="16,16" Icon="ICON_STRENGTH" />
+			<Label ID="ValueText" Anchor="R,T" Offset="28,2" Style="GreatPeopleChartHeader" String="22" />
+			<Label ID="NameText" Anchor="L,T" Offset="0,2" Style="GreatPeopleChartHeader" String="Combat Strength" />
+		</Container>
+	</Instance>
+	<Instance Name="AbilityInstance">
+		<Container ID="Top" Size="parent,auto">
+			<Image Offset="6,0" Size="38,38" IconSize="38" Icon="ICON_HERO_PASSIVE_ABILITY" />
+			<Stack Anchor="L,T" Offset="45,0" StackGrowth="Down" StackPadding="4">
+				<ScrollTextField ID="AbilityName" Anchor="L,T" Size="250,20" Style="GreatPeopleLargeText" />
+				<Label ID="AbilityText" Anchor="L,T" WrapWidth="250" Style="GreatPeopleText" />
+			</Stack>
+		</Container>
+	</Instance>
+	<Instance Name="ExtraAbilityInstance">
+		<Container ID="Top" Size="parent,auto">
+			<Stack Anchor="L,T" Offset="10,0" StackGrowth="Down" StackPadding="4">
+				<Label ID="AbilityText" Anchor="L,T" WrapWidth="280" Style="GreatPeopleLargeText" />
+			</Stack>
+		</Container>
+	</Instance>
+	<Instance Name="CommandInstance">
+		<Container ID="Top" Size="parent,auto">
+			<Image ID="CommandIcon" Offset="6,0" Size="38,38" Texture="Controls_SlotCircle3" />
+			<Stack Anchor="L,T" Offset="45,0" StackGrowth="Down" StackPadding="4">
+				<ScrollTextField ID="CommandName" Anchor="L,T" Size="152,20" Style="GreatPeopleLargeText" />
+				<Label ID="CommandText" Anchor="L,T" WrapWidth="155" Style="GreatPeopleText" />
+			</Stack>
+		</Container>
+	</Instance>
+	<Instance Name="HeroEquipmentInstance">
+		<Container ID="Top" Size="parent,auto" Offset="5,0">
+			<Button ID="EquipmentButton" Size="280,45">
+				<Box ID="EquipmentBox" Size="parent,parent" Color="169,169,169,1" />
+				<Image ID="EquipmentTypeIcon" Anchor="L,C" Offset="6,0" Size="38,38" IconSize="38" Icon="ICON_EQUIPMENT_WEAPON" />
+				<Label ID="EquipmentName" Anchor="C,C" Size="200,parent" Align="C,C" WrapWidth="155" Style="GreatPeopleText" />
+			</Button>
+		</Container>
+	</Instance>
+	<Instance Name="HeroUpgradeInstance">
+		<Container ID="Top" Size="parent,auto" Offset="5,0">
+			<Box ID="Box" Size="parent,parent" Color="169,169,169,1" />
+			<Label ID="UpgradeDescription" Anchor="L,C" Size="200,40" Align="L,C" WrapWidth="250" Style="GreatPeopleText" />
+			<Button ID="AddValueButton" Anchor="R,C" Offset="0,0" Size="29,29" Texture="TopBar_LookButton" ToolTip="LOC_ADD_VALUE_FOR_THIS_UPGRADE" />
+		</Container>
+	</Instance>
+	<Instance Name="HeroPanelInstance">
+		<Container ID="Content" Size="300,500">
+			<Label Anchor="L,T" Offset="20,20" Align="C,C" WrapWidth="200" Style="GreatPeopleChartHeader" String="LOC_TKH_HERO_BASE_INFO" />
+			<Line ID="TitleLine" Start="10,42" End="300,42" Width="2" Color="199,187,157,90" />
+			<Label Anchor="L,T" Offset="20,280" Align="C,C" WrapWidth="200" Style="GreatPeopleChartHeader" String="LOC_TKH_HERO_ABILITIES" />
+			<Line ID="TitleLine" Start="10,302" End="300,302" Width="2" Color="199,187,157,90" />
+			<Label Anchor="L,T" Offset="320,20" Align="C,C" WrapWidth="200" Style="GreatPeopleChartHeader" String="LOC_TKH_HERO_EQUIPMENTS" />
+			<Line ID="TitleLine" Start="310,42" End="600,42" Width="2" Color="199,187,157,90" />
+			<Label Anchor="L,T" Offset="320,280" Align="C,C" WrapWidth="200" Style="GreatPeopleChartHeader" String="LOC_TKH_HERO_UPGRADE" />
+			<Line ID="TitleLine" Start="310,302" End="600,302" Width="2" Color="199,187,157,90" />
+			<Container ID="MainInfo" Anchor="C,T" Size="parent,parent" Offset="10,0">
+				<!-- LEFT -->
+				<ScrollPanel ID="EffectStackScroller" Offset="0,54" Size="parent-15,300" Vertical="1" AutoScrollBar="1">
+					<Stack ID="EffectStack" StackPadding="4" />
+					<ScrollBar Anchor="R,T" AnchorSide="O,I" Offset="1,0" Style="ScrollVerticalBarAlt" Size="8,parent-10" />
+				</ScrollPanel>
+				<ScrollPanel ID="ExtraEffectStackScroller" Offset="0,330" Size="parent-15,300" Vertical="1" AutoScrollBar="0">
+					<Stack ID="ExtraEffectStack" StackPadding="4" />
+					<ScrollBar Anchor="R,T" AnchorSide="O,I" Offset="5,0" Style="ScrollVerticalBarAlt" Size="8,parent+10" />
+				</ScrollPanel>
+				<!-- RIGHT -->
+				<ScrollPanel ID="HeroEquipmentStackScroller" Offset="300,54" Size="parent-15,300" Vertical="1" AutoScrollBar="1">
+					<Stack ID="HeroEquipmentStack" StackPadding="10" />
+					<ScrollBar Anchor="R,T" AnchorSide="O,I" Offset="1,0" Style="ScrollVerticalBarAlt" Size="8,parent-10" />
+				</ScrollPanel>
+				<Label ID="HeroTotalKPLabel" Offset="310,330" Size="parent, auto" Align="C,C" WrapWidth="200" FontSize="15" Style="PanelText" String="LOC_HERO_LEFT_TOTAL_KILL_POINT"/>
+				<ScrollPanel ID="HeroUpgradeStackScroller" Offset="300,350" Size="parent-15,290" Vertical="1" AutoScrollBar="1">
+					<Stack ID="HeroUpgradeStack" StackPadding="10"/>
+					<ScrollBar Anchor="R,T" AnchorSide="O,I" Offset="1,0" Style="ScrollVerticalBarAlt" Size="8,parent-10" />
+				</ScrollPanel>
+			</Container>
+		</Container>
+	</Instance>
+	<Instance Name="HeroInstance">
+		<Container ID="Top" Size="100, 100">
+			<Button ID="HeroChangeButton" Anchor="C,B" Size="105,105" ToolTip="LOC_EXCHANGE_SELECTED_HERO" Hidden="0">
+				<Image ID="Portrait" Anchor="C,C" Size="105,105" IconSize="105" Icon="ICON_HEROCLASS_TKH_CAO_CAO_PORTRAIT" />
+			</Button>
+			<Grid Size="100,25" Color="GreatPeopleRowUnOwned" Style="TTGrid" InnerPadding="25,25" InnerOffset="10,10" Anchor="C,C" Offset="0,35" Hidden="0">
+				<Label ID="Name" Anchor="C,C" Size="parent, 30" Align="C,C" WrapWidth="200" FontSize="15" Style="PanelText" String="LOC_GREAT_PERSON_INDIVIDUAL_PANG_TONG_NAME" />
+			</Grid>
+			<Button ID="LookAtButton" Anchor="L,B" Offset="0,-10" Size="29,29" Texture="TopBar_LookButton" ToolTip="LOC_LOCK_AT_SELECTED_HERO" Hidden="1" />
+			<Button ID="CivilopediaButton" Anchor="R,B" Offset="0,-10" Size="29,29" Texture="TopBar_CivilopediaButton" ToolTip="LOC_GREAT_PEOPLE_HEROES_CIVILOPEDIA_ENTRY_TT" Hidden="1" />
+		</Container>
+	</Instance>
+	<Instance Name="EquipmentSuitEffectInstance">
+		<Stack ID="EquipmentSuitEffectStack" StackGrowth="Down" StackPadding="4">
+			<Label ID="EffectEAmount" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Center" WrapWidth="260" Color="120,255,30" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_SUIT_NEED_AMOUNT" />
+			<Label ID="EffectDescription" Size="parent,40" Offset="0,0" Anchor="L,C" Align="Left" WrapWidth="260" Color="150,150,150" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_PROMOTION_TK_ZI_YU_DESCRIPTION" />
+			<Box Anchor="C,C" Offset="0,0" Size="1,20" Color="0,0,0,0" />
+		</Stack>
+	</Instance>
+	<Instance Name="ShopEquipmentInstance">
+		<Grid ID="ShopContent" Size="parent-20,130" Color="GreatPeopleRowUnOwned" Style="SubContainer2">
+			<Container ID="EquipmentButton" Size="130,130" Anchor="L,T">
+				<Image ID="EquipmentPortrait" Anchor="C,C" Size="100,100" Offset="0, 0" IconSize="100" Icon="ICON_EQUIPMENT_YinXueDao" />
+			</Container>
+			<Container Size="120,parent" Offset="140,0">
+				<Label ID="EquipmentName" Size="auto,auto" Anchor="L,C" Offset="0,-5" Align="Center" WrapWidth="260" ColorSet="ResTourismLabelCS" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" />
+				<Label ID="EquipmentSuitName" Size="auto,auto" Offset="0,15" Anchor="L,C" Align="Center" ToolTipType="EquipmentSuitTooltip" WrapWidth="260" Color="GreatPeopleRow" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+			</Container>
+			<Container Size="480,parent" Offset="350,0">
+				<Label ID="EquipmentDescription" Size="parent,auto" Anchor="L,C" WrapWidth="parent" Color="GreatPeopleRow" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_DiLu_DESCRIPTION" />
+			</Container>
+			<Container ID="BuyCon" Size="100, 100" Offset="30,0" Anchor="R,C">
+				<GridButton ID="BuyButton" Size="100,50" FontSize="15" String="LOC_TKH_BUY_EQUIPMENT" Style="ButtonConfirm" Anchor="C,C" />
+				<Label ID="EquipmentPrice" Size="100,30" FontSize="15" Anchor="C,B" Align="Center" WrapWidth="260" ColorSet="ResTourismLabelCS" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" />
+			</Container>
+		</Grid>
+	</Instance>
+	<Instance Name="HandbookEquipmentInstance">
+		<Grid ID="HandbookContent" Size="parent-20,130" Color="GreatPeopleRowUnOwned" Style="SubContainer2">
+			<Grid ID="Content2" Size="parent,parent" Color="GovBonusSelected" Style="SubContainer2" Hidden="1" />
+			<Container ID="EquipmentButton" Size="130,130" Anchor="L,T">
+				<Image ID="EquipmentPortrait" Anchor="C,C" Size="100,100" Offset="0, 0" IconSize="100" Icon="ICON_EQUIPMENT_YinXueDao" />
+				<Button ID="TestButton" Anchor="L,B" Offset="0,30" Size="29,29" Texture="TopBar_LookButton" ToolTip="LOC_LOCK_AT_SELECTED_HERO" Hidden="1" />
+			</Container>
+			<Container Size="120,parent" Offset="140,0">
+				<Label ID="EquipmentName" Size="auto,auto" Anchor="L,C" Offset="0,-5" Align="Center" WrapWidth="260" ColorSet="ResTourismLabelCS" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" />
+				<Label ID="EquipmentSuitName" Size="auto,auto" Offset="0,15" Anchor="L,C" Align="Center" ToolTipType="EquipmentSuitTooltip" WrapWidth="260" Color="GreatPeopleRow" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+			</Container>
+			<Container Size="480,parent" Offset="350,0">
+				<Label ID="EquipmentDescription" Size="parent,auto" Anchor="L,C" WrapWidth="parent" Color="GreatPeopleRow" Style="FontBoldFlair18" SmallCaps="22" SmallCapsType="Every" String="LOC_EQUIPMENT_DiLu_DESCRIPTION" />
+			</Container>
+			<Container ID="EquipmentOwnerCon" Anchor="R,C" Offset="50,0" Size="68,68">
+				<Image Texture="Controls_CircleBacking68" Size="68,68" Anchor="C,C" />
+				<Image ID="YouIndicator" Hidden="1" Size="64,62" Texture="Diplomacy_YouIndicator" Anchor="C,C" />
+				<Image ID="RecruitedImage" Anchor="C,C" Size="55,55" Texture="Leaders55" />
+				<Image ID="CivIndicator" Anchor="R,T" Texture="CircleBacking22" Size="22,22" Offset="0,0">
+					<Image ID="CivIcon" Anchor="C,C" Texture="CivSymbols22" Size="22,22" />
+				</Image>
+			</Container>
+		</Grid>
+	</Instance>
+	<Instance Name="RewardBarInstance">
+		<Container ID="Top" Size="500,50" Anchor="C,B">
+			<Label ID="RewardTypeName" Anchor="L,B" Offset="100,25" String="LOC_TOTAL_CITIES_BAR" Style="FontFlair20" FontStyle="glow" Color="206,218,225,255" EffectColor="74,108,37,191" />
+			<TextureBar ID="RewardBarFrame" Direction="Right" Offset="0,30" TextureOffset="500,0" Speed="1" Percent="1.0" Anchor="C,B" Size="500,15" Texture="UnitKilledBar">
+				<TextureBar ID="RewardBar" Direction="Right" TextureOffset="0,15" Speed="1" Percent="0.8" Anchor="C,B" Size="500,15" Texture="UnitKilledBar" />
+				<Box ID="RewardFlag" Anchor="C,C" Offset="0,0" Size="5,parent" Color="178,34,34,150" />
+			</TextureBar>
+		</Container>
+	</Instance>
+	<Instance Name="PieChartSliceInstance">
+		<Meter ID="Slice" Anchor="C,C" Size="360,360" Texture="Climate_CO2Meter_Fill" Speed="0" />
+	</Instance>
+	<Instance Name="CivEquipmentInstance">
+		<Grid ID="Top" Size="95,50" Style="SubContainer2" Color="0,0,0,150">
+			<MakeInstance Name="CivilizationIcon36" ID="CivIcon" Anchor="L,C" Offset="0,0" />
+			<Label ID="Amount" Anchor="C,C" Offset="18,0" Style="FontNormal20" String="000" />
+		</Grid>
+	</Instance>
+	<Instance Name="LibraryEquipmentInstance">
+		<Grid ID="LibraryContent" Size="350,60" Color="GreatPeopleRowUnOwned" Style="SubContainer2">
+			<Grid ID="Content2" Size="parent,parent" Color="GovBonusSelected" Style="SubContainer2" Hidden="1" />
+			<Container Size="80,parent" Offset="30,0" Anchor="L,C">
+				<Image ID="EquipmentIcon" Anchor="L,C" Size="30,30" Offset="-25,0" IconSize="30" Icon="ICON_EQUIPMENT_WEAPON" />
+				<Label ID="EquipmentName" Size="auto,auto" Anchor="L,C" Offset="30,-6" Align="Center" WrapWidth="260" ColorSet="ResScienceLabelCS" Style="FontFlair16" SmallCaps="22" SmallCapsType="Every" String="My New Screen" />
+				<Label ID="EquipmentSuitName" Size="auto,auto" Offset="30,15" Anchor="L,C" Align="Center" ToolTipType="EquipmentSuitTooltip" WrapWidth="260" Color="GreatPeopleRow" Style="FontFlair16" SmallCaps="22" SmallCapsType="Every" String="My New Screen" Hidden="1" />
+			</Container>
+			<Container ID="HeroCon" Size="100, 100" Offset="0,0" Anchor="R,C" Hidden="0">
+				<Grid Size="100,30" Color="GreatPeopleRowUnOwned" Style="TTGrid" InnerPadding="25,25" InnerOffset="10,10" Anchor="C,C">
+					<Button ID="ActionChangeToEquipmentOwnerButton" Size="parent,parent" ToolTip="LOC_TKH_SWITCH_TO_HERO">
+						<Label ID="HeroName" Anchor="C,C" Size="parent, 30" Align="C,C" WrapWidth="200" FontSize="15" Style="PolicyRowHeader" String="LOC_GREAT_PERSON_INDIVIDUAL_PANG_TONG_NAME" />
+					</Button>
+					<!--
+					<Image ID="EquipmentIcon" Anchor="R,C" Size="30,30" Offset="-25,0" IconSize="30" Icon="ICON_EQUIPMENT_WEAPON">
+					<Label Anchor="C,C" Size="parent, 30" Align="C,C" WrapWidth="200" FontSize="18" Style="PolicyRowHeader" String="E" ColorSet="ResMilitaryLabelCS"/>
+					</Image>
+					-->
+				</Grid>
+			</Container>
+			<Container ID="ActionCon" Size="100, 100" Offset="0,0" Anchor="R,C" Hidden="0">
+				<Button ID="ActionEquipentButton" Offset="40,0" Texture="LaunchBar_Hook_ButtonSmall.dds" Style="ButtonDisabledText" Size="40,40" Anchor="R,C" ToolTip="LOC_TKH_HERO_EQUIPMENTS">
+					<Label String="[ICON_Strength]" TextAnchor="C,C" Style="FontNormal16" Size="26,26" Anchor="C,C" Offset="0,0" />
+				</Button>
+				<Button ID="ActionSellButton" Offset="0,0" Texture="LaunchBar_Hook_ButtonSmall.dds" Style="ButtonDisabledText" Size="40,40" Anchor="R,C" ToolTip="LOC_CHEAT_MENU_GOLD">
+					<Label String="[ICON_GoldLarge]" TextAnchor="C,C" Style="FontNormal16" Size="26,26" Anchor="C,C" Offset="0,0" />
+				</Button>
+			</Container>
+		</Grid>
+	</Instance>
+	<Instance Name="TimerTool">
+		<Container ID="TimerCon" Size="auto,auto">
+			<!-- 这里具体来说是透明度变化的动画控件，其他参数不是很重要， -->
+			<!-- 主要是周期Cycle=""要为Once一周期，表示动画控件被激活只运行一次 -->
+			<!-- 这样就可以在lua控制控件在运行结束时启动新的周期，从而实现循环运行我们的函数达到计时 -->
+			<AlphaAnim ID="TimerAnim" AlphaStart="1" AlphaEnd="1" Size="0,0" Cycle="Once" Speed="1" />
+		</Container>
+	</Instance>
+	<!-- ================================================================== -->
+	<!-- Instances -->
+	<!-- ================================================================== -->
+	<Container Style="FullScreenVignetteConsumer" ConsumeAllMouse="0" ConsumeMouseButton="1" ConsumeMouseWheel="1" ConsumeMouseOver="1" />
+	<Container ID="TKH_MainContainer" Anchor="C,C" Size="1024,870">
+		<!-- <AlphaAnim ID="TimerAnim" AlphaStart="1" AlphaEnd="1" Size="0,0" Cycle="Once" Speed="1" Hidden="1"/> -->
+		<Container Size="0,0" Anchor="C,C" Hidden="1">
+			<Stack ID="TimeStack" Anchor="C,C" />
+		</Container>
+		<!-- main -->
+		<!-- BG -->
+		<Image ConsumeMouse="1" Anchor="L,B" Size="Parent,Parent" Texture="Parchment_Pattern" StretchMode="Tile" />
+		<Image Size="parent,40" Texture="Controls_SubHeader2" />
+		<Grid Offset="-5,-5" Size="parent+10,parent+10" Style="WindowFrameAlpha" />
+		<Label ID="ModalScreenTitle" Anchor="C,T" Offset="0,5" String="LOC_TKH_EQUIPMENTS_PANEL_TITLE" Style="FontFlair28" FontStyle="glow" Color="206,218,225,255" EffectColor="74,108,37,191" />
+		<Button ID="ScreenCloseButton" Anchor="R,T" Style="CloseButtonLarge" Offset="-8,-5" />
+		<!-- 仓库 -->
+		<Container ID="LibraryPane" Size="parent,parent">
+			<Box ID="RecruitedArea" Size="parent,parent-40" Offset="0,40" Color="11,27,40,255">
+				<Line Start="10,50" End="parent-10,50" Width="2" Color="48,60,68,255" />
+				<Container Offset="10,42" Size="parent-20,28">
+					<PullDown ID="EquipmentFilterPulldown" ConsumeMouse="0" Anchor="R,T" Offset="70,34" Size="200,26" AutoSizePopUp="1" AutoFlip="1" ScrollThreshold="400">
+						<ButtonData>
+							<GridButton ID="FilterButton" TextAnchor="R,C" TextOffset="15,0" Style="FontNormal16" FontStyle="Shadow" EffectColor="0,0,0,255" Offset="0,-25" Size="50,-20" Texture="Controls_ButtonControl.dds" SliceCorner="10,10" SliceSize="1,1" SliceTextureSize="24,24" />
+						</ButtonData>
+						<GridData InnerPadding="15,15" Offset="0,0" Anchor="L,T" Style="Drawer" />
+						<ScrollPanelData Anchor="L,T" Vertical="1" Size="11,14" Offset="0,0" AutoScrollBar="1">
+							<ScrollBar Style="ScrollVerticalBacking" Anchor="L,T" AnchorSide="I,I" Color="28,60,90,255" Offset="-2,2">
+								<Thumb Style="ScrollThumbAlt" Color="28,60,90,255" />
+							</ScrollBar>
+						</ScrollPanelData>
+						<StackData StackGrowth="Bottom" Offset="0,0" Size="200,400" Anchor="L,T" />
+						<InstanceData Name="FilterEntry">
+							<GridButton Anchor="L,T" ID="Button" Size="265,26" Offset="1,0" Style="FontNormal16" FontStyle="Shadow" EffectColor="0,0,0,255" Texture="Controls_ButtonControl.dds" SliceCorner="10,10" SliceSize="1,1" SliceTextureSize="24,24" StateOffsetIncrement="0,24" />
+						</InstanceData>
+						<Label String="LOC_TKH_EQUIPMENTS_TYPE_NAME" Anchor="L,T" Offset="40,-20" Style="FontNormal16" FontStyle="Shadow" EffectColor="0,0,0,255" />
+					</PullDown>
+				</Container>
+				<Line Start="10,80" End="parent-10,80" Width="2" Color="48,60,68,255" />
+				<Line Start="10,180" End="610,180" Width="2" Color="48,60,68,255" />
+				<Line Start="100,80" End="100,parent" Anchor="C,T" Width="2" Color="48,60,68,255" />
+				<ScrollPanel ID="LibraryScroller" Anchor="R,T" Offset="0,110" Size="parent-210,parent-130" Vertical="1" AutoScrollBar="1">
+					<Stack ID="LibraryStack" Anchor="R,T" Offset="50,0" StackGrowth="Down" StackPadding="4" />
+					<ScrollBar Anchor="R,T" Offset="10,0" Size="8,parent-300" Style="ScrollVerticalBackingAlt">
+						<Thumb Style="ScrollThumbHAlt" />
+					</ScrollBar>
+				</ScrollPanel>
+				<Container ID="HeroList" Size="600,100" Offset="5,60" Anchor="L,T">
+					<Container Anchor="C,T" Size="parent,parent" Offset="0,0">
+						<ScrollPanel ID="HeroScrollPanel" Anchor="C,C" Size="parent,parent" Offset="0,0" AutoScrollBar="1" Vertical="0">
+							<Stack ID="HeroScrollPanelStack" Anchor="L,C" Padding="0" Offset="0,20" StackGrowth="Right" StackPadding="0">
+							</Stack>
+							<ScrollBar Anchor="C,B" AnchorSide="I,I" Offset="1,-23" Style="ScrollHorizontalBarAlt" Size="parent,3" />
+						</ScrollPanel>
+					</Container>
+				</Container>
+				<Container ID="HeroEquipmentCon" Size="610,parent-180" Offset="0,90" Anchor="L,C">
+					<Stack ID="HeroStack" Anchor="L,T" Size="300,500" Offset="0,0" StackGrowth="Right" StackPadding="0" />
+				</Container>
+			</Box>
+		</Container>
+		<!-- 市场 -->
+		<Container ID="ShopPane" Size="parent,parent">
+			<Box ID="RecruitedArea" Size="parent,parent-40" Offset="0,40" Color="11,27,40,255">
+				<Line Start="10,50" End="parent-10,50" Width="2" Color="48,60,68,255" />
+				<Container Offset="10,42" Size="parent-20,28">
+					<Label Anchor="L,T" Offset="120,16" Style="GreatPeopleChartHeader" String="LOC_TKH_EQUIPMENT" />
+					<Label Anchor="L,T" Offset="500,16" Style="GreatPeopleChartHeader" String="LOC_TKH_EQUIPMENT_EFFECT" />
+					<!-- <Label Anchor="R,T" Offset="75,16" Style="GreatPeopleChartHeader" String="LOC_TKH_EQUIPMENT_OWNER" /> -->
+				</Container>
+				<Line Start="10,80" End="parent-10,80" Width="2" Color="48,60,68,255" />
+				<ScrollPanel ID="ShopScroller" Offset="10,101" Size="parent-5,parent-162" Vertical="1" AutoScrollBar="1">
+					<Stack ID="ShopStack" StackGrowth="Down" StackPadding="4" />
+					<ScrollBar Anchor="R,T" Offset="10,0" Size="8,parent-300" Style="ScrollVerticalBackingAlt">
+						<Thumb Style="ScrollThumbHAlt" />
+					</ScrollBar>
+				</ScrollPanel>
+			</Box>
+			<Container Anchor="C,B" Offset="0,-10" Size="parent,61">
+				<Image Anchor="C,C" Size="parent,27" Texture="Controls_TabLedge2_Fill" StretchMode="Tile" />
+				<Grid Anchor="C,T" Size="parent,61" Texture="Controls_TabLedge2" SliceCorner="194,18" SliceSize="52,26" SliceTextureSize="parent,61">
+					<Container ID="ShopPaneTabContainer" Anchor="C,C" Size="parent-80,34">
+						<GridButton ID="ShopPaneButtonWeapon" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_WEAPON_NAME">
+							<GridButton ID="ShopPaneSelectedWeapon" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+						<GridButton ID="ShopPaneButtonArmor" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_ARMOR_NAME">
+							<GridButton ID="ShopPaneSelectedArmor" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+						<GridButton ID="ShopPaneButtonMount" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_MOUNT_NAME">
+							<GridButton ID="ShopPaneSelectedMount" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+						<GridButton ID="ShopPaneButtonArtifact" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_ARTIFACT_NAME">
+							<GridButton ID="ShopPaneSelectedArtifact" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+					</Container>
+				</Grid>
+			</Container>
+		</Container>
+		<!-- 图鉴 -->
+		<Container ID="HandbookPane" Size="parent,parent">
+			<Box ID="RecruitedArea" Size="parent,parent-40" Offset="0,40" Color="11,27,40,255">
+				<Line Start="10,50" End="parent-10,50" Width="2" Color="48,60,68,255" />
+				<Container Offset="10,42" Size="parent-20,28">
+					<Label Anchor="L,T" Offset="120,16" Style="GreatPeopleChartHeader" String="LOC_TKH_EQUIPMENT" />
+					<Label Anchor="L,T" Offset="500,16" Style="GreatPeopleChartHeader" String="LOC_TKH_EQUIPMENT_EFFECT" />
+					<Label Anchor="R,T" Offset="75,16" Style="GreatPeopleChartHeader" String="LOC_TKH_EQUIPMENT_OWNER" />
+				</Container>
+				<Line Start="10,80" End="parent-10,80" Width="2" Color="48,60,68,255" />
+				<ScrollPanel ID="HandbookScroller" Offset="10,101" Size="parent-5,parent-162" Vertical="1" AutoScrollBar="1">
+					<Stack ID="HandbookStack" StackGrowth="Down" StackPadding="4" />
+					<ScrollBar Anchor="R,T" Offset="10,0" Size="8,parent-300" Style="ScrollVerticalBackingAlt">
+						<Thumb Style="ScrollThumbHAlt" />
+					</ScrollBar>
+				</ScrollPanel>
+			</Box>
+			<Container Anchor="C,B" Offset="0,-10" Size="parent,61">
+				<Image Anchor="C,C" Size="parent,27" Texture="Controls_TabLedge2_Fill" StretchMode="Tile" />
+				<Grid Anchor="C,T" Size="parent,61" Texture="Controls_TabLedge2" SliceCorner="194,18" SliceSize="52,26" SliceTextureSize="parent,61">
+					<Container ID="HandbookTabContainer" Anchor="C,C" Size="parent-80,34">
+						<GridButton ID="ButtonWeapon" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_WEAPON_NAME">
+							<GridButton ID="SelectedWeapon" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+						<GridButton ID="ButtonArmor" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_ARMOR_NAME">
+							<GridButton ID="SelectedArmor" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+						<GridButton ID="ButtonMount" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_MOUNT_NAME">
+							<GridButton ID="SelectedMount" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+						<GridButton ID="ButtonArtifact" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_ARTIFACT_NAME">
+							<GridButton ID="SelectedArtifact" Size="parent,parent" Style="TabButtonSelected" />
+						</GridButton>
+					</Container>
+				</Grid>
+			</Container>
+		</Container>
+		<!-- 进度 -->
+		<Container ID="ProgressPane" Size="parent,parent">
+			<Box ID="ProgressBox" Size="parent,parent-40" Offset="0,40" Color="11,27,40,255">
+				<Stack Offset="11,100" StackPadding="6">
+					<Grid Size="500,674">
+						<Label ID="PlayerEquipmentAmouts" Anchor="C,T" String="LOC_PLAYER_EQUIPMENT_AMOUNT" Style="FontFlair22" Offset="0,50" />
+						<Image ID="GlobalContributionsPie" Anchor="C,T" Offset="0,92" Size="360,360" Texture="Climate_CO2Meter_Slot" />
+						<Stack ID="GlobalCityStack" Anchor="C,T" Offset="0,460" StackGrowth="Right" StackPadding="3" WrapGrowth="Bottom" WrapWidth="500" />
+					</Grid>
+				</Stack>
+				<Stack Offset="600,175" StackPadding="6">
+					<Label ID="TOTAL_CITIES_BAR" Anchor="C,T" String="LOC_TOTAL_CITIES_BAR" Style="FontFlair22" Offset="0,50" Tooltip="LOC_HELP_REWARD_TOTAL_CITIES" />
+					<Label ID="TOTAL_KILL_BAR" Anchor="C,T" String="LOC_TOTAL_KILL_BAR" Style="FontFlair22" Offset="0,50" Tooltip="LOC_HELP_REWARD_TOTAL_KILL" />
+					<Label ID="DESTORY_BARBARIAN_CAMP_BAR" Anchor="C,T" String="LOC_DESTORY_BARBARIAN_CAMP_BAR" Style="FontFlair22" Offset="0,50" Tooltip="LOC_HELP_REWARD_DESTORY_BARBARIAN_CAMP" />
+					<Label ID="GOODYHUT_REWARD_BAR" Anchor="C,T" String="LOC_GOODYHUT_REWARD_BAR" Style="FontFlair22" Offset="0,50" Tooltip="LOC_HELP_REWARD_GOODYHUT_REWARD" />
+					<Label ID="CONQUERED_ORIGINAL_CAPITAL_BAR" Anchor="C,T" String="LOC_CONQUERED_ORIGINAL_CAPITAL_BAR" Style="FontFlair22" Offset="0,50" Tooltip="LOC_HELP_REWARD_CONQUERED_ORIGINAL_CAPITAL" />
+				</Stack>
+				<Label Offset="600,620" String="LOC_HELP_REWARD_GUIDE" Style="FontFlair22" />
+			</Box>
+		</Container>
+		<Container Anchor="C,T" Offset="0,30" Size="400,61">
+			<Image Anchor="C,C" Size="439,27" Texture="Controls_TabLedge2_Fill" StretchMode="Tile" />
+			<Grid Anchor="C,T" Size="600,61" Texture="Controls_TabLedge2" SliceCorner="194,18" SliceSize="52,26" SliceTextureSize="438,61">
+				<Container ID="TabContainer" Anchor="C,C" Size="parent-80,34">
+					<GridButton ID="ButtonLibrary" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_EQUIPMENT_TAB_LIBRARY">
+						<GridButton ID="SelectedLibrary" Size="parent,parent" Style="TabButtonSelected" />
+					</GridButton>
+					<GridButton ID="ButtonShop" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_EQUIPMENT_TAB_SHOP">
+						<GridButton ID="SelectedShop" Size="parent,parent" Style="TabButtonSelected" />
+					</GridButton>
+					<GridButton ID="ButtonHandbook" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_EQUIPMENT_TAB_HANDBOOK">
+						<GridButton ID="SelectedHandbook" Size="parent,parent" Style="TabButtonSelected" />
+					</GridButton>
+					<GridButton ID="ButtonProgress" Size="170,34" Style="TabButton" FontSize="14" TextOffset="0,2" String="LOC_EQUIPMENT_TAB_PROGRESS">
+						<GridButton ID="SelectedProgress" Size="parent,parent" Style="TabButtonSelected" />
+					</GridButton>
+				</Container>
+			</Grid>
+		</Container>
+	</Container>
+</Context>

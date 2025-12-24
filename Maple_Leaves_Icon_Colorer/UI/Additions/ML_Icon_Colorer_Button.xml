@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ML_Icon_Colorer_Button -->
+<!-- Author: yiboy -->
+<!-- DateCreated: 9/15/2024 12:20:46 PM -->
+<Context FontStyle="Stroke">
+
+	<Instance Name="ML_IconColorer_Item">
+		<Button ID="ML_IconColorer_Button" Anchor="L,C" Size="49,49" Texture="LaunchBar_Hook_GreatPeopleButton" Style="ButtonNormalText" StateOffsetIncrement="0,0" ToolTip="LOC_ML_ICON_COLORER_LAUNCH_BUTTON_NAME">
+			<!--<Image ID="ML_IconColorer_Icon" Size="35,35" Anchor="C,C" Offset="-2,0" Texture="ML_IconColorer_Icon_35.dds"/>-->
+			<!--<Image ID="ML_IconColorer_Icon" Size="35,35" Anchor="C,C" Offset="0,0" Texture="LaunchBar_Hook_TechTree.dds"/>-->
+			<Image ID="ML_IconColorer_Icon" Size="36,36" Anchor="C,C" Offset="0,0" Texture="LaunchBar_Hook_TechTree.dds"/>
+			<!--<Image ID="ML_IconColorer_Icon" Size="35,35" Anchor="C,C" Offset="0,0" Texture="LaunchBar_Hook_ML_IconColorer_35.dds"/>-->
+
+			<Label ID="ML_IconColorer_AlertIndicator" String="[ICON_New]" Anchor="R,T" AnchorSide="O,O" Offset="-18,-18" ToolTip="LOC_AlertIndicator_LAUNCH_NAME" Hidden="1"/>
+		</Button>
+	</Instance>
+
+	<Instance Name="ML_IconColorer_PinInstance">
+		<Image ID="ML_IconColorer_Pin" Anchor="L,C" Offset="0,-2" Size="7,7" Texture="LaunchBar_TrackPip" Color="255,255,255,200"/>
+	</Instance>
+
+</Context>

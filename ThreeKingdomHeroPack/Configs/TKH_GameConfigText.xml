@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TKH_UIText -->
+<!-- Author: PurpleSoul -->
+<!-- DateCreated: 2/21/2025 7:51:47 PM -->
+<GameData>
+	<LocalizedText>
+		<Replace Tag="LOC_SETTINGS_UI_TKH_NAME" Language="zh_Hans_CN">
+			<Text>
+				三国英雄自定义设置
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_SETTINGS_UI_TKH_DESC" Language="zh_Hans_CN">
+			<Text>
+				选择三国英雄MOD的自定义设置
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_SETTINGS_UI_TKH_ENABLE_ALL_NAME" Language="zh_Hans_CN">
+			<Text>
+				启用全部
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_SETTINGS_UI_TKH_ENABLE_ALL_DESC" Language="zh_Hans_CN">
+			<Text>
+				启用全部选项
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_SETTINGS_UI_TKH_CUSTOM_NAME" Language="zh_Hans_CN">
+			<Text>
+				自定义设置
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_SETTINGS_UI_TKH_CUSTOM_DESC" Language="zh_Hans_CN">
+			<Text>
+				设置自定义选项
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_EQUIPMENT_DEBUG_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				装备测试模式
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_EQUIPMENT_DEBUG_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				开启该模式后，游戏开始时会分发所有装备给玩家。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LUXURY_TAX_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				奢侈税
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LUXURY_TAX_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				生产过量单位时会收取回合金 [ICON_Gold] ，国库不足时会降低城市忠诚度。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LUXURY_TAX_MODE_CITY_NAME" Language="zh_Hans_CN">
+			<Text>
+				城市奢侈税
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LUXURY_TAX_MODE_CITY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				建造过多城市会收取回合金 [ICON_Gold] ，国库不足时会减少城市收益。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HIGH_COST_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				高级兵种消耗增加
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HIGH_COST_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				高级兵种会消耗更多资源。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_COST_POPULATION_NAME" Language="zh_Hans_CN">
+			<Text>
+				战斗单位消耗 [ICON_Citizen] 人口
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_COST_POPULATION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				生产战斗单位需要消耗1点 [ICON_Citizen] 人口
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_LIMIT_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				战斗单位数量限制
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_LIMIT_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				生产战斗单位具有数量限制，数量为：10 + 3*非首都城市数量
+			</Text>
+		</Replace>
+
+		<Replace Tag="LOC_AiEnhanceLevelSelect_NAME" Language="zh_Hans_CN">
+			<Text>
+				AI增强等级
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AiEnhanceLevelSelect_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				选择AI增强等级
+			</Text>
+		</Replace>
+
+		<Replace Tag="LOC_AI_ENHANCE_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				增强
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_ENHANCE_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				每过一定回合生成战斗单位及一定增益
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_INFERNO_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				炼狱
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_INFERNO_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				每过一定回合生成战斗单位及一定增益，AI单位增加额外战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_NO_ENHANCE_NAME" Language="zh_Hans_CN">
+			<Text>
+				无加成
+			</Text>
+		</Replace>
+
+		<Replace Tag="LOC_AI_NO_ENHANCE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				不设置额外加成
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_EQUIPMENT_UPGRADE_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				装备库
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_EQUIPMENT_UPGRADE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				新增“装备库”建筑,可解锁多个项目用于增强单位。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_BAN_GPP_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				AI无法获得伟人点数
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_BAN_GPP_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				AI获得伟人点数时会清空
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_WAR_AND_CHAOS_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				战乱年代
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_WAR_AND_CHAOS_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				非平民单位 [ICON_GOLD] 花费翻倍，城市人口消耗更多 [ICON_FOOD] 粮食
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_WAR_AND_CHAOS_LOWER_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				饥荒年代
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_WAR_AND_CHAOS_LOWER_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				城市人口消耗更多 [ICON_FOOD] 粮食
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GIFT_EQUIPMENT_COUNT_NAME" Language="zh_Hans_CN">
+			<Text>
+				装备赠礼
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GIFT_EQUIPMENT_COUNT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				游戏开始时赠送选择数量的随机装备
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_MAINTAINCE_FREE_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				AI单位无消耗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_MAINTAINCE_FREE_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				减免单位单位的金币和资源消耗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ONLY_HUMAN_SUMMON_HERO_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				禁止AI建造英雄项目
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ONLY_HUMAN_SUMMON_HERO_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				增加英雄项目所需建筑，该建筑只赠送给玩家单位，并通过未来科技解锁
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LUXURY_HEAVEN_MODE_NAME" Language="zh_Hans_CN">
+			<Text>
+				奢侈天堂
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_LUXURY_HEAVEN_MODE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				添加奢侈品和加成资源的改良设施加成更改
+			</Text>
+		</Replace>
+	</LocalizedText>
+</GameData>

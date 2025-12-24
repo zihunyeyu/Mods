@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Units -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 7:49:19 PM -->
+<GameData>
+	<Types>
+		<Row Type="UNIT_VARANGIANS" Kind="KIND_UNIT" />
+		<Row Type="TRAIT_CIVILIZATION_UNIT_VARANGIANS" Kind="KIND_TRAIT" />
+		<Row Type="ABILITY_VARANGIANS" Kind="KIND_ABILITY" />
+	</Types>
+	<Tags>
+		<Row Tag="CLASS_VARANGIANS" Vocabulary="ABILITY_CLASS" />
+	</Tags>
+	<Traits>
+		<Row TraitType="TRAIT_CIVILIZATION_UNIT_VARANGIANS" Name="LOC_UNIT_VARANGIANS_NAME" Description="LOC_UNIT_VARANGIANS_DESCRIPTION" />
+	</Traits>
+	<UnitAiInfos>
+		<!-- Varangians -->
+		<Row UnitType="UNIT_VARANGIANS" AiType="UNITAI_COMBAT" />
+		<Row UnitType="UNIT_VARANGIANS" AiType="UNITAI_EXPLORE" />
+		<Row UnitType="UNIT_VARANGIANS" AiType="UNITTYPE_MELEE" />
+		<Row UnitType="UNIT_VARANGIANS" AiType="UNITTYPE_LAND_COMBAT" />
+	</UnitAiInfos>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_VARANGIANS" ReplacesUnitType="UNIT_MAN_AT_ARMS" />
+	</UnitReplaces>
+	<Units>
+		<!-- <Update>
+			<Where UnitType="UNIT_NORWEGIAN_LONGSHIP" />
+			<Set PrereqTech="" PrereqCivic="CIVIC_THEOLOGY" BaseMoves="3" />
+		</Update> -->
+		<Update>
+			<Where UnitType="UNIT_NORWEGIAN_BERSERKER" />
+			<Set PrereqTech="" PrereqCivic="CIVIC_THEOLOGY" BaseMoves="3" Combat="40"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_ENGLISH_SEADOG" />
+			<Set Combat="45" />
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_PORTUGUESE_NAU" />
+			<Set Combat="60" />
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_CREE_OKIHTCITAW" />
+			<Set Cost="20" BaseMoves="4" />
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_BYZANTINE_TAGMA" />
+			<Set Combat="55" />
+		</Update>
+		<Row UnitType="UNIT_VARANGIANS" Cost="160" Maintenance="10" BaseMoves="3" BaseSightRange="2" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="50" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_MELEE" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_VARANGIANS_NAME" Description="LOC_UNIT_VARANGIANS_DESCRIPTION" PurchaseYield="YIELD_GOLD" MandatoryObsoleteTech="TECH_REPLACEABLE_PARTS" TraitType="TRAIT_CIVILIZATION_UNIT_VARANGIANS" PrereqCivic="CIVIC_MERCENARIES" MustPurchase="true" />
+		<!-- CIVIC_CODE_OF_LAWS -->
+		<!-- CIVIC_MERCENARIES -->
+	</Units>
+	<TypeTags>
+		<!-- <Update>
+			<Where Type="ABILITY_DROMON" />
+			<Set Tag="CLASS_NAVAL_RANGED" />
+		</Update> -->
+		<Row Type="UNIT_VARANGIANS" Tag="CLASS_MELEE" />
+		<Row Type="UNIT_VARANGIANS" Tag="CLASS_VARANGIANS" />
+		<Row Type="ABILITY_VARANGIANS" Tag="CLASS_VARANGIANS" />
+	</TypeTags>
+	<UnitUpgrades>
+		<Row Unit="UNIT_VARANGIANS" UpgradeUnit="UNIT_MUSKETMAN" />
+	</UnitUpgrades>
+	<UnitAbilities>
+		<Row UnitAbilityType="ABILITY_VARANGIANS" Name="LOC_ABILITY_VARANGIANS_NAME" Description="LOC_ABILITY_VARANGIANS_DESCRIPTION" />
+	</UnitAbilities>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_UNIT" MomentDataType="MOMENT_DATA_UNIT" GameDataType="UNIT_VARANGIANS" Texture="Moment_UniqueUnit_Norway_Berserker.dds"/>
+	</MomentIllustrations>
+</GameData>

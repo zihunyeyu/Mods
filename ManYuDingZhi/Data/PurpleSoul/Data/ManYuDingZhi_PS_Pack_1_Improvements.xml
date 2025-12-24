@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Improvements -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 5:57:51 PM -->
+<GameData>
+	<Types>
+		<Row Type="IMPROVEMENT_POLDER_LAND" Kind="KIND_IMPROVEMENT" />
+		<Row Type="TRAIT_CIVILIZATION_IMPROVEMENT_POLDER_LAND" Kind="KIND_TRAIT" />
+		<Row Type="IMPROVEMENT_OIL_WELL_BYZANTIUM" Kind="KIND_IMPROVEMENT" />
+		<Row Type="TRAIT_IMPROVEMENT_OIL_WELL_BYZANTIUM" Kind="KIND_TRAIT" />
+	</Types>
+	<Traits>
+		<Row TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_POLDER_LAND" Name="LOC_IMPROVEMENT_POLDER_LAND_NAME" />
+		<Row TraitType="TRAIT_IMPROVEMENT_OIL_WELL_BYZANTIUM" Name="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_NAME" />
+	</Traits>
+	<Improvements>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_POLDER" />
+			<Set PrereqTech="TECH_ENGINEERING" PrereqCivic="" Housing="2" ValidAdjacentTerrainAmount="0" />
+		</Update>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_MEKEWAP" />
+			<Set SameAdjacentValid="true" />
+		</Update>
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" Name="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_NAME" Description="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_DESCRIPTION" Icon="ICON_IMPROVEMENT_OIL_WELL_BYZANTIUM" PlunderType="PLUNDER_GOLD" PlunderAmount="50" PrereqTech="TECH_SAILING" EnforceTerrain="true" Appeal="-1" TraitType="TRAIT_IMPROVEMENT_OIL_WELL_BYZANTIUM" />
+		<!--
+		<Update>
+		<Where ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" />
+		<Set PrereqTech="TECH_SAILING"/>
+		</Update>
+		-->
+		<!-- 风车花海 -->
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" Name="LOC_IMPROVEMENT_POLDER_LAND_NAME" Description="LOC_IMPROVEMENT_POLDER_LAND_DESCRIPTION" Icon="ICON_IMPROVEMENT_POLDER_LAND" PlunderType="PLUNDER_FAITH" PlunderAmount="25" Buildable="true" PrereqTech="TECH_ENGINEERING" Housing="1" TilesRequired="2" Domain="DOMAIN_LAND" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_POLDER_LAND" MovementChange="2" />
+	</Improvements>
+	<Improvement_ValidAdjacentTerrains>
+		<Delete ImprovementType="IMPROVEMENT_POLDER" />
+	</Improvement_ValidAdjacentTerrains>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_DESERT" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_TUNDRA" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_PLAINS" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_GRASS" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_SNOW" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_DESERT_HILLS" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_TUNDRA_HILLS" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_PLAINS_HILLS" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_GRASS_HILLS" />
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" TerrainType="TERRAIN_SNOW_HILLS" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" TerrainType="TERRAIN_PLAINS" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" TerrainType="TERRAIN_GRASS" />
+	</Improvement_ValidTerrains>
+	<Improvement_ValidResources>
+		<!-- Oil -->
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" ResourceType="RESOURCE_OIL" MustRemoveFeature="false" />
+	</Improvement_ValidResources>
+	<Improvement_ValidFeatures>
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" FeatureType="FEATURE_FLOODPLAINS" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" FeatureType="FEATURE_FLOODPLAINS_GRASSLAND" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" FeatureType="FEATURE_FLOODPLAINS_PLAINS" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" FeatureType="FEATURE_MARSH" />
+	</Improvement_ValidFeatures>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" UnitType="UNIT_BUILDER" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" UnitType="UNIT_BUILDER" />
+	</Improvement_ValidBuildUnits>
+	<!-- 棚屋 -->
+	<Improvement_YieldChanges>
+		<Row ImprovementType="IMPROVEMENT_OIL_WELL_BYZANTIUM" YieldType="YIELD_PRODUCTION" YieldChange="1" />
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_PRODUCTION" />
+			<Set YieldChange="1" />
+		</Update>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_FOOD" />
+			<Set YieldChange="1" />
+		</Update>
+		<Update>
+			<Where ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_GOLD" />
+			<Set YieldChange="2" />
+		</Update>
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldType="YIELD_FOOD" YieldChange="1" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldType="YIELD_GOLD" YieldChange="0" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldType="YIELD_PRODUCTION" YieldChange="1" />
+	</Improvement_YieldChanges>
+	<Improvement_BonusYieldChanges>
+		<Delete ImprovementType="IMPROVEMENT_POLDER" />
+		<Row ID="17710" ImprovementType="IMPROVEMENT_POLDER" YieldType="YIELD_PRODUCTION" BonusYieldChange="1" PrereqTech="TECH_MASS_PRODUCTION" />
+		<Row ID="17711" ImprovementType="IMPROVEMENT_POLDER" YieldType="YIELD_FOOD" BonusYieldChange="1" PrereqTech="TECH_SCIENTIFIC_THEORY" />
+		<Row ID="17712" ImprovementType="IMPROVEMENT_POLDER_LAND" YieldType="YIELD_FOOD" BonusYieldChange="1" PrereqTech="TECH_SCIENTIFIC_THEORY" />
+		<Row ID="17713" ImprovementType="IMPROVEMENT_POLDER_LAND" YieldType="YIELD_FOOD" BonusYieldChange="1" PrereqTech="TECH_SCIENTIFIC_THEORY" />
+		<Delete ImprovementType="IMPROVEMENT_MEKEWAP" />
+		<Row ID="17714" ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_FOOD" BonusYieldChange="1" PrereqCivic="CIVIC_FEUDALISM" />
+		<Row ID="17715" ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_PRODUCTION" BonusYieldChange="1" PrereqTech="TECH_MASS_PRODUCTION" />
+		<Row ID="17716" ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_FOOD" BonusYieldChange="1" PrereqTech="TECH_SCIENTIFIC_THEORY" />
+		<Row ID="17717" ImprovementType="IMPROVEMENT_MEKEWAP" YieldType="YIELD_PRODUCTION" BonusYieldChange="1" PrereqTech="TECH_REPLACEABLE_PARTS" />
+	</Improvement_BonusYieldChanges>
+	<Improvement_Adjacencies>
+		<Delete ImprovementType="IMPROVEMENT_POLDER" />
+		<Row ImprovementType="IMPROVEMENT_POLDER" YieldChangeId="Polder_BonusAdjacencyPolder1" />
+		<Row ImprovementType="IMPROVEMENT_POLDER" YieldChangeId="Polder_BonusAdjacencyPolder2" />
+		<Row ImprovementType="IMPROVEMENT_POLDER" YieldChangeId="Polder_BonusAdjacencyPolder3" />
+		<Row ImprovementType="IMPROVEMENT_POLDER" YieldChangeId="Polder_BonusAdjacencyPolder4" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldChangeId="PolderLand_BonusAdjacencyPolder1" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldChangeId="PolderLand_BonusAdjacencyPolder2" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldChangeId="PolderLand_BonusAdjacencyPolder3" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" YieldChangeId="PolderLand_BonusAdjacencyPolder4" />
+		<Delete ImprovementType="IMPROVEMENT_MEKEWAP" />
+		<Row ImprovementType="IMPROVEMENT_MEKEWAP" YieldChangeId="Mekewap_BonusAdjacencyPasture" />
+		<Row ImprovementType="IMPROVEMENT_MEKEWAP" YieldChangeId="Mekewap_BonusAdjacencyCamp" />
+		<Row ImprovementType="IMPROVEMENT_MEKEWAP" YieldChangeId="Mekewap_BonusAdjacencyLuxury" />
+	</Improvement_Adjacencies>
+	<Adjacency_YieldChanges>
+		<Row ID="Polder_BonusAdjacencyPolder1" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER" />
+		<Row ID="Polder_BonusAdjacencyPolder2" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER" PrereqTech="TECH_CARTOGRAPHY" />
+		<Row ID="Polder_BonusAdjacencyPolder3" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER_LAND" />
+		<Row ID="Polder_BonusAdjacencyPolder4" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER_LAND" PrereqTech="TECH_CARTOGRAPHY" />
+		<Row ID="PolderLand_BonusAdjacencyPolder1" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER" />
+		<Row ID="PolderLand_BonusAdjacencyPolder2" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER" PrereqTech="TECH_CARTOGRAPHY" />
+		<Row ID="PolderLand_BonusAdjacencyPolder3" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER_LAND" />
+		<Row ID="PolderLand_BonusAdjacencyPolder4" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_POLDER_LAND" PrereqTech="TECH_CARTOGRAPHY" />
+		<Row ID="Mekewap_BonusAdjacencyPasture" Description="Placeholder" YieldType="YIELD_FOOD" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_PASTURE" />
+		<Row ID="Mekewap_BonusAdjacencyCamp" Description="Placeholder" YieldType="YIELD_PRODUCTION" YieldChange="1" TilesRequired="1" AdjacentImprovement="IMPROVEMENT_CAMP" />
+		<Row ID="Mekewap_BonusAdjacencyLuxury" Description="Placeholder" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentResourceClass="RESOURCECLASS_LUXURY" />
+	</Adjacency_YieldChanges>
+	<Improvement_Tourism>
+		<Row ImprovementType="IMPROVEMENT_POLDER" TourismSource="TOURISMSOURCE_GOLD" PrereqTech="TECH_FLIGHT" ScalingFactor="100" />
+		<Row ImprovementType="IMPROVEMENT_POLDER_LAND" TourismSource="TOURISMSOURCE_GOLD" PrereqTech="TECH_FLIGHT" ScalingFactor="100" />
+	</Improvement_Tourism>
+</GameData>

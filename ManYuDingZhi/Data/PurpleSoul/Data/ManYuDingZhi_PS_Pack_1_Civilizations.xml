@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Civilizations -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/5/2024 1:25:33 AM -->
+<GameData>
+	<CivilizationTraits>
+		<Row CivilizationType="CIVILIZATION_NETHERLANDS" TraitType="TRAIT_CIVILIZATION_IMPROVEMENT_POLDER_LAND" />
+		<Row CivilizationType="CIVILIZATION_BYZANTIUM" TraitType="TRAIT_IMPROVEMENT_OIL_WELL_BYZANTIUM"/>
+	</CivilizationTraits>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_IMPROVEMENT" MomentDataType="MOMENT_DATA_IMPROVEMENT" GameDataType="IMPROVEMENT_POLDER_LAND" Texture="Moment_Infrastructure_Netherlands.dds" />
+	</MomentIllustrations>
+</GameData>

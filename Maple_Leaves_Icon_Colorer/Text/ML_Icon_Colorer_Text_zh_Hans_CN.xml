@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ML_Icon_Colorer_Text_zh_Hans_CN -->
+<!-- Author: yiboy -->
+<!-- DateCreated: 9/28/2024 1:44:00 AM -->
+<GameData>
+	<LocalizedText>
+		<!--zh_Hans_CN-->
+		<Replace Tag="LOC_ML_ICON_COLORER_LAUNCH_BUTTON_NAME" Language="zh_Hans_CN">
+			<Text>图标配色器[NEWLINE][NEWLINE]为您的新文明选择配色！</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_PANEL_TITLE" Language="zh_Hans_CN">
+			<Text>图标配色器</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_CIV_ICON_TITLE" Language="zh_Hans_CN">
+			<Text>选择文明图标：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_UNIT_ICON_TITLE" Language="zh_Hans_CN">
+			<Text>选择单位图标：</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_PULLDOWN_ERROR" Language="zh_Hans_CN">
+			<Text>Error：选择的文明不存在</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_EDIT_LEADER_NAME" Language="zh_Hans_CN">
+			<Text>领袖名称：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_EDIT_LEADER_NAME_EDIT_TT" Language="zh_Hans_CN">
+			<Text>编辑领袖名称</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CONFIRM_LEADER_NAME_BUTTON" Language="zh_Hans_CN">
+			<Text>确认</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_DEFAULT_PRIMARY_TITLE" Language="zh_Hans_CN">
+			<Text>选择默认主要颜色：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_DEFAULT_SECONDARY_TITLE" Language="zh_Hans_CN">
+			<Text>选择默认次要颜色：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_DEFAULT_COLOR_TITLE" Language="zh_Hans_CN">
+			<Text>选择默认颜色</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_BLOCK_TITLE" Language="zh_Hans_CN">
+			<Text>色块：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_USE_AS_PRIMARY" Language="zh_Hans_CN">
+			<Text>作为主要颜色</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_USE_AS_SECONDARY" Language="zh_Hans_CN">
+			<Text>作为次要颜色</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_PRIMARY_COLOR_LABEL" Language="zh_Hans_CN">
+			<Text>主要颜色(PrimaryColor):</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_SECONDARY_COLOR_LABEL" Language="zh_Hans_CN">
+			<Text>次要颜色(SecondaryColor):</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_R_LABEL" Language="zh_Hans_CN">
+			<Text>R  :</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_G_LABEL" Language="zh_Hans_CN">
+			<Text>G  :</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_B_LABEL" Language="zh_Hans_CN">
+			<Text>B  :</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_RGBA_A_LABEL" Language="zh_Hans_CN">
+			<Text>A  :</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_SWAP_COLOR" Language="zh_Hans_CN">
+			<Text>交换主要/次要颜色</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_CHOOSE_COLOER_SCHEME" Language="zh_Hans_CN">
+			<Text>选择配色方案：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_PREFIX" Language="zh_Hans_CN">
+			<Text>配色方案：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_BASE" Language="zh_Hans_CN">
+			<Text>默认颜色</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_ALT_1" Language="zh_Hans_CN">
+			<Text>替代颜色组1（Alt1）</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_ALT_2" Language="zh_Hans_CN">
+			<Text>替代颜色组2（Alt2）</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOR_SCHEME_ALT_3" Language="zh_Hans_CN">
+			<Text>替代颜色组3（Alt3）</Text>
+		</Replace>
+
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_LABEL" Language="zh_Hans_CN">
+			<Text>代码：</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_COPY" Language="zh_Hans_CN">
+			<Text>点击此处复制</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_SWITCH" Language="zh_Hans_CN">
+			<Text>复制XML代码</Text>
+		</Replace>
+		<Replace Tag="LOC_ML_ICON_COLORER_COLOER_CODE_CONTENT_DEFAULT" Language="zh_Hans_CN">
+			<Text>默认代码</Text>
+		</Replace>
+
+
+
+	</LocalizedText>
+</GameData>

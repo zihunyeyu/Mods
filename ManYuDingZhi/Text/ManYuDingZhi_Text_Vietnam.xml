@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_Text -->
+<!-- Author: SFDH100 -->
+<!-- DateCreated: 2023/8/13 10:30:19 -->
+<GameData>
+	<LocalizedText>
+		<Replace Tag="LOC_BOOST_TRIGGER_CONSERVATION" Language="zh_Hans_CN">
+		  <Text>建造1个惊艳的保护区。</Text>
+		</Replace>
+		<Replace Tag="LOC_BOOST_TRIGGER_LONGDESC_CONSERVATION" Language="zh_Hans_CN">
+		  <Text>您那惊艳的新保护区居民要求实行一项保护世界自然宝藏的计划。</Text>
+		</Replace>
+	</LocalizedText>
+</GameData>	

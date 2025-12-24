@@ -1,0 +1,300 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Text -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/2/2024 12:43:47 PM -->
+<GameData>
+	<LocalizedText>
+		<!-- purple soul -->
+		<Replace Tag="LOC_DISTRICT_COMMERCIAL_HUB_1_GOLD_FEATURE_FLOODPLAINS" Language="zh_Hans_CN">
+			<Text>
+				+{1_num} [ICON_Gold] 金币来自相邻沙漠泛滥平原{1_Num : plural 1?单元格; other?单元格;}。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_COMMERCIAL_HUB_1_GOLD_FEATURE_FLOODPLAINS_GRASSLAND" Language="zh_Hans_CN">
+			<Text>
+				+{1_num} [ICON_Gold] 金币来自相邻草原泛滥平原{1_Num : plural 1?单元格; other?单元格;}。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_DISTRICT_COMMERCIAL_HUB_1_GOLD_FEATURE_FLOODPLAINS_PLAINS" Language="zh_Hans_CN">
+			<Text>
+				+{1_num} [ICON_Gold] 金币来自相邻平原泛滥平原{1_Num : plural 1?单元格; other?单元格;}。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_PORTUGAL_COMBAT_BONUS_OTHER_RELIGION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与信奉其他宗教的单位作战时+5 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VARANGIANS_DEFENSE_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				国境内防御提供+10 [ICON_Strength] 防御力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VARANGIANS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				位于国境内时，回合结束时即便已进行移动或遭到攻击也能恢复生命值，防御攻击时+10 [ICON_Strength] 战斗力；若该单位从国境外领土开始回合，+1 [ICON_Movement] 移动力，进攻时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ALLIANCE_LV1_ECONOMIC_EFFECT_1_CREE" Language="zh_Hans_CN">
+			<Text>
+				从通往盟友城市的 [ICON_TradeRoute] 贸易路线处获得的 [ICON_GOLD] 金币+4（克里）
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ALLIANCE_LV1_ECONOMIC_EFFECT_2_CREE" Language="zh_Hans_CN">
+			<Text>
+				源自盟友城市的 [ICON_TradeRoute] 贸易路线所提供的 [ICON_GOLD] 金币+2（克里）
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_GROTE_RIVIEREN_NAME" Language="zh_Hans_CN">
+			<Text>
+				烂地之国
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_GROTE_RIVIEREN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				在沼泽、泛滥平原或拥有圩田的单元格中战斗的单位+5 [ICON_Strength] 战斗力。如果单位在回合开始时处于这些地貌中，则+3 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_GROTE_RIVIEREN_COMBAT_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				烂地之国特质+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_CORPUS_JURIS_CIVILIS_QUOTE" Language="zh_Hans_CN">
+			<Text>
+				人人都应安分守法。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_CORPUS_JURIS_CIVILIS_NAME" Language="zh_Hans_CN">
+			<Text>
+				《查士丁尼法典》
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREAT_PERSON_INDIVIDUAL_JUSTINIAN_THE_GREAT_NAME" Language="zh_Hans_CN">
+			<Text>
+				查士丁尼大帝
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREAT_PERSON_CLASS_EXTRA_GENERAL_NAME" Language="zh_Hans_CN">
+			<Text>
+				特殊伟人
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_EXTRA_GENERAL_NAME" Language="zh_Hans_CN">
+			<Text>
+				特殊伟人
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_EXTRA_GENERAL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				一些用于特殊用途生成的伟人
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_BYZANTIUM_NAVAL_RANGED_COMBAT_BONUS_NAME" Language="zh_Hans_CN">
+			<Text>
+				希腊火
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_BYZANTIUM_NAVAL_RANGED_COMBAT_BONUS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与单位作战时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_PRIZE_SHIPS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				攻击海军单位战斗时+5 [ICON_Strength] 战斗力，可以获得战败敌人的海军舰艇。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_MELEE_COASTAL_RAID_NAME_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				+5 [ICON_Strength] 战斗力，可掠夺建筑物和改良设施，并在海岸单元格上俘获平民单位。（哈拉尔德）
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_MELEE_COASTAL_RAID_COMBAT_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				北方惊雷特质+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_VALHALLA_UNIT_SACRIFICED" Language="zh_Hans_CN">
+			<Text>
+				{1_UnitName}进入英灵殿，提供了[COLOR_FLOAT_FAITH]+{2_Amount}[ENDCOLOR] [ICON_FAITH] 信仰值
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_TUNDRA_NAME" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉冻土
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_TUNDRA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉冻土：位于冻土上的单位加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_TUNDRA_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉冻土特质加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_MELEE_NAME" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉勇士
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_MELEE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉勇士：近战单位加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_MELEE_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉勇士特质加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_EARLY_OCEAN_NAVIGATION_HERO_NAME" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉传奇
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_EARLY_OCEAN_NAVIGATION_HERO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉的召唤：英雄单位+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_EARLY_OCEAN_NAVIGATION_HERO_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				瓦尔哈拉传奇特质+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CLASS_MELEE_BERSERKER_NAME" Language="zh_Hans_CN">
+			<Text>
+				狂暴战术
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CLASS_MELEE_BERSERKER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				狂暴战术：狂暴武士获得+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_CLASS_MELEE_BERSERKER_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				狂暴战术特质+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_STAVE_CHURCH_TRAINED_MELEE_COMBAT_NAME" Language="zh_Hans_CN">
+			<Text>
+				木板教堂
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_STAVE_CHURCH_TRAINED_MELEE_COMBAT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				教堂规训：近战单位获得+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_STAVE_CHURCH_TRAINED_MELEE_COMBAT_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				教堂规训特质+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_HARDRADA_LEVY_UNITS_COMBAT_NAME" Language="zh_Hans_CN">
+			<Text>
+				海盗雇佣兵
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AABILITY_HARDRADA_LEVY_UNITS_COMBAT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				海盗雇佣兵：征集单位加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_MELEE_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				海盗雇佣兵特质加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ALLIANCE_LV1_ECONOMIC_EFFECT_1_LEADER_POUNDMAKER" Language="zh_Hans_CN">
+			<Text>
+				从通往盟友城市的 [ICON_TradeRoute] 贸易路线处获得的 [ICON_GOLD] 金币+4（克里·庞德梅克）
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ALLIANCE_LV1_ECONOMIC_EFFECT_2_LEADER_POUNDMAKER" Language="zh_Hans_CN">
+			<Text>
+				从源自盟友城市的 [ICON_TradeRoute] 贸易路线处获得的 [ICON_GOLD] 金币+2（克里·庞德梅克）
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ROUTECHOOSER_YIELD_POUNDERMAKER_BONUSES" Language="zh_Hans_CN">
+			<Text>
+				{1_YieldAmount} {2_YieldIconString} {3_YieldName}来自庞德梅克：毛皮贸易。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ROUTECHOOSER_YIELD_WILHELMINA_BONUSES" Language="zh_Hans_CN">
+			<Text>
+				{1_YieldAmount} {2_YieldIconString} {3_YieldName}来自威廉明娜：抵抗之母。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_PAX_BRITANNICA_IGNORE_EMBARK_DISEMBARK_COST_NAME" Language="zh_Hans_CN">
+			<Text>
+				日不落帝国
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_PAX_BRITANNICA_IGNORE_EMBARK_DISEMBARK_COST_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				[ICON_Bullet]上船和下船不消耗额外 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_PAX_BRITANNICA_GRANT_EMBARKED_MOVEMENT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				上船后+2 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_PAX_BRITANNICA_GRANT_NAVAL_MOVEMENT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				海军单位+2 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_MELEE_BYPASS_WALLS_NAME" Language="zh_Hans_CN">
+			<Text>
+				绕开城墙
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_MELEE_BYPASS_WALLS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				靠近敌方城市时，近战单位能绕开城墙，直接攻击城市。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_BYPASS_WALLS_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				允许近战单位绕开城墙。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_MELEE_COASTAL_RAIDS_NAVAL_MELEE_NAME" Language="zh_Hans_CN">
+			<Text>
+				北方惊雷
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_MELEE_COASTAL_RAIDS_NAVAL_MELEE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				北方惊雷：近战单位加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_LEADER_MELEE_COASTAL_RAIDS_NAVAL_MELEE_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				北方惊雷特质加+{1_Amount}战斗力
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_ADVANCED_PILLAGING_NAME" Language="zh_Hans_CN">
+			<Text>
+				维京海盗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_ADVANCED_PILLAGING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				维京海盗：掠夺只消耗1个 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_VALHALLA_ADVANCED_PILLAGING_MODIFIER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				掠夺只消耗1个 [ICON_Movement] 移动力。
+			</Text>
+		</Replace>
+		<!-- purple soul -->
+	</LocalizedText>
+</GameData>

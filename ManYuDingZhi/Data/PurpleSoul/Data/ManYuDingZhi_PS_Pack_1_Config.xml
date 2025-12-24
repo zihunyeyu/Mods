@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- ManYuDingZhi_PS_Pack_1_Config -->
+<!-- Author: purple soul -->
+<!-- DateCreated: 11/5/2024 1:25:47 AM -->
+<GameData>
+	<Players>
+		<!-- 删除挪威领袖 -->
+		<Delete CivilizationType="CIVILIZATION_NORWAY" LeaderType="LEADER_HARALD_ALT" />
+	</Players>
+	<DuplicateLeaders>
+		<Delete OtherLeaderType="LEADER_HARALD_ALT" />
+	</DuplicateLeaders>
+	<PlayerItems>
+		<Delete CivilizationType="CIVILIZATION_NORWAY" LeaderType="LEADER_HARALD_ALT" />
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_NETHERLANDS" LeaderType="LEADER_WILHELMINA" Type="IMPROVEMENT_POLDER_LAND" Icon="ICON_IMPROVEMENT_POLDER_LAND" Name="LOC_IMPROVEMENT_POLDER_LAND_NAME" Description="LOC_IMPROVEMENT_POLDER_LAND_DESCRIPTION" SortIndex="20" />
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="UNIT_VARANGIANS" Icon="ICON_UNIT_VARANGIANS" Name="LOC_UNIT_VARANGIANS_NAME" Description="LOC_UNIT_VARANGIANS_DESCRIPTION" SortIndex="10" />
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_THEODORA" Type="IMPROVEMENT_OIL_WELL_BYZANTIUM" Icon="ICON_IMPROVEMENT_OIL_WELL_BYZANTIUM" Name="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_NAME" Description="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_DESCRIPTION" SortIndex="20" />
+		<Row Domain="Players:Expansion2_Players" CivilizationType="CIVILIZATION_BYZANTIUM" LeaderType="LEADER_BASIL" Type="IMPROVEMENT_OIL_WELL_BYZANTIUM" Icon="ICON_IMPROVEMENT_OIL_WELL_BYZANTIUM" Name="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_NAME" Description="LOC_IMPROVEMENT_OIL_WELL_BYZANTIUM_DESCRIPTION" SortIndex="20" />
+	</PlayerItems>
+</GameData>

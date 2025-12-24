@@ -92,7 +92,7 @@ end
 
 -- 初始化所有贸易路线修改器
 function InitializeTradeRouteModifiers()
-    -- print('m_TradeRouteModifierManager = ', m_TradeRouteModifierManager, #m_TradeRouteModifierManager)
+    print('m_TradeRouteModifierManager = ', m_TradeRouteModifierManager, #m_TradeRouteModifierManager)
 
     for _, playerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
         local player = Players[playerID]
@@ -329,16 +329,6 @@ function UpdaterRegister()
         params.p = playerID
         params.c = cityID
         UpdateTradeRouteModifier(CalculationItemType.FOLLOWER_OF_RELIGION, params)
-    end)
-
-    --- 贸易路线活动变更事件
-    Events.TradeRouteActivityChanged.Add(function (playerID, originPlayerID, originCityID, targetPlayerID, targetCityID)
-        local params = {}
-        params.op = originPlayerID
-        params.oc = originCityID
-        params.dp = targetPlayerID
-        params.dc = targetCityID
-        UpdateTradeRouteModifier(CalculationItemType.TRADE_R0UTE, params)
     end)
 end
 

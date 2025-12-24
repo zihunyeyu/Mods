@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+	<Button ID="GyokusaiButton" Hidden="1" Anchor="C,B" Size="44,53" Texture="UnitPanel_ActionButton" ToolTip="LOC_ACTION_PANEL_GYOUKUSAI_TOOLTIP">
+		<Image ID="GyokusaiButtonIcon" Anchor="C,C" Offset="0,-2" Size="38,38" Icon="ICON_UNITCOMMAND_DELETE" />
+	</Button>
+</Context>

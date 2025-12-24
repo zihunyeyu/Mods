@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FantasyExtensionPack_Notifications -->
+<!-- Author: PurpleSoul -->
+<!-- DateCreated: 12/1/2024 4:13:08 PM -->
+<GameData>
+	<Types>
+		<Row Type="NOTIFICATION_YASUKUNI" Kind="KIND_NOTIFICATION" />
+	</Types>
+	<Notifications>
+		<Row NotificationType="NOTIFICATION_YASUKUNI" SeverityType="MID" ExpiresEndOfTurn="True" AutoNotify="False">
+	</Notifications>
+</GameData>

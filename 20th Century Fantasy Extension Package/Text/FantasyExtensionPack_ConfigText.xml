@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_LEADER_DENGXIAOPING_NAME" Language="zh_Hans_CN">
+			<Text>
+				邓小平（总设计师）
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DENGXIAOPING_NAME" Language="zh_Hans_CN">
+			<Text>
+				小平理论
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DENGXIAOPING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				所有单位金币维护花费-2 [ICON_GOLD]。任意政体中额外增加一个经济政策槽位。其他文明通往中国的 [ICON_TradeRoute] 贸易路线为其提供+4 [ICON_Gold] 金币，为中国提供+1 [ICON_Science] 科技值和+1 [ICON_Culture] 文化值。拥有经济与其他特殊能力的专属特色总督，研究完“货币”科技后获得1个 [ICON_Governor] 总督头衔。
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DENGXIAOPING_GOVERNOR_NAME" Language="zh_Hans_CN">
+			<Text>
+				改开先驱
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DENGXIAOPING_GOVERNOR_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				专属于邓小平（总设计师），具有经济与其他特殊能力的特色总督。
+			</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_59TANK_NAME" Language="zh_Hans_CN">
+			<Text>
+				59式坦克
+			</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_59TANK_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				邓小平领袖现代时代单位，替代坦克。拥有更高移动力，更便宜的造价。在学院或市政广场的6个单元格范围内时+4 [ICON_Strength] 战斗力。
+			</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_COASTAL_OPEN_ZONE_NAME" Language="zh_Hans_CN">
+			<Text>
+				沿海经济开放区
+			</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_COASTAL_OPEN_ZONE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				邓小平领袖特色区域，专精于经济与贸易，取代商业中心。如果建立在靠近海岸的单元格，建造完成时还会额外增加1条 [ICON_TradeRoute] 贸易路线容量。[NEWLINE][NEWLINE]每个包含河岸、海岸或湖泊的单元格获得+2 [ICON_Gold] 金币加成。每个相邻港口额外获得+1 [ICON_Science] 科技、+1 [ICON_Culture] 文化加成。每两个相邻区域单元格获得+1 [ICON_Gold] 金币加成。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_HIROHITO_NAME" Language="zh_Hans_CN">
+			<Text>
+				愚人天皇
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_HIROHITO_QUOTE" Language="zh_Hans_CN">
+			<Text>
+				抑图帝国臣民康宁，抑偕万邦共荣之乐，皇祖皇宗之遗范也，朕拳拳所措。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_HIROHITO" Language="zh_Hans_CN">
+			<Text>
+				...
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_HIROHITO_NAME" Language="zh_Hans_CN">
+			<Text>
+				昭和之魂
+			</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_KYOUEI_NAME" Language="zh_Hans_CN">
+			<Text>
+				共荣
+			</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_KYOUEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				喜欢没有威胁的文明。讨厌拥有强大军队或在附近拥有城市的文明。
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_HIROHITO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				生产出一个非平民单位时，获得等同于该单位成本20%的 [ICON_Faith] 信仰值。建造军营、圣地和学院的时间减半。掠夺收益翻倍，且掠夺时有一定几率使被掠夺改良资源或区域所属城市减少1个 [ICON_Citizen] 人口。游戏中生产出的第1、2枚核弹会自动投向该文明随机城市。
+			</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_KAMIKAZE_BOMBER_NAME" Language="zh_Hans_CN">
+			<Text>
+				神风特攻队
+			</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_KAMIKAZE_BOMBER_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				愚人天皇领袖原子能时代单位，替代轰炸机。可使用 [ICON_FAITH] 信仰值购买。可以献祭该单位，消灭与神风特攻队相邻的全部敌方单位；升级为军团后，还能够摧毁区域和改良设施。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_DENGXIAOPING_ALT_NAME" Language="zh_Hans_CN">
+			<Text>
+				邓小平（政权捍卫者）
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_DENGXIAOPING_ALT_QUOTE" Language="zh_Hans_CN">
+			<Text>
+				...
+			</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_DENGXIAOPING_ALT" Language="zh_Hans_CN">
+			<Text>
+				...
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DENGXIAOPING_ALT_NAME" Language="zh_Hans_CN">
+			<Text>
+				铁腕
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DENGXIAOPING_ALT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				可用 [ICON_FAITH] 信仰值购买陆地战斗单位，使用 [ICON_Faith] 信仰值购买可享受15%折扣。完成“意识形态”市政后解锁并获得1个59式坦克。
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DALAI_NAME" Language="zh_Hans_CN">
+			<Text>
+				金瓶掣签
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_DALAI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				新时代开始时可选择仍存活的其他文明作为灵童，转世获得其特殊能力。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_MAOZEDONG_NAME" Language="zh_Hans_CN">
+			<Text>
+				毛泽东（长征）
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_MAOZEDONG_QUOTE" Language="zh_Hans_CN">
+			<Text>
+				红军不怕远征难！
+			</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_MAOZEDONG" Language="zh_Hans_CN">
+			<Text>
+				红军不怕远征难，万水千山只等闲。五岭逶迤腾细浪，乌蒙磅礴走泥丸。金沙水拍云崖暖，大渡桥横铁索寒。更喜岷山千里雪，三军过后尽开颜。
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_MAOZEDONG_NAME" Language="zh_Hans_CN">
+			<Text>
+				四渡赤水
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_MAOZEDONG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				所有单位+1 [ICON_Movement] 移动力；单位穿越河流时无视 [ICON_Movement] 移动力减益。
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_RCMA_NAME" Language="zh_Hans_CN">
+			<Text>
+				黄埔军校
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_RCMA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				中华民国特色建筑。该城中训练的陆地近战、远程单位+25%战斗经验值。非平民单位在此城中创建时，提供5点 [ICON_GreatGeneral] 大将军点数，并随机获得“国军”或“共军”标签。[NEWLINE][NEWLINE]国军：+5 [ICON_Strength] 战斗力。[NEWLINE]共军：+1 [ICON_Movement] 移动力。[NEWLINE][NEWLINE]战略资源储备+10（标准速度下）。[NEWLINE]无法建造在已拥有马厩的军营区域中。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_SUNZHONGSHAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				孙中山
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_SUNZHONGSHAN_QUOTE" Language="zh_Hans_CN">
+			<Text>
+				亟拯斯民于水火，切扶大厦之将倾。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_SUNZHONGSHAN" Language="zh_Hans_CN">
+			<Text>
+				孙中山目睹了山河破碎、生灵涂炭，誓言“亟拯斯民于水火，切扶大厦之将倾”，高扬反对封建专制统治的旗帜，毅然投身民主革命事业。创立兴中会、同盟会，提出民族、民权、民生的三民主义，积极传播革命思想，广泛联合革命力量，连续发动武装起义，为推进民主革命四处奔走、大声疾呼。
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_SUNZHONGSHAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				孙中山领袖特质
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_SUNZHONGSHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				孙中山领袖特质描述
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_GUNBU_NAME" Language="zh_Hans_CN">
+			<Text>
+				军部
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_GUNBU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				愚人天皇特色建筑，取代兵营。该城中训练的陆地近战、远程单位+25%战斗经验值，战斗单位获得“玉碎”操作，此操作能牺牲该单位将1个单元格以内的敌对文明的单位摧毁，组建为军团或军队后还能相应摧毁改良设施或区域。[NEWLINE][NEWLINE]战略资源储备+10（标准速度下）。[NEWLINE]无法建造在已拥有马厩的军营区域中。
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_YASUKUNI_NAME" Language="zh_Hans_CN">
+			<Text>
+				靖国神厕
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_YASUKUNI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				愚人天皇特色建筑，取代神社。友方战斗单位死亡时，灵魂会被召回最近的该建筑，每一种类单位会为该建筑提供+1对应产出。
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_RIKEN_NAME" Language="zh_Hans_CN">
+			<Text>
+				理化学研究所
+			</Text>
+		</Row>
+		<Row Tag="LOC_BUILDING_RIKEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				愚人天皇特色建筑，取代研究实验室。该建筑建成时会触发当前时代的1个随机科技尤里卡，如尤里卡已触发，则会直接解锁该科技。
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_REPUBLIC_OF_CHINA_NAME" Language="zh_Hans_CN">
+			<Text>
+				中华民国
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_REPUBLIC_OF_CHINA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				中华民国
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_REPUBLIC_OF_CHINA_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>
+				中国的
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_SOVIET_REPUBLIC_OF_CHINA_NAME" Language="zh_Hans_CN">
+			<Text>
+				中华苏维埃共和国
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_SOVIET_REPUBLIC_OF_CHINA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				中华苏维埃共和国
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_SOVIET_REPUBLIC_OF_CHINA_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>
+				中国的
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_SOVIET_REPUBLIC_OF_CHINA_NAME" Language="zh_Hans_CN">
+			<Text>
+				工农联盟
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_SOVIET_REPUBLIC_OF_CHINA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				在拥有学院区域的城市中生产的所有建造者将+1建造次数。建造者可消耗3点建造次数为一个军事单位提供1次升级。与农场相邻的区域获得额外+1相邻加成；与军营、工业区相邻时农场+1 [ICON_Food] 食物，+1 [ICON_Production] 生产力。
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_REPUBLIC_OF_CHINA_NAME" Language="zh_Hans_CN">
+			<Text>
+				三民主义
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_REPUBLIC_OF_CHINA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				建造军营、工业区及相应建筑的时间减半。与同盟之间的贸易路线根据同盟类别额外+2对应产出。
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_HIROHITO_CHAPTER_CAPSULE_BODY" Language="zh_Hans_CN">
+			<Text>
+				愚人天皇想共建万族共荣，建立军部击溃挡在前进之路的敌人，同时死亡的英魂会在神社中继续为国家振奋精神，努力研究科技，同时也要提防他国的军事科技进度，尤其是核弹。
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_AUSTRIAN_EMPIRE_NAME" Language="zh_Hans_CN">
+			<Text>
+				奥地利帝国
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_AUSTRIAN_EMPIRE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				奥地利帝国
+			</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_AUSTRIAN_EMPIRE_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>
+				奥地利帝国的
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_AUSTRIAN_EMPIRE_NAME" Language="zh_Hans_CN">
+			<Text>
+				奥地利注定统治世界
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_CIVILIZATION_AUSTRIAN_EMPIRE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				额外的通配政策槽位。建造区域和奇观时+50%生产力，每个奇观提供+2宜居度、+4文化值与+5外交支持。当区域与奇观相邻时，所有区域获得标准相邻加成。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_IWS2000_NAME" Language="zh_Hans_CN">
+			<Text>
+				IWS2000
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_IWS2000_QUOTE" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_IWS2000" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_LEADER_IWS2000_NAME" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_LEADER_IWS2000_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_IWS2000_NAME" Language="zh_Hans_CN">
+			<Text>
+				二元君主国
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_IWS2000_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				所有城市每回合-4忠诚度和+20%文化值。国内贸易路线+2食物、+2信仰值和+4文化值，目标城市每拥有一座奇观则+2金币和+4文化值，每拥有一个斯柯达工业中的建筑则+2生产力和+4科技值。
+			</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_PRINZ_EUGEN_NAME" Language="zh_Hans_CN">
+			<Text>
+				欧根亲王
+			</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_PRINZ_EUGEN_QUOTE" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_PRINZ_EUGEN" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_LEADER_PRINZ_EUGEN_NAME" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_AGENDA_LEADER_PRINZ_EUGEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_PRINZ_EUGEN_NAME" Language="zh_Hans_CN">
+			<Text>
+				神圣罗马元帅
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRAIT_LEADER_PRINZ_EUGEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				额外的军事政策槽位。所有单位+10战斗力和+1移动力，且渡河时不消耗额外移动力。战争期间每回合+20%信仰值与+10%文化值。
+			</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

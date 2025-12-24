@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Types>
+		<Row Type="UNIT_59TANK" Kind="KIND_UNIT" />
+		<Row Type="TRAIT_LEADER_UNIT_59TANK" Kind="KIND_TRAIT" />
+		<Row Type="UNIT_KAMIKAZE_BOMBER" Kind="KIND_UNIT" />
+		<Row Type="TRAIT_LEADER_UNIT_KAMIKAZE_BOMBER" Kind="KIND_TRAIT" />
+	</Types>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_UNIT_59TANK" Name="LOC_UNIT_59TANK_NAME" Description="LOC_UNIT_59TANK_DESCRIPTION" />
+		<Row TraitType="TRAIT_LEADER_UNIT_KAMIKAZE_BOMBER" Name="LOC_UNIT_KAMIKAZE_BOMBER_NAME" Description="LOC_UNIT_KAMIKAZE_BOMBER_DESCRIPTION" />
+	</Traits>
+	<UnitAiInfos>
+		<Row UnitType="UNIT_59TANK" AiType="UNITAI_COMBAT" />
+		<Row UnitType="UNIT_59TANK" AiType="UNITTYPE_MELEE" />
+		<Row UnitType="UNIT_59TANK" AiType="UNITTYPE_CAVALRY" />
+		<Row UnitType="UNIT_59TANK" AiType="UNITTYPE_LAND_COMBAT" />
+		<Row UnitType="UNIT_KAMIKAZE_BOMBER" AiType="UNITAI_COMBAT" />
+		<Row UnitType="UNIT_KAMIKAZE_BOMBER" AiType="UNITTYPE_NUCLEAR" />
+		<Row UnitType="UNIT_KAMIKAZE_BOMBER" AiType="UNITTYPE_AIR_SIEGE" />
+	</UnitAiInfos>
+	<TypeTags>
+		<Row Type="UNIT_59TANK" Tag="CLASS_HEAVY_CHARIOT" />
+		<Row Type="UNIT_59TANK" Tag="CLASS_HEAVY_CAVALRY" />
+		<Row Type="UNIT_KAMIKAZE_BOMBER" Tag="CLASS_AIRCRAFT" />
+		<Row Type="UNIT_KAMIKAZE_BOMBER" Tag="CLASS_AIR_BOMBER" />
+	</TypeTags>
+	<UnitReplaces>
+		<Row CivUniqueUnitType="UNIT_59TANK" ReplacesUnitType="UNIT_TANK" />
+		<Row CivUniqueUnitType="UNIT_KAMIKAZE_BOMBER" ReplacesUnitType="UNIT_BOMBER" />
+	</UnitReplaces>
+	<Units>
+		<!-- 59式坦克 -->
+		<Row UnitType="UNIT_59TANK" Cost="300" Maintenance="6" BaseMoves="5" BaseSightRange="3" ZoneOfControl="true" Domain="DOMAIN_LAND" Combat="85" StrategicResource="RESOURCE_OIL" FormationClass="FORMATION_CLASS_LAND_COMBAT" PromotionClass="PROMOTION_CLASS_HEAVY_CAVALRY" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_59TANK_NAME" Description="LOC_UNIT_59TANK_DESCRIPTION" PurchaseYield="YIELD_GOLD" PrereqCivic="CIVIC_IDEOLOGY" TraitType="TRAIT_LEADER_UNIT_59TANK" />
+		<!-- 神风特攻队 -->
+		<Row UnitType="UNIT_KAMIKAZE_BOMBER" Cost="560" Maintenance="7" BaseMoves="10" BaseSightRange="4" ZoneOfControl="false" Domain="DOMAIN_AIR" Combat="85" Bombard="110" Range="10" StrategicResource="RESOURCE_ALUMINUM" FormationClass="FORMATION_CLASS_AIR" PromotionClass="PROMOTION_CLASS_AIR_BOMBER" AdvisorType="ADVISOR_CONQUEST" Name="LOC_UNIT_KAMIKAZE_BOMBER_NAME" Description="LOC_UNIT_KAMIKAZE_BOMBER_DESCRIPTION" PurchaseYield="YIELD_GOLD" PseudoYieldType="PSEUDOYIELD_UNIT_AIR_COMBAT" IgnoreMoves="true" PrereqTech="TECH_ADVANCED_FLIGHT" Stackable="TRUE" PrereqDistrict="DISTRICT_AERODROME" CanTargetAir="TRUE" WMDCapable="true" TraitType="TRAIT_LEADER_UNIT_KAMIKAZE_BOMBER" />
+	</Units>
+	<UnitUpgrades>
+		<Row Unit="UNIT_59TANK" UpgradeUnit="UNIT_MODERN_ARMOR" />
+		<Row Unit="UNIT_KAMIKAZE_BOMBER" UpgradeUnit="UNIT_JET_BOMBER" />
+	</UnitUpgrades>
+</GameData>

@@ -4,16 +4,34 @@
 <!-- DateCreated: 2/22/2025 1:01:01 AM -->
 <GameData>
 	<IconTextureAtlases>
-		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="32" IconsPerRow="4" IconsPerColumn="2" Filename="ICON_EQUIPMENT_TYPES_32" />
-		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="38" IconsPerRow="4" IconsPerColumn="2" Filename="ICON_EQUIPMENT_TYPES_38" />
-		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="50" IconsPerRow="4" IconsPerColumn="2" Filename="ICON_EQUIPMENT_TYPES_50" />
-		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="64" IconsPerRow="4" IconsPerColumn="2" Filename="ICON_EQUIPMENT_TYPES_64" />
-		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="128" IconsPerRow="4" IconsPerColumn="2" Filename="ICON_EQUIPMENT_TYPES_128" />
-		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="256" IconsPerRow="4" IconsPerColumn="2" Filename="ICON_EQUIPMENT_TYPES_256" />
-		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="64" IconsPerRow="10" IconsPerColumn="11" Filename="ICON_EQUIPMENTS_64" />
-		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="80" IconsPerRow="10" IconsPerColumn="11" Filename="ICON_EQUIPMENTS_80" />
-		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="130" IconsPerRow="10" IconsPerColumn="11" Filename="ICON_EQUIPMENTS_130" />
-		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="220" IconsPerRow="10" IconsPerColumn="11" Filename="ICON_EQUIPMENTS_220" />
+		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="32" IconsPerRow="4" IconsPerColumn="2"
+			Filename="ICON_EQUIPMENT_TYPES_32" />
+		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="38" IconsPerRow="4" IconsPerColumn="2"
+			Filename="ICON_EQUIPMENT_TYPES_38" />
+		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="50" IconsPerRow="4" IconsPerColumn="2"
+			Filename="ICON_EQUIPMENT_TYPES_50" />
+		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="64" IconsPerRow="4" IconsPerColumn="2"
+			Filename="ICON_EQUIPMENT_TYPES_64" />
+		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="128" IconsPerRow="4" IconsPerColumn="2"
+			Filename="ICON_EQUIPMENT_TYPES_128" />
+		<Row Name="ATLAS_ICON_EQUIPMENT_TYPES" IconSize="256" IconsPerRow="4" IconsPerColumn="2"
+			Filename="ICON_EQUIPMENT_TYPES_256" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="64" IconsPerRow="10" IconsPerColumn="11"
+			Filename="ICON_EQUIPMENTS_64" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="80" IconsPerRow="10" IconsPerColumn="11"
+			Filename="ICON_EQUIPMENTS_80" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="130" IconsPerRow="10" IconsPerColumn="11"
+			Filename="ICON_EQUIPMENTS_130" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS" IconSize="220" IconsPerRow="10" IconsPerColumn="11"
+			Filename="ICON_EQUIPMENTS_220" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS_EX2" IconSize="64" IconsPerRow="10" IconsPerColumn="12"
+			Filename="ICON_EQUIPMENTS_EX2_64" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS_EX2" IconSize="80" IconsPerRow="10" IconsPerColumn="12"
+			Filename="ICON_EQUIPMENTS_EX2_80" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS_EX2" IconSize="130" IconsPerRow="10" IconsPerColumn="12"
+			Filename="ICON_EQUIPMENTS_EX2_130" />
+		<Row Name="ATLAS_ICON_EQUIPMENTS_EX2" IconSize="220" IconsPerRow="10" IconsPerColumn="12"
+			Filename="ICON_EQUIPMENTS_EX2_220" />
 		<Row Name="ATLAS_ICON_EQUIPMENT_LOCK" IconSize="32" Filename="ICON_EQUIPMENT_LOCK_32" />
 		<Row Name="ATLAS_ICON_EQUIPMENT_LOCK" IconSize="38" Filename="ICON_EQUIPMENT_LOCK_38" />
 		<Row Name="ATLAS_ICON_EQUIPMENT_LOCK" IconSize="50" Filename="ICON_EQUIPMENT_LOCK_50" />
@@ -136,115 +154,116 @@
 		<Row Name="ICON_EQUIPMENT_MUSEN" Atlas="ATLAS_ICON_EQUIPMENTS" Index="91" />
 		<Row Name="ICON_EQUIPMENT_TUYAO" Atlas="ATLAS_ICON_EQUIPMENTS" Index="92" />
 		<!-- EX2 -->
-		<Row Name="ICON_EQUIPMENT_XiangYaShuangGou" Atlas="ATLAS_ICON_EQUIPMENTS" Index="0" />
-		<Row Name="ICON_EQUIPMENT_JuXiangKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="1" />
-		<Row Name="ICON_EQUIPMENT_MengMaXiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="2" />
-		<Row Name="ICON_EQUIPMENT_JuXiangZhanGu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="3" />
-		<Row Name="ICON_EQUIPMENT_TieShiDan" Atlas="ATLAS_ICON_EQUIPMENTS" Index="4" />
-		<Row Name="ICON_EQUIPMENT_TieXiangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="5" />
-		<Row Name="ICON_EQUIPMENT_TieJiaXiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="6" />
-		<Row Name="ICON_EQUIPMENT_TieXiangTongGu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="7" />
-		<Row Name="ICON_EQUIPMENT_HuoYanShenQiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="8" />
-		<Row Name="ICON_EQUIPMENT_HuoYanKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="9" />
-		<Row Name="ICON_EQUIPMENT_LieYanShenJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="10" />
-		<Row Name="ICON_EQUIPMENT_LieYanZhanChui" Atlas="ATLAS_ICON_EQUIPMENTS" Index="11" />
-		<Row Name="ICON_EQUIPMENT_ManXueLiFu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="12" />
-		<Row Name="ICON_EQUIPMENT_ManXueTengJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="13" />
-		<Row Name="ICON_EQUIPMENT_ManXueShenJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="14" />
-		<Row Name="ICON_EQUIPMENT_ManXueZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS" Index="15" />
-		<Row Name="ICON_EQUIPMENT_ShuiMiaoShenGong" Atlas="ATLAS_ICON_EQUIPMENTS" Index="16" />
-		<Row Name="ICON_EQUIPMENT_ShuiMiaoKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="17" />
-		<Row Name="ICON_EQUIPMENT_ShuiMiaoZhanXiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="18" />
-		<Row Name="ICON_EQUIPMENT_ShuiMiaoZhenZhu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="19" />
-		<Row Name="ICON_EQUIPMENT_HeiShanYaRen" Atlas="ATLAS_ICON_EQUIPMENTS" Index="20" />
-		<Row Name="ICON_EQUIPMENT_TuYaoKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="21" />
-		<Row Name="ICON_EQUIPMENT_MoYan" Atlas="ATLAS_ICON_EQUIPMENTS" Index="22" />
-		<Row Name="ICON_EQUIPMENT_ZhaoZeJuanZhou" Atlas="ATLAS_ICON_EQUIPMENTS" Index="23" />
-		<Row Name="ICON_EQUIPMENT_HeiLeiJian" Atlas="ATLAS_ICON_EQUIPMENTS" Index="24" />
-		<Row Name="ICON_EQUIPMENT_LeiMingZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="25" />
-		<Row Name="ICON_EQUIPMENT_ZhuiDian" Atlas="ATLAS_ICON_EQUIPMENTS" Index="26" />
-		<Row Name="ICON_EQUIPMENT_DianYunDun" Atlas="ATLAS_ICON_EQUIPMENTS" Index="27" />
-		<Row Name="ICON_EQUIPMENT_XueYinZhangDao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="28" />
-		<Row Name="ICON_EQUIPMENT_YinXueZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="29" />
-		<Row Name="ICON_EQUIPMENT_YinXueJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="30" />
-		<Row Name="ICON_EQUIPMENT_YinXueDao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="31" />
-		<Row Name="ICON_EQUIPMENT_SuTieJian" Atlas="ATLAS_ICON_EQUIPMENTS" Index="32" />
-		<Row Name="ICON_EQUIPMENT_YunTieZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="33" />
-		<Row Name="ICON_EQUIPMENT_HeiTieJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="34" />
-		<Row Name="ICON_EQUIPMENT_XuanTieDun" Atlas="ATLAS_ICON_EQUIPMENTS" Index="35" />
-		<Row Name="ICON_EQUIPMENT_YueYaJi" Atlas="ATLAS_ICON_EQUIPMENTS" Index="36" />
-		<Row Name="ICON_EQUIPMENT_CanYueZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="37" />
-		<Row Name="ICON_EQUIPMENT_XiaoYue" Atlas="ATLAS_ICON_EQUIPMENTS" Index="38" />
-		<Row Name="ICON_EQUIPMENT_HaoYueZhanKui" Atlas="ATLAS_ICON_EQUIPMENTS" Index="39" />
-		<Row Name="ICON_EQUIPMENT_JiShenGong" Atlas="ATLAS_ICON_EQUIPMENTS" Index="40" />
-		<Row Name="ICON_EQUIPMENT_JiShenZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="41" />
-		<Row Name="ICON_EQUIPMENT_ShenJi" Atlas="ATLAS_ICON_EQUIPMENTS" Index="42" />
-		<Row Name="ICON_EQUIPMENT_JiShenDun" Atlas="ATLAS_ICON_EQUIPMENTS" Index="43" />
-		<Row Name="ICON_EQUIPMENT_BingRiMoDao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="44" />
-		<Row Name="ICON_EQUIPMENT_LieRiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="45" />
-		<Row Name="ICON_EQUIPMENT_LuoRi" Atlas="ATLAS_ICON_EQUIPMENTS" Index="46" />
-		<Row Name="ICON_EQUIPMENT_ShuoRiZhanKui" Atlas="ATLAS_ICON_EQUIPMENTS" Index="47" />
-		<Row Name="ICON_EQUIPMENT_FangTianHuaJi" Atlas="ATLAS_ICON_EQUIPMENTS" Index="48" />
-		<Row Name="ICON_EQUIPMENT_FeiJiangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="49" />
-		<Row Name="ICON_EQUIPMENT_ChiTuMa" Atlas="ATLAS_ICON_EQUIPMENTS" Index="50" />
-		<Row Name="ICON_EQUIPMENT_FeiJiangZhanGong" Atlas="ATLAS_ICON_EQUIPMENTS" Index="51" />
-		<Row Name="ICON_EQUIPMENT_HunTianZhanQiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="52" />
-		<Row Name="ICON_EQUIPMENT_HunTianZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="53" />
-		<Row Name="ICON_EQUIPMENT_HunDun" Atlas="ATLAS_ICON_EQUIPMENTS" Index="54" />
-		<Row Name="ICON_EQUIPMENT_HunTianChui" Atlas="ATLAS_ICON_EQUIPMENTS" Index="55" />
-		<Row Name="ICON_EQUIPMENT_WuWangBaoJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="56" />
-		<Row Name="ICON_EQUIPMENT_WuWangBaoYu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="57" />
-		<Row Name="ICON_EQUIPMENT_YuanYangJinJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="58" />
-		<Row Name="ICON_EQUIPMENT_YuanYangJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="59" />
-		<Row Name="ICON_EQUIPMENT_YuanYangNeiJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="60" />
-		<Row Name="ICON_EQUIPMENT_BaWangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="61" />
-		<Row Name="ICON_EQUIPMENT_WuZhuiMa" Atlas="ATLAS_ICON_EQUIPMENTS" Index="62" />
-		<Row Name="ICON_EQUIPMENT_BaWangZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS" Index="63" />
-		<Row Name="ICON_EQUIPMENT_PiLiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="64" />
-		<Row Name="ICON_EQUIPMENT_PiLiJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="65" />
-		<Row Name="ICON_EQUIPMENT_PiLiZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS" Index="66" />
-		<Row Name="ICON_EQUIPMENT_ShangJinZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="67" />
-		<Row Name="ICON_EQUIPMENT_ShangJinZhanMa" Atlas="ATLAS_ICON_EQUIPMENTS" Index="68" />
-		<Row Name="ICON_EQUIPMENT_JinZhanBei" Atlas="ATLAS_ICON_EQUIPMENTS" Index="69" />
-		<Row Name="ICON_EQUIPMENT_WeiWangLinJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="70" />
-		<Row Name="ICON_EQUIPMENT_WeiWangBaoYu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="71" />
-		<Row Name="ICON_EQUIPMENT_HunTieZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="72" />
-		<Row Name="ICON_EQUIPMENT_HunTieShenJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="73" />
-		<Row Name="ICON_EQUIPMENT_HunTieNeiJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="74" />
-		<Row Name="ICON_EQUIPMENT_HeiShiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="75" />
-		<Row Name="ICON_EQUIPMENT_ZuanShiShenJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="76" />
-		<Row Name="ICON_EQUIPMENT_YuShiRuanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="77" />
-		<Row Name="ICON_EQUIPMENT_HanBingZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="78" />
-		<Row Name="ICON_EQUIPMENT_HanBingJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="79" />
-		<Row Name="ICON_EQUIPMENT_HanBingBaoShi" Atlas="ATLAS_ICON_EQUIPMENTS" Index="80" />
-		<Row Name="ICON_EQUIPMENT_ZhongPaoZhanGong" Atlas="ATLAS_ICON_EQUIPMENTS" Index="81" />
-		<Row Name="ICON_EQUIPMENT_ZhongPaoZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="82" />
-		<Row Name="ICON_EQUIPMENT_ZhongPao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="83" />
-		<Row Name="ICON_EQUIPMENT_ZhongPaoZhanNu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="84" />
-		<Row Name="ICON_EQUIPMENT_ZhangBaSheMao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="85" />
-		<Row Name="ICON_EQUIPMENT_WuZhuiBaoJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="86" />
-		<Row Name="ICON_EQUIPMENT_TaXueWuZhui" Atlas="ATLAS_ICON_EQUIPMENTS" Index="87" />
-		<Row Name="ICON_EQUIPMENT_WuZhuiRuanJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="88" />
-		<Row Name="ICON_EQUIPMENT_HuDanZhanJinQiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="89" />
-		<Row Name="ICON_EQUIPMENT_JinShaZhongKai" Atlas="ATLAS_ICON_EQUIPMENTS" Index="90" />
-		<Row Name="ICON_EQUIPMENT_LiFeiSha" Atlas="ATLAS_ICON_EQUIPMENTS" Index="91" />
-		<Row Name="ICON_EQUIPMENT_JinShaZhanPao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="92" />
-		<Row Name="ICON_EQUIPMENT_LongDanLiangYinQiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="93" />
-		<Row Name="ICON_EQUIPMENT_ShiZiYinJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="94" />
-		<Row Name="ICON_EQUIPMENT_ZhaoYuYeShiZi" Atlas="ATLAS_ICON_EQUIPMENTS" Index="95" />
-		<Row Name="ICON_EQUIPMENT_ShiZiYinKui" Atlas="ATLAS_ICON_EQUIPMENTS" Index="96" />
-		<Row Name="ICON_EQUIPMENT_QingLongYanYueDao" Atlas="ATLAS_ICON_EQUIPMENTS" Index="97" />
-		<Row Name="ICON_EQUIPMENT_WuShengJingKai" Atlas="ATLAS_ICON_EQUIPMENTS" Index="98" />
-		<Row Name="ICON_EQUIPMENT_ChiTuMa" Atlas="ATLAS_ICON_EQUIPMENTS" Index="99" />
-		<Row Name="ICON_EQUIPMENT_WuShengDaoPu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="100" />
-		<Row Name="ICON_EQUIPMENT_HanHuangBaoJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="101" />
-		<Row Name="ICON_EQUIPMENT_HanHuangBaoYu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="102" />
-		<Row Name="ICON_EQUIPMENT_BaoDiaoGong" Atlas="ATLAS_ICON_EQUIPMENTS" Index="103" />
-		<Row Name="ICON_EQUIPMENT_BaoDiaoJingJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="104" />
-		<Row Name="ICON_EQUIPMENT_LiaoYuanHuo" Atlas="ATLAS_ICON_EQUIPMENTS" Index="105" />
-		<Row Name="ICON_EQUIPMENT_QiLinQiang" Atlas="ATLAS_ICON_EQUIPMENTS" Index="106" />
-		<Row Name="ICON_EQUIPMENT_QiLinJia" Atlas="ATLAS_ICON_EQUIPMENTS" Index="107" />
-		<Row Name="ICON_EQUIPMENT_QiLinJu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="108" />
-		<Row Name="ICON_EQUIPMENT_QiLinShenMu" Atlas="ATLAS_ICON_EQUIPMENTS" Index="109" />
+		<Row Name="ICON_EQUIPMENT_XiangYaShuangGou" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="0" />
+		<Row Name="ICON_EQUIPMENT_JuXiangKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="1" />
+		<Row Name="ICON_EQUIPMENT_MengMaXiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="2" />
+		<Row Name="ICON_EQUIPMENT_JuXiangZhanGu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="3" />
+		<Row Name="ICON_EQUIPMENT_TieShiDan" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="4" />
+		<Row Name="ICON_EQUIPMENT_TieXiangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="5" />
+		<Row Name="ICON_EQUIPMENT_TieJiaXiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="6" />
+		<Row Name="ICON_EQUIPMENT_TieXiangTongGu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="7" />
+		<Row Name="ICON_EQUIPMENT_HuoYanShenQiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="8" />
+		<Row Name="ICON_EQUIPMENT_HuoYanKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="9" />
+		<Row Name="ICON_EQUIPMENT_LieYanShenJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="10" />
+		<Row Name="ICON_EQUIPMENT_LieYanZhanChui" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="11" />
+		<Row Name="ICON_EQUIPMENT_ManXueLiFu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="12" />
+		<Row Name="ICON_EQUIPMENT_ManXueTengJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="13" />
+		<Row Name="ICON_EQUIPMENT_ManXueShenJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="14" />
+		<Row Name="ICON_EQUIPMENT_ManXueZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="15" />
+		<Row Name="ICON_EQUIPMENT_ShuiMiaoShenGong" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="16" />
+		<Row Name="ICON_EQUIPMENT_ShuiMiaoKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="17" />
+		<Row Name="ICON_EQUIPMENT_ShuiMiaoZhanXiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="18" />
+		<Row Name="ICON_EQUIPMENT_ShuiMiaoZhenZhu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="19" />
+		<Row Name="ICON_EQUIPMENT_HeiShanYaRen" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="20" />
+		<Row Name="ICON_EQUIPMENT_TuYaoKaiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="21" />
+		<Row Name="ICON_EQUIPMENT_MoYan" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="22" />
+		<Row Name="ICON_EQUIPMENT_ZhaoZeJuanZhou" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="23" />
+		<Row Name="ICON_EQUIPMENT_HeiLeiJian" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="24" />
+		<Row Name="ICON_EQUIPMENT_LeiMingZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="25" />
+		<Row Name="ICON_EQUIPMENT_ZhuiDian" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="26" />
+		<Row Name="ICON_EQUIPMENT_DianYunDun" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="27" />
+		<Row Name="ICON_EQUIPMENT_XueYinZhangDao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="28" />
+		<Row Name="ICON_EQUIPMENT_YinXueZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="29" />
+		<Row Name="ICON_EQUIPMENT_YinXueJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="30" />
+		<Row Name="ICON_EQUIPMENT_YinXueDao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="31" />
+		<Row Name="ICON_EQUIPMENT_SuTieJian" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="32" />
+		<Row Name="ICON_EQUIPMENT_YunTieZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="33" />
+		<Row Name="ICON_EQUIPMENT_HeiTieJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="34" />
+		<Row Name="ICON_EQUIPMENT_XuanTieDun" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="35" />
+		<Row Name="ICON_EQUIPMENT_YueYaJi" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="36" />
+		<Row Name="ICON_EQUIPMENT_CanYueZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="37" />
+		<Row Name="ICON_EQUIPMENT_XiaoYue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="38" />
+		<Row Name="ICON_EQUIPMENT_HaoYueZhanKui" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="39" />
+		<Row Name="ICON_EQUIPMENT_JiShenGong" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="40" />
+		<Row Name="ICON_EQUIPMENT_JiShenZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="41" />
+		<Row Name="ICON_EQUIPMENT_ShenJi" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="42" />
+		<Row Name="ICON_EQUIPMENT_JiShenDun" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="43" />
+		<Row Name="ICON_EQUIPMENT_BingRiMoDao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="44" />
+		<Row Name="ICON_EQUIPMENT_LieRiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="45" />
+		<Row Name="ICON_EQUIPMENT_LuoRi" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="46" />
+		<Row Name="ICON_EQUIPMENT_ShuoRiZhanKui" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="47" />
+		<Row Name="ICON_EQUIPMENT_FangTianHuaJi" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="48" />
+		<Row Name="ICON_EQUIPMENT_FeiJiangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="49" />
+		<Row Name="ICON_EQUIPMENT_ChiTuMa_A" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="50" />
+		<Row Name="ICON_EQUIPMENT_FeiJiangZhanGong" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="51" />
+		<Row Name="ICON_EQUIPMENT_HunTianZhanQiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="52" />
+		<Row Name="ICON_EQUIPMENT_HunTianZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="53" />
+		<Row Name="ICON_EQUIPMENT_HunDun" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="54" />
+		<Row Name="ICON_EQUIPMENT_HunTianChui" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="55" />
+		<Row Name="ICON_EQUIPMENT_WuWangBaoJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="56" />
+		<Row Name="ICON_EQUIPMENT_WuWangBaoYu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="57" />
+		<Row Name="ICON_EQUIPMENT_YuanYangJinJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="58" />
+		<Row Name="ICON_EQUIPMENT_YuanYangJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="59" />
+		<Row Name="ICON_EQUIPMENT_YuanYangNeiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="60" />
+		<Row Name="ICON_EQUIPMENT_BaWangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="61" />
+		<Row Name="ICON_EQUIPMENT_WuZhuiMa" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="62" />
+		<Row Name="ICON_EQUIPMENT_BaWangZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="63" />
+		<Row Name="ICON_EQUIPMENT_PiLiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="64" />
+		<Row Name="ICON_EQUIPMENT_PiLiJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="65" />
+		<Row Name="ICON_EQUIPMENT_PiLiZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="66" />
+		<Row Name="ICON_EQUIPMENT_ShangJinZhanGong" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="67" />
+		<Row Name="ICON_EQUIPMENT_ShangJinZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="68" />
+		<Row Name="ICON_EQUIPMENT_ShangJinZhanMa" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="69" />
+		<Row Name="ICON_EQUIPMENT_JinZhanBei" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="70" />
+		<Row Name="ICON_EQUIPMENT_WeiWangLinJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="71" />
+		<Row Name="ICON_EQUIPMENT_WeiWangBaoYu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="72" />
+		<Row Name="ICON_EQUIPMENT_HunTieZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="73" />
+		<Row Name="ICON_EQUIPMENT_HunTieShenJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="74" />
+		<Row Name="ICON_EQUIPMENT_HunTieNeiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="75" />
+		<Row Name="ICON_EQUIPMENT_HeiShiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="76" />
+		<Row Name="ICON_EQUIPMENT_ZuanShiShenJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="77" />
+		<Row Name="ICON_EQUIPMENT_YuShiRuanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="78" />
+		<Row Name="ICON_EQUIPMENT_HanBingZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="79" />
+		<Row Name="ICON_EQUIPMENT_HanBingJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="80" />
+		<Row Name="ICON_EQUIPMENT_HanBingBaoShi" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="81" />
+		<Row Name="ICON_EQUIPMENT_ZhongPaoZhanGong" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="82" />
+		<Row Name="ICON_EQUIPMENT_ZhongPaoZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="83" />
+		<Row Name="ICON_EQUIPMENT_ZhongPao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="84" />
+		<Row Name="ICON_EQUIPMENT_ZhongPaoZhanNu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="85" />
+		<Row Name="ICON_EQUIPMENT_ZhangBaSheMao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="86" />
+		<Row Name="ICON_EQUIPMENT_WuZhuiBaoJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="87" />
+		<Row Name="ICON_EQUIPMENT_TaXueWuZhui" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="88" />
+		<Row Name="ICON_EQUIPMENT_WuZhuiRuanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="89" />
+		<Row Name="ICON_EQUIPMENT_HuDanZhanJinQiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="90" />
+		<Row Name="ICON_EQUIPMENT_JinShaZhongKai" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="91" />
+		<Row Name="ICON_EQUIPMENT_LiFeiSha" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="92" />
+		<Row Name="ICON_EQUIPMENT_JinShaZhanPao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="93" />
+		<Row Name="ICON_EQUIPMENT_LongDanLiangYinQiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="94" />
+		<Row Name="ICON_EQUIPMENT_ShiZiYinJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="95" />
+		<Row Name="ICON_EQUIPMENT_ZhaoYuYeShiZi" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="96" />
+		<Row Name="ICON_EQUIPMENT_ShiZiYinKui" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="97" />
+		<Row Name="ICON_EQUIPMENT_QingLongYanYueDao" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="98" />
+		<Row Name="ICON_EQUIPMENT_WuShengJingKai" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="99" />
+		<Row Name="ICON_EQUIPMENT_ChiTuMa_B" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="100" />
+		<Row Name="ICON_EQUIPMENT_WuShengDaoPu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="101" />
+		<Row Name="ICON_EQUIPMENT_HanHuangBaoJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="102" />
+		<Row Name="ICON_EQUIPMENT_HanHuangBaoYu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="103" />
+		<Row Name="ICON_EQUIPMENT_BaoDiaoGong" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="104" />
+		<Row Name="ICON_EQUIPMENT_BaoDiaoJingJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="105" />
+		<Row Name="ICON_EQUIPMENT_LiaoYuanHuo" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="106" />
+		<Row Name="ICON_EQUIPMENT_QiLinQiang" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="107" />
+		<Row Name="ICON_EQUIPMENT_QiLinJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="108" />
+		<Row Name="ICON_EQUIPMENT_QiLinJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="109" />
+		<Row Name="ICON_EQUIPMENT_QiLinShenMu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="110" />
 	</IconDefinitions>
 </GameData>

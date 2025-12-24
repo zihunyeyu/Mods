@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<IconDefinitions>
+		<!-- 59式坦克-->
+		<Row Name="ICON_UNIT_59TANK"            Atlas="ICON_ATLAS_UNITS" Index="78"/>
+		<Row Name="ICON_UNIT_59TANK_PORTRAIT"	Atlas="ICON_ATLAS_UNIT_PORTRAITS_2" Index="12"/>
+		<Row Name="ICON_UNIT_59TANK_FOW"                     Atlas="ICON_ATLAS_UNITS_FOW" Index="78"/>
+		<Row Name="ICON_UNIT_59TANK_WHITE" Index="78" Atlas="ICON_ATLAS_UNIT_FLAG_SYMBOLS_WHITE"/>
+		<Row Name="ICON_UNIT_59TANK_BLACK" Index="78" Atlas="ICON_ATLAS_UNIT_FLAG_SYMBOLS_BLACK"/>
+		<!-- 神风特工队-->
+		<Row Name="ICON_UNIT_KAMIKAZE_BOMBER_WHITE" Index="81" Atlas="ICON_ATLAS_UNIT_FLAG_SYMBOLS_WHITE"/>
+		<Row Name="ICON_UNIT_KAMIKAZE_BOMBER_BLACK" Index="81" Atlas="ICON_ATLAS_UNIT_FLAG_SYMBOLS_BLACK"/>
+		<Row Name="ICON_UNIT_KAMIKAZE_BOMBER_PORTRAIT"         Atlas="ICON_ATLAS_UNIT_PORTRAITS_2" Index="15"/>
+		<Row Name="ICON_UNIT_KAMIKAZE_BOMBER"                   Atlas="ICON_ATLAS_UNITS" Index="81"/>
+		<Row Name="ICON_UNIT_KAMIKAZE_BOMBER_FOW"                   Atlas="ICON_ATLAS_UNITS_FOW" Index="81"/>
+	</IconDefinitions>
+</GameData>

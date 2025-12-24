@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<IconTextureAtlases>
+		<Row Name="ATLAS_ICON_GOLD_TRANSFER" IconSize="38" Filename="ICON_GOLD_TRANSFER_38"/>
+		<Row Name="ATLAS_ICON_GOLD_TRANSFER" IconSize="50" Filename="ICON_GOLD_TRANSFER_50"/>
+		<Row Name="ATLAS_ICON_GOLD_TRANSFER" IconSize="80" Filename="ICON_GOLD_TRANSFER_80"/>
+		<Row Name="ATLAS_ICON_GOLD_TRANSFER" IconSize="256" Filename="ICON_GOLD_TRANSFER_256"/>
+	</IconTextureAtlases>
+	<IconDefinitions>
+		<Row Name="ICON_GOLD_TRANSFER" Atlas="ATLAS_ICON_GOLD_TRANSFER" Index="0"/>
+	</IconDefinitions>
+</GameData>

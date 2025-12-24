@@ -1,0 +1,313 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="72654b13-5967-4cc8-a1ae-77761638d2f1" version="1">
+  <Properties>
+    <Name>20th Century Fantasy Extension Package</Name>
+    <Description>Extension Pack for 20th Century Fantasy Civilizations or Leaders.</Description>
+    <Created>1744463305</Created>
+    <Teaser>Extension Pack for 20th Century Civilizations or Leaders</Teaser>
+    <Authors>normal person</Authors>
+    <SpecialThanks>History</SpecialThanks>
+    <SupportsMultiplayer>0</SupportsMultiplayer>
+    <SupportsHotSeat>0</SupportsHotSeat>
+    <CompatibleVersions>2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="4873eb62-8ccc-4574-b784-dda455e74e68" title="Expansion: Gathering Storm" />
+    <Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="Expansion: Rise and Fall" />
+  </Dependencies>
+  <ActionCriteria>
+    <Criteria id="Expansion2">
+      <GameCoreInUse>Expansion2</GameCoreInUse>
+    </Criteria>
+    <Criteria id="SFDH_Vietnam_DLC">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+      <ModInUse>A3F42CD4-6C3E-4F5A-BC81-BE29E0C0B87C</ModInUse>
+    </Criteria>
+    <Criteria id="SFDH_Ethiopia_DLC">
+      <RuleSetInUse>RULESET_EXPANSION_2</RuleSetInUse>
+      <ModInUse>1B394FE9-23DC-4868-8F0A-5220CB8FB427</ModInUse>
+    </Criteria>
+    <Criteria id="SFDH_Monopolies_Mode">
+      <ConfigurationValueMatches>
+        <ConfigurationId>GAMEMODE_MONOPOLIES</ConfigurationId>
+        <Group>Game</Group>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="SFDH_SecretSocieties_Mode">
+      <ConfigurationValueMatches>
+        <ConfigurationId>GAMEMODE_SECRETSOCIETIES</ConfigurationId>
+        <Group>Game</Group>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="SFDH_Suk_Oceans">
+      <ModInUse>4922ba47-61e1-4b15-9281-db996b14522d</ModInUse>
+    </Criteria>
+    <Criteria id="MerchantVictory">
+      <ConfigurationValueMatches>
+        <ConfigurationId>CONFIG_MYN_MERCHANT_VIC</ConfigurationId>
+        <Group>Game</Group>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="APOCALYPSE_MODE">
+      <ConfigurationValueMatches>
+        <ConfigurationId>GAMEMODE_APOCALYPSE</ConfigurationId>
+        <Group>Game</Group>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="GranColombia_Maya">
+      <ModInUse>9DE86512-DE1A-400D-8C0A-AB46EBBF76B9</ModInUse>
+    </Criteria>
+    <Criteria id="Heroes_Mode">
+      <ConfigurationValueMatches>
+        <ConfigurationId>GAMEMODE_HEROES</ConfigurationId>
+        <Group>Game</Group>
+        <Value>1</Value>
+      </ConfigurationValueMatches>
+    </Criteria>
+    <Criteria id="BetterTradeModInUse">
+      <ModInUse>8d4fa23a-ef43-440c-8422-2bec11f8f5d7</ModInUse>
+    </Criteria>
+  </ActionCriteria>
+  <FrontEndActions>
+    <UpdateDatabase id="FantasyExtensionPack_Config">
+      <File>Data/FantasyExtensionPack_Config.xml</File>
+    </UpdateDatabase>
+    <UpdateText id="FantasyExtensionPack_ConfigText">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <File>Text/FantasyExtensionPack_ConfigText.xml</File>
+    </UpdateText>
+    <UpdateColors id="FantasyExtensionPack_Color">
+      <File>Data/FantasyExtensionPack_Colors.xml</File>
+    </UpdateColors>
+    <UpdateIcons id="FantasyExtensionPack_Icon">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <File>Icons/FantasyExtensionPack_Icons_Districts.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Leaders.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Units.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Civilizations.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Buildings.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_SQL.sql</File>
+    </UpdateIcons>
+    <UpdateArt id="FantasyExtensionPack_Arts">
+      <File>20th Century Fantasy Extension Package.dep</File>
+    </UpdateArt>
+  </FrontEndActions>
+  <InGameActions>
+    <UpdateDatabase id="FantasyExtensionPack_DB">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Data/FantasyExtensionPack_Buildings.xml</File>
+      <File>Data/FantasyExtensionPack_Civilizations.xml</File>
+      <File>Data/FantasyExtensionPack_Districts.xml</File>
+      <File>Data/FantasyExtensionPack_Units.xml</File>
+      <File>Data/FantasyExtensionPack_Governors.xml</File>
+      <File>Data/FantasyExtensionPack_Leaders.xml</File>
+      <File>Data/FantasyExtensionPack_Improvements.xml</File>
+      <File>Data/FantasyExtensionPack_Civilizations_SQL.sql</File>
+      <File>Data/FantasyExtensionPack_GreatPeople.xml</File>
+      <File>Data/FantasyExtensionPack_Buildings_SQL.sql</File>
+      <File>Data/FantasyExtensionPack_Notifications.xml</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="FantasyExtensionPack_Modifiers">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Requirements.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifiers.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Civilizations.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Leaders.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Districts.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Buildings.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Units.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Governors.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Improvements.sql</File>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Abilities.sql</File>
+    </UpdateDatabase>
+    <UpdateDatabase id="FantasyExtensionPack_Tables">
+      <Criteria>Expansion2</Criteria>
+      <File>Data/Modifiers/FantasyExtensionPack_Modifier_Tables.sql</File>
+    </UpdateDatabase>
+    <UpdateText id="FantasyExtensionPack_Text">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Text/FantasyExtensionPack_ConfigText.xml</File>
+      <File>Text/FantasyExtensionPack_Text_SQL.sql</File>
+      <File>Text/FantasyExtensionPack_Text.xml</File>
+      <File>Text/FantasyExtensionPack_UI_Text.xml</File>
+    </UpdateText>
+    <UpdateIcons id="FantasyExtensionPack_Icon">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <File>Icons/FantasyExtensionPack_Icons_Districts.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Governors.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Leaders.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Units.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_UI.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Civilizations.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_Buildings.xml</File>
+      <File>Icons/FantasyExtensionPack_Icons_SQL.sql</File>
+      <File>Icons/FantasyExtensionPack_Icons_Notifications.xml</File>
+    </UpdateIcons>
+    <UpdateColors id="FantasyExtensionPack_Color">
+      <File>Data/FantasyExtensionPack_Colors.xml</File>
+    </UpdateColors>
+    <AddGameplayScripts id="FantasyExtensionPack_ScriptsInGame">
+      <Properties>
+        <LoadOrder>100</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/InGame/FantasyExtensionPack_Script_Support.lua</File>
+      <File>Scripts/InGame/FantasyExtensionPack_Script_Utils.lua</File>
+      <File>Scripts/InGame/FantasyExtensionPack_Script_Gameplay.lua</File>
+      <File>Scripts/InGame/FantasyExtensionPack_Script_SacrificeUnit.lua</File>
+    </AddGameplayScripts>
+    <AddUserInterfaces id="FantasyExtensionPack_ScriptsUIBase">
+      <Properties>
+        <LoadOrder>1000</LoadOrder>
+        <Context>InGame</Context>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Additions/ContextBase.xml</File>
+    </AddUserInterfaces>
+    <AddUserInterfaces id="FantasyExtensionPack_ScriptsUI">
+      <Properties>
+        <Context>InGame</Context>
+        <LoadOrder>200</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Additions/GoldToProduction.xml</File>
+      <File>Scripts/UI/Additions/Gyokusai.xml</File>
+      <File>Scripts/UI/Additions/OneCountryTwoSystem.xml</File>
+      <File>Scripts/UI/Additions/GoldBottleLot.xml</File>
+      <File>Scripts/UI/Additions/AdditionalButtons.xml</File>
+    </AddUserInterfaces>
+    <ImportFiles id="FantasyExtensionPack_ImportFilesBase">
+      <Properties>
+        <LoadOrder>1000</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Additions/ContextBase.lua</File>
+    </ImportFiles>
+    <ImportFiles id="FantasyExtensionPack_ImportFiles">
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Additions/GoldToProduction.lua</File>
+      <File>Scripts/UI/Additions/Gyokusai.lua</File>
+      <File>Scripts/UI/Additions/OneCountryTwoSystem.lua</File>
+      <File>Scripts/UI/Additions/GoldBottleLot.lua</File>
+      <File>Scripts/UI/Additions/AdditionalButtons.lua</File>
+    </ImportFiles>
+    <UpdateAudio id="FantasyExtensionPack_Audios">
+      <File>Platforms/Windows/Audio/banzai_audio.ini</File>
+      <File>Platforms/Windows/Audio/SB_Banzai.bnk</File>
+      <File>Platforms/Windows/Audio/SoundbanksInfo.xml</File>
+    </UpdateAudio>
+    <UpdateArt id="FantasyExtensionPack_Art">
+      <File>20th Century Fantasy Extension Package.dep</File>
+    </UpdateArt>
+    <ReplaceUIScript id="UnitPanel_20CFT">
+      <Properties>
+        <LuaContext>UnitPanel</LuaContext>
+        <LuaReplace>Scripts/UI/Replacements/UnitPanel_20CFT.lua</LuaReplace>
+        <LoadOrder>200202</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+    </ReplaceUIScript>
+    <ImportFiles id="ReplacementImportFiles">
+      <Properties>
+        <LoadOrder>200201</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <File>Scripts/UI/Replacements/UnitPanel_20CFT.lua</File>
+      <File>Scripts/UI/20CFT_UnitCommandDefs.lua</File>
+    </ImportFiles>
+  </InGameActions>
+  <Files>
+    <File>20th Century Fantasy Extension Package.dep</File>
+    <File>ArtDefs/Buildings.artdef</File>
+    <File>ArtDefs/Districts.artdef</File>
+    <File>ArtDefs/FallbackLeaders.artdef</File>
+    <File>ArtDefs/Improvements.artdef</File>
+    <File>ArtDefs/Landmarks.artdef</File>
+    <File>ArtDefs/Leaders.artdef</File>
+    <File>ArtDefs/Units.artdef</File>
+    <File>Data/FantasyExtensionPack_Buildings.xml</File>
+    <File>Data/FantasyExtensionPack_Buildings_SQL.sql</File>
+    <File>Data/FantasyExtensionPack_Civilizations.xml</File>
+    <File>Data/FantasyExtensionPack_Civilizations_SQL.sql</File>
+    <File>Data/FantasyExtensionPack_Colors.xml</File>
+    <File>Data/FantasyExtensionPack_Config.xml</File>
+    <File>Data/FantasyExtensionPack_Districts.xml</File>
+    <File>Data/FantasyExtensionPack_Governors.xml</File>
+    <File>Data/FantasyExtensionPack_GreatPeople.xml</File>
+    <File>Data/FantasyExtensionPack_Improvements.xml</File>
+    <File>Data/FantasyExtensionPack_Leaders.xml</File>
+    <File>Data/FantasyExtensionPack_Notifications.xml</File>
+    <File>Data/FantasyExtensionPack_Units.xml</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifiers.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Abilities.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Buildings.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Civilizations.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Districts.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Governors.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Improvements.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Leaders.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Requirements.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Tables.sql</File>
+    <File>Data/Modifiers/FantasyExtensionPack_Modifier_Units.sql</File>
+    <File>Icons/FantasyExtensionPack_Icons_Buildings.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_Civilizations.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_Districts.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_Governors.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_Leaders.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_Notifications.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_SQL.sql</File>
+    <File>Icons/FantasyExtensionPack_Icons_UI.xml</File>
+    <File>Icons/FantasyExtensionPack_Icons_Units.xml</File>
+    <File>Platforms/MacOS/BLPs/20thMomentIllustrations.blp</File>
+    <File>Platforms/MacOS/BLPs/LeaderFallbacks.blp</File>
+    <File>Platforms/MacOS/BLPs/TexttureLeaders.blp</File>
+    <File>Platforms/MacOS/BLPs/TextureGovernors.blp</File>
+    <File>Platforms/MacOS/BLPs/TextureIcons.blp</File>
+    <File>Platforms/Windows/BLPs/20thMomentIllustrations.blp</File>
+    <File>Platforms/Windows/BLPs/LeaderFallbacks.blp</File>
+    <File>Platforms/Windows/BLPs/TexttureLeaders.blp</File>
+    <File>Platforms/Windows/BLPs/TextureGovernors.blp</File>
+    <File>Platforms/Windows/BLPs/TextureIcons.blp</File>
+    <File>Scripts/InGame/FantasyExtensionPack_Script_Gameplay.lua</File>
+    <File>Scripts/InGame/FantasyExtensionPack_Script_SacrificeUnit.lua</File>
+    <File>Scripts/InGame/FantasyExtensionPack_Script_Support.lua</File>
+    <File>Scripts/InGame/FantasyExtensionPack_Script_Utils.lua</File>
+    <File>Scripts/UI/20CFT_UnitCommandDefs.lua</File>
+    <File>Scripts/UI/Additions/AdditionalButtons.lua</File>
+    <File>Scripts/UI/Additions/AdditionalButtons.xml</File>
+    <File>Scripts/UI/Additions/ContextBase.lua</File>
+    <File>Scripts/UI/Additions/ContextBase.xml</File>
+    <File>Scripts/UI/Additions/GoldBottleLot.lua</File>
+    <File>Scripts/UI/Additions/GoldBottleLot.xml</File>
+    <File>Scripts/UI/Additions/GoldToProduction.lua</File>
+    <File>Scripts/UI/Additions/GoldToProduction.xml</File>
+    <File>Scripts/UI/Additions/Gyokusai.lua</File>
+    <File>Scripts/UI/Additions/Gyokusai.xml</File>
+    <File>Scripts/UI/Additions/OneCountryTwoSystem.lua</File>
+    <File>Scripts/UI/Additions/OneCountryTwoSystem.xml</File>
+    <File>Scripts/UI/Replacements/UnitPanel_20CFT.lua</File>
+    <File>Text/FantasyExtensionPack_ConfigText.xml</File>
+    <File>Text/FantasyExtensionPack_Text.xml</File>
+    <File>Text/FantasyExtensionPack_Text_SQL.sql</File>
+    <File>Text/FantasyExtensionPack_UI_Text.xml</File>
+  </Files>
+</Mod>

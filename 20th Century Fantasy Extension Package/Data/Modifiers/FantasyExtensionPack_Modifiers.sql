@@ -1,0 +1,61 @@
+--======================DynamicModifiers==============================
+INSERT INTO Types (Type, Kind)
+VALUES
+('MODIFIER_PLAYER_DISTRICTS_ATTACH_MODIFIER', 'KIND_MODIFIER');
+INSERT INTO DynamicModifiers (ModifierType, EffectType, CollectionType)
+VALUES
+('MODIFIER_PLAYER_DISTRICTS_ATTACH_MODIFIER', 'EFFECT_ATTACH_MODIFIER', 'COLLECTION_PLAYER_DISTRICTS');
+
+--======================通用MODIFIERS==============================
+-- 效果：可用信仰值购买陆地战斗单位。
+INSERT OR IGNORE INTO Modifiers(ModifierId, ModifierType)
+SELECT 'MODIFIER_FAITH_PURCHASE_BATTLE_LAND_UNIT_'||Tag, 'MODIFIER_PLAYER_CITIES_ENABLE_UNIT_FAITH_PURCHASE'
+FROM TCEP_UNIT_TAG WHERE UnitType='BATTLE_LAND';
+
+INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value)
+SELECT 'MODIFIER_FAITH_PURCHASE_BATTLE_LAND_UNIT_'||Tag, 'Tag', Tag
+FROM TCEP_UNIT_TAG WHERE UnitType='BATTLE_LAND';
+
+--====================================================
+-- 效果：建造区域及建筑时间减半。
+INSERT OR IGNORE INTO Modifiers(ModifierId, ModifierType)
+SELECT 'MODIFIER_BOOST_PRODUCTION_100PERCENT_'||DistrictType, 'MODIFIER_PLAYER_CITIES_ADJUST_DISTRICT_PRODUCTION'
+FROM Districts
+UNION SELECT 'MODIFIER_BOOST_PRODUCTION_100PERCENT_'||DistrictType||'_BUILDING', 'MODIFIER_PLAYER_CITIES_ADJUST_BUILDING_PRODUCTION'
+FROM Districts;
+
+INSERT OR IGNORE INTO ModifierArguments (ModifierId, Name, Value)
+SELECT 'MODIFIER_BOOST_PRODUCTION_100PERCENT_'||DistrictType, 'DistrictType', DistrictType
+FROM Districts
+UNION SELECT 'MODIFIER_BOOST_PRODUCTION_100PERCENT_'||DistrictType, 'Amount', 100
+FROM Districts
+UNION SELECT 'MODIFIER_BOOST_PRODUCTION_100PERCENT_'||DistrictType||'_BUILDING', 'DistrictType', DistrictType
+FROM Districts
+UNION SELECT 'MODIFIER_BOOST_PRODUCTION_100PERCENT_'||DistrictType||'_BUILDING', 'Amount', 100
+FROM Districts;
+
+--====================================================
+INSERT INTO Modifiers(ModifierId, ModifierType)
+VALUES
+-- 效果：单位增加移动力。
+('MODIFIER_RCMA_INCREASED_MOVEMENT', 'MODIFIER_PLAYER_UNIT_ADJUST_MOVEMENT'),
+-- 效果：单位增加战斗力。
+('MODIFIER_RCMA_INCREASED_STRENGTH', 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH');
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+VALUES
+('MODIFIER_RCMA_INCREASED_MOVEMENT', 'Amount', '1'),
+('MODIFIER_RCMA_INCREASED_STRENGTH', 'Amount', '5');
+
+INSERT INTO ModifierStrings (ModifierId, Context, Text)
+VALUES
+('MODIFIER_RCMA_INCREASED_STRENGTH', 'Preview', '{LOC_ABILITY_RCMA_INCREASED_STRENGTH_DESCRIPTION} {LOC_ABILITY_DESCRIPTOR_PREVIEW_TEXT}');
+
+--====================================================
+-- 效果：单位维护费用-2金币
+INSERT INTO Modifiers(ModifierId, ModifierType)
+VALUES
+('MODIFIER_UNIT_MAINTENANCE_DISCOUNT_2GOLD', 'MODIFIER_PLAYER_ADJUST_UNIT_MAINTENANCE_DISCOUNT');
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+VALUES
+('MODIFIER_UNIT_MAINTENANCE_DISCOUNT_2GOLD', 'Amount', '2');

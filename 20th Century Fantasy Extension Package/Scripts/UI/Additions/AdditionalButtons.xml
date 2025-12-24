@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- CivicTraits_Button -->
+<!-- Author: Konomi -->
+<!-- DateCreated: 4/6/2022 19:36:16 -->
+<Context FontStyle="Stroke">
+
+	<Instance Name="CivicTraitsItem">
+		<Button ID="CivicTraitsButton" Anchor="L,C" Size="49,49" Texture="LaunchBar_DetailedWonderReminder.dds"
+                Style="ButtonNormalText" StateOffsetIncrement="0,49" ToolTip="LOC_CIVIC_TRAITS_NAME">
+			<Image ID="CivicTraitsIcon" Size="35,35" Anchor="C,C" Offset="-2,0" Texture="DetailedWonderReminder40.dds"/>
+			<!--<Label ID="ReminderAlertIndicator" String="[ICON_New]" Anchor="R,T" AnchorSide="O,O" Offset="-18,-18" ToolTip="LOC_KNM_REMINDER_LAUNCH_NAME" Hidden="1"/>-->
+		</Button>
+	</Instance>
+
+	<Instance Name="CivicTraitsPinInstance">
+		<Image ID="ReminderPin" Anchor="L,C" Offset="0,-2" Size="7,7" Texture="LaunchBar_TrackPip"
+               Color="255,255,255,200"/>
+	</Instance>
+
+</Context>

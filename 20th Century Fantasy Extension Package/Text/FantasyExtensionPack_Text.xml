@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_CITY_NAME_DHARMSALA" Language="zh_Hans_CN">
+			<Text>达兰萨拉</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_LEADERS_PAGE_LEADER_DENGXIAOPING_QUOTE" Language="zh_Hans_CN">
+			<Text>发展才是硬道理！</Text>
+		</Row>
+		<Row Tag="LOC_LOADING_INFO_LEADER_DENGXIAOPING" Language="zh_Hans_CN">
+			<Text>你为种花家人民不懈奋斗的光辉一生，为推进种花家领导的伟大事业和开创种花家的建设新的伟大工程作出的不可磨灭的贡献，充分展现了一位伟大领袖的崇高品德、博大胸怀、卓越胆识和革命风格，为我们树立了光辉典范。</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_SHENZHEN" Language="zh_Hans_CN">
+			<Text>深圳</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_JIANGZEMIN_NAME" Language="zh_Hans_CN">
+			<Text>黑框眼镜</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_JIANGZEMIN_TITLE" Language="zh_Hans_CN">
+			<Text>改开践行者</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_JIANGZEMIN_SHORT_TITLE" Language="zh_Hans_CN">
+			<Text>改开践行者</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_JIANGZEMIN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>改开践行者{LOC_GOVERNOR_JIANGZEMIN_NAME}是一名专精于经济和政治的总督，拥有特殊的升级树。</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MODERNIZE_NAME" Language="zh_Hans_CN">
+			<Text>大步迈进现代化</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MODERNIZE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>此城市中生产的所有单位将+1 [ICON_Movement] 移动力。进入现代后，该加成翻倍。</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_TECHNOLOGY_PRODUCTION_NAME" Language="zh_Hans_CN">
+			<Text>科技是第一生产力！</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_TECHNOLOGY_PRODUCTION_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>城市中学院的相邻加成加倍；学院区域的 [ICON_Science] 科技值加成也提供 [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_REFORM_AND_OPENINGUP_NAME" Language="zh_Hans_CN">
+			<Text>改革开放</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_REFORM_AND_OPENINGUP_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>从此城开始的每条国际 [ICON_TradeRoute] 贸易路线+3 [ICON_Gold] 金币、+1 [ICON_Science] 科技值、+1 [ICON_Culture] 文化值；国内 [ICON_TradeRoute] 贸易路线+1 [ICON_Production] 生产力、+1 [ICON_Food] 食物。</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_TWO_SYSTEMS_NAME" Language="zh_Hans_CN">
+			<Text>一国两制</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_TWO_SYSTEMS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>该城市可选择另一不同政体并获得该政体的加成。</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_SPECIAL_ECONOMIC_ZONE_NAME" Language="zh_Hans_CN">
+			<Text>经济特区</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_SPECIAL_ECONOMIC_ZONE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>一回合一次，该城市可消耗等同于3倍 [ICON_Production] 生产力需求的[COLOR_FLOAT_GOLD] [ICON_Gold] 金币[ENDCOLOR]完成生产。</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MACRO_ECONOMY_CONTROL_NAME" Language="zh_Hans_CN">
+			<Text>宏观调控</Text>
+		</Row>
+		<Row Tag="LOC_GOVERNOR_PROMOTION_MACRO_ECONOMY_CONTROL_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>该城市6个单元格以内，每有一座国内城市，该城市+2 [ICON_Production] 生产力、+2 [ICON_Food] 食物，为这些城市提供+1全部产出和+1 [ICON_Amenities] 宜居度。该效果辐射城市（包含该城市）数量大于等于6时，上述加成翻倍。</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_MODERNIZE_MOVEMENT_BONUS_NAME" Language="zh_Hans_CN">
+			<Text>大步迈进现代化（能力）</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_MODERNIZE_MOVEMENT_BONUS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>大步迈进现代化：提供+1 [ICON_Movement] 移动力，进入现代后提供2点。</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_UNIT_59TANK_NAME" Language="zh_Hans_CN">
+			<Text>血腥镇压</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_UNIT_59TANK_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>血腥镇压：在学院或市政广场的6个单元格范围内时+4 [ICON_Strength] 战斗力</Text>
+		</Row>
+		<Row Tag="LOC_MODIFIER_UNIT_59TANK_COMBAT_BONUS_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+4 [ICON_Strength] 战斗力</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_RUIJIN" Language="zh_Hans_CN">
+			<Text>瑞金</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_RCMA_NAME" Language="zh_Hans_CN">
+			<Text>黄埔精训</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_RCMA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>黄埔精训：随机获得国军或共军标签并获得其能力。</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_RCMA_INCREASED_MOVEMENT_NAME" Language="zh_Hans_CN">
+			<Text>黄埔精训：共军</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_RCMA_INCREASED_MOVEMENT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>提供+1 [ICON_Movement] 移动力（共军）</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_RCMA_INCREASED_STRENGTH_NAME" Language="zh_Hans_CN">
+			<Text>黄埔精训：国军</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_RCMA_INCREASED_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>提供+5 [ICON_Strength] 战斗力（国军）</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_FARM_ADD_1_YIELD_FOOD" Language="zh_Hans_CN">
+			<Text>相邻农场提供+{1_num} [ICON_Food] 食物。</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_FARM_ADD_1_YIELD_PRODUCTION" Language="zh_Hans_CN">
+			<Text>相邻农场提供+{1_num} [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_FARM_ADD_1_YIELD_GOLD" Language="zh_Hans_CN">
+			<Text>相邻农场提供+{1_num} [ICON_GOLD] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_FARM_ADD_1_YIELD_CULTURE" Language="zh_Hans_CN">
+			<Text>相邻农场提供+{1_num} [ICON_Culture] 文化值。</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_FARM_ADD_1_YIELD_FAITH" Language="zh_Hans_CN">
+			<Text>相邻农场提供+{1_num} [ICON_Faith] 信仰值。</Text>
+		</Row>
+		<Row Tag="LOC_DISTRICT_FARM_ADD_1_YIELD_SCIENCE" Language="zh_Hans_CN">
+			<Text>相邻农场提供+{1_num} [ICON_SCIENCE] 科技值。</Text>
+		</Row>
+		<Row Tag="LOC_COZ_GOLD_FROM_COAST" Language="zh_Hans_CN">
+			<Text>+{1_num} [ICON_Gold] 金币来自相邻海岸、湖泊。</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_YASUKUNI" Language="zh_Hans_CN">
+			<Text>靖国招魂</Text>
+		</Row>
+		<Row Tag="LOC_NOTIFICATION_YASUKUNI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>{1_UNIT}阵亡，供奉于{2_CITY}的神社内，提供+1{3_YIELD}。</Text>
+		</Row>
+		<Row Tag="LOC_PEDIA_BUILDINGS_PAGE_BUILDING_YASUKUNI_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
+			<Text>靖国神社由1869年明治天皇下令建立的“东京招魂社”发展而来，只祭祀为天皇尽忠而死的人。通过将死者的灵位不分生前军衔等级平等地供奉起来，达到安抚亲人、动员战争的目的。靖国神社由鸟居、神乐殿、社务所、支社神殿、拜殿、游就馆、围栏等组成。占地10多万平方米，是日本近代史上军国主义对外侵略扩张的精神支柱。</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

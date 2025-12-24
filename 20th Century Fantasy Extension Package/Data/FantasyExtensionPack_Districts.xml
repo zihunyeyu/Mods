@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Types>
+		<Row Type="DISTRICT_COASTAL_OPEN_ZONE" Kind="KIND_DISTRICT" />
+		<Row Type="TRAIT_LEADER_DISTRICT_COASTAL_OPEN_ZONE" Kind="KIND_TRAIT" />
+	</Types>
+	<Traits>
+		<Row TraitType="TRAIT_LEADER_DISTRICT_COASTAL_OPEN_ZONE" Name="LOC_DISTRICT_COASTAL_OPEN_ZONE_NAME" Description="LOC_DISTRICT_COASTAL_OPEN_ZONE_DESCRIPTION" />
+	</Traits>
+	<DistrictReplaces>
+		<Row CivUniqueDistrictType="DISTRICT_COASTAL_OPEN_ZONE" ReplacesDistrictType="DISTRICT_COMMERCIAL_HUB" />
+	</DistrictReplaces>
+	<Districts>
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" Name="LOC_DISTRICT_COASTAL_OPEN_ZONE_NAME" Description="LOC_DISTRICT_COASTAL_OPEN_ZONE_DESCRIPTION" PrereqTech="TECH_CURRENCY" PlunderType="PLUNDER_GOLD" PlunderAmount="50" AdvisorType="ADVISOR_GENERIC" Cost="27" CostProgressionModel="COST_PROGRESSION_NUM_UNDER_AVG_PLUS_TECH" CostProgressionParam1="40" RequiresPlacement="true" RequiresPopulation="true" Aqueduct="false" NoAdjacentCity="false" InternalOnly="false" ZOC="false" CaptureRemovesBuildings="false" CaptureRemovesCityDefenses="false" MilitaryDomain="NO_DOMAIN" TravelTime="3" CityStrengthModifier="2" TraitType="TRAIT_LEADER_DISTRICT_COASTAL_OPEN_ZONE" />
+	</Districts>
+	<District_Adjacencies>
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldChangeId="River_Gold" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldChangeId="District_Gold" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldChangeId="Government_Gold" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldChangeId="TERRAIN_COAST_GOLD_COZ" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldChangeId="Harbor_Gold"/>
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldChangeId="RoyalDock_Gold"/>
+	</District_Adjacencies>
+	<District_GreatPersonPoints>
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" GreatPersonClassType="GREAT_PERSON_CLASS_MERCHANT" PointsPerTurn="1" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" GreatPersonClassType="GREAT_PERSON_CLASS_ENGINEER" PointsPerTurn="1" />
+	</District_GreatPersonPoints>
+	<District_TradeRouteYields>
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldType="YIELD_PRODUCTION" YieldChangeAsOrigin="0" YieldChangeAsDomesticDestination="1" YieldChangeAsInternationalDestination="0" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldType="YIELD_GOLD" YieldChangeAsOrigin="0" YieldChangeAsDomesticDestination="0" YieldChangeAsInternationalDestination="3" />
+	</District_TradeRouteYields>
+	<District_CitizenYieldChanges>
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldType="YIELD_GOLD" YieldChange="4" />
+		<Row DistrictType="DISTRICT_COASTAL_OPEN_ZONE" YieldType="YIELD_PRODUCTION" YieldChange="1" />
+	</District_CitizenYieldChanges>
+	<Adjacency_YieldChanges>
+		<Row ID="TERRAIN_COAST_GOLD_COZ" Description="LOC_COZ_GOLD_FROM_COAST" YieldType="YIELD_GOLD" YieldChange="2" TilesRequired="1" AdjacentTerrain="TERRAIN_COAST" />
+	</Adjacency_YieldChanges>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_DISTRICT" MomentDataType="MOMENT_DATA_DISTRICT" GameDataType="DISTRICT_COASTAL_OPEN_ZONE" Texture="Moment_Infrastructure_DISTRICT_COASTAL_OPEN_ZONE.dds"/>
+	</MomentIllustrations>
+</GameData>

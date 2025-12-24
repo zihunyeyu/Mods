@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FantasyExtensionPack_Icons_Notifications -->
+<!-- Author: PurpleSoul -->
+<!-- DateCreated: 12/1/2024 4:17:18 PM -->
+<GameData>
+	<IconDefinitions>
+		<Row Name="ICON_NOTIFICATION_YASUKUNI"				Atlas="ICON_ATLAS_EXPANSION2_NOTIFICATIONS" Index="6"/>
+	</IconDefinitions>
+</GameData>

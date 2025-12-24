@@ -669,8 +669,6 @@ function TradeRouteModifierInstance.GetItemYieldMultiplier(self, cityIndex)
             yieldMultiplier = yieldMultiplier + _city:GetGrowth():GetAmenities()
         elseif _cItem == CalculationItemType.FOLLOWER_OF_RELIGION then
             yieldMultiplier = yieldMultiplier + GetCityReligionFollowers(_city, self.Filters)
-        elseif _cItem == CalculationItemType.TRADE_R0UTE then
-            yieldMultiplier = yieldMultiplier + table.count(GetCityTradeRouteCount(_city, self.Filters))
         end
     end
 
@@ -680,20 +678,8 @@ function TradeRouteModifierInstance.GetItemYieldMultiplier(self, cityIndex)
         elseif self.Range == CalculationRangeType.CITIES then
             local player = Players[pID]
             local cities = player:GetCities()
-            if cItem == CalculationItemType.TRADE_R0UTE then
-                local tradeRoutes = {}
-                for _, pCity in cities:Members() do
-                    -- GetCityYieldMutilpier(pCity, cItem)
-                    local cityTradeRoutes = GetCityTradeRouteCount(pCity, self.Filters)
-                    for _, tradeRoute in ipairs(cityTradeRoutes) do
-                        tradeRoutes[tradeRoute] = true
-                    end
-                end
-                yieldMultiplier = yieldMultiplier + table.count(tradeRoutes)
-            else
-                for _, pCity in cities:Members() do
-                    GetCityYieldMutilpier(pCity, cItem)
-                end
+            for _, pCity in cities:Members() do
+                GetCityYieldMutilpier(pCity, cItem)
             end
         elseif self.Range == CalculationRangeType.PLAYER then
             local pPlayer = Players[pID]

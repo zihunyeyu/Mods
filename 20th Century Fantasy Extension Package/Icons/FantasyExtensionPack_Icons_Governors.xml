@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<IconTextureAtlases>
+        <Row Name="ATLAS_ICON_GOVERNOR_JIANGZEMIN" IconSize="32" Filename="ICON_GOVERNOR_JIANGZEMIN_32"/>
+        <Row Name="ATLAS_ICON_GOVERNOR_JIANGZEMIN" IconSize="64" Filename="ICON_GOVERNOR_JIANGZEMIN_64"/>
+		<Row Name="ATLAS_20TH_GOVERNOR_CITY_BANNER" IconSize="22" IconsPerRow="2" IconsPerColumn="1" Filename="20th_GovernorsCityBanner22"/>
+		<Row Name="ATLAS_20TH_GOVERNOR_CITY_BANNER" IconSize="32" IconsPerRow="2" IconsPerColumn="1" Filename="20th_GovernorsCityBanner32"/>
+	</IconTextureAtlases>
+	<IconDefinitions>
+		<Row Name="ICON_GOVERNOR_JIANGZEMIN" Atlas="ATLAS_ICON_GOVERNOR_JIANGZEMIN" Index="0"/>
+		<Row Name="ICON_GOVERNOR_JIANGZEMIN_FILL"   Atlas="ATLAS_20TH_GOVERNOR_CITY_BANNER" Index="0"/>
+		<Row Name="ICON_GOVERNOR_JIANGZEMIN_SLOT"   Atlas="ATLAS_20TH_GOVERNOR_CITY_BANNER" Index="1"/>
+	</IconDefinitions>
+</GameData>

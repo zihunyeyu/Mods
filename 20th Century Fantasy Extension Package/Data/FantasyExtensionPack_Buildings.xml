@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<GameData>
+	<Types>
+		<!-- 黄埔军校 -->
+		<Row Type="BUILDING_RCMA" Kind="KIND_BUILDING" />
+		<Row Type="TRAIT_BUILDING_RCMA" Kind="KIND_TRAIT" />
+		<!-- 军部 -->
+		<Row Type="BUILDING_GUNBU" Kind="KIND_BUILDING" />
+		<Row Type="TRAIT_BUILDING_GUNBU" Kind="KIND_TRAIT" />
+		<!-- 靖国神社 -->
+		<Row Type="BUILDING_YASUKUNI" Kind="KIND_BUILDING" />
+		<Row Type="TRAIT_BUILDING_YASUKUNI" Kind="KIND_TRAIT" />
+		<!-- 理化学研究所 -->
+		<Row Type="BUILDING_RIKEN" Kind="KIND_BUILDING" />
+		<Row Type="TRAIT_BUILDING_RIKEN" Kind="KIND_TRAIT" />
+		<!-- 测试神社 -->
+		<Row Type="BUILDING_TEST_SHRINE" Kind="KIND_BUILDING" />
+		<Row Type="TRAIT_BUILDING_TEST_SHRINE" Kind="KIND_TRAIT" />
+	</Types>
+	<BuildingReplaces>
+		<Row CivUniqueBuildingType="BUILDING_RCMA" ReplacesBuildingType="BUILDING_BARRACKS" />
+		<Row CivUniqueBuildingType="BUILDING_GUNBU" ReplacesBuildingType="BUILDING_BARRACKS" />
+		<Row CivUniqueBuildingType="BUILDING_YASUKUNI" ReplacesBuildingType="BUILDING_SHRINE" />
+		<Row CivUniqueBuildingType="BUILDING_RIKEN" ReplacesBuildingType="BUILDING_RESEARCH_LAB" />
+	</BuildingReplaces>
+	<Buildings>
+		<Row BuildingType="BUILDING_RCMA" Name="LOC_BUILDING_RCMA_NAME" Description="LOC_BUILDING_RCMA_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="90" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1" TraitType="TRAIT_BUILDING_RCMA" />
+		<Row BuildingType="BUILDING_GUNBU" Name="LOC_BUILDING_GUNBU_NAME" Description="LOC_BUILDING_GUNBU_DESCRIPTION" PrereqTech="TECH_BRONZE_WORKING" PrereqDistrict="DISTRICT_ENCAMPMENT" PurchaseYield="YIELD_GOLD" Cost="90" AdvisorType="ADVISOR_CONQUEST" Maintenance="1" CitizenSlots="1" Housing="1" TraitType="TRAIT_BUILDING_GUNBU" />
+		<Row BuildingType="BUILDING_YASUKUNI" Name="LOC_BUILDING_YASUKUNI_NAME" Description="LOC_BUILDING_YASUKUNI_DESCRIPTION" PrereqTech="TECH_ASTROLOGY" PrereqDistrict="DISTRICT_HOLY_SITE" PurchaseYield="YIELD_GOLD" Cost="70" AdvisorType="ADVISOR_RELIGIOUS" Maintenance="1" CitizenSlots="1" TraitType="TRAIT_BUILDING_YASUKUNI" />
+		<Row BuildingType="BUILDING_RIKEN" Name="LOC_BUILDING_RIKEN_NAME" Description="LOC_BUILDING_RIKEN_DESCRIPTION" PrereqTech="TECH_CHEMISTRY" PrereqDistrict="DISTRICT_CAMPUS" PurchaseYield="YIELD_GOLD" Cost="580" AdvisorType="ADVISOR_TECHNOLOGY" Maintenance="3" CitizenSlots="1" TraitType="TRAIT_BUILDING_RIKEN" />
+	</Buildings>
+	<MutuallyExclusiveBuildings>
+		<Row Building="BUILDING_RCMA" MutuallyExclusiveBuilding="BUILDING_STABLE" />
+		<Row Building="BUILDING_GUNBU" MutuallyExclusiveBuilding="BUILDING_STABLE" />
+	</MutuallyExclusiveBuildings>
+	<Building_YieldChanges>
+		<Row BuildingType="BUILDING_RCMA" YieldType="YIELD_PRODUCTION" YieldChange="1" />
+		<Row BuildingType="BUILDING_GUNBU" YieldType="YIELD_PRODUCTION" YieldChange="1" />
+		<Row BuildingType="BUILDING_YASUKUNI" YieldType="YIELD_FAITH" YieldChange="2" />
+		<Row BuildingType="BUILDING_RIKEN" YieldType="YIELD_SCIENCE" YieldChange="5" />
+	</Building_YieldChanges>
+	<BuildingPrereqs>
+		<Row Building="BUILDING_RIKEN" PrereqBuilding="BUILDING_UNIVERSITY" />
+	</BuildingPrereqs>
+	<Building_GreatPersonPoints>
+		<Row BuildingType="BUILDING_RCMA" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" PointsPerTurn="1" />
+		<Row BuildingType="BUILDING_GUNBU" GreatPersonClassType="GREAT_PERSON_CLASS_GENERAL" PointsPerTurn="1" />
+		<Row BuildingType="BUILDING_YASUKUNI" GreatPersonClassType="GREAT_PERSON_CLASS_PROPHET" PointsPerTurn="1" />
+		<Row BuildingType="BUILDING_RIKEN" GreatPersonClassType="GREAT_PERSON_CLASS_SCIENTIST" PointsPerTurn="1" />
+	</Building_GreatPersonPoints>
+	<Traits>
+		<Row TraitType="TRAIT_BUILDING_RCMA" Name="LOC_BUILDING_RCMA_NAME" Description="LOC_BUILDING_RCMA_DESCRIPTION" />
+		<Row TraitType="TRAIT_BUILDING_GUNBU" Name="LOC_BUILDING_GUNBU_NAME" Description="LOC_BUILDING_GUNBU_DESCRIPTION" />
+		<Row TraitType="TRAIT_BUILDING_YASUKUNI" Name="LOC_BUILDING_YASUKUNI_NAME" Description="LOC_BUILDING_YASUKUNI_DESCRIPTION" />
+		<Row TraitType="TRAIT_BUILDING_RIKEN" Name="LOC_BUILDING_RIKEN_NAME" Description="LOC_BUILDING_RIKEN_DESCRIPTION" />
+	</Traits>
+	<MomentIllustrations>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_RCMA" Texture="Moment_Infrastructure_BUILDING_RCMA.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_GUNBU" Texture="Moment_Infrastructure_BUILDING_GUNBU.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_YASUKUNI" Texture="Moment_Infrastructure_BUILDING_YASUKUNI.dds"/>
+		<Row MomentIllustrationType="MOMENT_ILLUSTRATION_UNIQUE_BUILDING" MomentDataType="MOMENT_DATA_BUILDING" GameDataType="BUILDING_RIKEN" Texture="Moment_Infrastructure_BUILDING_RIKEN.dds"/>
+	</MomentIllustrations>
+</GameData>

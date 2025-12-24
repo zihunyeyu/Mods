@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+	<Button ID="SpendGoldFinishProgressButton" Hidden="1" Size="44,53" Texture="UnitPanel_ActionButton" ToolTip="LOC_ACTION_PANEL_SGFP_TOOLTIP">
+			<Image ID="SpendGoldFinishProgressButtonIcon" Anchor="C,C" Offset="0,-2" Size="38,38" Icon="ICON_UNITOPERATION_MAKE_TRADE_ROUTE" />
+			<Image Anchor="R,B" Offset="0,5" Size="22,22" Icon="Gold" />
+			<Image Anchor="L,T" Offset="0,5" Size="22,22" Icon="Production" />
+	</Button>
+</Context>

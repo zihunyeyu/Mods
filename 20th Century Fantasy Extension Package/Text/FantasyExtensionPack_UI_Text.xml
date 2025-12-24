@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<LocalizedText>
+		<Row Tag="LOC_ACTION_PANEL_GYOUKUSAI_TOOLTIP" Language="zh_Hans_CN">
+			<Text>玉碎</Text>
+		</Row>
+		<Row Tag="LOC_KAMIKAZE_SACRIFICE" Language="zh_Hans_CN">
+			<Text>天皇陛下，万岁！</Text>
+		</Row>
+		<Row Tag="LOC_SGFP_NOT_ENOUGH_GOLD" Language="zh_Hans_CN">
+			<Text>加速 {1_Name} 还需要[COLOR_FLOAT_GOLD]{2_NeedGold} [ICON_Gold] 金币。[ENDCOLOR]</Text>
+		</Row>
+		<Row Tag="LOC_ACTION_PANEL_SGFP_TOOLTIP" Language="zh_Hans_CN">
+			<Text>使用 [ICON_Gold] 金币加速生产</Text>
+		</Row>
+		<Row Tag="LOC_ACTION_PANEL_OCTS_TOOLTIP" Language="zh_Hans_CN">
+			<Text>更改城市第二 [ICON_Government] 政体</Text>
+		</Row>
+		<Row Tag="LOC_OCTS_PANEL_TITLE" Language="zh_Hans_CN">
+			<Text>一国两制</Text>
+		</Row>
+		<Row Tag="LOC_FIRST_GOV_TAG" Language="zh_Hans_CN">
+			<Text>帝国政体：</Text>
+		</Row>
+		<Row Tag="LOC_SECOND_GOV_TAG" Language="zh_Hans_CN">
+			<Text>第二政体：</Text>
+		</Row>
+		<Row Tag="LOC_SECOND_GOV_CONFIRM_TIPS" Language="zh_Hans_CN">
+			<Text>是否确认选择 [COLOR_Civ6DarkRed]{1_GovName}[ENDCOLOR] 作为第二政体</Text>
+		</Row>
+		<Row Tag="LOC_GOLD_BOTTLE_LOT_TITLE" Language="zh_Hans_CN">
+			<Text>金瓶掣签</Text>
+		</Row>
+		<Row Tag="LOC_UNKNOWN_CIV" Language="zh_Hans_CN">
+			<Text>未知文明</Text>
+		</Row>
+		<Row Tag="LOC_UNKNOWN_DATE" Language="zh_Hans_CN">
+			<Text>未知时间</Text>
+		</Row>
+		<Row Tag="LOC_UNKNOWN_LEADER" Language="zh_Hans_CN">
+			<Text>未知领袖</Text>
+		</Row>
+		<Row Tag="LOC_UNKNOWN_INFO" Language="zh_Hans_CN">
+			<Text>未知信息</Text>
+		</Row>
+		<Row Tag="LOC_DEFEATED_INFO" Language="zh_Hans_CN">
+			<Text>被{1_LeaderName}击败于{2_EraDate}{3_Turn}</Text>
+		</Row>
+		<Row Tag="LOC_PILLAGE_HEADER" Language="zh_Hans_CN">
+			<Text>征服战利品</Text>
+		</Row>
+		<Row Tag="LOC_PILLAGE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>来自{1_CivName}：{2_LeaderName}</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

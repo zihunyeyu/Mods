@@ -1,0 +1,4 @@
+-- FantasyExtensionPack_Script_Support
+-- Author: PurpleSoul
+-- DateCreated: 11/13/2024 1:04:25 PM
+--------------------------------------------------------------

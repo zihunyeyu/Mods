@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<Types>
+		<Row Type="IMPROVEMENT_PORTAL" Kind="KIND_IMPROVEMENT"/>
+		<Row Type="TRAIT_IMPROVEMENT_PORTAL" Kind="KIND_TRAIT"/>
+	</Types>
+	<Improvements>
+		<Row ImprovementType="IMPROVEMENT_PORTAL" Name="LOC_IMPROVEMENT_PORTAL_NAME" Description="LOC_IMPROVEMENT_PORTAL_DESCRIPTION" 
+			 Icon="ICON_IMPROVEMENT_PORTAL" PlunderType="PLUNDER_HEAL" PlunderAmount="50" Buildable="true"/>
+	</Improvements>
+	<Improvement_ValidTerrains>
+		<Row ImprovementType="IMPROVEMENT_PORTAL" TerrainType="TERRAIN_PLAINS"/>
+		<Row ImprovementType="IMPROVEMENT_PORTAL" TerrainType="TERRAIN_GRASS"/>
+		<Row ImprovementType="IMPROVEMENT_PORTAL" TerrainType="TERRAIN_PLAINS_HILLS"/>
+		<Row ImprovementType="IMPROVEMENT_PORTAL" TerrainType="TERRAIN_GRASS_HILLS"/>
+	</Improvement_ValidTerrains>
+	<Improvement_ValidBuildUnits>
+		<Row ImprovementType="IMPROVEMENT_PORTAL" UnitType="UNIT_BUILDER"/>
+	</Improvement_ValidBuildUnits>
+	<Traits>
+		<Row TraitType="TRAIT_IMPROVEMENT_PORTAL" Name="LOC_IMPROVEMENT_PORTAL_NAME" Description="LOC_IMPROVEMENT_PORTAL_DESCRIPTION" />
+	</Traits>
+</GameData>

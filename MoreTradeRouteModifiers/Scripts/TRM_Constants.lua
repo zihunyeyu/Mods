@@ -91,10 +91,11 @@ CalculationItemType.AMENITIES               = 108 -- 宜居度
 CalculationItemType.FOLLOWER_OF_RELIGION    = 109 -- 信徒数量
 -- CalculationItemType.FOLLOWER_OF_DOMAIN_RELIGION = 110 -- 信徒数量（仅限本城市的主流宗教）
 -- CalculationItemType.FOLLOWER_OF_FOUNDED_RELIGION = 111 -- 信徒数量（仅限本城市所建宗教）
-CalculationItemType.TRADE_R0UTE             = 112 -- 贸易路线
+
 CalculationItemType.COUNTERS                = 150
 CalculationItemType.FOUNDED_NATURAL_W0NDERS = 151 -- 已发现自然奇观数量
 CalculationItemType.UNITS_KILLED            = 152 -- 击杀单位数量
+CalculationItemType.TRADE_R0UTE             = 153 -- 贸易路线
 
 CalculationItemName                         = {}
 setmetatable(CalculationItemName, MetalTableString)

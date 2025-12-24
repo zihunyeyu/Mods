@@ -1,0 +1,17 @@
+--====================================================
+INSERT INTO BuildingModifiers (BuildingType, ModifierId)
+VALUES
+-- 效果：黄埔军校训练士兵获得能力
+('BUILDING_RCMA', 'RCMA_GAIN_ABILITY_MODIFIER'),
+-- 效果：军部训练士兵获得能力
+('BUILDING_GUNBU', 'GUNBU_GAIN_ABILITY_MODIFIER');
+
+INSERT INTO Modifiers(ModifierId, ModifierType, Permanent)
+VALUES
+('RCMA_GAIN_ABILITY_MODIFIER', 'MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS', 1),
+('GUNBU_GAIN_ABILITY_MODIFIER', 'MODIFIER_SINGLE_CITY_GRANT_ABILITY_FOR_TRAINED_UNITS', 1);
+
+INSERT INTO ModifierArguments (ModifierId, Name, Value)
+VALUES
+('RCMA_GAIN_ABILITY_MODIFIER', 'AbilityType', 'ABILITY_RCMA'),
+('GUNBU_GAIN_ABILITY_MODIFIER', 'AbilityType', 'ABILITY_GUNBU');

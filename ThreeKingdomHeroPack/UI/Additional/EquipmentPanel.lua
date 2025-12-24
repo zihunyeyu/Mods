@@ -123,11 +123,9 @@ function GetEquiomentDescription(e)
     end
     local equipmentName = Locale.Lookup(equipment.Name)
     local equipmentDescription = string.gsub(Locale.Lookup(equipment.Description), equipmentName .. '：', '')
-    if equipment.EquipmentType == 'EQUIPMENT_ARMOR' then
-        local armorValue = equipment.Parameter1
-        if armorValue then
-            equipmentDescription = equipmentDescription .. '[NEWLINE]护甲值：' .. armorValue
-        end
+    local armorValue = equipment.Parameter1
+    if armorValue and armorValue ~= 0 then
+        equipmentDescription = equipmentDescription .. '[NEWLINE]护甲值：' .. armorValue
     end
 
     return equipmentDescription

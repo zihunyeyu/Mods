@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- FantasyExtensionPack_GreatPeople -->
+<!-- Author: PurpleSoul -->
+<!-- DateCreated: 11/12/2024 10:11:28 PM -->
+<GameData>
+	<Types>
+		<Row Type="GREAT_PERSON_CLASS_STRATEGIST" Kind="KIND_GREAT_PERSON_CLASS" />
+		<Row Type="GREAT_PERSON_INDIVIDUAL_HAN_XIN" Kind="KIND_GREAT_PERSON_INDIVIDUAL" />
+	</Types>
+	<GreatPersonClasses>
+		<Row GreatPersonClassType="GREAT_PERSON_CLASS_STRATEGIST" Name="LOC_GREAT_PERSON_CLASS_STRATEGIST_NAME" UnitType="UNIT_GREAT_MUSICIAN" DistrictType="DISTRICT_THEATER" PseudoYieldType="PSEUDOYIELD_GPP_MUSICIAN" IconString="[ICON_GreatMusician]" ActionIcon="ICON_UNITOPERATION_MUSICIAN_ACTION" />
+	</GreatPersonClasses>
+	<GreatPersonIndividuals>
+		<Row GreatPersonIndividualType="GREAT_PERSON_INDIVIDUAL_HAN_XIN" Name="LOC_GREAT_PERSON_INDIVIDUAL_HAN_XIN_NAME" GreatPersonClassType="GREAT_PERSON_CLASS_STRATEGIST" EraType="ERA_INDUSTRIAL" ActionCharges="0" Gender="M" />
+	</GreatPersonIndividuals>
+</GameData>

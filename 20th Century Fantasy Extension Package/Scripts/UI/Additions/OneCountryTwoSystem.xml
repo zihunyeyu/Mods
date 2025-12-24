@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context>
+	<Stack ID="OCTSButtons" Anchor="R,B" Size="auto,41" AutoSizePadding="6,0" Texture="SelectionPanel_ActionGroupSlot" SliceCorner="5,19" SliceSize="1,1" SliceTextureSize="12,41" ConsumeMouse="1" Alpha="0.75" StackGrowth="Right">
+		<Button Hidden="1" ID="ExtraGovButton" Size="44,53" Texture="UnitPanel_ActionButton" ToolTip="LOC_ACTION_PANEL_OCTS_TOOLTIP">
+			<Image ID="ExtraGovButtonIcon" Anchor="C,C" Offset="0,-2" Size="38,38" Icon="ICON_UNITOPERATION_MAKE_TRADE_ROUTE" />
+			<!-- <Box ID="ExtraGovButtonInputShield" Offset="0,-2" Size="parent,parent" ConsumeMouseButton="1" Color="0,0,0,0"/> -->
+			<!-- <Image ID="InputShieldIcon" Anchor="C,C" Offset="0,-2" Size="38,38" Icon="ICON_UNITCOMMAND_CANCEL" /> -->
+		</Button>
+	</Stack>
+	<Container ID="Vignette" Style="FullScreenVignetteConsumer" />
+	<BoxButton ID="ScreenConsumer" Color="0,0,0,0" Size="parent,parent" ConsumeMouse="1" />
+	<Container ID="OCTSContainer" Anchor="C,C" Size="parent,550">
+		<!-- 主框架背景图 -->
+		<Image ConsumeMouse="1" Size="Parent,Parent" Texture="Wood_Pattern" StretchMode="Tile" />
+		<!-- Title -->
+		<Grid ID="FrameTitleGrid" Size="parent,40" Texture="Controls_SubHeader2" ConsumeMouse="1" SliceCorner="20,2" SliceTextureSize="40,40">
+			<Label ID="FrameTitleLabel" Anchor="C,C" Style="FontFlair24" FontStyle="glow" ColorSet="ShellHeader" SmallCaps="28" SmallCapsLeading="0" SmallCapsType="EveryWord" String="LOC_OCTS_PANEL_TITLE" />
+		</Grid>
+		<!-- 外边框Frame -->
+		<Grid ID="FrameBorder" Anchor="C,C" Size="parent+16,parent+16" Style="ScreenFrame" />
+		<!-- 滚动内容框架 -->
+		<Grid ID="OCTSBodyGrid" Anchor="C,C" Size="parent, parent-40" Offset="0,20">
+			<ScrollPanel ID="OCTSScrollPanel" Anchor="C,T" Size="parent,parent" Offset="0,0" Vertical="1" AutoScrollBar="1" FullClip="1">
+				<Stack ID="OCTSContainerStack" Anchor="C,T" Offset="0,0" StackGrowth="Bottom" StackPadding="8" WrapGrowth="Down" />
+				<ScrollBar Anchor="R,C" Size="15,parent" AnchorSide="I,I" Offset="0,0" Style="ScrollVerticalBar" Color="110,106,90,255">
+					<Thumb Style="ScrollThumbHAlt" Size="10,4" Color="110,106,90,255" />
+				</ScrollBar>
+			</ScrollPanel>
+		</Grid>
+		<Button ID="ScreenCloseButton" Anchor="R,T" Style="CloseButtonLarge" Offset="-8,-5" />
+	</Container>
+	<Instance Name="GovLevelInstance">
+		<Container ID="GovLevelInstanceContainer" Anchor="C,T" Size="parent,auto">
+			<Label ID="GovLevelInstanceTitle" Anchor="C,T" Offset="0,10" Style="FontFlair20" FontStyle="glow" ColorSet="ShellHeader" SmallCaps="28" SmallCapsLeading="0" SmallCapsType="EveryWord" />
+			<Stack ID="GovItemInstanceStack" Anchor="C,T" Offset="0,40" StackPadding="2" StackGrowth="Right" WrapWidth="parent-20" WrapGrowth="Down" />
+			<Box Size="parent,2" Color="0,0,0,40" />
+		</Container>
+	</Instance>
+	<Instance Name="GovernmentItemInstance">
+		<GridButton ID="Top" Size="352,238" Texture="Governments_Backing" SliceCorner="180,70" SliceTextureSize="352,145">
+			<GridButton ID="Selected" Size="parent,parent" Texture="Governments_BackingSelected" SliceCorner="180,70" SliceTextureSize="352,145" />
+			<Stack ID="GovernmentContentStack" StackGrowth="Down">
+				<Container Size="parent,42">
+					<Label ID="GovernmentName" Anchor="C,C" Offset="0,7" String="$GovernmentName$" Style="FontFlair20" FontSize="14" SmallCaps="18" FontStyle="glow" Color0="9,46,75,255" Color1="16,43,67,100" TruncateWidth="200" TruncatedTooltip="1" />
+					<Label ID="GovernmentExtra" Anchor="R,C" Offset="20,5" String="[ICON_Government]" Style="FontFlair20" FontSize="14" Color="0,0,0,255" />
+				</Container>
+				<Container Size="336,93" Anchor="C,T">
+					<Image ID="GovernmentImage" Anchor="C,C" Offset="0,0" Size="330,83" Texture="GOVERNMENT_AUTOCRACY" TextureOffset="0,80" />
+					<Grid ID="ImageFrame" Anchor="C,C" Offset="0,0" Size="336,93" Texture="Governments_ImageFrame" SliceCorner="168,20" SliceTextureSize="336,91" />
+				</Container>
+				<Stack ID="BonusStack" Anchor="C,T" Offset="0,-2" StackGrowth="Down" Padding="0">
+					<Container Size="2,2" />
+					<Grid ID="GovernmentBonusBacking" Anchor="C,T" Offset="0,0" Size="290,auto" Texture="Controls_SubContainer2" SliceCorner="17,17" SliceSize="1,1" SliceTextureSize="36,35" Color="GovBonusSelected" MinSize="36,35" AutoSizePadding="0,3">
+						<Label ID="GovernmentBonus" Anchor="C,C" Offset="0,1" TruncateHeight="27" TruncatedTooltip="1" Color0="9,46,75,255" Color1="9,46,75,20" WrapWidth="275" Style="BodyText12" />
+					</Grid>
+					<Container Size="2,4" />
+					<Grid ID="GovPercentBonusArea" Anchor="C,T" Offset="0,0" Size="290,auto" Texture="Controls_SubContainer2" SliceCorner="17,17" SliceSize="1,1" SliceTextureSize="36,35" Color="GovBonusSelected" MinSize="36,35" AutoSizePadding="0,0">
+						<Container Size="290,auto" Anchor="C,C" MinSize="36,35">
+							<Image ID="PercentImage" AnchorSide="O,I" Offset="-55,-3" Size="51,40" Texture="Governments_PercentWhite" Color="255,255,255,255">
+								<Label ID="BonusPercent" Anchor="C,C" Offset="-6,1" Color0="9,46,75,255" Color1="9,46,75,20" Style="FontFlair26" String="0" KerningAdjustment="-2" />
+							</Image>
+							<Container Offset="55,0" Anchor="L,C" Size="200,auto" MinSize="36,35">
+								<Label ID="BonusText" Anchor="C,C" Color0="9,46,75,255" Color1="9,46,75,20" String="$Bonus Text$" WrapWidth="200" Style="BodyText12" />
+							</Container>
+							<Image ID="QuillImage" Texture="Governments_LearnedPolicy" Size="40,47" Anchor="R,T" Offset="-18,-4" AnchorSide="O,I" />
+						</Container>
+					</Grid>
+					<Container Size="2,5" />
+				</Stack>
+			</Stack>
+			<Container Anchor="L,B" Size="parent,37" Offset="0,5">
+				<Image ID="ArtLeft" Anchor="L,T" Offset="4,0" Size="31,37" Texture="Governments_Leaf" />
+				<Image ID="ArtRight" Anchor="R,T" Offset="4,0" Size="31,37" Texture="Governments_Leaf" FlipX="1" />
+			</Container>
+			<GridButton ID="Disabled" Size="parent,parent" Texture="Governments_BackingSelected" SliceCorner="180,70" SliceSize="1,1" SliceTextureSize="352,145" Color="0,0,0,100" Hidden="1" />
+			<Container Anchor="C,T" Offset="0,48" Size="305,83">
+				<Stack ID="SlotStack" Anchor="C,C" StackGrowth="Right" />
+			</Container>
+			<Image ID="UnlockedIcon" Offset="5,5" Size="51,51" Texture="Controls_CircleBacking45">
+				<Image ID="CultureBacking" Anchor="C,C" Size="57,57" Texture="LaunchBar_Hook_CultureMeter_Backing" Hidden="0" Offset="-1,-2">
+					<Meter ID="CultureMeter" Anchor="C,C" Size="57,57" Texture="LaunchBar_Hook_CultureMeter_Fill" Percent="0" Follow="1" />
+				</Image>
+				<Image ID="PrereqCivicIcon" Anchor="C,C" Size="38,38" Texture="Civics38" Offset="-1,-2" />
+			</Image>
+		</GridButton>
+	</Instance>
+</Context>

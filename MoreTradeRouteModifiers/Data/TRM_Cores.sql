@@ -124,8 +124,8 @@ Value TEXT NOT NULL
 -- SAMPLES / TEST
 -- ======================================================
 
-INSERT INTO TRM_TraitTradeRouteModifier(TraitType, TradeRouteModifier)
-VALUES
+-- INSERT INTO TRM_TraitTradeRouteModifier(TraitType, TradeRouteModifier)
+-- VALUES
 
 -- =========================================
 -- 官方能力复刻
@@ -201,6 +201,10 @@ VALUES
 -- 此城中每有1位您所创建（或主流）宗教的信徒，国际与国内贸易路线提供的信仰值便+1。
 -- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_ADJUST_TRADE_ROUTE_YIELD_ORIGINATION_CITY_PER_FOLLOWER'),
 
+-- 纺织会馆
+-- 从此城开始的国际 [ICON_TradeRoute] 贸易路线+2 [ICON_Production] 生产力；国内 [ICON_TradeRoute] 贸易路线+4 [ICON_Gold] 金币。
+
+
 
 -- 桑科雷大学
 -- 与该城连接的其他文明贸易路线向城市提供+1科技值与+1金币。与该城连接的每条贸易路线提供+2科技值。国内贸易路线向该城额外提供+1信仰值。
@@ -250,7 +254,7 @@ VALUES
 -- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_EACH_FOUNDED_NATURAL_WONDER'),
 -- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_EACH_UNITS_KILLED'),
 -- 贸易路线数量
-('TRAIT_LEADER_MAJOR_CIV', 'TRM_EACH_TRADE_ROUTE');
+-- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_EACH_TRADE_ROUTE');
 -- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_TRADE_ROUTE_PATH_EACH_TRADE_C1TIES'),
 -- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_PLAYER_RELATIONSHIP'),
 -- ('TRAIT_LEADER_MAJOR_CIV', 'TRM_TRADE_ROUTE_PATH_EACH_CONTINENT'),
@@ -348,7 +352,7 @@ VALUES
 ('TRM_EACH_UNITS_KILLED', 'YieldType', 'YIELD_FAITH'),
 ('TRM_EACH_UNITS_KILLED', 'Amount', '2'),
 
-('TRM_EACH_TRADE_ROUTE', 'CalculationType', 'ORIGINATION_CITIES_EACH_TRADE_R0UTE'),
+('TRM_EACH_TRADE_ROUTE', 'CalculationType', 'ORIGINATION_PLAYER_EACH_TRADE_R0UTE'),
 ('TRM_EACH_TRADE_ROUTE', 'YieldType', 'YIELD_FAITH'),
 ('TRM_EACH_TRADE_ROUTE', 'Amount', '2'),
 
@@ -600,8 +604,6 @@ VALUES
 
 INSERT INTO TRM_TradeRouteModifierFilters(Filter, FilterType, Name, Value)
 VALUES
-('FILTER_TRADE_TYPE_ORIGINATION_INTERNATIONAL', 'Custom', 'TradeType', 'ORIGINATION_INTERNATIONAL'),
-
 -- 主流宗教
 ('FILTER_FOLLOWER_OF_DOMINANT_RELIGION', 'Custom', 'CityReligionFollowersType', 'DOMINANT'),
 ('FILTER_ORIGINATION_CITY_RANGE_3', 'Custom', 'CityCenterDistanceRange', 'ORIGINATION,3,999'),

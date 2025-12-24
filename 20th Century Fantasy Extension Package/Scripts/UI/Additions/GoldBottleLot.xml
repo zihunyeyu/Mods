@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Context xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="..\..\..\..\..\CivTech\Libs\ForgeUI\ForgeUI_Assets\Controls.xsd">
+	<Include File="CivilizationIcon" />
+	<!-- Instance -->
+	<Instance Name="CivTraitsInfoInstance">
+		<Container ID="CivTraitsInfoContainer" Size="350, 592">
+			<Container ID="Root" Size="parent,parent">
+				<!-- <Image Texture="Controls_GradientSmall" Size="22,parent" AnchorSide="O,I" Anchor="R,T" Color="0,0,0,255" Rotate="270" Offset="-2,0" /> -->
+				<!-- <Image Texture="Controls_GradientSmall" Size="22,parent" AnchorSide="O,I" Anchor="L,T" Color="0,0,0,255" Rotate="90" Offset="-2,0" /> -->
+				<!-- <Image Texture="Controls_Gradient" Size="parent,150" Anchor="L,T" Color="0,0,0,255" Offset="0,-20" /> -->
+				<!-- <Image Texture="Controls_Gradient" Size="parent,100" Anchor="L,B" Color="0,0,0,255" Offset="0,0" FlipY="1" /> -->
+				<Image ID="PlayerPanelWindow" Size="parent,parent" Offset="0,0" Texture="Controls_BannerWide" StretchMode="TileY">
+					<Container Anchor="C,T" Size="auto,88">
+						<Container Anchor="L,C" Size="62,62" Offset="-62,0">
+							<MakeInstance ID="CivIcon" Name="CivilizationIconShaded44" />
+							<Image Texture="Controls_CircleRim50" Size="50,50" Anchor="C,C" Offset="-1,-1" Color="255,255,255,50" />
+						</Container>
+						<Label ID="PlayerNameText" Anchor="C,C" Offset="0,-11" Align="C" Style="DiplomacyCivHeader" />
+						<Label ID="CivNameText" Anchor="C,C" Offset="0,13" Align="C" Style="DiplomacyCivHeader" />
+					</Container>
+					<Container ID="UniqueInfoContainer" StackGrowth="Down" StackPadding="10" Size="parent-20, parent-87" Anchor="C, B" Offset="0, 5">
+						<Label Align="center" Anchor="L,T" Offset="10,35" Size="parent, 14" ColorSet="ResTourismLabelCS" Style="FontFlair14" String="{LOC_LOADING_FEATURES_ABILITIES:upper}" SmallCapsType="EveryWord" SmallCaps="20" />
+						<ScrollPanel ID="LeaderInfoScrollPanel" Anchor="L,B" Size="parent-10,parent-50" Vertical="1" AutoScrollBar="1">
+							<Stack ID="FeaturesStack" Anchor="L,T" Offset="10,8" StackGrowth="Right" WrapWidth="400" WrapGrowth="Down" Padding="10" WrapPadding="14" />
+							<ScrollBar Anchor="L,T" AnchorSide="O,I" Size="11,parent" Style="Slider_Blue" Vertical="1" Offset="-2,-2" />
+						</ScrollPanel>
+					</Container>
+					<Container ID="WarInfoContent" Hidden="1" Anchor="C,B" Offset="0,30" Size="300,52" MinSize="300,52" Texture="Controls_GossipContainer" SliceTextureSize="32,32" SliceCorner="16,16">
+						<Image Anchor="L,T" Size="parent,parent" Texture="Parchment_Pattern" StretchMode="Tile" />
+						<GridButton ID="WarButton" Anchor="L,T" Offset="-25,-25" Size="parent+50,parent+50" InnerPadding="0,0" Texture="Controls_GoldBox" SliceTextureSize="64,64" SliceCorner="30,30" SliceSize="4,4" />
+						<Grid Anchor="L,T" Offset="4,4" Size="parent-8,parent-8" Padding="0,8" Texture="Controls_GossipContainer" SliceTextureSize="32,32" SliceCorner="16,16" Color="74,67,60,150">
+							<Stack Anchor="L,C" Offset="10,0" StackGrowth="Right" StackPadding="4">
+								<Image ID="WarStatusIconBack" Anchor="L,C" Size="38,38" Icon="ICON_NOTIFICATION_DECLARE_WAR" Color="0,0,0,200" StretchMode="Uniform">
+									<Image ID="WarStatusIcon" Anchor="L,C" Offset="3,-1" Size="32,32" Icon="ICON_NOTIFICATION_DECLARE_WAR" />
+								</Image>
+								<Label ID="WarMessage" Anchor="L,C" MinSize="205,14" WrapWidth="205" ColorSet="ParchmentBrown" Style="FontNormal14" />
+								<Button ID="WarExpandButton" Size="20,16" Color="30,30,30,255" Texture="Controls_ButtonExtendSmall" States="7" StateOffsetIncrement="0,16" />
+							</Stack>
+						</Grid>
+					</Container>
+					<Grid Texture="Controls_BannerBottom" Anchor="L,B" Offset="0,-4" Size="parent,32" SliceSize="1,30" SliceCorner="18,2" SliceTextureSize="37,32" />
+				</Image>
+			</Container>
+		</Container>
+	</Instance>
+	<Instance Name="GainTraitsHeaderInstance">
+		<Stack ID="Top" StackGrowth="Bottom" StackPadding="4">
+			<Label ID="Header" Style="FontFlair14" WrapWidth="300" SmallCapsType="EveryWord" SmallCaps="20" String="Test String" />
+			<Line Start="0,0" End="300,0" Width="2" Color="255,255,255,100" />
+			<Label ID="Description" Style="FontFlair14" WrapWidth="300" SmallCapsType="EveryWord" SmallCaps="20" String="Test String" />
+		</Stack>
+	</Instance>
+	<Instance Name="CivTraitTextInfoInstance">
+		<Stack ID="Top" StackGrowth="Bottom" StackPadding="4">
+			<Label ID="Header" Style="FontFlair14" WrapWidth="300" SmallCapsType="EveryWord" SmallCaps="20" String="$Header$" />
+			<Label ID="Description" Style="DawnText" WrapWidth="300" String="$Description$" />
+		</Stack>
+	</Instance>
+	<Instance Name="CivTraitIconInfoInstance">
+		<Container ID="Top" Size="300,auto">
+			<Image Texture="Controls_CircleRim40" Size="40,40" Offset="-5,-2" Color="255,255,255,150">
+				<Image ID="Icon" Size="32,32" Anchor="C,C" />
+			</Image>
+			<Stack ID="TextStack" Offset="36,0" StackGrowth="Bottom" StackPadding="4">
+				<Label ID="Header" WrapWidth="parent-40" SmallCapsType="EveryWord" SmallCaps="20" Style="FontFlair14" String="$Header$" />
+				<Label ID="Description" WrapWidth="parent-40" Style="DawnText" String="$Description$" />
+			</Stack>
+		</Container>
+	</Instance>
+	<Container ID="Vignette" Style="FullScreenVignetteConsumer" />
+	<BoxButton ID="ScreenConsumer" Color="0,0,0,0" Size="parent,parent" ConsumeMouse="1" />
+	<Container ID="CivicTraitsContainer" Anchor="C,C" Size="parent,650">
+		<!-- 主框架背景图 -->
+		<Image ConsumeMouse="1" Anchor="L,B" Size="Parent,Parent" Texture="Wood_Pattern" StretchMode="Tile" />
+		<!-- Title -->
+		<Grid ID="FrameTitleGrid" Size="parent,40" Texture="Controls_SubHeader2" ConsumeMouse="1" SliceCorner="20,2" SliceTextureSize="40,40">
+			<Label ID="FrameTitleLabel" Size="parent," Anchor="C,C" Style="FontFlair24" FontStyle="glow" ColorSet="ShellHeader" SmallCaps="28" SmallCapsLeading="0" SmallCapsType="EveryWord" String="LOC_GOLD_BOTTLE_LOT_TITLE" />
+		</Grid>
+		<!-- 外边框Frame -->
+		<Grid ID="FrameBorder" Anchor="C,C" Size="parent+16,parent+16" Style="ScreenFrame" />
+		<!-- 滚动内容框架 -->
+		<Grid ID="FrameCivTraitsGrid" Size="parent,parent-40" Offset="0, 40" Texture="Controls_SubHeader2" ConsumeMouse="1" SliceCorner="20,2" SliceTextureSize="40,40">
+			<ScrollPanel ID="CivTraitScroller" Offset="0,-10" Size="parent,parent+10" Vertical="0" AutoScrollBar="1">
+				<Image ID="CivTraitBackground" Offset="0,10" Size="parent,parent-10" Texture="Parchment_Pattern" StretchMode="Tile">
+					<Image Offset="0,0" Size="parent,217" Texture="Parchment_Ripple" FlipY="1" StretchMode="Tile" Alpha="1.0" />
+					<Image Anchor="L,B" Size="parent,217" Texture="Parchment_Ripple" FlipY="0" StretchMode="Tile" Alpha="1.0" />
+				</Image>
+				<ScrollBar ID="CivTraitScrollbar" Anchor="C,B" Offset="5,0" Size="parent-10,8" Style="ScrollHorizontalBar" Color="57,48,42,200">
+					<Thumb ID="CivTraitThumb" Style="ScrollThumb" Color="57,48,42,150" />
+				</ScrollBar>
+			</ScrollPanel>
+		</Grid>
+		<Button ID="ScreenCloseButton" Anchor="R,T" Style="CloseButtonLarge" Offset="-8,-5" />
+	</Container>
+</Context>

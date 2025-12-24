@@ -193,65 +193,6 @@ function GetReligionFounders()
     return res
 end
 
---- 获取城市贸易路线数量
----@param pCity any
----@param filters any
-function GetCityTradeRouteCount(pCity, filters)
-    if not pCity then
-        return {}
-    end
-
-    local playerID = pCity:GetOwner()
-    local cityID = pCity:GetID()
-
-    local m_TradeRouteModifierManager = Game:GetProperty('TradeRouteModifierInstanceManager') or {}
-    local tradeRoutes = {}
-
-    -- local tradeRouteID = table.concat({ originPlayerID, originCityID, targetPlayerID, targetCityID }, '-')
-    for trmID, _ in pairs(m_TradeRouteModifierManager) do
-        local tradeInfo = SplitString(trmID, '-')
-        local originPlayerID = tonumber(tradeInfo[1])
-        local originCityID = tonumber(tradeInfo[2])
-        local targetPlayerID = tonumber(tradeInfo[3])
-        local targetCityID = tonumber(tradeInfo[4])
-
-        -- print('Trade Route Info:', originPlayerID, originCityID, targetPlayerID, targetCityID, playerID, cityID)
-
-        if (originPlayerID == playerID and originCityID == cityID) or
-            (targetPlayerID == playerID and targetCityID == cityID) then
-            local isMatch = true
-            if filters and filters['Custom'] then
-                for key, values in pairs(filters['Custom']) do
-                    if key == 'TradeType' then
-                        if values[1] == 'ORIGINATION_INTERNATIONAL' then
-                            isMatch = (originPlayerID == playerID and originCityID == cityID) and
-                            originPlayerID ~= targetPlayerID
-                        elseif values[1] == 'ORIGINATION_DOMESTIC' then
-                            isMatch = (originPlayerID == playerID and originCityID == cityID) and
-                            originPlayerID == targetPlayerID
-                        elseif values[1] == 'DESTINATION_INTERNATIONAL' then
-                            isMatch = (targetPlayerID == playerID and targetCityID == cityID) and
-                            originPlayerID ~= targetPlayerID
-                        elseif values[1] == 'DESTINATION_DOMESTIC' then
-                            isMatch = (targetPlayerID == playerID and targetCityID == cityID) and
-                            originPlayerID == targetPlayerID
-                        end
-                    end
-                end
-            end
-            if isMatch then
-                -- tradeRouteCount = tradeRouteCount + 1
-                table.insert(tradeRoutes, trmID)
-            end
-        end
-    end
-
-    return tradeRoutes
-end
-
---- 获取城市宗教信徒
----@param pCity table
----@param filters table
 function GetCityReligionFollowers(pCity, filters)
     if not pCity then
         return 0

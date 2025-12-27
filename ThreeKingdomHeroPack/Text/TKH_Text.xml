@@ -2847,7 +2847,7 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DIAO_CHAN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				可在攻击后移动，3个单元格以内的远程单位攻击时+7 [ICON_Strength] 战斗力。
+				可在攻击后移动；3个单元格以内的远程单位攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROMOTION_TK_XIU_HUA_NAME" Language="zh_Hans_CN">
@@ -6705,7 +6705,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_XiangYaShuangGou_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				象牙双钩：攻击时+11战斗力
+				象牙双钩：攻击时+11 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JuXiangKaiJia_NAME" Language="zh_Hans_CN">
@@ -6715,7 +6715,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JuXiangKaiJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				巨象铠甲：防御时+10战斗力
+				巨象铠甲：防御时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_MengMaXiang_NAME" Language="zh_Hans_CN">
@@ -6725,7 +6725,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_MengMaXiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				猛犸象：+1移动。攻击+7战斗力
+				猛犸象：+1移动。攻击+7 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JuXiangZhanGu_NAME" Language="zh_Hans_CN">
@@ -6735,7 +6735,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JuXiangZhanGu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				巨象战鼓：周围5个单元格的所有单位攻击时+3战斗力
+				巨象战鼓：周围5个单元格的所有单位攻击时+3 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieShiDan_NAME" Language="zh_Hans_CN">
@@ -6745,7 +6745,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieShiDan_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				铁石弹：攻击时+8战斗力
+				铁石弹：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieXiangZhanJia_NAME" Language="zh_Hans_CN">
@@ -6755,7 +6755,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieXiangZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				铁象战甲：防御时+10战斗力
+				铁象战甲：防御时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieJiaXiang_NAME" Language="zh_Hans_CN">
@@ -6765,7 +6765,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieJiaXiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				铁甲象：+1移动。防御时+7战斗力
+				铁甲象：+1移动。防御时+7 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieXiangTongGu_NAME" Language="zh_Hans_CN">
@@ -6775,7 +6775,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TieXiangTongGu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				铁象铜鼓：周围5个单元格的所有单位防御时+3战斗力
+				铁象铜鼓：周围5个单元格的所有单位防御时+3 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HuoYanShenQiang_NAME" Language="zh_Hans_CN">
@@ -6785,7 +6785,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HuoYanShenQiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				火焱神枪：攻击时+10战斗力
+				火焱神枪：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HuoYanKaiJia_NAME" Language="zh_Hans_CN">
@@ -6795,7 +6795,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HuoYanKaiJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				火焱铠甲：防御时+8战斗力，一个单元格以内的敌方单位每回合掉血20点
+				火焱铠甲：防御时+8 [ICON_Strength] 战斗力，一个单元格以内的敌方单位每回合掉血20点
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LieYanShenJu_NAME" Language="zh_Hans_CN">
@@ -6825,7 +6825,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ManXueLiFu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				蛮血利斧：攻击时+12战斗力
+				蛮血利斧：攻击时+12 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ManXueTengJia_NAME" Language="zh_Hans_CN">
@@ -6835,7 +6835,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ManXueTengJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				蛮血藤甲：防御时+10战斗力。
+				蛮血藤甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ManXueShenJu_NAME" Language="zh_Hans_CN">
@@ -6865,7 +6865,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShuiMiaoShenGong_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				水淼神弓：攻击时+9战斗力
+				水淼神弓：攻击时+9 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShuiMiaoKaiJia_NAME" Language="zh_Hans_CN">
@@ -6875,7 +6875,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShuiMiaoKaiJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				水淼铠甲：防御时+8战斗力，一个单元格的敌方单位-1移动战斗力。
+				水淼铠甲：防御时+8 [ICON_Strength] 战斗力，一个单元格的敌方单位-1移动 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShuiMiaoZhanXiang_NAME" Language="zh_Hans_CN">
@@ -6905,7 +6905,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HeiShanYaRen_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				黑山牙刃：战斗时+5战斗力
+				黑山牙刃：战斗时+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TuYaoKaiJia_NAME" Language="zh_Hans_CN">
@@ -6915,7 +6915,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TuYaoKaiJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				土垚铠甲：防御时+8战斗力，每回合回复10点生命即使在攻击
+				土垚铠甲：防御时+8 [ICON_Strength] 战斗力，每回合回复10点生命即使在攻击
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_MoYan_NAME" Language="zh_Hans_CN">
@@ -6945,7 +6945,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HeiLeiJian_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				黑雷剑：攻击时+10战斗力
+				黑雷剑：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LeiMingZhanJia_NAME" Language="zh_Hans_CN">
@@ -6955,7 +6955,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LeiMingZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				雷鸣战甲：防御时+10战斗力。
+				雷鸣战甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhuiDian_NAME" Language="zh_Hans_CN">
@@ -6965,7 +6965,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhuiDian_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				追电：+2移动防御近战时+5战斗力
+				追电：+2移动防御近战时+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_DianYunDun_NAME" Language="zh_Hans_CN">
@@ -6975,7 +6975,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_DianYunDun_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				电云盾：在丘陵地貌防御时+10战斗力
+				电云盾：在丘陵地貌防御时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_XueYinZhangDao_NAME" Language="zh_Hans_CN">
@@ -6985,7 +6985,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_XueYinZhangDao_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				血饮长刀：攻击时+6战斗力
+				血饮长刀：攻击时+6 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YinXueZhanJia_NAME" Language="zh_Hans_CN">
@@ -6995,7 +6995,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YinXueZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				饮血战甲：防御时+8战斗力，攻击时+5%的吸血效果。
+				饮血战甲：防御时+8 [ICON_Strength] 战斗力，攻击时+5%的吸血效果。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YinXueJu_NAME" Language="zh_Hans_CN">
@@ -7005,7 +7005,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YinXueJu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				饮血驹：+1移动，攻击时+5%的吸血效果
+				饮血驹：+1 [ICON_Movement] 移动力，攻击时+5%的吸血效果
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YinXueDao_NAME" Language="zh_Hans_CN">
@@ -7025,7 +7025,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_SuTieJian_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				宿铁剑：攻击时+10战斗力
+				宿铁剑：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YunTieZhanJia_NAME" Language="zh_Hans_CN">
@@ -7035,7 +7035,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YunTieZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				陨铁战甲：防御时+8战斗力，+5%的减伤效果。
+				陨铁战甲：防御时+8 [ICON_Strength] 战斗力，+5%的减伤效果。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HeiTieJu_NAME" Language="zh_Hans_CN">
@@ -7045,7 +7045,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HeiTieJu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				黑铁驹：+1移动，+5%的减伤效果
+				黑铁驹：+1 [ICON_Movement] 移动力，+5%的减伤效果
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_XuanTieDun_NAME" Language="zh_Hans_CN">
@@ -7065,7 +7065,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YueYaJi_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				月牙戟：攻击时+8战斗力
+				月牙戟：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_CanYueZhanJia_NAME" Language="zh_Hans_CN">
@@ -7075,7 +7075,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_CanYueZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				残月战甲：防御时+8战斗力。
+				残月战甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_XiaoYue_NAME" Language="zh_Hans_CN">
@@ -7105,7 +7105,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JiShenGong_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				姬神弓：攻击时+9战斗力
+				姬神弓：攻击时+9 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JiShenZhanJia_NAME" Language="zh_Hans_CN">
@@ -7115,7 +7115,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JiShenZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				姬神战甲：防御时+10战斗力。
+				姬神战甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShenJi_NAME" Language="zh_Hans_CN">
@@ -7135,7 +7135,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JiShenDun_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				姬神盾：3个单元格的远程单位防御时+10战斗力
+				姬神盾：3个单元格的远程单位防御时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BingRiMoDao_NAME" Language="zh_Hans_CN">
@@ -7145,7 +7145,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BingRiMoDao_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				冰日魔刀：攻击时+8战斗力
+				冰日魔刀：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LieRiZhanJia_NAME" Language="zh_Hans_CN">
@@ -7155,7 +7155,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LieRiZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				烈日战甲：防御时+8战斗力。
+				烈日战甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LuoRi_NAME" Language="zh_Hans_CN">
@@ -7185,7 +7185,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_FangTianHuaJi_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				方天画戟：攻击时+14战斗力
+				方天画戟：攻击时+14 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_FeiJiangZhanJia_NAME" Language="zh_Hans_CN">
@@ -7195,7 +7195,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_FeiJiangZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				飞将战甲：防御时+10战斗力。
+				飞将战甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ChiTuMa_NAME" Language="zh_Hans_CN">
@@ -7205,7 +7205,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ChiTuMa_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				赤兔马：+2移动+4战斗力
+				赤兔马：+2移动+4 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_FeiJiangZhanGong_NAME" Language="zh_Hans_CN">
@@ -7215,7 +7215,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_FeiJiangZhanGong_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				飞将战弓：攻击有30%的概率使敌方丧失所有移动战斗力
+				飞将战弓：攻击有30%的概率使敌方丧失所有移动 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTianZhanQiang_NAME" Language="zh_Hans_CN">
@@ -7225,7 +7225,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTianZhanQiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				浑天战枪：攻击时+8战斗力
+				浑天战枪：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTianZhanJia_NAME" Language="zh_Hans_CN">
@@ -7235,7 +7235,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTianZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				浑天战甲：防御时+10战斗力。
+				浑天战甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunDun_NAME" Language="zh_Hans_CN">
@@ -7255,7 +7255,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTianChui_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				浑天锤：攻击有百分之30概率使单位丢失所有移动战斗力
+				浑天锤：攻击有百分之30概率使单位丢失所有移动 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuWangBaoJia_NAME" Language="zh_Hans_CN">
@@ -7265,7 +7265,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuWangBaoJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				吴王宝甲：防御时+10战斗力。
+				吴王宝甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuWangBaoYu_NAME" Language="zh_Hans_CN">
@@ -7285,7 +7285,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YuanYangJinJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				鸳鸯金甲：防御时+8战斗力。
+				鸳鸯金甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_YuanYangJu_NAME" Language="zh_Hans_CN">
@@ -7315,7 +7315,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BaWangZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				霸王战甲：防御时+8战斗力。
+				霸王战甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuZhuiMa_NAME" Language="zh_Hans_CN">
@@ -7325,7 +7325,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuZhuiMa_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				乌骓马：+2移动，防御时+5战斗力
+				乌骓马：+2 [ICON_Movement] 移动力，防御时+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BaWangZhanXue_NAME" Language="zh_Hans_CN">
@@ -7345,7 +7345,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_PiLiZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				霹雳战甲：防御时+8战斗力。
+				霹雳战甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_PiLiJu_NAME" Language="zh_Hans_CN">
@@ -7375,7 +7375,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShangJinZhanGong_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				赏金战弓：攻击时+10战斗力
+				赏金战弓：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShangJinZhanJia_NAME" Language="zh_Hans_CN">
@@ -7385,7 +7385,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShangJinZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				赏金战甲：防御时+10战斗力。
+				赏金战甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShangJinZhanMa_NAME" Language="zh_Hans_CN">
@@ -7405,7 +7405,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JinZhanBei_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				金盏杯：杀死一个单位获得该单位战斗战斗力×5的金币。
+				金盏杯：杀死一个单位获得该单位战斗 [ICON_Strength] 战斗力×5的金币。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WeiWangLinJia_NAME" Language="zh_Hans_CN">
@@ -7415,7 +7415,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WeiWangLinJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				魏王鳞甲：防御时+10战斗力。
+				魏王鳞甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WeiWangBaoYu_NAME" Language="zh_Hans_CN">
@@ -7435,7 +7435,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTieZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				浑铁战甲：防御时+8战斗力
+				浑铁战甲：防御时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HunTieShenJu_NAME" Language="zh_Hans_CN">
@@ -7465,7 +7465,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HeiShiZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				黑石战甲：防御时+8战斗力。
+				黑石战甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZuanShiShenJu_NAME" Language="zh_Hans_CN">
@@ -7495,7 +7495,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanBingZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				寒冰战甲：防御时+8战斗力。
+				寒冰战甲：防御时+8 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanBingJu_NAME" Language="zh_Hans_CN">
@@ -7505,7 +7505,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanBingJu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				寒冰驹：+1移动，+1视野
+				寒冰驹：+1 [ICON_Movement] 移动力，+1视野
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanBingBaoShi_NAME" Language="zh_Hans_CN">
@@ -7525,7 +7525,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhongPaoZhanGong_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				重炮战弓：攻击时+9战斗力
+				重炮战弓：攻击时+9 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhongPaoZhanJia_NAME" Language="zh_Hans_CN">
@@ -7535,7 +7535,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhongPaoZhanJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				重炮战甲：防御时+10战斗力。
+				重炮战甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhongPao_NAME" Language="zh_Hans_CN">
@@ -7555,7 +7555,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhongPaoZhanNu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				重炮战弩：攻击城市防御+10战斗力
+				重炮战弩：攻击城市防御+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhangBaSheMao_NAME" Language="zh_Hans_CN">
@@ -7565,7 +7565,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhangBaSheMao_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				丈八蛇矛：攻击时+12战斗力
+				丈八蛇矛：攻击时+12 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuZhuiBaoJia_NAME" Language="zh_Hans_CN">
@@ -7575,7 +7575,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuZhuiBaoJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				乌骓宝甲：防御时+10战斗力。
+				乌骓宝甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_TaXueWuZhui_NAME" Language="zh_Hans_CN">
@@ -7605,7 +7605,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HuDanZhanJinQiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				虎胆湛金枪：战斗时+7战斗力
+				虎胆湛金枪：战斗时+7 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JinShaZhongKai_NAME" Language="zh_Hans_CN">
@@ -7615,7 +7615,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JinShaZhongKai_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				金沙重铠：防御时+10战斗力。
+				金沙重铠：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LiFeiSha_NAME" Language="zh_Hans_CN">
@@ -7625,7 +7625,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LiFeiSha_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				里飞沙：+2移动，每回合回复10点生命或者护甲值
+				里飞沙：+2 [ICON_Movement] 移动力，每回合回复10点生命或者护甲值
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_JinShaZhanPao_NAME" Language="zh_Hans_CN">
@@ -7645,7 +7645,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LongDanLiangYinQiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				龙胆亮银枪：战斗时+8战斗力
+				龙胆亮银枪：战斗时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShiZiYinJia_NAME" Language="zh_Hans_CN">
@@ -7655,7 +7655,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ShiZiYinJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				狮子银甲：防御时+10战斗力。
+				狮子银甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ZhaoYuYeShiZi_NAME" Language="zh_Hans_CN">
@@ -7685,7 +7685,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				青龙偃月刀：攻击时+13战斗力
+				青龙偃月刀：攻击时+13 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuShengJingKai_NAME" Language="zh_Hans_CN">
@@ -7695,7 +7695,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuShengJingKai_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				武圣精铠：防御时+10战斗力。
+				武圣精铠：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ChiTuMa_NAME" Language="zh_Hans_CN">
@@ -7705,7 +7705,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_ChiTuMa_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				赤兔马：+2移动,+4战斗力
+				赤兔马：+2移动,+4 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuShengDaoPu_NAME" Language="zh_Hans_CN">
@@ -7715,7 +7715,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_WuShengDaoPu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				武圣刀谱：攻击时+6战斗力，每杀死1个单位，回复10点血量或者护甲值
+				武圣刀谱：攻击时+6 [ICON_Strength] 战斗力，每杀死1个单位，回复10点血量或者护甲值
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanHuangBaoJia_NAME" Language="zh_Hans_CN">
@@ -7725,7 +7725,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanHuangBaoJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				汉皇宝甲：防御时+10战斗力。
+				汉皇宝甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_HanHuangBaoYu_NAME" Language="zh_Hans_CN">
@@ -7745,7 +7745,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BaoDiaoGong_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				宝雕弓：攻击时+10战斗力
+				宝雕弓：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BaoDiaoJingJia_NAME" Language="zh_Hans_CN">
@@ -7755,7 +7755,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_BaoDiaoJingJia_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				宝雕精甲：防御时+10战斗力。
+				宝雕精甲：防御时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_LiaoYuanHuo_NAME" Language="zh_Hans_CN">
@@ -7775,7 +7775,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_QiLinQiang_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				麒麟枪：防御时+12战斗力
+				麒麟枪：防御时+12 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_QiLinJia_NAME" Language="zh_Hans_CN">
@@ -7795,7 +7795,7 @@
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_QiLinJu_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				麒麟驹：+2移动，每回合回复15点生命即使在攻击后
+				麒麟驹：+2 [ICON_Movement] 移动力，每回合回复15点生命即使在攻击后
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_EQUIPMENT_QiLinShenMu_NAME" Language="zh_Hans_CN">

@@ -334,6 +334,10 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         --     UnitManager.RestoreUnitAttacks(pUnit, true)
         --     Game:SetProperty('TKH_UNIT_HERO_TKH_GUAN_YU_RESTORE_TIMES', restoreTimes + 1)
         -- end
+    
+    elseif unitInfo.UnitType == 'UNIT_HERO_TKH_YAN_YUN_GUARD' then
+        -- 给特种兵“燕云卫”+一个技能（要不然太弱了，粘贴的时候漏掉了）每击杀一个单位，回复80点生命或者护甲值。
+        TreatUnit(pUnit, YAN_YUN_GUARD_KILL_HEAL)
     end
 
     -- 亮浩刀：击杀单位时有40%几率将其捕获为建造者（90%）或开拓者（10%）。

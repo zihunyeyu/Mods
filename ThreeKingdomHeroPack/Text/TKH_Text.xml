@@ -6262,7 +6262,7 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_KILL_STRENGTH_NAME" Language="zh_Hans_CN">
 			<Text>
-				特殊兵种老兵急啥加成
+				特殊兵种老兵击杀加成
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_KILL_STRENGTH_DESCRIPTION"

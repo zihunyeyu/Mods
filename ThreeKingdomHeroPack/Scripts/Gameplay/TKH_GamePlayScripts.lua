@@ -104,9 +104,10 @@ function AiCreatUnitInferno()
     for _, pPlyerID in ipairs(pAllPlayerIDs) do
         local player = Players[pPlyerID]
         if player ~= nil and not player:IsHuman() then
-            local playerResources = player:GetResources()
-            playerResources:ChangeResourceAmount(RESOURCE_IRON_INDEX, 5)
-            playerResources:ChangeResourceAmount(RESOURCE_HORSES_INDEX, 5)
+            -- +5马、+5铁
+            -- local playerResources = player:GetResources()
+            -- playerResources:ChangeResourceAmount(RESOURCE_IRON_INDEX, 5)
+            -- playerResources:ChangeResourceAmount(RESOURCE_HORSES_INDEX, 5)
 
             local cities = player:GetCities()
             if cities == nil then
@@ -135,11 +136,12 @@ function AiCreatUnitInferno()
                         UNIT_CUIRASSIER:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION);
                     end
                 end
-            end
 
-            for _, unit in player:GetUnits():Members() do
-                unit:SetProperty("TKH_AI_INFERNO_MODE_FLEX_STRENGTH",
-                    math.min(turn, AI_INFERNO_MODE_FLEX_STRENGTH_MAX))
+                -- 每回合增加攻击力
+                for _, unit in player:GetUnits():Members() do
+                    unit:SetProperty("TKH_AI_INFERNO_MODE_FLEX_STRENGTH",
+                        math.min(turn, AI_INFERNO_MODE_FLEX_STRENGTH_MAX))
+                end
             end
         end
     end

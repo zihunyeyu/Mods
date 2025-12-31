@@ -70,6 +70,10 @@ function CalculateRangeDamage(oDamage)
     end
 end
 
+--- 战斗伤害修改器
+---@param aUnit table 攻击单位
+---@param dUnit table 防守单位
+---@param info table 战斗信息
 function UnitCombatDamageModifier(aUnit, dUnit, info)
     local attack_damage = info.AttackerDamageTakenFromDefender
     local defend_damage = info.DefenderDamageTaken
@@ -109,6 +113,14 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
 
         if IsUnitHaveAbility(aUnit, 'ABILITY_UNIT_HERO_TKH_ZHANG_FEI') then
             defend_damage = defend_damage + 25
+        end
+
+        -- 武圣骁卫 武圣威压：攻击时有50%概率额外造成30%伤害。
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED') then
+            math.randomseed(GetRandomSeed())
+            if math.random() < FULL_PROMOTED_ABILITY_PARAMETERS.WU_SHENG_PROBABILITY then
+                defend_damage = math.floor(defend_damage * (1 + FULL_PROMOTED_ABILITY_PARAMETERS.WU_SHENG_RATE))
+            end
         end
     end
 

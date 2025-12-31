@@ -167,14 +167,7 @@ FROM UnitPromotions WHERE UnitPromotionType LIKE 'PROMOTION_TK_%'
 UNION SELECT UnitPromotionType||'_REPROMOTION', 'PromotionType', UnitPromotionType
 FROM UnitPromotions WHERE UnitPromotionType LIKE 'PROMOTION_TK_%';
 
-INSERT OR IGNORE INTO ModifierStrings (ModifierId, Context, Text)
-SELECT ModifierId, 'Preview', REPLACE('+{1_Amount} {LOC_'||ModifierId||'_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}','MODIFIER_','')
-FROM Modifiers WHERE ModifierId LIKE 'MODIFIER_PROMOTION_TK_%' AND ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH';
 
-
-INSERT OR REPLACE INTO ModifierStrings (ModifierId, Context, Text)
-VALUES
-('MODIFIER_PROMOTION_TK_YU_XUE', 'Preview', 'LOC_MODIFIER_PROMOTION_TK_YU_XUE');
 
 
 

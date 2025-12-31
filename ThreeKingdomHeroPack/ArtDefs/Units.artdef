@@ -3560,7 +3560,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
+										<m_fValue>1.350000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -3688,7 +3688,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
+										<m_fValue>1.500000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -3816,7 +3816,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
+										<m_fValue>1.250000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -3944,7 +3944,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
+										<m_fValue>1.250000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -4072,7 +4072,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
+										<m_fValue>1.250000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -4187,7 +4187,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.150000</m_fValue>
+										<m_fValue>1.250000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">
@@ -4443,7 +4443,7 @@
 							<m_Fields>
 								<m_Values>
 									<Element class="AssetObjects..FloatValue">
-										<m_fValue>1.000000</m_fValue>
+										<m_fValue>1.500000</m_fValue>
 										<m_ParamName text="Scale"/>
 									</Element>
 									<Element class="AssetObjects..IntValue">

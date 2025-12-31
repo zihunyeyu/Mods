@@ -4,7 +4,7 @@
     <Name>Three Kingdom Hero Mods</Name>
     <Description>This is a brief description of the mod.</Description>
     <CustomProperties></CustomProperties>
-    <Created>1766575161</Created>
+    <Created>1767106848</Created>
     <Teaser>This is a brief description of the mod.</Teaser>
     <Authors>purple soul</Authors>
     <CompatibleVersions>1.2,2.0</CompatibleVersions>
@@ -231,7 +231,6 @@
       <File>Data/Equipments/TKH_EquipmentsCivilopedia.sql</File>
       <File>Data/Replace/TKH_HeroesReplace.sql</File>
       <File>Data/Options/TKH_LuxuryTax.sql</File>
-      <File>Data/TKH_RequirementSets.sql</File>
     </UpdateDatabase>
     <UpdateText id="UpdateText">
       <Properties>
@@ -551,6 +550,14 @@
       </Properties>
       <File>Data/NewUnits/TKH_RelationshipAbilitiesRegister.sql</File>
     </UpdateDatabase>
+    <UpdateDatabase id="UpdateModifierStrings">
+      <Properties>
+        <LoadOrder>300200</LoadOrder>
+      </Properties>
+      <Criteria>Expansion2</Criteria>
+      <Criteria>Heroes_Mode</Criteria>
+      <File>Data/TKH_ModifierStrings.sql</File>
+    </UpdateDatabase>
   </InGameActions>
   <Files>
     <File>ArtDefs/Improvements.artdef</File>
@@ -584,6 +591,7 @@
     <File>Data/TKH_GreatPeoples.sql</File>
     <File>Data/TKH_Improvements.sql</File>
     <File>Data/TKH_LuxuryResource.sql</File>
+    <File>Data/TKH_ModifierStrings.sql</File>
     <File>Data/TKH_Notifications.sql</File>
     <File>Data/TKH_Projects.sql</File>
     <File>Data/TKH_Promotions.sql</File>

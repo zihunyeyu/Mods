@@ -619,22 +619,25 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         local unitType = unitInfo.UnitType
         if unit:GetHeroClassType() ~= -1 then
             if m_HeroRewardManager[unitType] then
-                local rewardReq = m_HeroRewardManager[unitType]['RewardNeed']
-                m_HeroRewardManager[unitType]['Prograss'] = m_HeroRewardManager[unitType]['Prograss'] + 1
-                if m_HeroRewardManager[unitType]['Prograss'] == rewardReq then
-                    local e = m_HeroRewardManager[unitType]['Equipment']
-                    local equipment = m_EquipmentManager[e]
-                    if equipment and equipment.Owner == -1 then
-                        local e_index = IndexOf(m_EquipmentAllocator, e)
-                        if e_index then
-                            table.remove(m_EquipmentAllocator, e_index)
-                            AllocateEquipmentToPlayerForReward(playerID, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL, e)
-                            SendEquipmentCreatedNotification(playerID, e, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
-                                unit:GetX(),
-                                unit:GetY())
+                for _, info in pairs(m_HeroRewardManager[unitType]) do
+
+                    local rewardReq = info['RewardNeed']
+                    info['Prograss'] = info['Prograss'] + 1
+                    if info['Prograss'] == rewardReq then
+                        local equipment = m_EquipmentManager[info['Equipment']]
+                        if equipment and equipment.Owner == -1 then
+                            local e_index = IndexOf(m_EquipmentAllocator, info['Equipment'])
+                            if e_index then
+                                table.remove(m_EquipmentAllocator, e_index)
+                                AllocateEquipmentToPlayerForReward(playerID, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL, info['Equipment'])
+                                SendEquipmentCreatedNotification(playerID, info['Equipment'], EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
+                                    unit:GetX(),
+                                    unit:GetY())
+                            end
                         end
                     end
                 end
+
                 Game:SetProperty('HeroRewardManager', m_HeroRewardManager)
             end
             local total_kill = unit:GetProperty("TKH_HERO_KILL_POINT") or 0
@@ -682,16 +685,16 @@ function InitializeEquipmentData()
             table.insert(m_EquipmentSuitManager[row.Suit].Equipments, row.Equipment)
         end
 
-        if row.RewardReqType == 'TOTAL_KILL' and row.ExclusiveHero and row.RewardParam1 then
-            local equipment = GameInfo.Equipments[row.Equipment]
-            if equipment then
-                m_HeroRewardManager['UNIT_HERO_TKH_' .. row.ExclusiveHero] = {
+        if row.ExclusiveHero and row.RewardParam1 then
+            m_HeroRewardManager['UNIT_HERO_TKH_' .. row.ExclusiveHero] = m_HeroRewardManager
+                ['UNIT_HERO_TKH_' .. row.ExclusiveHero] or {}
+            table.insert(m_HeroRewardManager['UNIT_HERO_TKH_' .. row.ExclusiveHero],
+                {
                     Equipment = row.Equipment,
                     RewardNeed = tonumber(row.RewardParam1),
                     Prograss = 0,
                     RewardType = 'TOTAL_KILL'
-                }
-            end
+                })
         end
     end
 

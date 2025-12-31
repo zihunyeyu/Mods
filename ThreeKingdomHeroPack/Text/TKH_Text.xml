@@ -36,8 +36,7 @@
 				青龙偃月刀：进攻时+13 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_ExclusiveHero_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），恢复10点生命值（义薄云天）
 			</Text>
@@ -525,8 +524,7 @@
 				1个单元格内的敌方陆地单位-10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_MU_LU_PROMOTION_DECREASE_STRENGTH_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_MU_LU_PROMOTION_DECREASE_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				象威：-10 [ICON_Strength] 战斗力。
 			</Text>
@@ -578,7 +576,7 @@
 		</Replace>
 		<Replace Tag="LOC_PROMOTION_TK_BAO_HE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				2个单元格以内的敌人获得：-1 [ICON_MOVEMENT] 移动力，攻击时-5 [ICON_Strength] 战斗力
+				3个单元格以内的敌人获得：-1 [ICON_MOVEMENT] 移动力，攻击时-5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_MODIFIER_PROMOTION_TK_BAO_HE" Language="zh_Hans_CN">
@@ -676,8 +674,7 @@
 				使1个单元格范围中的攻城类单位+1 [ICON_Range] 射程。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_CAO_CAO_PROMOTION_SIEGE_RANGE_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_CAO_CAO_PROMOTION_SIEGE_RANGE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				攻城类单位+1 [ICON_Range] 射程。
 			</Text>
@@ -712,8 +709,7 @@
 				远程单位+1攻击次数。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_SUN_QUAN_PROMOTION_RANGED_EX_RANGE_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_SUN_QUAN_PROMOTION_RANGED_EX_RANGE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				远程单位+1 [ICON_Range] 射程。
 			</Text>
@@ -993,20 +989,17 @@
 				攻击后可以移动；若击杀敌方单位，则恢复所有 [ICON_Movement] 移动力并能再次攻击。每个时代可以招募2个武圣骁卫。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_1"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
 			<Text>
 				在中国和世上许多地方，不时能看到供奉一名红面长须神祇的神龛和庙宇。这名神祇被称为关公、关帝、关圣帝君、迦蓝菩萨……在作为人类时，他则被称为关羽。东汉末年期间，关羽是忠于刘备的勇将。当刘备被军阀曹操击败不知所踪时，关羽被曹操所擒，但深得曹操厚礼相待。关羽以战功回报这份礼待，在白马之战时冲入敌阵斩杀敌将颜良。不过，关羽始终忠于刘备。当他听闻刘备所在之处时，他留书告辞并回到刘备阵营。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_2"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
 			<Text>
 				后来，孙权和刘备联盟，在赤壁之战击败曹操。三方势力争夺战略要地荆州的控制权。当刘备西进益州时，关羽留守荆州的根据地。在219年，关羽率军攻打樊城，此城由曹操的亲信曹仁驻守。曹操派遣七军援救樊城，但关羽证明他不仅是骁勇无比的战士，更是足智多谋的统帅。关羽利用秋季暴雨水淹七军，擒获敌方将领于禁和庞德，威震华夏。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_3"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
 			<Text>
 				然而，在关羽胜利的阴影之下，孙权密谋从昔日的盟友夺取荆州。他的将领吕蒙让士兵伪装成商人，渗透关羽大本营发动偷袭。加上驻守将领糜芳和士仁（《三国演义》中称为傅士仁）开城投降，关羽被切断补给，军心涣散。关羽往麦城撤退，却在途中被伏兵所擒，后被斩首。关羽被视为忠义的模范，为后世统治者与民众尊崇，最终被神格化，成为中国和世界各地华人社区最广受崇拜的神祇之一。
 			</Text>
@@ -1043,7 +1036,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_ZHANG_FEI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				张飞描述
+				张飞（？—221年），字益德   ，幽州涿郡（今河北省保定市涿州市） 人，汉末三国时期蜀汉名将。
+				张飞勇武过人，与关羽并称为“万人敌”。关羽年长数岁，张飞以兄事之 。中平元年（184年 ），黄巾起义爆发，刘备在涿县组织起了一支义勇军参与扑灭黄巾军的战争，张飞与关羽一起加入，随刘备辗转各地。三人情同兄弟，寝则同床，刘备出席各种宴会时，和关羽终日侍立在刘备身旁。建安元年（196年 ），张飞因交恶曹豹而被吕布所破。建安三年（198年 ），吕布败亡之后，张飞被任命为中郎将。建安五年（200年 ），刘备衣带诏事情泄漏，率领关羽、张飞逃走，杀徐州刺史车胄。后刘备战败，关羽被擒，刘备与张飞投奔袁绍。建安十三年（208年 ），刘备于长坂坡败退时，张飞仅率二十骑断后，据当阳桥厉声大喝，曹军无人敢逼近，刘备因此得以免难。
+				刘备入蜀后，张飞与诸葛亮、赵云进军西川，分定郡县。在抵达江州时义释了刘璋手下的巴郡太守严颜。在巴西之战中，击败魏国名将张郃。在武都之战中，兵败而还。章武元年（221年 ），刘备称帝建立蜀汉后，张飞晋升为车骑将军、领司隶校尉，封西乡侯。同年，张飞因为暴而无恩，被部将范强、张达杀害。谥号桓侯 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHANG_FEI_NAME" Language="zh_Hans_CN">
@@ -1088,7 +1083,10 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_MA_CHAO_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				马超描述
+				马超（176年—222年），字孟起 ，扶风茂陵人（今陕西兴平） ，马腾之子，汉伏波将军马援的后人。 汉末三国时期蜀汉名将。
+				马超少有健名 ，曹操曾多次征召马超入京为官，但都被马超拒绝。而后其父马腾入京被封为卫尉，马超就统领了马腾的部队。
+				建安十六年（211年），曹操治兵关中，马超联合关中诸侯韩遂等抵抗曹操，曾一度对曹操造成了极大的威胁，但被曹操用离间计击败退走，而后聚拢部队再次攻取陇上诸郡，失败后依附汉中张鲁。刘备攻打刘璋时，马超投降刘备，与刘备军合围成都，汉中之战后联名上书尊刘备为汉中王。章武元年（221年），刘备称帝建立蜀汉后，马超官至骠骑将军，领凉州牧，进封斄乡侯。
+				章武二年（222年），马超病逝，享年四十七岁，死后由其子马承嗣爵斄乡侯。马超之女配安平王刘理为妻 。刘禅时期被追谥为威侯。有剑术“出手法”流传后世。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_MA_CHAO_NAME" Language="zh_Hans_CN">
@@ -1133,7 +1131,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_HUANG_ZHONG_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				黄忠描述
+				黄忠（？—220年），字汉升，南阳（今河南省南阳市）人。东汉末年刘备麾下名将。
+				本为刘表部下中郎将，后归刘备，并助刘备攻破益州刘璋。建安二十四年（219年），定军山之战中，黄忠阵斩曹操部下名将夏侯渊，拜征西将军。刘备称汉中王后，加封后将军，赐关内侯。次年（220年），黄忠病逝。蜀汉景耀三年（260年） ，追谥为刚侯 。
+				黄忠在后世多以勇猛的老将形象出现于各类文学艺术作品中。《三国演义》里，刘备称汉中王后，将其封为“五虎上将”之一，而黄忠的名字在中国逐渐成为了老当益壮的代名词。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_HUANG_ZHONG_NAME" Language="zh_Hans_CN">
@@ -1178,7 +1178,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_DIAN_WEI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				典韦描述
+				典韦（？—197年），陈留己吾(今河南商丘市宁陵县己吾城村)人，东汉末年曹操部将。
+				典韦相貌魁梧，膂力过人。东汉初平年间（190年-193年），典韦投靠陈留太守张邈。后来归顺曹操，数有战功，拜为司马。兴平二年（195年），曹操与吕布在兖州开战，临时招募破陷敌阵的人选，典韦先占应募，战功赫赫，曹操拜典韦为都尉，引置于左右，让其带领亲兵数百人，常在军中大帐巡绕。
+				建安二年（197年），曹操征讨南阳张绣，绣先降而后叛，偷袭曹营。典韦据守营门死战，但死伤殆尽。典韦身受十余处重伤，仍持二敌人尸体力战，敌军不敢向前。典韦奋力拼杀，伤势严重，瞋目大骂而死。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DIAN_WEI_NAME" Language="zh_Hans_CN">
@@ -1223,7 +1225,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_XU_CHU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				许褚描述
+				许褚（生卒年不详），字仲康，谯国谯县（今安徽省亳州市谯城区）人。三国时曹魏将领。
+				许褚早年聚集当地青年和宗族几千家，筑壁垒抵抗贼寇。献帝建安元年（196年） ，许褚率部众归顺曹操，任都尉。其后，跟随曹操讨伐张绣 ，率领宿卫虎士作为先登，杀敌无数，官拜校尉。官渡之战中，徐他等人阴谋反叛，被许褚觉察杀死，曹操对许褚更加信任。后许褚随曹操包围邺城，奋力战斗，赐关内侯。
+				建安十六年（211年），讨伐韩遂、马超渡黄河时，许褚拼死护卫曹操，勉强渡到对岸。两军开战后，曹军击溃马超，许褚任武卫中郎将。许褚力大如虎，但并不聪明，因此军中称其“虎痴”。但其谨慎守法，沉默寡言，深得曹操爱惜，后升中坚将军。黄初元年（220年），曹操去世，许褚痛哭吐血。曹丕即位后，封许褚为万年亭侯，升武卫将军，总督中军宿卫禁兵。魏明帝即位后，封牟乡侯，食邑七百户，赐一子关内侯。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_XU_CHU_NAME" Language="zh_Hans_CN">
@@ -1253,7 +1257,7 @@
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_LIU_BEI_NAME" Language="zh_Hans_CN">
 			<Text>
-				丈八蛇矛
+				雌雄双股剑
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_LIU_BEI_NAME" Language="zh_Hans_CN">
@@ -1268,7 +1272,10 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_LIU_BEI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				刘备描述
+				汉昭烈帝刘备 （161年—223年6月10日），字玄德，汉族，涿郡涿县（今河北涿州大树楼桑村）人， 东汉末年政治家，三国蜀汉开国皇帝（221年5月15日 —223年6月10日 在位）。史家多称其为先主。
+				刘备是西汉汉景帝刘启之子中山靖王刘胜之后 ，少年时拜卢植为师，而后参与镇压黄巾起义。因为自身实力有限，刘备在东汉末年诸侯混战的过程中创业屡遭失败，   先后依附公孙瓒、陶谦、曹操、袁绍、刘表等多个诸侯。但因其始终坚持以德服人的行为准则，受到了四方名士的尊敬，陶谦、刘表表态放弃让自己的儿子继承基业，而是选择将自己的领地徐州、荆州让给刘备统领。
+				通过坚持不懈的努力，刘备于赤壁之战后，先后拿下荆州、益州，建立了蜀汉政权。而后因为关羽被东吴所害，刘备不听群臣劝阻，执意发动对吴国的战争。结果兵败夷陵，最终于章武三年（223年）病逝于白帝城，终年六十三岁，谥号昭烈皇帝，安葬于惠陵。 蜀汉未给刘备奉上庙号，汉国皇帝刘渊称其庙号为烈祖。
+				刘备弘毅宽厚，知人待士，百折不挠，其临死前举国托付给诸葛亮的行为被陈寿称赞为“古今之盛轨”， 后世众多文艺作品以刘备为主角。成都有汉昭烈庙为之纪念。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_CAO_CAO_NAME" Language="zh_Hans_CN">
@@ -1288,7 +1295,7 @@
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_CAO_CAO_NAME" Language="zh_Hans_CN">
 			<Text>
-				丈八蛇矛
+				青钢剑
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_CAO_CAO_NAME" Language="zh_Hans_CN">
@@ -1303,7 +1310,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_CAO_CAO_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				曹操描述
+				曹操（155年 —220年3月15日 ），一名吉利。字孟德，小字阿瞒 ，一说本姓夏侯 。是沛国谯县（今安徽亳州）人 ，太尉曹嵩之子 、汉相国曹参之后  。是东汉末年权臣、丞相、魏王，政治家、军事家、文学家、诗人、书法家 ，曹魏政权奠基者。
+				曹操少年间任侠放荡，到二十岁时举孝廉为郎，授洛阳北部尉。后任骑都尉，参与镇压黄巾军，调济南相。董卓擅政时，散尽家财，起兵讨董卓。初平三年（192年），据兖州，分化诱降黄巾军三十余万，选取其中精锐组建青州军。建安元年（196年），迎汉献帝至许县，从此用献帝名义发号施令，总揽朝政。在此前后相继击败袁术、陶谦、吕布等势力。建安五年（200年），在官渡之战中大败割据河北的袁绍，随后削平袁尚、袁谭，北击乌桓，统一北方。建安十三年（208年）进位丞相。同年率军南征，收服荆州，但在赤壁之战中败于孙刘联军。建安二十年（215年），取汉中，次年（216年）自魏公进爵魏王。建安二十五年（220年），曹操病死于洛阳，享年六十六岁 。曹魏建立后，被追尊为太祖，谥号武皇帝 ，葬于高陵 。
+				曹操用人唯才，对道教采取禁锢措施 。抑制豪强，加强集权。在北方屯田、兴修水利。他的举措使统治地区的社会经济得到一定的恢复和发展。此外，他知兵法、工书法、擅诗歌。其诗多抒发政治抱负、反映汉末人民的苦难生活，气魄雄伟、慷慨悲凉，开建安文学之风。著有《魏武帝集》，已佚失。今人辑有《曹操集》  。对于曹操的功业及其为人，后世评论之多、分歧之大，可谓世所罕见 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_SUN_QUAN_NAME" Language="zh_Hans_CN">
@@ -1338,7 +1347,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_SUN_QUAN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				孙权描述
+				孙权（182年—252年5月21日 ），字仲谋，吴郡富春县（今浙江省杭州市富阳区）人 。三国时期孙吴开国皇帝（229年5月23日 —252年5月21日在位）、政治家、军事统帅。
+				孙权的父亲孙坚和兄长孙策，在东汉末年群雄割据中打下了江东基业。建安五年（200年），孙策遇刺身亡，孙权继之掌事。上书交好曹操，被汉廷任为讨虏将军、会稽太守。在张昭、周瑜等人的倾心辅佐下，孙权招贤纳士，分部诸将，镇抚山越，征讨反抗势力。建安十三年（208年），占有荆州的曹操挥兵南下，议者多劝孙权降曹，唯有周瑜、鲁肃坚决主战，遂与刘备联军，于赤壁之战大破曹军。 建安二十四年（219年），派吕蒙袭取荆州，使领土面积大增。黄初二年（221年），向曹魏称臣，被册封为吴王。黄武元年（222年），在夷陵之战中大败刘备。黄龙元年（229年），在武昌正式称帝，国号“吴”，史称孙吴。不久迁都建业。孙权称帝后，设置农官，实行屯田，设置郡县，并继续剿抚山越，促进了江南经济的发展。黄龙二年（230年），派将军卫温、诸葛直抵达夷州。孙权晚年在继承人问题上反复无常，引发二宫之争，导致朝廷动荡。神凤元年（252年），孙权病逝，享年七十一岁，在位二十四年，谥号大皇帝，庙号太祖，葬于蒋陵。
+				孙权统治江东五十余年，通过长期的军事行动，将管辖地域由江东扩展到今福建、广东、广西、湖南等地区，结束了汉末的分裂状态，促进了当地社会经济的恢复与发展。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_BU_NAME" Language="zh_Hans_CN">
@@ -1376,8 +1387,7 @@
 				吕布描述
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_LV_BU_CHAPTER_HISTORY_PARA_1"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_LV_BU_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
 			<Text>
 				吕布是三国时期的猛将，以绝伦武艺和反复无常广为人知，世人以其善于骑射称他为“飞将”。他最初是丁原的部下，后来受董卓利诱背叛并杀死丁原，与董卓誓为父子。吕布在联军讨董中为董卓而战，后来二人交恶，吕布与董卓侍女有染，心怀不安，受王允拉拢暗杀董卓（《三国演义》将此演绎为王允义女貂蝉施展离间计）。吕布自成势力，游走各路军阀之间，曾受刘备邀请协助防守徐州，却趁刘备与袁术夺取徐州。在袁术攻打刘备时，吕布曾展示辕门射戟的绝技，威震袁术将兵使其退军。不过，吕布的反复无常让他成为各地势力的眼中钉。公元197年，曹操联合刘备围困吕布于下邳，吕布被部下反叛，最终被曹操处死。
 			</Text>
@@ -1399,7 +1409,7 @@
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_MU_LU_NAME" Language="zh_Hans_CN">
 			<Text>
-				丈八蛇矛
+				象牙双钩
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_MU_LU_NAME" Language="zh_Hans_CN">
@@ -1414,7 +1424,7 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_MU_LU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				木鹿大王描述
+				木鹿大王是《三国演义》中的虚构人物，南蛮八纳洞主，孟获盟友，出生于益州建宁（今云南）。其人身骑白象，腰悬双刀，身着金珠缨络，擅长呼风唤雨之术并能驱使虎豹豺狼作战 。为协助孟获对抗蜀汉，曾以法术召唤猛兽军团击退赵云、魏延所部。诸葛亮识破其驱兽战术后，以木制喷火巨兽反制，导致野兽溃散，木鹿大王最终在乱军中被践踏身亡 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_MU_LU_NAME" Language="zh_Hans_CN">
@@ -1424,7 +1434,7 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_MU_LU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				攻击时可对目标单位两侧单元格上的敌方单位造成同等伤害。
+				攻击时可对目标单位两侧单元格上的敌方单位造成同等伤害。每个时代可以招募2个“蛮族战象”。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROMOTION_TK_TIAO_QI_NAME" Language="zh_Hans_CN">
@@ -1529,7 +1539,10 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_ZHAO_YUN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				赵云描述
+				赵云（？－229年），字子龙，常山真定（今河北正定）人。身长八尺，姿颜雄伟，汉末三国时期蜀汉名将，与关羽、张飞并称“燕南三士”。
+				汉末军阀混战，赵云受本郡推举，率领义从加入公孙瓒。期间结识了汉室皇亲刘备，但不久之后，赵云因为兄长去世而离开。赵云离开公孙瓒大约七年后，在邺城与刘备相见，从此追随刘备。
+				赵云跟随刘备将近三十年，先后参加过博望坡之战、长坂坡之战、江南平定战，独自指挥过入川之战、汉水之战、箕谷之战，都取得了非常好的战果。除了四处征战，赵云还先后以偏将军任桂阳太守，以留营司马留守公安，以翊军将军督江州。除此之外，赵云于平定益州时引霍去病故事劝谏刘备将田宅归还百姓，又于关羽、张飞被害之后劝谏刘备不要伐吴，被后世赞为有大臣局量的儒将，甚至被认为是三国时期的完美人物。
+				赵云去世后，于蜀汉景耀四年（261年）被追谥为“顺平侯”，其“常胜将军”的形象在后世被广为流传。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_ZHUGE_LIANG_NAME" Language="zh_Hans_CN">
@@ -1648,8 +1661,7 @@
 				战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHUGE_LIANG_AOE_UNIT_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHUGE_LIANG_AOE_UNIT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				无视河流的 [ICON_Movement] 移动力减益、+1 [ICON_Movement] 移动力，+5 [ICON_Strength] 战斗力。
 			</Text>
@@ -2745,7 +2757,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_YAN_LIANG_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				颜良描述
+				许褚（生卒年不详），字仲康，谯国谯县（今安徽省亳州市谯城区）人。三国时曹魏将领。
+				许褚早年聚集当地青年和宗族几千家，筑壁垒抵抗贼寇。献帝建安元年（196年） ，许褚率部众归顺曹操，任都尉。其后，跟随曹操讨伐张绣 ，率领宿卫虎士作为先登，杀敌无数，官拜校尉。官渡之战中，徐他等人阴谋反叛，被许褚觉察杀死，曹操对许褚更加信任。后许褚随曹操包围邺城，奋力战斗，赐关内侯。
+				建安十六年（211年），讨伐韩遂、马超渡黄河时，许褚拼死护卫曹操，勉强渡到对岸。两军开战后，曹军击溃马超，许褚任武卫中郎将。许褚力大如虎，但并不聪明，因此军中称其“虎痴”。但其谨慎守法，沉默寡言，深得曹操爱惜，后升中坚将军。黄初元年（220年），曹操去世，许褚痛哭吐血。曹丕即位后，封许褚为万年亭侯，升武卫将军，总督中军宿卫禁兵。魏明帝即位后，封牟乡侯，食邑七百户，赐一子关内侯。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_YAN_LIANG_NAME" Language="zh_Hans_CN">
@@ -2791,7 +2805,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_WEN_CHOU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				文丑描述
+				文丑（？—200年），东汉末年袁绍部将。
+				文丑为一夫之勇。建安五年（200年），带领左将军刘备进驻延津，误中曹操军师荀攸的“饵敌”之计，其麾下“五六千骑”惨败于“不满六百”的曹军骑兵。文丑本人也死于乱军之中，葬于河南省禹州市。
+				明代小说《三国演义》将此段历史改编为关羽斩文丑。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_WEN_CHOU_NAME" Language="zh_Hans_CN">
@@ -2837,7 +2853,8 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_DIAO_CHAN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				貂蝉描述
+				貂蝉是小说《三国演义》中的人物，为中国古代四大美女之一。在民间传说中，貂蝉原名任红昌，是山西一位村姑，也有人认为吕布部将秦宜禄前妻杜氏（杜秀娘）即是貂蝉。登场于小说《三国演义》中的貂蝉，只是小说家为了增添色彩而加进去的，正史并无记载。
+				在《三国演义》中，貂蝉为东汉末年司徒王允家的义女，为拯救汉朝，推翻权臣董卓的荒淫统治，受王允所托，上演了可歌可泣的连环计，周旋于两个男人之间，成功地离间了董卓和吕布，最终借吕布之手除掉了恶贼董卓，结束了董卓专权的黑暗时期。之后貂蝉成为吕布的妾，董卓部将李傕击败吕布后，她随吕布来到徐州。下邳一役后，吕布被曹操所杀，貂蝉跟随吕布家眷前往许昌，从此不知所踪。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DIAO_CHAN_NAME" Language="zh_Hans_CN">
@@ -2897,7 +2914,11 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_ZHOU_TAI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				周泰描述
+				周泰，字幼平，九江下蔡（今安徽凤台）人。三国时期孙吴名将 。
+				孙策平定江东时与同郡蒋钦一起加入孙策军，随孙策左右，从征刘繇、严白虎、王朗等人，数有战功。
+				后来，孙权爱其为人，向孙策请求让周泰跟随自己。周泰多次于战乱当中保护孙权的安危，身上受的伤多达几十处，就像在皮肤上雕画一样。从征黄祖，在赤壁之战抵御曹操，皆有战功。后来，孙权为了表彰周泰为了东吴出生入死的功绩，而赐给他青罗伞盖，使他留督濡须，吴将朱然、徐盛等因此对其拜服。
+				官至汉中太守、奋威将军，封陵阳侯。死于黄武年间 。
+				陈寿在《三国志》 将周泰列为“江表之虎臣” 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHOU_TAI_NAME" Language="zh_Hans_CN">
@@ -2942,7 +2963,8 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_SUN_SHANGXIANG_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				孙尚香描述
+				孙夫人，吴郡富春（今浙江省杭州市富阳区）人，东汉末年讨虏将军孙权之妹，曾为左将军刘备之妻。史书《三国志》称之为孙夫人。民间戏剧称之为孙尚香。
+				为巩固孙刘联盟，孙夫人嫁给刘备三年。其间，孙夫人骄横跋扈，多次率领东吴吏兵纵横不法。后来大归回吴。孙夫人在许多小说，戏剧和影视里被不断描绘。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_SUN_SHANGXIANG_NAME" Language="zh_Hans_CN">
@@ -3012,7 +3034,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_CAO_REN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				曹仁描述
+				曹仁（168年—223年5月6日），字子孝，沛国谯县（今安徽省亳州市）人。三国时期曹魏名将。陈穆侯曹炽之子，魏武帝曹操从弟。
+				曹仁好弓马骑射，少时不修行检，及至长成为大将，奉法守令。其从曹操多年，屡立功勋。破袁术、攻陶谦、擒吕布、败刘备，参加官渡之战。赤壁之战后，曹仁又镇守江陵，抵御周瑜进攻。败马超于渭南之战，败反将苏伯、田银于冀州，败侯音于宛城，拜征南将军。襄樊之战挡住了关羽的进攻。文帝时，拜曹仁为车骑将军，都督荆、扬、益诸州军事，进封陈侯。黄初二年（221年），曹丕拜其为大将军、大司马，总督诸军据守乌江，还屯于合肥。濡须口之战，不听蒋济劝谏，惨败于朱桓。
+				黄初四年三月丁未日（223年5月6日 ），曹仁病逝，时年五十六岁，谥号忠侯。青龙元年（233年），曹仁配享魏武帝曹操的太庙。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_CAO_REN_NAME" Language="zh_Hans_CN">
@@ -3082,7 +3106,10 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_ZHANG_LIAO_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				张辽描述
+				张辽（169年 —222年），字文远，雁门马邑（今山西省朔州市）人，三国时期曹魏名将。聂壹的后人。
+				张辽年少时为雁门郡吏，中平五年（188年），被并州刺史丁原召为从事。入京后，先后隶属于何进、董卓、吕布，为骑都尉。兴平元年（194年），从吕布攻曹操于兖州。后与吕布奔徐州，领鲁相。吕布败亡后，张辽率众降曹操，任中郎将。建安五年（200年），在官渡之战中，数有战功。战后，奉命平鲁国诸县，又收降地方豪强昌豨于东海。从征冀州有功，行中坚将军。又独领一军攻占赵国、常山以及海滨地带，升荡寇将军。建安十二年（207年），随曹操征柳城。于白狼山之战率领先锋大破乌桓，并斩杀乌桓单于蹋顿。次年，以静制动平定军中谋反。次年，击灭江淮军阀陈兰、梅成。后进驻合肥。
+				建安二十年（215年），合肥之战，张辽率领八百将士 ，袭击东吴十万大军， 一直冲杀到孙权的主帅旗下 ，令吴军崩溃。 在东吴撤军时，张辽率领追兵，大破孙权、甘宁、凌统等 ，差点活捉孙权。 经此一役，张辽威震江东。 “张辽止啼”成为流传千古的典故。 战后，升征东将军。曹丕即位后，转为前将军，受封晋阳侯。
+				黄初三年（222年），带病率军攻吴，破吴将吕范。不久病卒于江都，谥曰刚侯。张辽为历代所推崇，成为古今六十四名将之一。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHANG_LIAO_NAME" Language="zh_Hans_CN">
@@ -3127,7 +3154,9 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_SUN_CE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				孙策描述
+				孙策（175年—200年5月5日 ），字伯符，吴郡富春县（今浙江省杭州市富阳区）人。东汉末年割据群雄之一，孙吴政权的奠基者之一，破虏将军孙坚长子，吴大帝孙权长兄。
+				孙坚参与平定黄巾起义、董卓之乱等军事活动时，年少的孙策携母迁居舒县，与当地豪族名士周瑜等人以及士大夫阶层，深得江淮地区的人心，颇有声誉。孙坚死后 ，孙策为继承父亲的志向 而暂时屈事袁术 ，带兵攻取庐江郡。兴平二年（195年），孙策征得袁术许可后 ，东渡长江，协助堂兄孙贲和舅舅吴景打败扬州刺史刘繇及其部将樊能、于糜、张英 。建安元年（196年 ），孙策击败会稽太守王朗和吴郡太守严白虎 。建安二年（197年），袁术称帝后，孙策公开与袁术决裂 ，得到朝廷的认可，授骑都尉、会稽太守，袭封乌程侯。建安三年（198年），曹操以朝廷的名义表孙策为讨逆将军，册封为吴侯 。建安四年（199年），孙策击败庐江太守刘勋和荆州牧刘表部将黄祖 。
+				建安五年（200年），在夺取豫章郡后统一江东地区 。同年四月四日（5月5日 ），正当孙策准备发兵北上之际 ，为其所诛的吴郡太守许贡的门客所伤 ，不治身亡，年仅二十六岁 ，临终前遗令其弟孙权继位 。孙权称帝后，追谥孙策为长沙桓王 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_SUN_CE_NAME" Language="zh_Hans_CN">
@@ -3157,7 +3186,7 @@
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_MENG_HUO_NAME" Language="zh_Hans_CN">
 			<Text>
-				八宝麒麟弓
+				铁石弹
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_MENG_HUO_NAME" Language="zh_Hans_CN">
@@ -3172,7 +3201,7 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_MENG_HUO_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				孟获描述
+				孟获，三国时期南中地区首领，生卒年不详，建宁郡（今云南曲靖）人。蜀汉建兴元年（223年），益州豪强雍闿联合越巂夷帅高定元、牂牁太守朱褒叛乱，孟获以“朝廷强征乌狗螨脑”之说煽动夷人附逆。建兴三年（225年）诸葛亮南征，雍闿被高定元部曲所杀，孟获继任叛军首领 。诸葛亮采纳马谡“攻心为上”之策，七擒七纵孟获，终使其臣服。南中平定后，孟获官至蜀汉御史中丞 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_MENG_HUO_NAME" Language="zh_Hans_CN">
@@ -3235,8 +3264,7 @@
 				3个单元格以内的武僧、颜良、文丑除非与敌人相邻，否则将处于隐身状态。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HE_BEI_SHUANG_XIONG_WEN_CHOU_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PROMOTION_TK_HE_BEI_SHUANG_XIONG_WEN_CHOU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				3个单元格以内的武僧、颜良、文丑回合结束时回复15点生命值。
 			</Text>
@@ -3501,14 +3529,12 @@
 				玄武：+2 [ICON_Movement] 移动力，2个单元格以内的友方单位防御时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				玄武光环：防御时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				防御时+5 [ICON_Strength] 战斗力。
 			</Text>
@@ -3558,8 +3584,7 @@
 				青龙：+2 [ICON_Movement] 移动力，2个单元格以内的友方单位攻击时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QINGLONG_MOUNT_AOE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QINGLONG_MOUNT_AOE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				攻击时+5 [ICON_Strength] 战斗力。（青龙光环）
 			</Text>
@@ -4153,8 +4178,7 @@
 				龙剑：与骑兵单位战斗时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_PROMOTION_TK_LONG_JIAN_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_PROMOTION_TK_LONG_JIAN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+5 [ICON_Strength] 战斗力（龙剑）
 			</Text>
@@ -4174,8 +4198,7 @@
 				龙盾：防御远程攻击时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_PROMOTION_TK_LONG_DUN_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_PROMOTION_TK_LONG_DUN_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+5 [ICON_Strength] 战斗力（龙盾）
 			</Text>
@@ -4195,8 +4218,7 @@
 				龙影：+5 [ICON_Strength] 战斗力、+1 [ICON_Movement] 移动力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_PROMOTION_TK_LONG_YING_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_PROMOTION_TK_LONG_YING_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（龙影）
 			</Text>
@@ -4241,8 +4263,7 @@
 				2个单元格以内的友方单位防御远程攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_XUANWU3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_XUANWU3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
@@ -4262,14 +4283,12 @@
 				2个单元格以内的敌方近战系单位攻击时-5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				攻击时-5 [ICON_Strength] 战斗力。（青龙龙威）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3" Language="zh_Hans_CN">
 			<Text>
 				攻击时-5 [ICON_Strength] 战斗力。（青龙龙威）
 			</Text>
@@ -4284,8 +4303,7 @@
 				2个单元格以内的友方近战系单位攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_BAIHU3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_BAIHU3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				攻击时+7 [ICON_Strength] 战斗力。（白虎咆哮）
 			</Text>
@@ -4305,8 +4323,7 @@
 				2个单元格以内的友方在每回合结束时（甚至是在移动或攻击后），自动恢复10点生命值。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_ZHUQUE3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_ZHUQUE3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），自动恢复10点生命值。（朱雀涅槃）
 			</Text>
@@ -4321,8 +4338,7 @@
 				2个单元格以内的友方单位防御英雄单位攻击时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_HERO3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_HERO3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御英雄单位攻击时+10 [ICON_Strength] 战斗力。（战将）
 			</Text>
@@ -4342,8 +4358,7 @@
 				2个单元格以内的友方单位防御非英雄单位攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_WARRIOR3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_WARRIOR3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御非英雄单位攻击时+5 [ICON_Strength] 战斗力。（统兵）
 			</Text>
@@ -4374,170 +4389,142 @@
 				[ICON_Gold] 金币[ENDCOLOR]
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YAN_LIANG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YAN_LIANG" Language="zh_Hans_CN">
 			<Text>
 				防御时+8 [ICON_Strength] 战斗力（河北庭柱）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_WEN_CHOU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_WEN_CHOU" Language="zh_Hans_CN">
 			<Text>
 				进攻时+8 [ICON_Strength] 战斗力（河北庭柱）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU" Language="zh_Hans_CN">
 			<Text>
 				进攻时+7 [ICON_Ranged] 远程战斗力（美女英雄）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_DIAO_CHAN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_DIAO_CHAN" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（美女英雄）
 			</Text>
 		</Replace>
-		<Replace Tag="MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU"
-			Language="zh_Hans_CN">
+		<Replace Tag="MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU" Language="zh_Hans_CN">
 			<Text>
 				进攻时+{1_Amount} [ICON_Ranged] 远程战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_LIU_BEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_LIU_BEI" Language="zh_Hans_CN">
 			<Text>
 				进攻时+5 [ICON_Strength] 战斗力（桃园之誓）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_GUAN_YU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_GUAN_YU" Language="zh_Hans_CN">
 			<Text>
 				防御时+7 [ICON_Strength] 战斗力（桃园之誓）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_ZHANG_FEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_ZHANG_FEI" Language="zh_Hans_CN">
 			<Text>
 				防御时+7 [ICON_Strength] 战斗力（桃园之誓）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_LIU_BEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_LIU_BEI" Language="zh_Hans_CN">
 			<Text>
 				进攻时+5 [ICON_Strength] 战斗力（比翼双飞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_SUN_SHANGXIANG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_SUN_SHANGXIANG" Language="zh_Hans_CN">
 			<Text>
 				+2 [ICON_MOVEMENT] 移动力（比翼双飞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_CE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_CE" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复20点生命值（一母同胞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN" Language="zh_Hans_CN">
 			<Text>
 				+1 续行使用次数（一母同胞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_SHANGXIANG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_SHANGXIANG" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复20点生命值（一母同胞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_CAO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_CAO" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（曹氏双杰）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_REN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_REN" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（曹氏双杰）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO" Language="zh_Hans_CN">
 			<Text>
 				+1 续行使用次数（曹氏护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_DIAN_WEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_DIAN_WEI" Language="zh_Hans_CN">
 			<Text>
 				进攻时+5 [ICON_Strength] 战斗力（曹氏护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_XU_CHU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_XU_CHU" Language="zh_Hans_CN">
 			<Text>
 				防御时+5 [ICON_Strength] 战斗力（曹氏护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				+{1_Amount} [ICON_Strength] 战斗力（羁绊效果）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MU_LU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MU_LU" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复30点生命值（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MENG_HUO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MENG_HUO" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_SUN_QUAN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_SUN_QUAN" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（东吴护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_ZHOU_TAI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_ZHOU_TAI" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（东吴护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_GUAN_YU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_GUAN_YU" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHANG_FEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHANG_FEI" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHAO_YUN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHAO_YUN" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_MA_CHAO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_MA_CHAO" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_HUANG_ZHONG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_HUANG_ZHONG" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
@@ -5172,14 +5159,12 @@
 				位于沼泽地形时-1 [ICON_MOVEMENT] 移动力，防御时-10 [ICON_Strength] 战斗力，回合结束时失去20点生命值
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_UNITS_GAIN_DEBUFF_IN_MASH_DECREASE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_UNITS_GAIN_DEBUFF_IN_MASH_DECREASE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				位于沼泽地形时-10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QingGangJian_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QingGangJian_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				+1 [ICON_MOVEMENT] 移动力（曹操：当世奸雄）
 			</Text>
@@ -5189,56 +5174,47 @@
 				+1 [ICON_MOVEMENT] 移动力（孙权：江东少主）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				+3 [ICON_Strength] 战斗力（刘备：大汉皇叔）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				+{1_Amount} [ICON_Strength] 战斗力（刘备：大汉皇叔）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+5 [ICON_Strength] 战斗力（孙尚香：人间国色）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孙尚香：人间国色）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+5 [ICON_Strength] 战斗力（孙策：江东霸王）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+{1_Amount} [ICON_Strength] 战斗力（孙策：江东霸王）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_ExclusiveHero_AOE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_ExclusiveHero_AOE" Language="zh_Hans_CN">
 			<Text>
 				攻击时+5 [ICON_Strength] 战斗力、+1 [ICON_MOVEMENT] 移动力（文丑：宿铁刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CHANGBINGDADAO_ExclusiveHero_AOE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CHANGBINGDADAO_ExclusiveHero_AOE" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+15 [ICON_Strength] 战斗力（颜良：长柄大刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_ExclusiveHero_AOE_A"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_ExclusiveHero_AOE_A" Language="zh_Hans_CN">
 			<Text>
 				攻击时+{1_Amount} [ICON_Strength] 战斗力（文丑：宿铁刀）
 			</Text>
@@ -5248,8 +5224,7 @@
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孟获：南蛮之主）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_ExclusiveHero"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_ExclusiveHero" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孟获：南蛮之主）
 			</Text>
@@ -5264,8 +5239,7 @@
 				雌雄双股剑：+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				雌雄双股剑：2个单元格以内的非英雄单位+3 [ICON_Strength] 战斗力（大汉皇叔）
 			</Text>
@@ -5385,8 +5359,7 @@
 				象牙双钩：攻击时+11 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_XIANGYASHUANGGOU_ExclusiveHero_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_XIANGYASHUANGGOU_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				象牙双钩：+2 [ICON_MOVEMENT] 移动力（蛮象）
 			</Text>
@@ -5866,8 +5839,7 @@
 				自爆
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_LUOYANG_B"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_LUOYANG_B" Language="zh_Hans_CN">
 			<Text>
 				测试AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 			</Text>
@@ -6108,8 +6080,7 @@
 				3个单元格以内的抗骑兵单位+6 [ICON_Strength] 战斗力且无视河流的 [ICON_Movement] 移动力减益。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_LONGWEIJIANGJUN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_LONGWEIJIANGJUN" Language="zh_Hans_CN">
 			<Text>
 				防御时+6 [ICON_Strength] 战斗力，回合结束时恢复10点生命值
 			</Text>
@@ -6129,8 +6100,7 @@
 				2个单元格以内的非英雄近战单位+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_XIANZHENYONGSHI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_XIANZHENYONGSHI" Language="zh_Hans_CN">
 			<Text>
 				3个单元格以内的御龙卫及孙策单位+2 [ICON_Movement] 移动力
 			</Text>
@@ -6211,14 +6181,12 @@
 				攻击区域防御时+{Property} [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI" Language="zh_Hans_CN">
 			<Text>
 				每相邻一个蛮族护卫，防御远程攻击时+4 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI" Language="zh_Hans_CN">
 			<Text>
 				相邻蛮族护卫防御远程攻击时+{Property} [ICON_Strength] 战斗力
 			</Text>
@@ -6248,14 +6216,12 @@
 				护甲[COLOR_Civ6Red] {1_armor} [ENDCOLOR]
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_NAME"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_NAME" Language="zh_Hans_CN">
 			<Text>
 				特殊兵种老兵晋升加成
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				每次升级增加防御英雄攻击时 [ICON_Strength] 战斗力
 			</Text>
@@ -6265,8 +6231,7 @@
 				特殊兵种老兵击杀加成
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_KILL_STRENGTH_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_KILL_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				每次击杀增加 [ICON_Strength] 战斗力
 			</Text>
@@ -6301,6 +6266,11 @@
 				神威骑描述
 			</Text>
 		</Replace>
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_SHEN_WEI_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				每点未消耗的 [ICON_Movement] 移动力提供+1 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_WU_SHENG_GUARD_NAME" Language="zh_Hans_CN">
 			<Text>
 				武圣骁卫
@@ -6309,6 +6279,16 @@
 		<Replace Tag="LOC_UNIT_HERO_TKH_WU_SHENG_GUARD_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				武圣骁卫描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED_NAME" Language="zh_Hans_CN">
+			<Text>
+				武圣威压
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				攻击时有50%概率额外造成30%伤害。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_YAN_YUN_GUARD_NAME" Language="zh_Hans_CN">
@@ -6329,6 +6309,11 @@
 		<Replace Tag="LOC_UNIT_HERO_TKH_TAN_LANG_GUARD_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				贪狼飞骑描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_TAN_LANG_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				除非与敌人相邻，否则将处于隐身状态。（伏击）
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_CAO_SHI_GUARD_NAME" Language="zh_Hans_CN">
@@ -6359,6 +6344,11 @@
 		<Replace Tag="LOC_UNIT_HERO_TKH_HE_SHUO_GUARD_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				河朔佐卫军描述
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_HE_SHUO_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				+1 [ICON_Range] 射程，+1次攻击次数。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_BAI_ER_GUARD_NAME" Language="zh_Hans_CN">
@@ -6408,7 +6398,7 @@
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_ZHU_RONG_NAME" Language="zh_Hans_CN">
 			<Text>
-				八宝麒麟弓
+				火焱神枪
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_ZHU_RONG_NAME" Language="zh_Hans_CN">
@@ -6469,17 +6459,19 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_WU_TUGU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				兀突骨描述
+				兀突骨是《三国演义》中虚构的乌戈国国主，由窦永祥在1994年版电视剧中饰演。其人身长一丈二尺，以生蛇恶兽为食，体生鳞甲可抵御刀箭，乘骑巨象，穿戴日月狼须帽与金珠缨络。麾下藤甲军身着油浸藤甲，刀箭难入，渡水不沉，所饮桃花水能致他国人死，却使乌戈人精神倍增 。
+				兀突骨应孟获之请率藤甲军助战，初时凭借藤甲优势屡胜蜀军。诸葛亮遣魏延诈败诱敌，将其引入盘蛇谷，以火攻焚灭三万藤甲军，兀突骨与部众尽殁。
+				此战后乌戈国人无一幸存，诸葛亮亦叹此战虽胜却损及寿数。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_WU_TUGU_NAME" Language="zh_Hans_CN">
 			<Text>
-				国色
+				旋风斩
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_WU_TUGU_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				与非英雄单位战斗时+10 [ICON_Strength] 战斗力。
+				对1个单元格以内的敌方单位造成50点伤害（冷却1回合）。每个时代可以招募1个“蛮族战象”。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_SHA_MOKE_NAME" Language="zh_Hans_CN">
@@ -6499,7 +6491,7 @@
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_SHA_MOKE_NAME" Language="zh_Hans_CN">
 			<Text>
-				八宝麒麟弓
+				水淼神弓
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_SHA_MOKE_NAME" Language="zh_Hans_CN">
@@ -6514,7 +6506,8 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_SHA_MOKE_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				沙摩柯描述
+				沙摩柯（？－222年），又名摩沙柯，汉末三国时期胡族首领。章武元年（221年）刘备为报关羽被东吴杀害之仇亲征孙权，沙摩柯于次年章武二年（222年）率部参与夷陵之战。同年六月，东吴都督陆逊以火攻大破汉军，沙摩柯与汉将张南、冯习等同遭斩首，四十余营寨被攻破 。
+				《三国志·吴书·陆逊传》记载其以“胡王”身份参战 ，毛宗岗评其“番将能为汉死节”。《三国演义》将其塑造为五溪番王，描述其面如噀血、碧眼突出，使用铁蒺藜骨朵并射杀东吴将领甘宁，最终败亡于周泰之手 。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_SHA_MOKE_NAME" Language="zh_Hans_CN">
@@ -6559,15 +6552,249 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_DUO_SI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				朵思大王描述
+				朵思大王是长篇小说《三国演义》中虚构的南蛮首领，担任秃龙洞元帅  。他利用秃龙洞地势布下四眼毒泉阻挡蜀军，并镇守三江城以毒箭击退蜀兵，最终在乱军中被杀。最终在诸葛亮攻破三江城时战死，但央视版电视剧改编为投降蜀汉  。其形象亦被改编至多款三国题材游戏中，拥有高谋略性技能  。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DUO_SI_NAME" Language="zh_Hans_CN">
 			<Text>
-				国色
+				加班
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DUO_SI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				每回合可以让2个单元格以内的一个友方单位再攻击一次。每回合只能用一次。每个时代可以招募1个“蛮族护卫”。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给夏侯渊
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_XIAHOU_YUAN_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给夏侯渊
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_XIAHOU_YUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄夏侯渊。完成后，夏侯渊将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				夏侯渊史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				夏侯渊
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_XIAHOU_YUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				夏侯渊（？～219年），字妙才，沛国谯县 （今安徽省亳州市）人。汉末时期名将。太仆夏侯婴之后，夏侯惇族兄弟。
+				夏侯渊代曹操承担在家乡受某案件牵连的后果，后曹操又设法营救，得以免祸。后跟随曹操起兵。建安五年（200年），从曹操与袁绍战于官渡，曹操击败袁绍后，夏侯渊又督兖、豫、徐等州军粮，帮助曹操平定黄河以北。曹操平定冀州后，又派其与于禁合兵征讨，大败昌豨，收降其千余屯，夏侯渊被封为典军校尉。后又率军镇压济南、乐安等地黄巾军，并收其粮草，补充军用。
+				建安十一年（206年），昌豨复叛，夏侯渊与于禁合力攻击，昌豨再降，后官至典军校尉。建安十四年（209年），随曹操征孙权，在赤壁被孙刘联军击败后，平定庐江叛将雷绪。建安十六年（211年），以征西护军督徐晃等攻太原平定商曜之乱，屠太原城。建安十七年（212年），夏侯渊率兵征伐梁兴，将其斩杀，因功封为博昌亭侯。建安十九年（214年），其亲率精兵轻装疾进，一举击溃韩遂，乘胜攻克高平等地。建安二十年（215年）七月，曹操率夏侯渊攻降张鲁，升为都护将军。回师后拜其为征西将军。建安二十三年（218年），刘备亲率大军北征，进军至阳平关，夏侯渊、张郃、徐晃等率军阻击。
+				建安二十四年（219年），夏侯渊被黄忠斩杀，谥号为愍。正始四年（243年），配享魏武帝曹操的太庙。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_XIAHOU_YUAN_NAME" Language="zh_Hans_CN">
+			<Text>
+				国色
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_XIAHOU_YUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与非英雄单位战斗时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给吕玲绮
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_LINGQI_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给吕玲绮
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_LV_LINGQI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄吕玲绮。完成后，吕玲绮将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				吕玲绮史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				吕玲绮
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_LV_LINGQI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				吕玲绮是日本KT公司（原光荣）旗下游戏《三国志战记2》中的虚构人物，设定为吕布之女，正史无相关记载 。她在游戏中以女性武将的身份出现，使用长枪作为武器，擅长突击和快速移动，拥有较高的速度和攻击力 。她的形象设计融合了传统中国元素和幻想风格，体现出英勇和独立的特质 。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_LV_LINGQI_NAME" Language="zh_Hans_CN">
+			<Text>
+				国色
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_LV_LINGQI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与非英雄单位战斗时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给董卓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_DONG_ZHUO_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给董卓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_DONG_ZHUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄董卓。完成后，董卓将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				董卓史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				董卓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_DONG_ZHUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				董卓（？－192年5月22日），字仲颖，陇西郡临洮县（今甘肃岷县）人。东汉末年军阀、权臣。
+				董卓成长于凉州，喜欢结交羌人。汉桓帝末年，董卓被征召为羽林郎，后又在护匈奴中郎将张奂部下任军司马，讨伐汉阳羌人，作战粗猛有谋，屡建战功，拜郎中，历任广武县令、蜀郡北部都尉、西域戊己校尉，因事免职。后来得到司徒袁隗征辟，出任并州刺史、河东太守，先后参与镇压黄巾起义、凉州之乱等战役。中平六年（189年），时任并州牧的董卓受大将军何进、司隶校尉袁绍密召，率军进京诛十常侍。不久，京中动乱，董卓在北邙立下了救驾大功，又招揽吕布杀丁原，很快就吞并了附近两大军阀兵力。随后，董卓废少帝刘辩，立献帝刘协即位，不久就弑杀了少帝及何太后，专断朝政，威震天下，在朝野内外都广布亲信，僭用近似天子的服饰及车驾，官至太师、相国，封郿侯，位极人臣。当时有“千里草（董），何青青；十日卜（卓），不得生”之谣，反映出人们对他专权的憎恨。
+				献帝初平元年（190年），董卓讨伐战爆发，董卓迫使献帝迁都长安。初平二年（191年），董卓被孙坚击败，退守长安。翌年，司徒王允设离间计，成功挑拨吕布杀死董卓，董卓全族亦被诛灭。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DONG_ZHUO_NAME" Language="zh_Hans_CN">
+			<Text>
+				国色
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_DONG_ZHUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与非英雄单位战斗时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给袁绍
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_YUAN_SHAO_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给袁绍
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_YUAN_SHAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄袁绍。完成后，袁绍将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				袁绍史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				袁绍
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_YUAN_SHAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				袁绍（？－202年6月28日 ），字本初，汝南郡汝阳县（今属河南省周口市商水县 ）人 。东汉末年军阀首领，汉末群雄之一。
+				袁绍出身汝南袁氏，少时折节下士，知名于当世。中平六年（189年），汉灵帝驾崩，大将军何进任命袁绍为司隶校尉。二人合谋诛杀宦官，后何进事泄被杀，袁绍率军尽诛宦官。董卓专权，袁绍与其政见不同，逃奔冀州。董卓拜其为渤海太守。初平元年（190年），与关东州郡牧守联合起兵以讨董卓，袁绍被推为盟主，自号车骑将军，声势颇大。董卓畏惧，挟汉献帝西入关中，不久被杀。后关东军内部开始互相兼并，袁绍夺取冀州牧韩馥的地盘，自领冀州牧，此后又夺得青州、并州。初平四年（193年），袁绍平定黑山军。建安四年（199年），袁绍又消灭幽州军阀公孙瓒。至此，袁绍已跨据黄河下游的四州之地，领众数十万，成为当时最强大的割据势力。 建安五年（200年），袁绍跨河攻打曹操，在官渡之战中大败。 随后冀州叛乱爆发，被袁绍平定。
+				建安七年（202年），袁绍病逝，其子袁尚继位 。初期三子一甥联手共退敌兵  ，后兄弟阋墙，河北分裂，袁谭引狼入室 ，四人相继兵败身死 。建安十二年（207年），河北尽并于曹操。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_YUAN_SHAO_NAME" Language="zh_Hans_CN">
+			<Text>
+				国色
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_YUAN_SHAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				与非英雄单位战斗时+10 [ICON_Strength] 战斗力。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给太史慈
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_TAISHI_CI_SHORT_NAME" Language="zh_Hans_CN">
+			<Text>
+				献给太史慈
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_PROJECT_CREATE_HERO_TKH_TAISHI_CI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				将此城献给英雄太史慈。完成后，太史慈将出现在市中心。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_SYMBOL_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				八宝麒麟弓
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_GREATWORK_HERO_EPIC_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				太史慈史诗
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				太史慈
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_UNIT_HERO_TKH_TAISHI_CI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				太史慈（166年—206年），字子义，东莱黄县（今山东龙口东黄城集）人。东汉末年名将 。
+				弓马熟练，箭法精良。曾为救孔融而单骑突围向刘备求援。原为刘繇部下，后被孙策收降，自此太史慈为孙氏大将，助其扫荡江东。孙权统事后，因太史慈能制刘磐【pán】，便将管理南方的要务委托给他。
+				建安十一年（206年），太史慈逝世，死前说道：“丈夫生世，当带七尺之剑，以升天子之阶。今所志未从，奈何而死乎！” 言讫而亡，年四十一岁。
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_TAISHI_CI_NAME" Language="zh_Hans_CN">
+			<Text>
+				国色
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_TAISHI_CI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				与非英雄单位战斗时+10 [ICON_Strength] 战斗力。
 			</Text>
@@ -6604,7 +6831,8 @@
 		</Replace>
 		<Replace Tag="LOC_UNIT_HERO_TKH_JIANG_WEI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				姜维描述
+				姜维（202年—264年3月3日），字伯约，天水郡冀县（今甘肃省天水市甘谷县）人。三国时期蜀汉名将，天水功曹姜冏之子。
+				姜维出身天水姜氏。诸葛亮北伐时，姜维被魏天水太守马遵怀疑有异心，不得已投降蜀汉，被诸葛亮重用。诸葛亮去世后，姜维在蜀汉开始崭露头角。费祎遇刺后，姜维开始独掌军权，继续率领蜀汉军队北伐曹魏，与曹魏名将邓艾、陈泰、郭淮等多次交手，互有胜负。而后蜀汉大臣大多反对姜维北伐，宦官黄皓也操弄权柄，姜维杀黄皓不成，前往沓中屯田避祸。后司马昭五道伐蜀，姜维摆脱牵制自己的邓艾等人，退守剑阁，阻挡住钟会大军，但邓艾却从阴平偷袭成都，刘禅投降后，命令姜维向魏军投降。姜维投降后，打算利用魏将钟会反抗司马昭的机会以恢复汉室，但最终无力回天，姜、钟二人皆被魏军所杀。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_JIANG_WEI_NAME" Language="zh_Hans_CN">
@@ -6652,38 +6880,32 @@
 				测试用能力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MENG_HUO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MENG_HUO" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_ZHU_RONG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_ZHU_RONG" Language="zh_Hans_CN">
 			<Text>
 				回合结束时回复30点生命值或护甲（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MU_LU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MU_LU" Language="zh_Hans_CN">
 			<Text>
 				回合结束时回复30点生命值或护甲（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_WU_TUGU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_WU_TUGU" Language="zh_Hans_CN">
 			<Text>
 				回合结束时回复30点生命值或护甲（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_SHA_MOKE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_SHA_MOKE" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_DUO_SI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_DUO_SI" Language="zh_Hans_CN">
 			<Text>
 				每回合增加一次技能使用次数（南蛮入侵）
 			</Text>

@@ -18,17 +18,19 @@ include('TKH_Helper')
 -- ===========================================================================
 --	CONSTANTS	/ DEFINES
 -- ===========================================================================
-local MA_CHAO_PROMOTION_ATTACH      = GameInfo.UnitPromotions["PROMOTION_TK_XI_LIANG_TIE_QI_MC"].Index
-local LIU_BEI_PROMOTION_TURN_END    = GameInfo.UnitPromotions["PROMOTION_TK_LIAO_YU_LiuBei"].Index
+local MA_CHAO_PROMOTION_ATTACH         = GameInfo.UnitPromotions["PROMOTION_TK_XI_LIANG_TIE_QI_MC"].Index
+local LIU_BEI_PROMOTION_TURN_END       = GameInfo.UnitPromotions["PROMOTION_TK_LIAO_YU_LiuBei"].Index
 local LIU_BEI_PROMOTION_TURN_END_RANGE = 3
-local DIAN_WEI_PROMOTION_TURN_END   = GameInfo.UnitPromotions["PROMOTION_TK_GU_ZHI_E_LAI_DW"].Index
-local SUN_SHANGXIANG_PROMOTION_HEAL = GameInfo.UnitPromotions["PROMOTION_TK_XI_XUE_QI_SunSX"].Index
-local ZHOU_TAI_PROMOTION_BU_QU      = GameInfo.UnitPromotions["PROMOTION_TK_BU_QU_ZTai"].Index
+local DIAN_WEI_PROMOTION_TURN_END      = GameInfo.UnitPromotions["PROMOTION_TK_GU_ZHI_E_LAI_DW"].Index
+local SUN_SHANGXIANG_PROMOTION_HEAL    = GameInfo.UnitPromotions["PROMOTION_TK_XI_XUE_QI_SunSX"].Index
+local ZHOU_TAI_PROMOTION_BU_QU         = GameInfo.UnitPromotions["PROMOTION_TK_BU_QU_ZTai"].Index
+local ZHANG_FEI_PROMOTION_WAN_REN_DI   = GameInfo.UnitPromotions["PROMOTION_TK_WAN_REN_DI_ZF"].Index
+
 
 -- ===========================================================================
 --	VARIABLES
 -- ===========================================================================
-local HeroSummons                   = {}
+local HeroSummons = {}
 
 -- ===========================================================================
 --	EFFECT Events
@@ -322,6 +324,15 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
     end
     local unitInfo = GameInfo.Units[pUnit:GetType()]
 
+    -- 张飞：万人敌，击杀单位后恢复30点生命值。
+    if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_WAN_REN_DI_ZF"].Index) then
+        TreatUnit(pUnit, 30)
+    end
+    -- 河北之虎，击杀单位后恢复20点生命值。
+    if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_HE_BEI_ZHI_HU_YL"].Index) then
+        TreatUnit(pUnit, 20)
+    end
+
     -- 关羽：若击杀敌方单位，则恢复所有 [ICON_Movement] 移动力并能再次攻击。
     if unitInfo.UnitType == 'UNIT_HERO_TKH_GUAN_YU' then
         UnitManager.RestoreMovement(pUnit, true)
@@ -334,7 +345,6 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         --     UnitManager.RestoreUnitAttacks(pUnit, true)
         --     Game:SetProperty('TKH_UNIT_HERO_TKH_GUAN_YU_RESTORE_TIMES', restoreTimes + 1)
         -- end
-    
     elseif unitInfo.UnitType == 'UNIT_HERO_TKH_YAN_YUN_GUARD' then
         -- 给特种兵“燕云卫”+一个技能（要不然太弱了，粘贴的时候漏掉了）每击杀一个单位，回复80点生命或者护甲值。
         TreatUnit(pUnit, YAN_YUN_GUARD_KILL_HEAL)
@@ -374,8 +384,7 @@ end
 function OnUnitAddedToMap(playerID, unitID)
     local unit = UnitManager.GetUnit(playerID, unitID)
     local unitInfo = GameInfo.Units[unit:GetType()]
-    if unitInfo.UnitType == 'UNIT_HERO_TKH_MENG_HUO_GUARD' or unitInfo.UnitType == 'UNIT_HERO_TKH_ZHANG_LIAO_GUARD' or
-        unitInfo.UnitType == 'UNIT_HERO_TKH_SUN_CE_GUARD' then
+    if MatchUnitTag(unitInfo.UnitType, 'CLASS_TKH_SP_UNIT') then
         unit:SetProperty('COMBAT_STRENGTH_BY_ERA', UnitEraStrength[Game.GetEras():GetCurrentEra() + 1])
         if not HeroSummons[playerID] then
             HeroSummons[playerID] = {}
@@ -391,7 +400,7 @@ function Initialize()
     Events.TurnEnd.Add(OnTurnEnd)
     Events.UnitDamageChanged.Add(OnUnitDamageChanged)
 
-    -- 英雄召唤物调整攻击力
+    -- 特种兵随时代调整攻击力
     HeroSummons = Game:GetProperty('HeroSummons') or {}
     Events.UnitAddedToMap.Add(OnUnitAddedToMap)
     Events.GameEraChanged.Add(OnGameEraChanged)

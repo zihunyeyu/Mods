@@ -1,11 +1,11 @@
-INSERT OR IGNORE INTO EquipmentTypes(EquipmentType, Name)
+INSERT OR IGNORE INTO TKH_EquipmentTypes(EquipmentType, Name)
 VALUES
 ('EQUIPMENT_WEAPON', 'LOC_WEAPON_NAME'),
 ('EQUIPMENT_ARMOR', 'LOC_ARMOR_NAME'),
 ('EQUIPMENT_MOUNT', 'LOC_MOUNT_NAME'),
 ('EQUIPMENT_ARTIFACT', 'LOC_ARTIFACT_NAME');
 
-INSERT OR IGNORE INTO EquipmentSuits(Suit, Name, Description, SuitEquipmentAmount)
+INSERT OR IGNORE INTO TKH_EquipmentSuits(Suit, Name, Description, SuitEquipmentAmount)
 VALUES
 
 ('EQUIPMENT_SUIT_JUXIANG', 'LOC_EQUIPMENT_SUIT_JUXIANG_NAME', 'LOC_EQUIPMENT_SUIT_JUXIANG_DESCRIPTION', '3,4'),
@@ -18,7 +18,7 @@ VALUES
 
 
 
-INSERT OR REPLACE INTO Equipments (Equipment, EquipmentType, ExclusiveHero, MustReward, RewardParam1, RewardParam2, Suit, Level, Price, Parameter1, Parameter2, Parameter3 )
+INSERT OR REPLACE INTO TKH_Equipments (Equipment, EquipmentType, HeroExclusive, MustReward, RewardParam1, RewardParam2, Suit, Level, Price, Parameter1, Parameter2, Parameter3 )
 VALUES
 -- 装备类型：EQUIPMENT_ARTIFACT（神器）
 ('EQUIPMENT_YinXueDao', 'EQUIPMENT_ARTIFACT', NULL, 0, NULL, NULL, NULL, 1, 9000, 0, 0, 0),
@@ -243,7 +243,7 @@ VALUES
 ('EQUIPMENT_QiLinJu', 'EQUIPMENT_MOUNT', 'JIANG_WEI', 0, 20, NULL, NULL, 1, 9000, 0, 0, 0),
 ('EQUIPMENT_QiLinShenMu', 'EQUIPMENT_ARTIFACT', 'JIANG_WEI', 0, 20, NULL, NULL, 1, 9000, 0, 0, 0);
 
-UPDATE Equipments 
+UPDATE TKH_Equipments 
 SET 
 Name='LOC_'||Equipment||'_NAME', 
 Description='LOC_'||Equipment||'_DESCRIPTION',
@@ -252,17 +252,17 @@ EquipmentAbility='ABILITY_TKH_'||Equipment;
 
 INSERT OR IGNORE INTO Types(Type, Kind)
 SELECT EquipmentAbility, 'KIND_ABILITY'
-FROM Equipments
-UNION SELECT EquipmentAbility||'_ExclusiveHero', 'KIND_ABILITY'
-FROM Equipments
-WHERE ExclusiveHero IS NOT NULL;
+FROM TKH_Equipments
+UNION SELECT EquipmentAbility||'_HeroExclusive', 'KIND_ABILITY'
+FROM TKH_Equipments
+WHERE HeroExclusive IS NOT NULL;
 
 INSERT OR IGNORE INTO UnitAbilities(UnitAbilityType, Name, Inactive)
 SELECT EquipmentAbility, Name, 1
-FROM Equipments
-UNION SELECT EquipmentAbility||'_ExclusiveHero', Name, 1
-FROM Equipments
-WHERE ExclusiveHero IS NOT NULL;
+FROM TKH_Equipments
+UNION SELECT EquipmentAbility||'_HeroExclusive', Name, 1
+FROM TKH_Equipments
+WHERE HeroExclusive IS NOT NULL;
 
 INSERT OR REPLACE INTO TypeTags (Type, Tag)
 SELECT UnitAbilityType, 'CLASS_ALL_UNITS'
@@ -273,7 +273,7 @@ WHERE UnitAbilityType LIKE 'ABILITY_TKH_EQUIPMENT_%';
 INSERT OR IGNORE INTO Types(Type, Kind)
 WITH split(Suit,splid,idsstr) AS
 (
-  SELECT  Suit,'',SuitEquipmentAmount||',' FROM EquipmentSuits
+  SELECT  Suit,'',SuitEquipmentAmount||',' FROM TKH_EquipmentSuits
   UNION ALL 
    SELECT Suit,substr(idsstr, 0, instr(idsstr, ',')),substr(idsstr, instr(idsstr, ',')+1)
     FROM split WHERE idsstr!=''
@@ -283,7 +283,7 @@ SELECT 'ABILITY_TKH_'||Suit||splid,'KIND_ABILITY'  FROM split WHERE splid != '';
 INSERT OR IGNORE INTO UnitAbilities(UnitAbilityType, Name, Description, Inactive)
 WITH split(Suit,Name,splid,idsstr) AS
 (
-  SELECT  Suit,Name,'',SuitEquipmentAmount||',' FROM EquipmentSuits
+  SELECT  Suit,Name,'',SuitEquipmentAmount||',' FROM TKH_EquipmentSuits
   UNION ALL 
    SELECT Suit,Name,substr(idsstr, 0, instr(idsstr, ',')),substr(idsstr, instr(idsstr, ',')+1)
     FROM split WHERE idsstr!=''

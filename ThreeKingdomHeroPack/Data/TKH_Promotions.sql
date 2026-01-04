@@ -1369,10 +1369,85 @@ VALUES
 
 -- EXTENSION 3
 --=====
+-- 下面的代码用于自动生成武将升级树的数据表记录
+-- 目前注释掉，改为手动编写以便定制化
+
+-- INSERT OR REPLACE INTO Types(Type, Kind)
+-- SELECT 'PROMOTION_CLASS_TK_' || Name, 'KIND_PROMOTION_CLASS'
+-- FROM TKH_Heroes;
 
 
+-- INSERT OR REPLACE INTO Types(Type, Kind)
+-- WITH num_table (n) AS (
+--     SELECT 1 UNION ALL
+--     SELECT 2 UNION ALL
+--     SELECT 3 UNION ALL
+--     SELECT 4 UNION ALL
+--     SELECT 5
+-- )
+-- SELECT 'PROMOTION_TK_' || tkh.Name || '_1_' || nt.n, 'KIND_PROMOTION'
+-- FROM TKH_Heroes AS tkh CROSS JOIN num_table AS nt;
+
+-- INSERT OR REPLACE INTO Types(Type, Kind)
+-- WITH num_table (n) AS (
+--     SELECT 1 UNION ALL
+--     SELECT 2 UNION ALL
+--     SELECT 3 UNION ALL
+--     SELECT 4 UNION ALL
+--     SELECT 5
+-- )
+-- SELECT 'PROMOTION_TK_' || tkh.Name || '_3_' || nt.n, 'KIND_PROMOTION'
+-- FROM TKH_Heroes AS tkh CROSS JOIN num_table AS nt;
+
+-- INSERT OR REPLACE INTO UnitPromotionClasses(PromotionClassType, Name)
+-- SELECT 'PROMOTION_CLASS_TK_' || Name, 'LOC_PROMOTION_CLASS_TK_' || Name || '_NAME'
+-- FROM TKH_Heroes;
 
 
+-- INSERT OR REPLACE INTO UnitPromotions(UnitPromotionType, Name, Description, Level, [Column], Specialization, PromotionClass)
+-- WITH num_table (n) AS (
+--     SELECT 1 UNION ALL
+--     SELECT 2 UNION ALL
+--     SELECT 3 UNION ALL
+--     SELECT 4 UNION ALL
+--     SELECT 5
+-- )
+-- SELECT 
+--     'PROMOTION_TK_' || tkh.Name || '_1_' || nt.n AS UnitPromotionType,
+--     'LOC_PROMOTION_TK_' || tkh.Name || '_1_' || nt.n || '_NAME' AS Name,
+--     'LOC_PROMOTION_TK_' || tkh.Name || '_1_' || nt.n || '_DESCRIPTION' AS Description,
+--     nt.n AS Level,
+--     1 AS [Column],
+--     NULL AS Specialization,
+--     'PROMOTION_CLASS_TK_' || tkh.Name AS PromotionClass
+-- FROM TKH_Heroes AS tkh CROSS JOIN num_table AS nt
+-- UNION
+-- SELECT 
+--     'PROMOTION_TK_' || tkh.Name || '_3_' || nt.n AS UnitPromotionType,
+--     'LOC_PROMOTION_TK_' || tkh.Name || '_3_' || nt.n || '_NAME' AS Name,
+--     'LOC_PROMOTION_TK_' || tkh.Name || '_3_' || nt.n || '_DESCRIPTION' AS Description,
+--     nt.n AS Level,
+--     3 AS [Column],
+--     NULL AS Specialization,
+--     'PROMOTION_CLASS_TK_' || tkh.Name AS PromotionClass
+-- FROM TKH_Heroes AS tkh CROSS JOIN num_table AS nt;
+
+-- INSERT OR REPLACE INTO UnitPromotionPrereqs(UnitPromotion, PrereqUnitPromotion)
+-- WITH num_table (n) AS (
+--     SELECT 1 UNION ALL
+--     SELECT 2 UNION ALL
+--     SELECT 3 UNION ALL
+--     SELECT 4
+-- )
+-- SELECT 
+--     'PROMOTION_TK_' || tkh.Name || '_1_' || (nt.n + 1) AS UnitPromotion,
+--     'PROMOTION_TK_' || tkh.Name || '_1_' || nt.n AS PrereqUnitPromotion
+-- FROM TKH_Heroes AS tkh CROSS JOIN num_table AS nt
+-- UNION
+-- SELECT 
+--     'PROMOTION_TK_' || tkh.Name || '_3_' || (nt.n + 1) AS UnitPromotion,
+--     'PROMOTION_TK_' || tkh.Name || '_3_' || nt.n AS PrereqUnitPromotion
+-- FROM TKH_Heroes AS tkh CROSS JOIN num_table AS nt;
 
 -- 固化升级效果
 

@@ -275,7 +275,7 @@ function IsUnitHasCommand(pUnit, commandType)
     if gpInfo ~= nil then
         unitType = gpInfo.GreatPersonIndividualType
     end
-    for row in GameInfo.UnitTypeUnitCommands_TKH() do
+    for row in GameInfo.TKH_UnitTypeUnitCommands() do
         if row.CommandType == commandType then
             if unitType == row.UnitType then
                 return true
@@ -726,7 +726,7 @@ function GetCommandResourceIndex(pUnitType)
     local resourceType
     local resourceIndex = -1
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", pUnitType,
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
         'UNITCOMMAND_CREATE_RESOURCE');
     if results then
         for _, row in ipairs(results) do
@@ -755,7 +755,7 @@ function GetCommandPlotChangeInfo(pUnitType)
     local changeItemName = '原样'
 
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", pUnitType,
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
         'UNITCOMMAND_CHANGE_PLOT');
     if results then
         for _, row in ipairs(results) do
@@ -820,7 +820,7 @@ function GetCommandString(pUnitType, commandType)
         local form;
 
         local results = DB.Query(
-            "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", pUnitType,
+            "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
             commandType);
 
         if results then
@@ -855,7 +855,7 @@ function GetCommandString(pUnitType, commandType)
         end
     elseif commandType == 'UNITCOMMAND_ENDOW_ABILITY' then
         local results = DB.Query(
-            "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ? and Name = ?",
+            "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ? and Name = ?",
             pUnitType, 'UNITCOMMAND_ENDOW_ABILITY', 'ABILITY');
         local ability = GameInfo.UnitAbilities[results[1].Value]
         return Locale.Lookup('LOC_ENDOW_UNIT_ABILITY', Locale.Lookup(ability.Name),
@@ -1144,7 +1144,7 @@ function GetRemainEquipmentAmount(equipmentAllocator, equipmentType)
         else
             local amount = 0
             for _, equipmentIndex in ipairs(equipmentAllocator) do
-                local equipment = GameInfo.Equipments[equipmentIndex]
+                local equipment = GameInfo.TKH_Equipments[equipmentIndex]
                 if equipment and equipment.EquipmentType == equipmentType then
                     amount = amount + 1
                 end

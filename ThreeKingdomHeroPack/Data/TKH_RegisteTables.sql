@@ -3,17 +3,6 @@
 -- DateCreated: 6/7/2025 12:20:19 PM
 --------------------------------------------------------------
 
-DROP TABLE IF EXISTS TKH_Numbers;
-CREATE TABLE "TKH_Numbers" (
-	'No' INTEGER NOT NULL,
-	PRIMARY KEY(No)
-);
-WITH RECURSIVE
-INDICES(i) AS (SELECT 1 UNION ALL SELECT (i + 1) FROM INDICES LIMIT 100)
-INSERT INTO TKH_Numbers(No) 
-SELECT i 
-FROM INDICES;
-
 
 CREATE TABLE IF NOT EXISTS HeroClassAbilities (
 	HeroClassType		TEXT   NOT NULL,
@@ -29,6 +18,16 @@ CREATE TABLE IF NOT EXISTS HeroClassPortraits (
 	PRIMARY KEY (HeroClassType)
 );
 
+CREATE TABLE IF NOT EXISTS TKH_Numbers (
+	'No' INTEGER NOT NULL,
+	PRIMARY KEY(No)
+);
+WITH RECURSIVE
+INDICES(i) AS (SELECT 1 UNION ALL SELECT (i + 1) FROM INDICES LIMIT 100)
+INSERT INTO TKH_Numbers(No) 
+SELECT i 
+FROM INDICES;
+
 CREATE TABLE IF NOT EXISTS TKH_Heroes ( 
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     Name TEXT NOT NULL, 
@@ -41,13 +40,13 @@ CREATE TABLE IF NOT EXISTS TKH_RelationshipAbilities (
     Heroes TEXT NOT NULL
 );
 
-CREATE TABLE IF NOT EXISTS EquipmentTypes ( 
+CREATE TABLE IF NOT EXISTS TKH_EquipmentTypes ( 
 	EquipmentType TEXT NOT NULL, 
 	Name TEXT, 
 	PRIMARY KEY (EquipmentType) 
 );
 
-CREATE TABLE IF NOT EXISTS EquipmentSuits (
+CREATE TABLE IF NOT EXISTS TKH_EquipmentSuits (
 	Suit TEXT NOT NULL, 
 	Name TEXT NOT NULL, 
 	Description TEXT, 
@@ -56,14 +55,14 @@ CREATE TABLE IF NOT EXISTS EquipmentSuits (
 	PRIMARY KEY (Suit)
 );
 
-CREATE TABLE IF NOT EXISTS Equipments (
+CREATE TABLE IF NOT EXISTS TKH_Equipments (
 	Equipment TEXT NOT NULL, 
 	EquipmentType TEXT NOT NULL, 
 	Name TEXT, 
 	Description TEXT, 
 	EquipmentAbility TEXT, 
 	Icon TEXT,
-	ExclusiveHero TEXT,
+	HeroExclusive TEXT,
 	RewardReqType TEXT NOT NULL DEFAULT 'TOTAL_KILL',
 	MustReward BLOB NOT NULL DEFAULT 0,
 	RewardParam1 TEXT,
@@ -76,11 +75,11 @@ CREATE TABLE IF NOT EXISTS Equipments (
 	Parameter2 INTEGER NOT NULL DEFAULT 0,
 	Parameter3 INTEGER NOT NULL DEFAULT 0,
 	PRIMARY KEY (Equipment),
-	FOREIGN KEY (EquipmentType) REFERENCES EquipmentTypes(EquipmentType),
-	FOREIGN KEY (Suit) REFERENCES EquipmentSuits(Suit)
+	FOREIGN KEY (EquipmentType) REFERENCES TKH_EquipmentTypes(EquipmentType),
+	FOREIGN KEY (Suit) REFERENCES TKH_EquipmentSuits(Suit)
 );
 
-CREATE TABLE IF NOT EXISTS TKH_TKH_EA_Projects ( 
+CREATE TABLE IF NOT EXISTS TKH_ArmouryProjects ( 
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     Name TEXT NOT NULL, 
     Tags TEXT NOT NULL, 
@@ -95,7 +94,6 @@ CREATE TABLE IF NOT EXISTS TKH_GreatCities (
 	PRIMARY KEY (City) 
 );
 
-DROP TABLE IF EXISTS TKH_GreatCityModifers;
 CREATE TABLE IF NOT EXISTS TKH_GreatCityModifers ( 
 	PropertyKey TEXT NOT NULL, 
 	ModifierType TEXT,
@@ -105,7 +103,7 @@ CREATE TABLE IF NOT EXISTS TKH_GreatCityModifers (
 	SubjectRequirementSetId TEXT
 );
 
-CREATE TABLE "UnitCommands_TKH" (
+CREATE TABLE IF NOT EXISTS TKH_UnitCommands(
 	"CommandType" TEXT NOT NULL,
 	"Description" TEXT NOT NULL,
 	"Help" TEXT,
@@ -125,7 +123,7 @@ CREATE TABLE "UnitCommands_TKH" (
 	FOREIGN KEY (PrereqTech) REFERENCES Technologies(TechnologyType) ON DELETE CASCADE ON UPDATE CASCADE
 );
 
-CREATE TABLE IF NOT EXISTS UnitTypeUnitCommands_TKH (
+CREATE TABLE IF NOT EXISTS TKH_UnitTypeUnitCommands (
 	UnitType TEXT NOT NULL, 
 	CommandType TEXT NOT NULL,
 	ActionCharges INTEGER NOT NULL,
@@ -134,7 +132,7 @@ CREATE TABLE IF NOT EXISTS UnitTypeUnitCommands_TKH (
 	PRIMARY KEY (UnitType, CommandType)
 );
 
-CREATE TABLE IF NOT EXISTS UnitTypeUnitCommandArguments_TKH (
+CREATE TABLE IF NOT EXISTS TKH_UnitTypeUnitCommandArguments (
 	UnitType TEXT NOT NULL, 
 	CommandType TEXT NOT NULL, 
 	Name TEXT NOT NULL ,

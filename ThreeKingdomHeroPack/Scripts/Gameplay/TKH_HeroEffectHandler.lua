@@ -127,7 +127,7 @@ function OnCombat(pCombatResult)
 
 
         -- 铁石弹专属
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_ExclusiveHero') then
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
             local ajdunits = GetNeighborUnits(dUnit:GetX(), dUnit:GetY(), 1)
             if ajdunits ~= nil and #ajdunits > 0 then
                 for _, adjUnit in ipairs(ajdunits) do
@@ -148,7 +148,7 @@ function OnCombat(pCombatResult)
     elseif vsType == CombatVSComponentTypes.UNIT_CITY then
         local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
         local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_ExclusiveHero') then
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
             local ajdunits = GetNeighborUnits(defender[4].x, defender[4].y, 1)
             if ajdunits ~= nil and #ajdunits > 0 then
                 for _, adjUnit in ipairs(ajdunits) do
@@ -159,7 +159,7 @@ function OnCombat(pCombatResult)
     elseif vsType == CombatVSComponentTypes.UNIT_DISTRICT then
         local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
         local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_ExclusiveHero') then
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
             local ajdunits = GetNeighborUnits(defender[4].x, defender[4].y, 1)
             if ajdunits ~= nil and #ajdunits > 0 then
                 for _, adjUnit in ipairs(ajdunits) do
@@ -217,19 +217,19 @@ function OnTurnEnd()
                 TreatUnit(pUnit, 10)
             end
             -- 方天画戟额外效果
-            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_FangTianHuaJi_ExclusiveHero') then
+            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_FangTianHuaJi_HeroExclusive') then
                 TreatUnit(pUnit, 10)
             end
             -- 青龙偃月刀额外效果
-            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_QingLongYanYueDao_ExclusiveHero') then
+            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_QingLongYanYueDao_HeroExclusive') then
                 TreatUnit(pUnit, 10)
             end
             -- 霹雳斧额外效果
-            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_PILIFU_ExclusiveHero') then
+            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_PILIFU_HeroExclusive') then
                 TreatUnit(pUnit, 10)
             end
             -- 贯石斧额外效果
-            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_GUANSHIFU_ExclusiveHero') then
+            if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_GUANSHIFU_HeroExclusive') then
                 TreatUnit(pUnit, 10)
             end
 

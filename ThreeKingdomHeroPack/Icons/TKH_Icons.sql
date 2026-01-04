@@ -2,7 +2,7 @@
 -- Author: PurpleSoul
 -- DateCreated: 5/24/2025 10:24:56 PM
 --------------------------------------------------------------
-CREATE TABLE IF NOT EXISTS TKH_TKH_EA_Projects ( 
+CREATE TABLE IF NOT EXISTS TKH_ArmouryProjects ( 
     ID INTEGER PRIMARY KEY AUTOINCREMENT,
     Name TEXT NOT NULL, 
     Tags TEXT NOT NULL, 
@@ -10,7 +10,7 @@ CREATE TABLE IF NOT EXISTS TKH_TKH_EA_Projects (
 );
 
 
-INSERT INTO TKH_TKH_EA_Projects(Name, Cost, Tags) 
+INSERT INTO TKH_ArmouryProjects(Name, Cost, Tags) 
 VALUES 
 ('LIUDANPAO', 2, 'CLASS_SIEGE_TKH_UNIT'),
 ('RANSHAODAN', 2, 'CLASS_SIEGE_TKH_UNIT'),
@@ -43,4 +43,4 @@ VALUES
 
 INSERT INTO IconDefinitions(Name, Atlas, [Index])
 SELECT 'ICON_PROJECT_TKH_EA_'||Name, 'ICON_ATLAS_PROJECTS', 11
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;

@@ -8,11 +8,11 @@ VALUES
 
 INSERT OR REPLACE INTO CivilopediaPageQueries(SectionId,	PageGroupIdColumn,	TooltipColumn,	SortIndex,	SQL)
 VALUES
-('EQUIPMENTS',	'PageGroupId',	'Tooltip',	'10',	'SELECT Equipment AS PageId, EquipmentType AS PageGroupId, "Equipment" AS PageLayoutId, Name, null AS Tooltip FROM Equipments');
+('EQUIPMENTS',	'PageGroupId',	'Tooltip',	'10',	'SELECT Equipment AS PageId, EquipmentType AS PageGroupId, "Equipment" AS PageLayoutId, Name, null AS Tooltip FROM TKH_Equipments');
 
 INSERT OR REPLACE INTO CivilopediaPageGroupQueries(SectionId,	TooltipColumn,	VisibleIfEmptyColumn,	SortIndexColumn,	SortIndex,	SQL)
 VALUES
-('EQUIPMENTS',	'Tooltip',	'VisibleIfEmpty',	'SortIndex',	'10',	'SELECT EquipmentType as PageGroupId, Name, null as Tooltip, 1 as VisibleIfEmpty, 0 as SortIndex from EquipmentTypes');
+('EQUIPMENTS',	'Tooltip',	'VisibleIfEmpty',	'SortIndex',	'10',	'SELECT EquipmentType as PageGroupId, Name, null as Tooltip, 1 as VisibleIfEmpty, 0 as SortIndex from TKH_EquipmentTypes');
 
 INSERT OR REPLACE INTO CivilopediaPageLayouts(PageLayoutId,	ScriptTemplate)
 VALUES

@@ -36,7 +36,7 @@ function OnUnitGreatPersonCreated(playerID, unitID, greatPersonClassID, greatPer
 
     local actionCharges = {}
 
-    for row in GameInfo.UnitTypeUnitCommands_TKH() do
+    for row in GameInfo.TKH_UnitTypeUnitCommands() do
         if gpType == row.UnitType then
             actionCharges[row.CommandType] = { row.ActionCharges, row.ActionCharges }
             if row.Recover then
@@ -65,7 +65,7 @@ function OnUnitAddedToMap(playerID, unitID)
     local gInfo = GameInfo.GreatPersonIndividuals[greatPersonIndividualID]
     if not gInfo then
         local actionCharges = {}
-        for row in GameInfo.UnitTypeUnitCommands_TKH() do
+        for row in GameInfo.TKH_UnitTypeUnitCommands() do
             if unitType == row.UnitType then
                 actionCharges[row.CommandType] = { row.ActionCharges, row.ActionCharges }
                 if row.Recover then
@@ -256,7 +256,7 @@ function CommandBuildImprovement(eOwner, iUnitID, parameters)
     local pUnitType = GameInfo.Units[pUnit:GetType()].UnitType
 
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", pUnitType,
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
         parameters.CommandType)
     local improvementTypeIndex = -1
     -- local changeType = -1
@@ -300,7 +300,7 @@ function CommandCreateUnit(eOwner, iUnitID, parameters)
     local form
 
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", pUnitType,
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
         parameters.CommandType)
 
     if results then
@@ -352,7 +352,7 @@ function CommandEndowAbility(eOwner, iUnitID, parameters)
     end
 
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ? and Name = ?",
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ? and Name = ?",
         pUnitType, 'UNITCOMMAND_ENDOW_ABILITY', 'ABILITY')
 
     if results then
@@ -434,7 +434,7 @@ function CommandDealDamageAoe(eOwner, iUnitID, parameters)
     local range = 1
     local damage
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?",
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?",
         unitType, 'UNITCOMMAND_DEAL_DAMAGE_AOE')
 
     local diplomacy = Players[pUnit:GetOwner()]:GetDiplomacy()
@@ -558,7 +558,7 @@ function CommandAddBuff(eOwner, iUnitID, parameters)
     end
     local unitType = GameInfo.Units[pUnit:GetType()].UnitType
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?",
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?",
         unitType, 'UNITCOMMAND_ADD_BUFF')
     local ability
     local lastedTurn

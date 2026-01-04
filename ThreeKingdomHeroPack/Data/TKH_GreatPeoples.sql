@@ -224,12 +224,12 @@ INSERT OR REPLACE INTO GreatPersonIndividuals(GreatPersonIndividualType, Name, G
 SELECT 'GREAT_PERSON_INDIVIDUAL_'||Name, 'LOC_GREAT_PERSON_INDIVIDUAL_'||Name||'_NAME', GreatPersonClassType, EraType, Gender, 0
 FROM TKH_GreatPeoples;
 
-INSERT OR IGNORE INTO UnitTypeUnitCommands_TKH(UnitType, ActionCharges, CommandType)
+INSERT OR IGNORE INTO TKH_UnitTypeUnitCommands(UnitType, ActionCharges, CommandType)
 SELECT 'GREAT_PERSON_INDIVIDUAL_'||Name, ActionCharges, CommandType
 FROM TKH_GreatPeoples;
 
 INSERT OR REPLACE INTO
-	UnitTypeUnitCommandArguments_TKH (UnitType, CommandType, Name, Value)
+	TKH_UnitTypeUnitCommandArguments (UnitType, CommandType, Name, Value)
 VALUES
 ('GREAT_PERSON_INDIVIDUAL_MENG_HUO','UNITCOMMAND_CREATE_UNIT','UnitType','UNIT_KHMER_DOMREY'),
 ('GREAT_PERSON_INDIVIDUAL_MENG_HUO','UNITCOMMAND_CREATE_UNIT','Count',1),

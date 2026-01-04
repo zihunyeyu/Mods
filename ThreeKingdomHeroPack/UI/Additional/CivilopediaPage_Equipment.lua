@@ -10,7 +10,7 @@ PageLayouts["Equipment"] = function(page)
     SetPageHeader(page.Title);
     SetPageSubHeader(page.Subtitle);
 
-    local equipment = GameInfo.Equipments[pageId];
+    local equipment = GameInfo.TKH_Equipments[pageId];
     -- Right column data
     if (equipment) then
         AddPortrait(equipment.Icon);

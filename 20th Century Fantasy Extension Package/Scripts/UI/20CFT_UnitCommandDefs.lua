@@ -41,13 +41,3 @@ m_20CFT_UnitCommands.UNITCOMMAND_HEAL_UNIT.IsDisabled           = function(pUnit
 	return nil;
 end
 
-
-
--- for row in GameInfo.UnitCommands_TKH() do
--- 	m_20CFT_UnitCommands[row.CommandType].CategoryInUI      = row.CategoryInUI
--- 	m_20CFT_UnitCommands[row.CommandType].Icon              = row.Icon
--- 	m_20CFT_UnitCommands[row.CommandType].ActionName        = row.Description
--- 	m_20CFT_UnitCommands[row.CommandType].ActionDescription = row.Help
--- 	m_20CFT_UnitCommands[row.CommandType].VisibleInUI       = row.VisibleInUI
--- 	m_20CFT_UnitCommands[row.CommandType].InterfaceMode     = row.InterfaceMode;
--- end

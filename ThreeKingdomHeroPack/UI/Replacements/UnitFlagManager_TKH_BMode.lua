@@ -214,7 +214,7 @@ function UnitFlag.UpdateName(self)
 		local unitType = GameInfo.Units[pUnit:GetUnitType()].UnitType
 		if unitType ~= nil and m_HeroEquipmentManager[unitType] then
 			local heroEquipments = m_HeroEquipmentManager[unitType]
-			for row in GameInfo.EquipmentTypes() do
+			for row in GameInfo.TKH_EquipmentTypes() do
 				local e = heroEquipments[row.EquipmentType]
 				if e and m_EquipmentManager[e] then
 					nameString = nameString .. '[NEWLINE]- ' .. Locale.Lookup(m_EquipmentManager[e].Description)

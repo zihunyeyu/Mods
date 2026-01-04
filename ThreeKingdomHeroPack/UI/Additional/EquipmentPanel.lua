@@ -117,7 +117,7 @@ local m_filterSelectedName = "LOC_ROUTECHOOSER_FILTER_ALL"
 --- @param e string 装备类型
 --- @return string 装备描述
 function GetEquiomentDescription(e)
-    local equipment = GameInfo.Equipments[e]
+    local equipment = GameInfo.TKH_Equipments[e]
     if not equipment then
         return ''
     end
@@ -420,7 +420,7 @@ function PopulateSelectedHero()
 
         local suitAmount = {}
         local eInstans = {}
-        for row in GameInfo.EquipmentTypes() do
+        for row in GameInfo.TKH_EquipmentTypes() do
             local pEquipmentInst = m_pEquipmentIM:GetInstance(kHeroInstance.HeroEquipmentStack)
             eInstans[row.EquipmentType] = pEquipmentInst
             pEquipmentInst.EquipmentTypeIcon:SetIcon('ICON_' .. row.EquipmentType)
@@ -722,7 +722,7 @@ function RefreshFilters()
     Controls.EquipmentFilterPulldown:ClearEntries()
     m_filterList = {}
     AddFilter(Locale.Lookup("LOC_ROUTECHOOSER_FILTER_ALL"), nil)
-    for equipmentType in GameInfo.EquipmentTypes() do
+    for equipmentType in GameInfo.TKH_EquipmentTypes() do
         AddFilter(Locale.Lookup(equipmentType.Name), nil)
     end
     for index, filter in ipairs(m_filterList) do
@@ -742,7 +742,7 @@ function RefreshEquipmentLibraryStack()
     for e, equipment in pairs(m_EquipmentManager) do
         if equipment.Owner == playerID then
             if equipment ~= nil then
-                if m_filterSelected == 1 or equipment.EquipmentType == GameInfo.EquipmentTypes[m_filterSelected - 2].EquipmentType then
+                if m_filterSelected == 1 or equipment.EquipmentType == GameInfo.TKH_EquipmentTypes[m_filterSelected - 2].EquipmentType then
                     ownedEquipments[equipment.HeroClassIndex] = ownedEquipments[equipment.HeroClassIndex] or {}
                     table.insert(ownedEquipments[equipment.HeroClassIndex], e)
                 end
@@ -814,7 +814,7 @@ function RefreshShopPane(selectedTabName)
     end
 
     table.sort(es, function(a, b)
-        return GameInfo.Equipments[a].Index < GameInfo.Equipments[b].Index
+        return GameInfo.TKH_Equipments[a].Index < GameInfo.TKH_Equipments[b].Index
     end)
 
     for _, e in ipairs(es) do
@@ -918,7 +918,7 @@ function OnSuitTooltip(suit)
 
     local playerID = Game.GetLocalPlayer()
 
-    for _, e in ipairs(suit.Equipments) do
+    for _, e in ipairs(suit.TKH_Equipments) do
         local suitEquipment = m_EquipmentManager[e]
         if suitEquipment then
             local suitEquipmentName = Locale.Lookup(suitEquipment.Name)
@@ -982,7 +982,7 @@ function RefreshHandbookPane(selectedTabName)
     end
 
     table.sort(es, function(a, b)
-        return GameInfo.Equipments[a].Index < GameInfo.Equipments[b].Index
+        return GameInfo.TKH_Equipments[a].Index < GameInfo.TKH_Equipments[b].Index
     end)
 
 

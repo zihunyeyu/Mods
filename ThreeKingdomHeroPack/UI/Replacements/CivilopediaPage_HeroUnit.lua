@@ -415,7 +415,7 @@ PageLayouts["HeroUnit"] = function(page)
 
 	local createUnitType = nil
 	local results = DB.Query(
-		"SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", unitType,
+		"SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", unitType,
 		'UNITCOMMAND_CREATE_UNIT');
 	if results then
 		for _, row in ipairs(results) do

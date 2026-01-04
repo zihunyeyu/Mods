@@ -372,7 +372,7 @@ m_TKH_UnitCommands.UNITCOMMAND_ENDOW_ABILITY.IsDisabled = function(pUnit)
     local pUnitType = GameInfo.Units[pUnit:GetType()].UnitType
     local arguments = {}
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?", pUnitType,
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
         'UNITCOMMAND_ENDOW_ABILITY');
     if results then
         for _, row in ipairs(results) do
@@ -432,7 +432,7 @@ m_TKH_UnitCommands.UNITCOMMAND_ENDOW_ABILITY.ResetDescription = function(pUnit)
     local greatPersonIndividualID = pUnit:GetGreatPerson():GetIndividual()
     local gpType = GameInfo.GreatPersonIndividuals[greatPersonIndividualID].GreatPersonIndividualType
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ? and Name = ?",
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ? and Name = ?",
         gpType, 'UNITCOMMAND_ENDOW_ABILITY', 'ABILITY');
     local ability = GameInfo.UnitAbilities[results[1].Value]
     if ability == nil then
@@ -558,7 +558,7 @@ end
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.ResetDescription = function(pUnit)
     local unitType = GameInfo.Units[pUnit:GetType()].UnitType
     local results = DB.Query(
-        "SELECT Name, Value from UnitTypeUnitCommandArguments_TKH where UnitType = ? and CommandType = ?",
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?",
         unitType, 'UNITCOMMAND_ADD_BUFF')
     local ability
     local lastedTurn
@@ -589,7 +589,7 @@ m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.ResetDescription = function(pUnit)
 end
 
 
-for row in GameInfo.UnitCommands_TKH() do
+for row in GameInfo.TKH_UnitCommands() do
     m_TKH_UnitCommands[row.CommandType].Icon = row.Icon
     m_TKH_UnitCommands[row.CommandType].ActionName = row.Description
     m_TKH_UnitCommands[row.CommandType].ActionDescription = row.Help

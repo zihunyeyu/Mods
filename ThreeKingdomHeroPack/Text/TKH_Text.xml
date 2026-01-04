@@ -11,7 +11,7 @@
 				方天画戟：进攻时+14 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_FangTianHuaJi_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_FangTianHuaJi_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），恢复10点生命值（人中吕布）
 			</Text>
@@ -36,7 +36,7 @@
 				青龙偃月刀：进攻时+13 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），恢复10点生命值（义薄云天）
 			</Text>
@@ -5164,67 +5164,67 @@
 				位于沼泽地形时-10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QingGangJian_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QingGangJian_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+1 [ICON_MOVEMENT] 移动力（曹操：当世奸雄）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_GuDingDao_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_GuDingDao_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+1 [ICON_MOVEMENT] 移动力（孙权：江东少主）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+3 [ICON_Strength] 战斗力（刘备：大汉皇叔）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+{1_Amount} [ICON_Strength] 战斗力（刘备：大汉皇叔）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+5 [ICON_Strength] 战斗力（孙尚香：人间国色）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孙尚香：人间国色）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+5 [ICON_Strength] 战斗力（孙策：江东霸王）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+{1_Amount} [ICON_Strength] 战斗力（孙策：江东霸王）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_ExclusiveHero_AOE" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_HeroExclusive_AOE" Language="zh_Hans_CN">
 			<Text>
 				攻击时+5 [ICON_Strength] 战斗力、+1 [ICON_MOVEMENT] 移动力（文丑：宿铁刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CHANGBINGDADAO_ExclusiveHero_AOE" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CHANGBINGDADAO_HeroExclusive_AOE" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+15 [ICON_Strength] 战斗力（颜良：长柄大刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_ExclusiveHero_AOE_A" Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_HeroExclusive_AOE_A" Language="zh_Hans_CN">
 			<Text>
 				攻击时+{1_Amount} [ICON_Strength] 战斗力（文丑：宿铁刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孟获：南蛮之主）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_ExclusiveHero" Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孟获：南蛮之主）
 			</Text>
@@ -5239,7 +5239,7 @@
 				雌雄双股剑：+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_CIXIONGSHUANGGUJIAN_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				雌雄双股剑：2个单元格以内的非英雄单位+3 [ICON_Strength] 战斗力（大汉皇叔）
 			</Text>
@@ -5254,7 +5254,7 @@
 				长柄大刀：+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_CHANGBINGDADAO_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_CHANGBINGDADAO_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				长柄大刀：防御远程攻击时+10 [ICON_Strength] 战斗力（河北之虎）
 			</Text>
@@ -5269,7 +5269,7 @@
 				宿铁刀：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_SUTIEDAO_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_SUTIEDAO_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				宿铁刀：与英雄单位战斗时+5 [ICON_Strength] 战斗力（河北之狮）
 			</Text>
@@ -5284,7 +5284,7 @@
 				鸳鸯枪：+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_YUANYANGQIANG_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_YUANYANGQIANG_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				鸳鸯枪：2个单元格以内的抗骑兵单位防御远程攻击时+5 [ICON_Strength] 战斗力（人间国色）
 			</Text>
@@ -5299,7 +5299,7 @@
 				霸王枪：攻击时+9 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_BAWANGQIANG_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_BAWANGQIANG_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				霸王枪：自身及3个单元格以内的御龙卫与骑兵单位战斗时+5 [ICON_Strength] 战斗力（江东霸王）
 			</Text>
@@ -5314,7 +5314,7 @@
 				姬神弓：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_JISHENGONG_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_JISHENGONG_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				姬神弓：击杀单位时获得50 [ICON_GOLD] 金币（沉鱼落雁）
 			</Text>
@@ -5329,7 +5329,7 @@
 				霹雳斧：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_PILIFU_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_PILIFU_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				霹雳斧：每回合结束时（甚至是在移动或攻击后），额外恢复10点生命值（遍体鳞伤）
 			</Text>
@@ -5344,7 +5344,7 @@
 				贯石斧：攻击时+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_GUANSHIFU_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_GUANSHIFU_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				贯石斧：每回合结束时（甚至是在移动或攻击后），额外恢复10点生命值（曹氏虎卫）
 			</Text>
@@ -5359,7 +5359,7 @@
 				象牙双钩：攻击时+11 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_XIANGYASHUANGGOU_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_XIANGYASHUANGGOU_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				象牙双钩：+2 [ICON_MOVEMENT] 移动力（蛮象）
 			</Text>
@@ -5374,7 +5374,7 @@
 				寒冰剑：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_HANBINGJIAN_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_HANBINGJIAN_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				寒冰剑：攻击时+4 [ICON_Strength] 战斗力，+1 [ICON_MOVEMENT] 移动力（魏盾）
 			</Text>
@@ -5389,7 +5389,7 @@
 				月牙戟：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_YUEYAJI_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_YUEYAJI_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				月牙戟：自身及3个单元格以内的影卫+1 [ICON_MOVEMENT] 移动力（五子良将）
 			</Text>
@@ -5404,7 +5404,7 @@
 				铁石弹：攻击时+8 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_TIESHIDAN_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_TIESHIDAN_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				铁石弹：攻击时对目标1个单元格范围内的所有单位造成10点溅射伤害；自身及3个单元格以内的影卫防御远程攻击时时+5 [ICON_Strength] 战斗力（南蛮之主）
 			</Text>
@@ -5869,7 +5869,7 @@
 				切换到所选英雄
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_BaoDiaoGong_ExclusiveHero_DESCRIPTION" Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_BaoDiaoGong_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				宝雕弓专属：攻击区域时+{1_Amount} [ICON_Strength] 战斗力
 			</Text>

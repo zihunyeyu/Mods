@@ -41,7 +41,7 @@ PageLayouts["GreatPerson"] = function(page)
 
 
 	local commandSQL = DB.Query(
-		"SELECT CommandType, ActionCharges from UnitTypeUnitCommands_TKH where UnitType = ?",
+		"SELECT CommandType, ActionCharges from TKH_UnitTypeUnitCommands where UnitType = ?",
 		greatPersonType)
 
 	if commandSQL and #commandSQL > 0 then

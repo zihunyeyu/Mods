@@ -20,7 +20,7 @@ INSERT INTO Building_GreatPersonPoints(BuildingType, GreatPersonClassType, Point
 VALUES
 ('BUILDING_EQUIPMENT_ARSENAL', 'GREAT_PERSON_CLASS_GENERAL', 1);
 
-INSERT INTO TKH_TKH_EA_Projects(Name, CostMutilpier, Tags) 
+INSERT INTO TKH_ArmouryProjects(Name, CostMutilpier, Tags) 
 VALUES 
 ('LIUDANPAO', 2, 'CLASS_SIEGE_TKH_UNIT'),
 ('RANSHAODAN', 2, 'CLASS_SIEGE_TKH_UNIT'),
@@ -73,12 +73,12 @@ VALUES
 
 INSERT INTO Types(Type, Kind)
 SELECT 'ABILITY_TKH_EA_'||Name, 'KIND_ABILITY'
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;
 
 INSERT INTO TypeTags(Type, Tag)
 WITH split(Name,splid,idsstr) AS
 (
-  SELECT  Name,'',Tags||',' FROM TKH_TKH_EA_Projects
+  SELECT  Name,'',Tags||',' FROM TKH_ArmouryProjects
   UNION ALL 
    SELECT Name,substr(idsstr, 0, instr(idsstr, ',')),substr(idsstr, instr(idsstr, ',')+1)
     FROM split WHERE idsstr!=''
@@ -87,30 +87,30 @@ SELECT 'ABILITY_TKH_EA_'||Name, splid  FROM split WHERE splid != '';
 
 INSERT INTO UnitAbilities(UnitAbilityType, Description, Inactive, Permanent)
 SELECT 'ABILITY_TKH_EA_'||Name, 'LOC_PROJECT_TKH_EA_'||Name||'_DESCRIPTION', 1, 1
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;
 
 
 -- LOC_PROJECT_TKH_EA_LIUDANPAO_NAME
 
 INSERT INTO Types(Type, Kind)
 SELECT 'PROJECT_TKH_EA_'||Name, 'KIND_PROJECT'
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;
 
 INSERT INTO Projects(ProjectType, Name, ShortName, Description, Cost, UnlocksFromEffect, MaxPlayerInstances, RequiredBuilding)
 SELECT 'PROJECT_TKH_EA_'||Name, 'LOC_PROJECT_TKH_EA_'||Name||'_NAME', 'LOC_PROJECT_TKH_EA_'||Name||'_NAME', 'LOC_PROJECT_TKH_EA_'||Name||'_DESCRIPTION', CostMutilpier*500, 0, 1, 'BUILDING_EQUIPMENT_ARSENAL'
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;
 
 INSERT INTO Modifiers(ModifierId, ModifierType)
 SELECT 'MODIFIER_PROJECT_TKH_EA_'||Name, 'MODIFIER_PLAYER_UNITS_GRANT_ABILITY_GRANCOLOMBIA_MAYA'
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;
 
 INSERT INTO ModifierArguments(ModifierId, Name, Value)
 SELECT 'MODIFIER_PROJECT_TKH_EA_'||Name, 'AbilityType', 'ABILITY_TKH_EA_'||Name
-FROM TKH_TKH_EA_Projects;
+FROM TKH_ArmouryProjects;
 
 INSERT INTO UnitAbilityModifiers(UnitAbilityType, ModifierId)
 SELECT 'ABILITY_TKH_EA_'||Name, 'MOD_ABILITY_TKH_EA_'||Name
-FROM TKH_TKH_EA_Projects
+FROM TKH_ArmouryProjects
 WHERE EXISTS (
     SELECT 1
     FROM Modifiers

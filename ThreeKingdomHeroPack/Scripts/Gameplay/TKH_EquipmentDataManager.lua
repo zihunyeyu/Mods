@@ -63,7 +63,7 @@ function Equipment.Initialize(self, eData)
     self.Name = eData.Name
     self.Description = eData.Description
     self.EquipmentAbility = eData.EquipmentAbility
-    self.ExclusiveHero = eData.ExclusiveHero
+    self.HeroExclusive = eData.HeroExclusive
     self.Icon = eData.Icon
     self.Suit = eData.Suit
     self.MustReward = eData.MustReward == 1
@@ -177,7 +177,7 @@ function HeroEquipment.Initialize(self, unitID, heroClassIndex, playerID)
 end
 
 function HeroEquipment.ReCreate(self)
-    for row in GameInfo.EquipmentTypes() do
+    for row in GameInfo.TKH_EquipmentTypes() do
         local e = self[row.EquipmentType]
         if e ~= nil and m_EquipmentManager[e] ~= nil then
             local equipment = m_EquipmentManager[e]
@@ -190,7 +190,7 @@ function HeroEquipment.ReCreate(self)
 end
 
 function HeroEquipment.Destroye(self)
-    for row in GameInfo.EquipmentTypes() do
+    for row in GameInfo.TKH_EquipmentTypes() do
         local e = self[row.EquipmentType]
         if e and m_EquipmentManager[e] then
             local equipment = m_EquipmentManager[e]
@@ -233,7 +233,7 @@ end
 function EquipmentSuit.Initialize(self, suitData)
     self.Name = suitData.Name
     self.Description = suitData.Description
-    self.Equipments = {}
+    self.TKH_Equipments = {}
     self.Abilities = {}
 
     local abilityAmount = SplitString(suitData.SuitEquipmentAmount, ',')
@@ -371,7 +371,7 @@ function OnCombat(pCombatResult)
             return
         end
         local gainEquipments = {}
-        for row in GameInfo.EquipmentTypes() do
+        for row in GameInfo.TKH_EquipmentTypes() do
             local e = heroEquipments[row.EquipmentType]
             if e and m_EquipmentManager[e] and not m_EquipmentManager[e].Locked then
                 table.insert(gainEquipments, heroEquipments[row.EquipmentType])
@@ -675,20 +675,20 @@ function InitializeEquipmentData()
     m_EquipmentRewardManager = {}
 
     --- 初始化套装管理器
-    for row in GameInfo.EquipmentSuits() do
+    for row in GameInfo.TKH_EquipmentSuits() do
         EquipmentSuit:new(row)
     end
 
-    for row in GameInfo.Equipments() do
+    for row in GameInfo.TKH_Equipments() do
         Equipment:new(row)
         if row.Suit and m_EquipmentSuitManager[row.Suit] then
-            table.insert(m_EquipmentSuitManager[row.Suit].Equipments, row.Equipment)
+            table.insert(m_EquipmentSuitManager[row.Suit].TKH_Equipments, row.Equipment)
         end
 
-        if row.ExclusiveHero and row.RewardParam1 then
-            m_HeroRewardManager['UNIT_HERO_TKH_' .. row.ExclusiveHero] = m_HeroRewardManager
-                ['UNIT_HERO_TKH_' .. row.ExclusiveHero] or {}
-            table.insert(m_HeroRewardManager['UNIT_HERO_TKH_' .. row.ExclusiveHero],
+        if row.HeroExclusive and row.RewardParam1 then
+            m_HeroRewardManager['UNIT_HERO_TKH_' .. row.HeroExclusive] = m_HeroRewardManager
+                ['UNIT_HERO_TKH_' .. row.HeroExclusive] or {}
+            table.insert(m_HeroRewardManager['UNIT_HERO_TKH_' .. row.HeroExclusive],
                 {
                     Equipment = row.Equipment,
                     RewardNeed = tonumber(row.RewardParam1),
@@ -789,7 +789,7 @@ function ChangeSuitAbilitySatus(pUnit, heroEquipments)
         abilities[ability] = false
     end
 
-    for row in GameInfo.EquipmentTypes() do
+    for row in GameInfo.TKH_EquipmentTypes() do
         local e = heroEquipments[row.EquipmentType]
         if e and m_EquipmentManager[e] then
             local equipment = m_EquipmentManager[e]
@@ -831,7 +831,7 @@ function ChangeHeroEquipmentAbility(e, heroClassIndex, status)
     end
     local unitType = heroClass.UnitType
     local equipment = m_EquipmentManager[e]
-    local equipmentInfo = GameInfo.Equipments[e]
+    local equipmentInfo = GameInfo.TKH_Equipments[e]
     local heroEquipments = m_HeroEquipmentManager[unitType]
     local unitID = heroEquipments.UnitID
     local playerID = heroEquipments.Owner
@@ -842,8 +842,8 @@ function ChangeHeroEquipmentAbility(e, heroClassIndex, status)
 
     local abilities = {}
     table.insert(abilities, equipment.EquipmentAbility)
-    if equipment.ExclusiveHero and 'UNIT_HERO_TKH_' .. equipment.ExclusiveHero == unitType then
-        table.insert(abilities, equipment.EquipmentAbility .. '_ExclusiveHero')
+    if equipment.HeroExclusive and 'UNIT_HERO_TKH_' .. equipment.HeroExclusive == unitType then
+        table.insert(abilities, equipment.EquipmentAbility .. '_HeroExclusive')
     end
 
     -- ============================护甲逻辑============================

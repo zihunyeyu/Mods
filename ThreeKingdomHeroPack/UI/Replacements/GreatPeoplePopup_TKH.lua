@@ -117,7 +117,7 @@ function PopulateData(data, isPast)
 			if personInfo ~= nil then
 				local gpType = personInfo.GreatPersonIndividualType
 				local commandSQL = DB.Query(
-					"SELECT CommandType, ActionCharges from UnitTypeUnitCommands_TKH where UnitType = ?", gpType)
+					"SELECT CommandType, ActionCharges from TKH_UnitTypeUnitCommands where UnitType = ?", gpType)
 
 				if commandSQL and #commandSQL > 0 then
 					local command = commandSQL[1].CommandType

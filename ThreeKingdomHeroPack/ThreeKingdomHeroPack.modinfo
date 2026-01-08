@@ -4,7 +4,7 @@
     <Name>Three Kingdom Hero Mods</Name>
     <Description>This is a brief description of the mod.</Description>
     <CustomProperties></CustomProperties>
-    <Created>1767106848</Created>
+    <Created>1767802914</Created>
     <Teaser>This is a brief description of the mod.</Teaser>
     <Authors>purple soul</Authors>
     <CompatibleVersions>1.2,2.0</CompatibleVersions>
@@ -238,6 +238,8 @@
       </Properties>
       <File>Text/TKH_Text.xml</File>
       <File>Text/TKH_Text.sql</File>
+      <File>Text/TKH_EquipmentText.sql</File>
+      <File>Text/TKH_HeroText.sql</File>
     </UpdateText>
     <UpdateIcons id="UpdateIcons">
       <Properties>
@@ -644,6 +646,8 @@
     <File>Scripts/TKH_Constant.lua</File>
     <File>Scripts/TKH_Helper.lua</File>
     <File>Scripts/TKH_UnitCommandDefs.lua</File>
+    <File>Text/TKH_EquipmentText.sql</File>
+    <File>Text/TKH_HeroText.sql</File>
     <File>Text/TKH_Text.sql</File>
     <File>Text/TKH_Text.xml</File>
     <File>Three Kingdom Hero Pack.dep</File>

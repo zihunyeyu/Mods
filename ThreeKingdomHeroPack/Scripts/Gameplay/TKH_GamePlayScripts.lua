@@ -26,6 +26,12 @@ local FEATURE_MASH_INDEX = GameInfo.Features['FEATURE_MARSH'].Index
 local FEATURE_MASH_DAMAGE = 20
 local AI_INFERNO_MODE_FLEX_STRENGTH_MAX = 15
 
+local SECONDARY_HERO_FULL_PROMOTED_ARMOR = 100
+local s_Heroer = {}
+for row in GameInfo.TKH_S_Heroes() do
+    table.insert(s_Heroer, 'CLASS_UNIT_HERO_TKH_' .. row.Name)
+end
+
 -- ===========================================================================
 --	Events
 -- ===========================================================================
@@ -309,6 +315,10 @@ function OnUnitPromotionChanged(playerID, unitID)
             AddAbilityForUnit(playerID, unitID, ability, true)
         end
 
+        if MatchUnitTag(pUnitType, s_Heroer) then
+            ChangeExtraMaxArmor(pUnit, SECONDARY_HERO_FULL_PROMOTED_ARMOR)
+        end
+
         for tag, rewards in pairs(FULL_PROMOTED_REWARD) do
             if MatchUnitTag(pUnitType, tag) then
                 for k, v in pairs(rewards) do
@@ -357,6 +367,8 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         math.min(MELEES_UTNI_COMBAT_STRENGTH_BY_PER_KILL_MAX, TOTAL_KILL))
     pUnit:SetProperty('SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL',
         math.min(SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL_MAX, TOTAL_KILL))
+    pUnit:SetProperty('SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL',
+        math.min(SECONDARY_HERO_COMBAT_STRENGTH_PER_KILL_MAX, TOTAL_KILL))
 end
 
 function OnDeleteCityButtonClicked(playerID, params)

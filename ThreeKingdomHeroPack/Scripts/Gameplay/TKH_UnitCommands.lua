@@ -131,7 +131,7 @@ function OnGameEraChanged(previousEraIndex, newEraIndex)
             if not pUnit then
                 table.remove(unitInfos, i)
             else
-                if unitInfos[i][3] == -1 then
+                if unitInfos[i][3] == CommandRecoverType.PER_ERA then
                     local extraAction = pUnit:GetProperty('ExtraActions') or 0
                     local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
                     if actionCharges[unitInfos[i][4]] then
@@ -155,7 +155,7 @@ function OnTurnBegin()
             if not pUnit then
                 table.remove(unitInfos, i)
             else
-                if unitInfos[i][3] == 0 then
+                if unitInfos[i][3] == CommandRecoverType.PER_TURN then
                     local extraAction = pUnit:GetProperty('ExtraActions') or 0
                     local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
                     if actionCharges[unitInfos[i][4]] then

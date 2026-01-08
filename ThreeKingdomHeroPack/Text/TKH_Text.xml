@@ -36,8 +36,7 @@
 				青龙偃月刀：进攻时+13 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_HeroExclusive_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_QingLongYanYueDao_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），恢复10点生命值（义薄云天）
 			</Text>
@@ -435,7 +434,6 @@
 				巫杖：可对2个单元格以内的一名敌方单位造成30点伤害（冷却时间5回合）。
 			</Text>
 		</Replace>
-
 		<Replace Tag="LOC_PROJECT_CREATE_HERO_HULAO_LUBU_NAME" Language="zh_Hans_CN">
 			<Text>
 				献给吕布
@@ -536,20 +534,17 @@
 				攻击后可以移动；若击杀敌方单位，则恢复所有 [ICON_Movement] 移动力并能再次攻击。每个时代可以招募2个武圣骁卫。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_1"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
 			<Text>
 				在中国和世上许多地方，不时能看到供奉一名红面长须神祇的神龛和庙宇。这名神祇被称为关公、关帝、关圣帝君、迦蓝菩萨……在作为人类时，他则被称为关羽。东汉末年期间，关羽是忠于刘备的勇将。当刘备被军阀曹操击败不知所踪时，关羽被曹操所擒，但深得曹操厚礼相待。关羽以战功回报这份礼待，在白马之战时冲入敌阵斩杀敌将颜良。不过，关羽始终忠于刘备。当他听闻刘备所在之处时，他留书告辞并回到刘备阵营。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_2"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_2" Language="zh_Hans_CN">
 			<Text>
 				后来，孙权和刘备联盟，在赤壁之战击败曹操。三方势力争夺战略要地荆州的控制权。当刘备西进益州时，关羽留守荆州的根据地。在219年，关羽率军攻打樊城，此城由曹操的亲信曹仁驻守。曹操派遣七军援救樊城，但关羽证明他不仅是骁勇无比的战士，更是足智多谋的统帅。关羽利用秋季暴雨水淹七军，擒获敌方将领于禁和庞德，威震华夏。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_3"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_GUAN_YU_CHAPTER_HISTORY_PARA_3" Language="zh_Hans_CN">
 			<Text>
 				然而，在关羽胜利的阴影之下，孙权密谋从昔日的盟友夺取荆州。他的将领吕蒙让士兵伪装成商人，渗透关羽大本营发动偷袭。加上驻守将领糜芳和士仁（《三国演义》中称为傅士仁）开城投降，关羽被切断补给，军心涣散。关羽往麦城撤退，却在途中被伏兵所擒，后被斩首。关羽被视为忠义的模范，为后世统治者与民众尊崇，最终被神格化，成为中国和世界各地华人社区最广受崇拜的神祇之一。
 			</Text>
@@ -953,8 +948,7 @@
 				吕布描述
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_LV_BU_CHAPTER_HISTORY_PARA_1"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_PEDIA_UNITS_PAGE_UNIT_HERO_TKH_LV_BU_CHAPTER_HISTORY_PARA_1" Language="zh_Hans_CN">
 			<Text>
 				吕布是三国时期的猛将，以绝伦武艺和反复无常广为人知，世人以其善于骑射称他为“飞将”。他最初是丁原的部下，后来受董卓利诱背叛并杀死丁原，与董卓誓为父子。吕布在联军讨董中为董卓而战，后来二人交恶，吕布与董卓侍女有染，心怀不安，受王允拉拢暗杀董卓（《三国演义》将此演绎为王允义女貂蝉施展离间计）。吕布自成势力，游走各路军阀之间，曾受刘备邀请协助防守徐州，却趁刘备与袁术夺取徐州。在袁术攻打刘备时，吕布曾展示辕门射戟的绝技，威震袁术将兵使其退军。不过，吕布的反复无常让他成为各地势力的眼中钉。公元197年，曹操联合刘备围困吕布于下邳，吕布被部下反叛，最终被曹操处死。
 			</Text>
@@ -1159,8 +1153,7 @@
 				战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHUGE_LIANG_AOE_UNIT_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_ZHUGE_LIANG_AOE_UNIT_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				无视河流的 [ICON_Movement] 移动力减益、+1 [ICON_Movement] 移动力，+5 [ICON_Strength] 战斗力。
 			</Text>
@@ -2756,14 +2749,12 @@
 				玄武：+2 [ICON_Movement] 移动力，2个单元格以内的友方单位防御时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				玄武光环：防御时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_XUANWU_MOUNT_AOE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				防御时+5 [ICON_Strength] 战斗力。
 			</Text>
@@ -2813,8 +2804,7 @@
 				青龙：+2 [ICON_Movement] 移动力，2个单元格以内的友方单位攻击时+5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QINGLONG_MOUNT_AOE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QINGLONG_MOUNT_AOE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				攻击时+5 [ICON_Strength] 战斗力。（青龙光环）
 			</Text>
@@ -3268,8 +3258,7 @@
 				2个单元格以内的友方单位防御远程攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_XUANWU3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_XUANWU3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
@@ -3289,14 +3278,12 @@
 				2个单元格以内的敌方近战系单位攻击时-5 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				攻击时-5 [ICON_Strength] 战斗力。（青龙龙威）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_QINGLONG3" Language="zh_Hans_CN">
 			<Text>
 				攻击时-5 [ICON_Strength] 战斗力。（青龙龙威）
 			</Text>
@@ -3311,8 +3298,7 @@
 				2个单元格以内的友方近战系单位攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_BAIHU3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_BAIHU3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				攻击时+7 [ICON_Strength] 战斗力。（白虎咆哮）
 			</Text>
@@ -3332,8 +3318,7 @@
 				2个单元格以内的友方在每回合结束时（甚至是在移动或攻击后），自动恢复10点生命值。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_ZHUQUE3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_ZHUQUE3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），自动恢复10点生命值。（朱雀涅槃）
 			</Text>
@@ -3348,8 +3333,7 @@
 				2个单元格以内的友方单位防御英雄单位攻击时+10 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_HERO3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_HERO3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御英雄单位攻击时+10 [ICON_Strength] 战斗力。（战将）
 			</Text>
@@ -3369,8 +3353,7 @@
 				2个单元格以内的友方单位防御非英雄单位攻击时+7 [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_WARRIOR3_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_TKH_EQUIPMENT_SUIT_WARRIOR3_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				防御非英雄单位攻击时+5 [ICON_Strength] 战斗力。（统兵）
 			</Text>
@@ -3401,170 +3384,142 @@
 				[ICON_Gold] 金币[ENDCOLOR]
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YAN_LIANG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YAN_LIANG" Language="zh_Hans_CN">
 			<Text>
 				防御时+8 [ICON_Strength] 战斗力（河北庭柱）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_WEN_CHOU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_WEN_CHOU" Language="zh_Hans_CN">
 			<Text>
 				进攻时+8 [ICON_Strength] 战斗力（河北庭柱）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU" Language="zh_Hans_CN">
 			<Text>
 				进攻时+7 [ICON_Ranged] 远程战斗力（美女英雄）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_DIAO_CHAN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_DIAO_CHAN" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（美女英雄）
 			</Text>
 		</Replace>
-		<Replace Tag="MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU"
-			Language="zh_Hans_CN">
+		<Replace Tag="MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YINGXIONGMEINV_LV_BU" Language="zh_Hans_CN">
 			<Text>
 				进攻时+{1_Amount} [ICON_Ranged] 远程战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_LIU_BEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_LIU_BEI" Language="zh_Hans_CN">
 			<Text>
 				进攻时+5 [ICON_Strength] 战斗力（桃园之誓）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_GUAN_YU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_GUAN_YU" Language="zh_Hans_CN">
 			<Text>
 				防御时+7 [ICON_Strength] 战斗力（桃园之誓）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_ZHANG_FEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_TAOYUAN_ZHANG_FEI" Language="zh_Hans_CN">
 			<Text>
 				防御时+7 [ICON_Strength] 战斗力（桃园之誓）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_LIU_BEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_LIU_BEI" Language="zh_Hans_CN">
 			<Text>
 				进攻时+5 [ICON_Strength] 战斗力（比翼双飞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_SUN_SHANGXIANG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_BIYISHUANGFEI_SUN_SHANGXIANG" Language="zh_Hans_CN">
 			<Text>
 				+2 [ICON_MOVEMENT] 移动力（比翼双飞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_CE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_CE" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复20点生命值（一母同胞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN" Language="zh_Hans_CN">
 			<Text>
 				+1 续行使用次数（一母同胞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_SHANGXIANG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_SHANGXIANG" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复20点生命值（一母同胞）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_CAO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_CAO" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（曹氏双杰）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_REN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHISHUANGJIE_CAO_REN" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（曹氏双杰）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO" Language="zh_Hans_CN">
 			<Text>
 				+1 续行使用次数（曹氏护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_DIAN_WEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_DIAN_WEI" Language="zh_Hans_CN">
 			<Text>
 				进攻时+5 [ICON_Strength] 战斗力（曹氏护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_XU_CHU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_XU_CHU" Language="zh_Hans_CN">
 			<Text>
 				防御时+5 [ICON_Strength] 战斗力（曹氏护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MODIFIER_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				+{1_Amount} [ICON_Strength] 战斗力（羁绊效果）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MU_LU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MU_LU" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复30点生命值（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MENG_HUO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANRUQIN_MENG_HUO" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_SUN_QUAN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_SUN_QUAN" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（东吴护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_ZHOU_TAI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_DONGWUHUZHU_ZHOU_TAI" Language="zh_Hans_CN">
 			<Text>
 				+5 [ICON_Strength] 战斗力（东吴护卫）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_GUAN_YU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_GUAN_YU" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHANG_FEI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHANG_FEI" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHAO_YUN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_ZHAO_YUN" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_MA_CHAO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_MA_CHAO" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_HUANG_ZHONG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_WUHUSHANGJIANG_HUANG_ZHONG" Language="zh_Hans_CN">
 			<Text>
 				在每回合结束时（甚至是在移动或攻击后），额外恢复15点生命值（五虎上将）
 			</Text>
@@ -4199,14 +4154,12 @@
 				位于沼泽地形时-1 [ICON_MOVEMENT] 移动力，防御时-10 [ICON_Strength] 战斗力，回合结束时失去20点生命值
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_UNITS_GAIN_DEBUFF_IN_MASH_DECREASE_STRENGTH"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_UNITS_GAIN_DEBUFF_IN_MASH_DECREASE_STRENGTH" Language="zh_Hans_CN">
 			<Text>
 				位于沼泽地形时-10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QingGangJian_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_QingGangJian_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+1 [ICON_MOVEMENT] 移动力（曹操：当世奸雄）
 			</Text>
@@ -4216,56 +4169,47 @@
 				+1 [ICON_MOVEMENT] 移动力（孙权：江东少主）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+3 [ICON_Strength] 战斗力（刘备：大汉皇叔）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				+{1_Amount} [ICON_Strength] 战斗力（刘备：大汉皇叔）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+5 [ICON_Strength] 战斗力（孙尚香：人间国色）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_YUANYANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孙尚香：人间国色）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+5 [ICON_Strength] 战斗力（孙策：江东霸王）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_BAWANGQIANG_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				与骑兵单位战斗时+{1_Amount} [ICON_Strength] 战斗力（孙策：江东霸王）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_HeroExclusive_AOE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_HeroExclusive_AOE" Language="zh_Hans_CN">
 			<Text>
 				攻击时+5 [ICON_Strength] 战斗力、+1 [ICON_MOVEMENT] 移动力（文丑：宿铁刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CHANGBINGDADAO_HeroExclusive_AOE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_EQUIPMENT_CHANGBINGDADAO_HeroExclusive_AOE" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+15 [ICON_Strength] 战斗力（颜良：长柄大刀）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_HeroExclusive_AOE_A"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_SUTIEDAO_HeroExclusive_AOE_A" Language="zh_Hans_CN">
 			<Text>
 				攻击时+{1_Amount} [ICON_Strength] 战斗力（文丑：宿铁刀）
 			</Text>
@@ -4275,8 +4219,7 @@
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孟获：南蛮之主）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_HeroExclusive"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MODIFIER_EQUIPMENT_TIESHIDAN_HeroExclusive" Language="zh_Hans_CN">
 			<Text>
 				防御远程攻击时+{1_Amount} [ICON_Strength] 战斗力（孟获：南蛮之主）
 			</Text>
@@ -4291,8 +4234,7 @@
 				雌雄双股剑：+5 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_CIXIONGSHUANGGUJIAN_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				雌雄双股剑：2个单元格以内的非英雄单位+3 [ICON_Strength] 战斗力（大汉皇叔）
 			</Text>
@@ -4412,8 +4354,7 @@
 				象牙双钩：攻击时+11 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_EQUIPMENT_XIANGYASHUANGGOU_HeroExclusive_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_EQUIPMENT_XIANGYASHUANGGOU_HeroExclusive_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				象牙双钩：+2 [ICON_MOVEMENT] 移动力（蛮象）
 			</Text>
@@ -4893,8 +4834,7 @@
 				自爆
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_LUOYANG_B"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_LUOYANG_B" Language="zh_Hans_CN">
 			<Text>
 				测试AAAAAAAAAAAAAAAAAAAAAAAAAAAA
 			</Text>
@@ -5115,8 +5055,7 @@
 				已达到最大值，无法继续增加
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_LONGWEIJIANGJUN"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_LONGWEIJIANGJUN" Language="zh_Hans_CN">
 			<Text>
 				防御时+6 [ICON_Strength] 战斗力，回合结束时恢复10点生命值
 			</Text>
@@ -5136,8 +5075,7 @@
 				2个单元格以内的非英雄近战单位+10 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_XIANZHENYONGSHI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_XIANZHENYONGSHI" Language="zh_Hans_CN">
 			<Text>
 				3个单元格以内的御龙卫及孙策单位+2 [ICON_Movement] 移动力
 			</Text>
@@ -5218,14 +5156,12 @@
 				攻击区域防御时+{Property} [ICON_Strength] 战斗力。
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI" Language="zh_Hans_CN">
 			<Text>
 				每相邻一个蛮族护卫，防御远程攻击时+4 [ICON_Strength] 战斗力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_MOD_ABILITY_MOD_ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_MANLI" Language="zh_Hans_CN">
 			<Text>
 				相邻蛮族护卫防御远程攻击时+{Property} [ICON_Strength] 战斗力
 			</Text>
@@ -5255,14 +5191,12 @@
 				护甲[COLOR_Civ6Red] {1_armor} [ENDCOLOR]
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_NAME"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_NAME" Language="zh_Hans_CN">
 			<Text>
 				特殊兵种老兵晋升加成
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_DEFEND_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				每次升级增加防御英雄攻击时 [ICON_Strength] 战斗力
 			</Text>
@@ -5272,8 +5206,7 @@
 				特殊兵种老兵击杀加成
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_KILL_STRENGTH_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_COMBAT_KILL_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				每次击杀增加 [ICON_Strength] 战斗力
 			</Text>
@@ -5308,8 +5241,7 @@
 				神威骑描述
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_SHEN_WEI_FULL_PROMOTED_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_SHEN_WEI_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				每点未消耗的 [ICON_Movement] 移动力提供+1 [ICON_Strength] 战斗力。
 			</Text>
@@ -5324,14 +5256,12 @@
 				武圣骁卫描述
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED_NAME"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED_NAME" Language="zh_Hans_CN">
 			<Text>
 				武圣威压
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_WU_SHENG_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				攻击时有50%概率额外造成30%伤害。
 			</Text>
@@ -5356,8 +5286,7 @@
 				贪狼飞骑描述
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_TAN_LANG_FULL_PROMOTED_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_TAN_LANG_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				除非与敌人相邻，否则将处于隐身状态。（伏击）
 			</Text>
@@ -5392,8 +5321,7 @@
 				河朔佐卫军描述
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_HE_SHUO_FULL_PROMOTED_DESCRIPTION"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_TKH_SPECIAL_UNIT_HE_SHUO_FULL_PROMOTED_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
 				+1 [ICON_Range] 射程，+1次攻击次数。
 			</Text>
@@ -5887,7 +5815,7 @@
 		</Replace>
 		<Replace Tag="LOC_ABILITY_UNIT_HERO_TKH_JIANG_WEI_DESCRIPTION" Language="zh_Hans_CN">
 			<Text>
-				5个单元格以内的白毦兵+1攻击距离。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
+				5个单元格以内的白毦兵[ICON_range] 射程+1。忽略丘陵地貌的移动力惩罚。每个时代可以招募4个“白毦兵”。
 			</Text>
 		</Replace>
 		<Replace Tag="LOC_TKH_MOD_STRING_ATTACK_NOT_FORTIFIED" Language="zh_Hans_CN">
@@ -5925,38 +5853,32 @@
 				测试用能力
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MENG_HUO"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MENG_HUO" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_ZHU_RONG"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_ZHU_RONG" Language="zh_Hans_CN">
 			<Text>
 				回合结束时回复30点生命值或护甲（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MU_LU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_MU_LU" Language="zh_Hans_CN">
 			<Text>
 				回合结束时回复30点生命值或护甲（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_WU_TUGU"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_WU_TUGU" Language="zh_Hans_CN">
 			<Text>
 				回合结束时回复30点生命值或护甲（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_SHA_MOKE"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_SHA_MOKE" Language="zh_Hans_CN">
 			<Text>
 				+1 攻击次数（南蛮入侵）
 			</Text>
 		</Replace>
-		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_DUO_SI"
-			Language="zh_Hans_CN">
+		<Replace Tag="LOC_ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NANMANTUANJIE_DUO_SI" Language="zh_Hans_CN">
 			<Text>
 				每回合增加一次技能使用次数（南蛮入侵）
 			</Text>
@@ -7140,3106 +7062,6 @@
 		<Replace Tag="LOC_PROMOTION_CLASS_TK_MU_LU_NAME" Language="zh_Hans_CN">
 			<Text>
 				三国英雄进阶-木鹿大王
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				象甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲值
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				南蛮象威
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格的“蛮族战象”+1 [ICON_MOVEMENT] 移动力+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				象族血统
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				木鹿大王和5个单元格的“蛮族战象”每回合回复15点生命或者护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				象威
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				周围一个单元格的敌方单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				重龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MU_LU_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+15 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				灵活
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“蛮族护卫”和“孟获本身”与抗骑兵单位战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				瞄准
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮盾
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“蛮族护卫”和“孟获本身”防御远程攻击时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮影
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“蛮族护卫”和“孟获本身”+1的移动和5的战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“蛮族护卫”和“孟获本身”与近战单位战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				攻城
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击区域防御时+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				重武器
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与陆地单位战斗+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮血
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MENG_HUO_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“蛮族护卫”和“孟获”回合结束时回复15点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				破马阵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与骑兵单位战斗时+8 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				丛林法则
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌和森林地貌的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				破枪阵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与抗骑兵单位战斗时+8 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				藤甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50点护甲值
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮族一跃
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每回合可以在满移动力的情况下进行一次3个单元格内的跳跃
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮族女王
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHU_RONG_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格内的蛮族阵营单位+1 [ICON_MOVEMENT] 移动力，且+100%经验加成
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				破枪阵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与抗骑兵单位战斗时+8 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				丛林法则
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌和森林地貌的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				破剑阵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与近战系单位战斗时+8 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				飓风斩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				旋风斩的伤害提高到80点
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				蛮族一跃
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每回合可以在满移动力的情况下进行一次3个单元格内的跳跃
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				命中要害
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WU_TUGU_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				被旋风斩攻击到的单位100%会被“命中要害”，单位只剩1点移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				连弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1次攻击次数，攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				丛林法则
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌和森林地貌的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				象甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲值
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				森林战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在树林或者雨林地貌战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				射术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				丘陵战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在丘陵地貌战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				五溪之主
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SHA_MOKE_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格内的蛮族阵营单位无视河流的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				丛林法则
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌和森林地貌的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				烂地大王
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每回合可以把1环以内的任意一个单元格变成沼泽，建造后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				沼泽之神
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DUO_SI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的单位无视沼泽减益，回合开始时在沼泽的单位+1 [ICON_MOVEMENT] 移动力、+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				马战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与骑兵单位战斗+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				无双威吓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的敌方单位-6 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				温侯
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格的“贪狼飞骑”和“高顺”战斗时+5 [ICON_Strength] 战斗力+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				人中吕布
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_BU_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				吕布和5个单元格的“贪狼飞骑”和“高顺”每回合回复15点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				战盔
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				钢甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50点护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				小飞将
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				忽略森林地貌和渡河的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				小温侯
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LV_LINGQI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每回合可以攻击2次，攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				御弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				辽剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“张辽本身”与近战单位战斗时+5
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				辽盾
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“张辽本身”防御远程攻击时+5
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				辽影
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“张辽本身”+1的移动和5的战斗
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				辽战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“张辽本身”与骑兵战斗时+5
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				林战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在森林防御时或者攻击目标位于森林时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				辽血
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_LIAO_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“张辽”回合结束时回复15点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				魔王战法
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“董卓本身”以及“贪狼飞骑”+75%经验加成
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				魔王兵法
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“董卓本身”+50%的夹击加成
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				魔王战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的“西凉重装铁骑”和“董卓本身”与骑兵单位战斗+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				魔王剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“董卓本身”与近战单位战斗+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				魔王盾
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“西凉重装铁骑”和“董卓本身”防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				魔王回复
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DONG_ZHUO_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格的所有单位每回合回复30点生命或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				御骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				御弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				游击兵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击近战单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				羞花
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御英雄攻击时+40 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				巷战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在区域战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				劲弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAO_CHAN_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				青釭剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与枪兵战斗+10
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				攻城
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的所有攻城单位+1攻击距
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				魏王
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_CAO_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格的“曹氏亲卫”与近战单位战斗+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击抗骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				挑骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与骑兵战斗+10
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				古之恶来
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每回合回复30点生命或者护
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				枪王
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_DIAN_WEI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的抗骑兵单位+6 [ICON_Strength] 战斗力且无视河流的移动力减
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击抗骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击近战单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				水性
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视河流移动力惩罚（过河消耗一点移动力）
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				战神
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每回合可以额外攻击一次，且攻击后可移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				虎威
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XU_CHU_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格的近战单位+6 [ICON_Strength] 战斗力、+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				御弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击抗骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				战盔
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				八门金锁
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格的近战单位+6 [ICON_Strength] 战斗力、+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				战靴
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				战甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				巷战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在区域战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				武卫营
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_CAO_REN_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的近战单位位于丘陵时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				夏侯剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“曹氏亲卫”和“夏侯渊”与近战单位战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				夏侯盾
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“曹氏亲卫”和“夏侯渊”防御远程攻击时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				夏侯骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“曹氏亲卫”和“夏侯渊”与骑兵战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				夏侯血脉
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“曹氏亲卫”和“夏侯渊”获得每回合+15血的能力，即使在攻击后
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				夏侯阵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“曹氏亲卫”和“夏侯渊”+1的移动和5的战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				丘陵战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在丘陵地貌战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				森林战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在树林或者雨林地貌战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				连弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1次攻击次数，攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				射术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				征西将军
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_XIAHOU_YUAN_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的远程单位“命中要害”的概率从5%提升到20%
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				袁公剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与抗骑兵单位战斗时+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				袁公甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				急行军
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格内的“河朔佐卫军”+2 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				四世三公
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YUAN_SHAO_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格内的“河朔佐卫军”+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击抗骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击近战单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				河北之虎
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				击杀单位时恢复20点血或护甲值
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				河北双雄（颜良）
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_YAN_LIANG_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元以内的“武僧”单位、颜良文丑获得“影身”效果，只有相邻单位才能发现，颜良+2视野
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				御弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				御枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与抗骑兵单位战斗时+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				御剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御近战单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				御骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				河北之狮
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				战斗时+8 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				巷战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在区域战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				御械
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御攻城单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				河北双雄（文丑）
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_WEN_CHOU_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元以内的“武僧”单位、颜良文丑获得获得每回合回复15点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				古锭刀
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与枪兵战斗+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击抗骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				神弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				4个单元格的所有远程单位和“林江射手”+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				吴王甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+80护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				江东水师
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_QUAN_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的单位若位于河流旁时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				鸳鸯头盔
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+30护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				血骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				击杀骑兵单位时回复20点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				天香
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				孙尚香和5个单元格以内的孙策及“乌衣卫”与满护甲单位战斗+15 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				鸳鸯战靴
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+30护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				水战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在河流旁防御时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				背水一战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_SHANGXIANG_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在河流旁战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				霸王战盔
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+30护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				龙剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的“乌衣卫”和“孙策本身”与骑兵单位战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				龙盾
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的“乌衣卫”和“孙策本身”防御远程攻击时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				龙影
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的“乌衣卫”和“孙策本身”+1的移动和5的战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				龙战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的“乌衣卫”和“孙策本身”与抗骑兵单位战斗时+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				巷战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在区域战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				龙血
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_SUN_CE_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的“乌衣卫”和“孙策本身”获得每回合+15血的能力，即使在攻击后
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				御骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				御弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程单位+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				游击兵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				不屈
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每次受到伤害回复3点生命或者护甲值
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				巷战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				在区域战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				浴血奋战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHOU_TAI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				每损失50点护甲，+3 [ICON_Strength] 战斗力（最多15）
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				连弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1次攻击次数，攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				灵动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				林影
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				若处于森林或雨林地貌，获得影身效果
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				林甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50点护甲值
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				森林之子
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				太史慈和5个单元格以内的“横江射手”+1 [ICON_MOVEMENT] 移动力，且无视森林地貌的移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				射术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				火箭
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_TAISHI_CI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				若太史慈位于森林或雨林地貌，+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				游击兵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击远程单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				燕云王
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的燕云卫+1 [ICON_MOVEMENT] 移动力，+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				万人敌
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				杀死一个单位能恢复30点血
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				怒吓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHANG_FEI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				2个单元格的单位-1移动力，攻击时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				破弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击远程单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				马战
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与骑兵单位战斗+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				骑术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视森林地貌移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				西凉铁骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				被攻击的单位失去所有移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				神威将军
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_MA_CHAO_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				马超和5个单元格以内的庞德、马云禄和“神威骑”每回合回复15点生命或者护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				游击兵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				重铠
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御枪兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				龙威
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				赵云和5个单元格的赵统和“龙威豪骑”每回合回复15点生命或者护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				虎威将军
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击没有驻扎的单位+15 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				神威
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_ZHAO_YUN_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格的所有单位防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭弓
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击远程单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击近战单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				灭骑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				攻击骑兵单位+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				武圣
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与英雄单位战斗时+25 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				武圣庇护
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_GUAN_YU_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的“关羽”及“武圣骁卫”和“关银屏”获得：+100%支援加成，回合结束时回复15点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				雌雄双股剑
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				与近战战斗+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				疗愈
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				3个单元格以内的单位回合结束时回复20点生命值或护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				汉昭烈帝
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_LIU_BEI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的白毦兵忽略丘陵地貌的移动力惩罚且+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				敏捷
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御骑兵攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				盾甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御英雄攻击+10
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				游击兵
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				无视丘陵地貌移动力惩罚
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				劲弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1攻击距离
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				箭雨
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的远程单位以及“白毦兵”+1次攻击次数
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				习武
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+2 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				马术
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				连弩
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_HUANG_ZHONG_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1次攻击次数，攻击后可以移动
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				龟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				防御远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				矛雨
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的白毦兵远程攻击+10 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				钢甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+50点护甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				神速
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				幼麟光环
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_1_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				姜维和5个单元格以内的白毦兵战斗时+5 [ICON_Strength] 战斗力、+1 [ICON_MOVEMENT] 移动力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_1_NAME" Language="zh_Hans_CN">
-			<Text>
-				麟甲
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_1_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的白毦兵防御时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_2_NAME" Language="zh_Hans_CN">
-			<Text>
-				麟枪
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_2_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				姜维和5个单元格的白毦兵与骑兵单位战斗时+5 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_3_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_3_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_4_NAME" Language="zh_Hans_CN">
-			<Text>
-				练魄
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_4_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				+3 [ICON_Strength] 战斗力
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_5_NAME" Language="zh_Hans_CN">
-			<Text>
-				麒麟光环
-			</Text>
-		</Replace>
-		<Replace Tag="LOC_PROMOTION_TK_JIANG_WEI_3_5_DESCRIPTION" Language="zh_Hans_CN">
-			<Text>
-				5个单元格以内的白毦兵每回合+1次“远程攻击次数
 			</Text>
 		</Replace>
 	</LocalizedText>

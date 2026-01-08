@@ -34,16 +34,6 @@ AND arg.Name = 'Amount'
 AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings);
 
 INSERT OR REPLACE INTO ModifierStrings(ModifierId,	Context,	Text)
-SELECT mod.ModifierId, 'Preview', 'LOC_TKH_MOD_STRING_ATTACK_CLASS_CAVALRY'
-FROM Modifiers mod JOIN ModifierArguments arg
-ON mod.ModifierId = arg.ModifierId
-AND mod.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH' 
-AND mod.SubjectRequirementSetId = 'REQS_TKH_ATTACK_TAG_IS_CLASS_TKH_CAVALRY'
-AND mod.OwnerRequirementSetId IS NULL
-AND arg.Name = 'Amount'
-AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings);
-
-INSERT OR REPLACE INTO ModifierStrings(ModifierId,	Context,	Text)
 SELECT mod.ModifierId, 'Preview', 'LOC_TKH_MOD_STRING_ATTACK_NOT_FORTIFIED'
 FROM Modifiers mod JOIN ModifierArguments arg
 ON mod.ModifierId = arg.ModifierId
@@ -53,25 +43,62 @@ AND mod.OwnerRequirementSetId IS NULL
 AND arg.Name = 'Amount'
 AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings);
 
-INSERT OR REPLACE INTO ModifierStrings(ModifierId,	Context,	Text)
-SELECT mod.ModifierId, 'Preview', 'LOC_TKH_MOD_STRING_ATTACK_CLASS_MELEE'
-FROM Modifiers mod JOIN ModifierArguments arg
-ON mod.ModifierId = arg.ModifierId
-AND mod.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH' 
-AND mod.SubjectRequirementSetId = 'REQS_TKH_ATTACK_TAG_IS_CLASS_MELEE'
-AND mod.OwnerRequirementSetId IS NULL
-AND arg.Name = 'Amount'
-AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings);
+WITH 
+combat_types AS (
+    SELECT 'ATTACK' AS combat_type UNION ALL
+    SELECT 'DEFEND' UNION ALL
+    SELECT 'COMBAT'
+),
+combat_targets AS (
+    SELECT 'CLASS_ANTI_CAVALRY' AS combat_target UNION ALL
+    SELECT 'CLASS_RANGED' UNION ALL
+    SELECT 'CLASS_MELEE' UNION ALL
+    SELECT 'CLASS_TKH_CAVALRY' UNION ALL
+    SELECT 'CLASS_TKH_HERO' UNION ALL
+    SELECT 'CLASS_SIEGE' UNION ALL
+    SELECT 'CLASS_WARRIOR_MONK' UNION ALL
+    SELECT 'CLASS_RECON'
+),
+type_target_combinations AS (
+    SELECT ct.combat_type, ctt.combat_target
+    FROM combat_types ct
+    CROSS JOIN combat_targets ctt
+)
+INSERT OR REPLACE INTO ModifierStrings(ModifierId, Context, Text)
+SELECT 
+    mod.ModifierId, 
+    'Preview', 
+    'LOC_TKH_MOD_STRING_' || ttc.combat_type || '_' || ttc.combat_target AS Text
+FROM 
+    Modifiers mod 
+    JOIN ModifierArguments arg ON mod.ModifierId = arg.ModifierId
+    JOIN type_target_combinations ttc 
+        ON mod.SubjectRequirementSetId = 'REQS_TKH_' || ttc.combat_type || '_TAG_IS_' || ttc.combat_target
+WHERE 
+    mod.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH' 
+    AND mod.OwnerRequirementSetId IS NULL
+    AND arg.Name = 'Amount'
+    AND arg.Value >= 0
+    AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings)
 
-INSERT OR REPLACE INTO ModifierStrings(ModifierId,	Context,	Text)
-SELECT mod.ModifierId, 'Preview', 'LOC_TKH_MOD_STRING_ATTACK_CLASS_RANGED'
-FROM Modifiers mod JOIN ModifierArguments arg
-ON mod.ModifierId = arg.ModifierId
-AND mod.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH' 
-AND mod.SubjectRequirementSetId = 'REQS_TKH_ATTACK_TAG_IS_CLASS_RANGED'
-AND mod.OwnerRequirementSetId IS NULL
-AND arg.Name = 'Amount'
-AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings);
+UNION SELECT 
+    mod.ModifierId, 
+    'Preview', 
+    'LOC_TKH_MOD_STRING_' || ttc.combat_type || '_MINUS_' || ttc.combat_target AS Text
+FROM 
+    Modifiers mod 
+    JOIN ModifierArguments arg ON mod.ModifierId = arg.ModifierId
+    JOIN type_target_combinations ttc 
+        ON mod.SubjectRequirementSetId = 'REQS_TKH_' || ttc.combat_type || '_TAG_IS_' || ttc.combat_target
+WHERE 
+    mod.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH' 
+    AND mod.OwnerRequirementSetId IS NULL
+    AND arg.Name = 'Amount'
+    AND arg.Value < 0
+    AND mod.ModifierId NOT IN (SELECT ModifierId FROM ModifierStrings);
+
+
+
 
 -- Equipment modifiers preview text
 INSERT OR REPLACE INTO ModifierStrings (ModifierId, Context, Text)
@@ -79,16 +106,17 @@ SELECT ModifierId, 'Preview', REPLACE('LOC_'||ModifierId||'_DESCRIPTION', 'MODIF
 FROM Modifiers WHERE ModifierId LIKE 'MODIFIER_EQUIPMENT_%' AND ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH';
 
 -- Promotion modifiers preview text
-INSERT OR REPLACE INTO ModifierStrings (ModifierId, Context, Text)
-SELECT UnitPromotionModifiers.ModifierId, 'Preview', '+{1_Amount} {LOC_'||UnitPromotionModifiers.UnitPromotionType||'_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}'
-FROM UnitPromotionModifiers INNER JOIN Modifiers 
-ON UnitPromotionModifiers.UnitPromotionType LIKE 'PROMOTION_TK_%' 
-AND UnitPromotionModifiers.ModifierId = Modifiers.ModifierId
-AND Modifiers.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH';
+-- INSERT OR REPLACE INTO ModifierStrings (ModifierId, Context, Text)
+-- SELECT UnitPromotionModifiers.ModifierId, 'Preview', '+{1_Amount} {LOC_'||UnitPromotionModifiers.UnitPromotionType||'_NAME} {LOC_PROMOTION_DESCRIPTOR_PREVIEW_TEXT}'
+-- FROM UnitPromotionModifiers INNER JOIN Modifiers 
+-- ON UnitPromotionModifiers.UnitPromotionType LIKE 'PROMOTION_TK_%' 
+-- AND UnitPromotionModifiers.ModifierId = Modifiers.ModifierId
+-- AND Modifiers.ModifierType = 'MODIFIER_UNIT_ADJUST_COMBAT_STRENGTH';
 
 INSERT OR REPLACE INTO ModifierStrings(ModifierId,	Context,	Text)
 VALUES
 
+('MOD_ABILITY_TK_S_HERO_SKILL_COMBAT_STRENGTH_PER_KILL',	'Preview',	'LOC_MOD_ABILITY_TK_S_HERO_SKILL_COMBAT_STRENGTH_PER_KILL'),
 
 ('MODIFIER_PROMOTION_TK_TIE_TI',	'Preview',	'LOC_COMBAT_PREVIEW_UNUSED_MOVEMENT_COMBAT_BONUS_DESC'),
 

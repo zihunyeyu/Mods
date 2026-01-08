@@ -134,9 +134,9 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
             defend_damage = CalculateRangeDamage(defend_damage)
         end
 
-        -- 被攻击英雄特效
+        -- 闪避伤害
         -- 赵云：受到攻击时有一定概率闪避伤害
-        if dUnitType == 'UNIT_HERO_TKH_ZHAO_YUN' then
+        if IsUnitHaveAbility(dUnit, 'ABILITY_UNIT_HERO_TKH_ZHAO_YUN') then
             if math.random() <= HeroConstants.ZHAO_YUN_DODGE_RATE then
                 defend_damage = 0
             end

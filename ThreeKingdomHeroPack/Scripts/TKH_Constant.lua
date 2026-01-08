@@ -126,11 +126,24 @@ GREAT_CITIES_ENCAMPMENT_COUNT['阖闾'] = 3
 -- HERO
 -- =========================
 
+
+-- =========================
+-- COMBAT DAMAGE HERO CONSTANTS
+-- =========================
+
+DODGE_ABILITIES = {
+    ABILITY_UNIT_HERO_TKH_ZHAO_YUN = 0.4,
+    ABILITY_TKH_EQUIPMENT_SALUZI = 0.5,
+    ABILITY_TK_S_HERO_SKILL_ZHANG_HE_2 = 0.35,
+}
+
+
+
 HeroConstants = {}
 
 HeroConstants.ZHANG_FEI_WAN_REN_DI_HEAL = 30
 -- 赵云闪避几率
-HeroConstants.ZHAO_YUN_DODGE_RATE = 0.5
+HeroConstants.ZHAO_YUN_DODGE_RATE = 0.4
 HeroConstants.ZHOU_TAI_HEAL_RATE = 0.5
 HeroConstants.ZHOU_TAI_YU_XUE_ATTACK = 3
 -- 大将军文丑技能：造成伤害时吸血

@@ -28,7 +28,7 @@ include 'TKH_UnitCommandDefs'
 -- ===========================================================================
 TKH_AddActionButton             = AddActionButton;
 TKH_FilterUnitStatsFromUnitData = FilterUnitStatsFromUnitData;
-TKH_GetCombatModifierList       = GetCombatModifierList;
+-- TKH_GetCombatModifierList       = GetCombatModifierList;
 TKH_GetUnitActionsTable         = GetUnitActionsTable;
 TKH_LateInitialize              = LateInitialize;
 TKH_OnShowCombat                = OnShowCombat;
@@ -181,6 +181,9 @@ end
 
 --     TKH_ShowCombatAssessment();
 -- end
+
+-- ===========================================================================
+
 
 -- ===========================================================================
 function LateInitialize()

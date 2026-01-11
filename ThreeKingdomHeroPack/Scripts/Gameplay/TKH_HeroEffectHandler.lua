@@ -324,6 +324,7 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
     end
     local unitInfo = GameInfo.Units[pUnit:GetType()]
 
+    
     -- 张飞：万人敌，击杀单位后恢复30点生命值。
     if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_WAN_REN_DI_ZF"].Index) then
         TreatUnit(pUnit, 30)
@@ -331,6 +332,11 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
     -- 河北之虎，击杀单位后恢复20点生命值。
     if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_HE_BEI_ZHI_HU_YL"].Index) then
         TreatUnit(pUnit, 20)
+    end
+
+    -- 夏侯惇：击杀单位后恢复30点生命值。
+    if IsUnitHaveAbility(pUnit, 'ABILITY_TK_S_HERO_SKILL_XIA_HOU_DUN_2') then
+        TreatUnit(pUnit, 30)
     end
 
     -- 关羽：若击杀敌方单位，则恢复所有 [ICON_Movement] 移动力并能再次攻击。

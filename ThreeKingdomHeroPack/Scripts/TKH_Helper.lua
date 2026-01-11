@@ -42,6 +42,14 @@ function IndexOf(array, value)
     return nil
 end
 
+function GetRandomTableElement(tTable)
+    if tTable == nil or table.count(tTable) == 0 then
+        return nil
+    end
+    local index = math.random(1, #tTable)
+    return tTable[index]
+end
+
 --===========================================================================
 -- Identity-preserving table serialization by Metalua
 -- https://github.com/fab13n/metalua
@@ -719,6 +727,20 @@ function GetValidResources(plotID)
     return resources
 end
 
+--- 
+---@param classType string
+---@return table resources 资源索引列表
+function GetResouecesByClassType(classType)
+    local resources = {}
+    for row in GameInfo.Resources() do
+        if row.ResourceClassType == classType then
+            table.insert(resources, row.Index)
+        end
+    end
+
+    return resources
+end
+
 --- 获取UNITCOMMAND_CREATE_RESOURCE资源索引
 ---@param pUnitType string
 ---@return integer resourceIndex 资源索引
@@ -732,6 +754,14 @@ function GetCommandResourceIndex(pUnitType)
         for _, row in ipairs(results) do
             if row.Name == 'ResourceType' then
                 resourceType = row.Value
+            elseif row.Name == 'ResourceClassType' then
+                if row.Value == 'RESOURCECLASS_BONUS' then
+                    resourceType = GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_BONUS'))
+                elseif row.Value == 'RESOURCECLASS_LUXURY' then
+                    resourceType = GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_LUXURY'))
+                elseif row.Value == 'RESOURCECLASS_STRATEGIC' then
+                    resourceType = GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_STRATEGIC'))
+                end
             end
         end
     end

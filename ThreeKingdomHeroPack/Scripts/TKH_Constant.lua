@@ -1,6 +1,10 @@
 -- =========================
 -- SYSTEM
 -- =========================
+
+MELEE_COMBAT = 748940753
+RANGED_COMBAT = 784649805
+
 TKH_ObjectType = {}
 TKH_ObjectType.Game = -1
 TKH_ObjectType.Player = 0
@@ -132,11 +136,29 @@ GREAT_CITIES_ENCAMPMENT_COUNT['阖闾'] = 3
 -- =========================
 
 DODGE_ABILITIES = {
+    -- 赵云
     ABILITY_UNIT_HERO_TKH_ZHAO_YUN = 0.4,
+    -- 飒露紫
     ABILITY_TKH_EQUIPMENT_SALUZI = 0.5,
+    -- 张郃副将技能2：受到攻击时有概率闪避伤害
     ABILITY_TK_S_HERO_SKILL_ZHANG_HE_2 = 0.35,
 }
 
+DECREASE_DAMAGE_ABILITIES = {
+    -- 周泰
+    ABILITY_UNIT_HERO_TKH_ZHOU_TAI = 0.5,
+    ABILITY_TK_S_HERO_SKILL_GAN_NING_2 = 0.3,
+}
+
+INCREASE_DAMAGE_ABILITIES = {
+    -- 曹操副将技能2：攻击时增加伤害
+    ABILITY_UNIT_HERO_TKH_ZHANG_FEI = 25,
+}
+
+LIFE_STEAL_ABILITIES = {
+    -- 高顺3
+    ABILITY_TK_S_HERO_SKILL_GAO_SHUN_3 = 0.1,
+}
 
 
 HeroConstants = {}

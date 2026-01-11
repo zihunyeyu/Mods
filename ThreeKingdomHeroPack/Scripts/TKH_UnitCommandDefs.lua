@@ -162,7 +162,27 @@ m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.IsDisabled = function(pUnit)
 
     return nil;
 end
+m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.ResetDescription = function(pUnit)
+    -- return GetCommandString(GetUnitType(pUnit), 'UNITCOMMAND_CREATE_RESOURCE')
+    local aoe_range = 1
+    local damage = 10
+    local results = DB.Query(
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", GetUnitType(pUnit), 'UNITCOMMAND_DEAL_DAMAGE_AOE')
+    if results then
+        for _, row in ipairs(results) do
+            if row.Name == 'Range' then
+                aoe_range = tonumber(row.Value)
+            elseif row.Name == 'Damage' then
+                damage = tonumber(row.Value)
+            end
+        end
+    end
 
+    local aoe_damage_upgrade = pUnit:GetProperty('AOE_DAMAGE_UPGRADE') or 0
+    damage = damage + aoe_damage_upgrade
+    return Locale.Lookup('LOC_UNITCOMMAND_DEAL_DAMAGE_AOE_HELP', aoe_range, damage)
+
+end
 -- ===========================================================================
 --	UNITCOMMAND_BUILD_ROUTE
 -- ===========================================================================

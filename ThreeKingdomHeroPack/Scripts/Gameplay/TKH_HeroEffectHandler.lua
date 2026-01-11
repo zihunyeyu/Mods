@@ -18,11 +18,11 @@ include('TKH_Helper')
 -- ===========================================================================
 --	CONSTANTS	/ DEFINES
 -- ===========================================================================
-local MA_CHAO_PROMOTION_ATTACH         = GameInfo.UnitPromotions["PROMOTION_TK_XI_LIANG_TIE_QI_MC"].Index
+-- local MA_CHAO_PROMOTION_ATTACH         = 
 local LIU_BEI_PROMOTION_TURN_END       = GameInfo.UnitPromotions["PROMOTION_TK_LIAO_YU_LiuBei"].Index
 local LIU_BEI_PROMOTION_TURN_END_RANGE = 3
 local DIAN_WEI_PROMOTION_TURN_END      = GameInfo.UnitPromotions["PROMOTION_TK_GU_ZHI_E_LAI_DW"].Index
-local SUN_SHANGXIANG_PROMOTION_HEAL    = GameInfo.UnitPromotions["PROMOTION_TK_XI_XUE_QI_SunSX"].Index
+local SUN_SHANGXIANG_PROMOTION_HEAL    = GameInfo.UnitPromotions["PROMOTION_TK_SUN_SHANGXIANG_1_2"].Index
 local ZHOU_TAI_PROMOTION_BU_QU         = GameInfo.UnitPromotions["PROMOTION_TK_BU_QU_ZTai"].Index
 local ZHANG_FEI_PROMOTION_WAN_REN_DI   = GameInfo.UnitPromotions["PROMOTION_TK_WAN_REN_DI_ZF"].Index
 
@@ -35,140 +35,68 @@ local HeroSummons = {}
 -- ===========================================================================
 --	EFFECT Events
 -- ===========================================================================
-function OnCombat(pCombatResult)
-    local combatResult = GetCombatResult(pCombatResult)
+-- function OnCombat(pCombatResult)
 
-    local vsType, attacker, defender, location = combatResult.CombatComponentTypes, combatResult.Attacker,
-        combatResult.Dfender, combatResult.Location
+--     -- print("沙摩柯效果触发检查")
 
-    if vsType == CombatVSComponentTypes.UNIT_UNIT then
-        local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
-        local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
-        local dPlayerID, dUnitID = defender[2].player, defender[2].id
-        local dUnit = UnitManager.GetUnit(dPlayerID, dUnitID)
-        local damage = defender[3]
+--     local combatResult = GetCombatResult(pCombatResult)
 
-        if not aUnit or not dUnit then
-            return
-        end
+--     local vsType, attacker, defender, location = combatResult.CombatComponentTypes, combatResult.Attacker,
+--         combatResult.Dfender, combatResult.Location
 
-        local aUnitInfo = GameInfo.Units[aUnit:GetType()]
-        local dUnitInfo = GameInfo.Units[dUnit:GetType()]
+--     if vsType == CombatVSComponentTypes.UNIT_UNIT then
+--         local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
+--         local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
+--         local dPlayerID, dUnitID = defender[2].player, defender[2].id
+--         local dUnit = UnitManager.GetUnit(dPlayerID, dUnitID)
+--         local damage = defender[3]
 
-        math.randomseed(GetRandomSeed())
+--         if not aUnit or not dUnit then
+--             return
+--         end
 
-        if not aUnit:IsDelayedDeath() and not aUnit:IsDead() then
-            -- 许褚
-            if aUnitInfo.UnitType == 'UNIT_HERO_TKH_XU_CHU' then
-                TreatUnit(aUnit, attacker[3])
-            end
-        end
+--         local aUnitInfo = GameInfo.Units[aUnit:GetType()]
+--         local dUnitInfo = GameInfo.Units[dUnit:GetType()]
 
-        if not dUnit:IsDelayedDeath() and not dUnit:IsDead() then
-            -- 马超：西凉铁骑、浑天锤，攻击后敌方失去所有移动力
-            if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_HunTianChui') or aUnit:GetExperience():HasPromotion(MA_CHAO_PROMOTION_ATTACH) then
-                UnitManager.ChangeMovesRemaining(dUnit, -dUnit:GetMovesRemaining())
-                Game.AddWorldViewText(0, "敌军失去移动力", location.x, location.y)
-            end
+--         math.randomseed(GetRandomSeed())
 
-            -- 单位控制技能
-            if GameInfo.TKH_UnitTypeControlCrit[aUnitInfo.UnitType] then
-                local basePercent = GameInfo.TKH_UnitTypeControlCrit[aUnitInfo.UnitType].Percent
-                local extraPercent = aUnit:GetProperty('EXTRA_CRIT_PERCENT') or 0
-                local lostMoves = math.max(0, dUnit:GetMovesRemaining() - 1)
-                math.randomseed(GetRandomSeed())
-                if (basePercent + extraPercent) <= math.random(100) then
-                    UnitManager.ChangeMovesRemaining(dUnit, -lostMoves)
-                end
-            end
-        else
-            if aUnit:GetExperience():HasPromotion(SUN_SHANGXIANG_PROMOTION_HEAL) and
-                MatchUnitTag(dUnitInfo.UnitType, 'CAVALRY') then
-                TreatUnit(aUnit, HeroConstants.SUN_SHANGXIANG_HEAL)
-            end
-        end
+--         if not dUnit:IsDelayedDeath() and not dUnit:IsDead() then
 
-        -- 木鹿大王：攻击时可对目标单位两侧单元格上的敌方单位造成同等伤害。
-        if aUnitInfo.UnitType == 'UNIT_HERO_TKH_MU_LU' then
-            local ajdunits = GetNeighborUnits(dUnit:GetX(), dUnit:GetY(), 1)
-            if ajdunits ~= nil and #ajdunits > 0 then
-                for _, adjUnit in ipairs(ajdunits) do
-                    if adjUnit:GetOwner() == dPlayerID then
-                        DamageUnit(adjUnit, damage)
-                    end
-                end
-            end
-        end
-
-        -- 祝融夫人：攻击时对与攻击目标相邻且不与祝融夫人相邻的单位造成30点溅射伤害。
-        if aUnitInfo.UnitType == 'UNIT_HERO_TKH_ZHU_RONG' then
-            local ajdunits = GetNeighborUnits(dUnit:GetX(), dUnit:GetY(), 1)
-            if ajdunits ~= nil and #ajdunits > 0 then
-                for _, adjUnit in ipairs(ajdunits) do
-                    if adjUnit:GetOwner() == dPlayerID and Map.GetPlotDistance(adjUnit:GetX(), adjUnit:GetY(), aUnit:GetX(), aUnit:GetY()) ~= 1 then
-                        DamageUnit(adjUnit, HeroConstants.ZHU_RONG_DAMAGE)
-                    end
-                end
-            end
-        end
-
-        -- 沙摩柯：攻击时对目标一个单元个内的所有敌方单位造成10点伤害
-        if aUnitInfo.UnitType == 'UNIT_HERO_TKH_ZHU_RONG' then
-            local ajdunits = GetNeighborUnits(dUnit:GetX(), dUnit:GetY(), 1)
-            if ajdunits ~= nil and #ajdunits > 0 then
-                for _, adjUnit in ipairs(ajdunits) do
-                    if adjUnit:GetOwner() == dPlayerID then
-                        DamageUnit(adjUnit, HeroConstants.SHA_MOKE_DAMAGE)
-                    end
-                end
-            end
-        end
+--         else
+--             -- 孙尚香：攻击击杀敌方骑兵单位后，恢复20点生命值。
+--             if aUnit:GetExperience():HasPromotion(SUN_SHANGXIANG_PROMOTION_HEAL) and
+--                 MatchUnitTag(dUnitInfo.UnitType, 'CLASS_TKH_CAVALRY') then
+--                 TreatUnit(aUnit, HeroConstants.SUN_SHANGXIANG_HEAL)
+--             end
+--         end
 
 
 
-        -- 铁石弹专属
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
-            local ajdunits = GetNeighborUnits(dUnit:GetX(), dUnit:GetY(), 1)
-            if ajdunits ~= nil and #ajdunits > 0 then
-                for _, adjUnit in ipairs(ajdunits) do
-                    DamageUnit(adjUnit, 10)
-                end
-            end
-        end
 
-        -- 吸血
-        -- 大将军文丑赋予技能
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_GREATPEOPLE_WEN_CHOU') then
-            TreatUnit(aUnit, damage * HeroConstants.WEN_CHOU_RATE)
-        end
-        -- 饮血刀
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_YinXueDao') then
-            TreatUnit(aUnit, damage * EquipmentConstants.YIN_XUE_DAO_RATE)
-        end
-    elseif vsType == CombatVSComponentTypes.UNIT_CITY then
-        local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
-        local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
-            local ajdunits = GetNeighborUnits(defender[4].x, defender[4].y, 1)
-            if ajdunits ~= nil and #ajdunits > 0 then
-                for _, adjUnit in ipairs(ajdunits) do
-                    DamageUnit(adjUnit, 10)
-                end
-            end
-        end
-    elseif vsType == CombatVSComponentTypes.UNIT_DISTRICT then
-        local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
-        local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
-            local ajdunits = GetNeighborUnits(defender[4].x, defender[4].y, 1)
-            if ajdunits ~= nil and #ajdunits > 0 then
-                for _, adjUnit in ipairs(ajdunits) do
-                    DamageUnit(adjUnit, 10)
-                end
-            end
-        end
-    end
-end
+--     elseif vsType == CombatVSComponentTypes.UNIT_CITY then
+--         local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
+--         local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
+--         if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
+--             local adjUnits = GetNeighborUnits(defender[4].x, defender[4].y, 1)
+--             if adjUnits ~= nil and #adjUnits > 0 then
+--                 for _, adjUnit in ipairs(adjUnits) do
+--                     DamageUnit(adjUnit, 10)
+--                 end
+--             end
+--         end
+--     elseif vsType == CombatVSComponentTypes.UNIT_DISTRICT then
+--         local aPlayerID, aUnitID = attacker[2].player, attacker[2].id
+--         local aUnit = UnitManager.GetUnit(aPlayerID, aUnitID)
+--         if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
+--             local adjUnits = GetNeighborUnits(defender[4].x, defender[4].y, 1)
+--             if adjUnits ~= nil and #adjUnits > 0 then
+--                 for _, adjUnit in ipairs(adjUnits) do
+--                     DamageUnit(adjUnit, 10)
+--                 end
+--             end
+--         end
+--     end
+-- end
 
 function OnUnitDamageChanged(playerID, unitID, newDamage, oldDamage)
     local pUnit = UnitManager.GetUnit(playerID, unitID)
@@ -401,7 +329,7 @@ function OnUnitAddedToMap(playerID, unitID)
 end
 
 function Initialize()
-    Events.Combat.Add(OnCombat)
+    -- Events.Combat.Add(OnCombat)
     Events.UnitKilledInCombat.Add(OnUnitKilledInCombat)
     Events.TurnEnd.Add(OnTurnEnd)
     Events.UnitDamageChanged.Add(OnUnitDamageChanged)

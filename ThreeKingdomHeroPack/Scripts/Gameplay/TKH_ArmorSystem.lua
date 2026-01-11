@@ -212,7 +212,7 @@ function OnUnitArmorChanged(pUnit)
     end
 
     -- 周泰-浴血奋战：护甲减少攻击力提升
-    if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_XI_LIANG_TIE_QI_MC"].Index) then
+    if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_ZHOU_TAI_3_5"].Index) then
         local dUnitDamage = pUnit:GetDamage()
         if dUnitDamage > 0 then
             local armor = pUnit:GetProperty('TKH_Armor') or 0
@@ -308,6 +308,16 @@ function OnUnitPromoted(playerID, unitID)
     end
     pUnit:SetProperty('TKH_UNIT_PROMOTED_INDEXES', promotedIndexes)
     TreatArmor(pUnit, math.max(50 - pUnit:GetDamage(), 0))
+    -- 兀突骨 特殊技能
+    -- 飓风斩：旋风斩的伤害提高到80点
+    if pUnitType == 'UNIT_HERO_TKH_WU_TUGU' then
+        if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_WU_TUGU_1_4"].Index) then
+            pUnit:SetProperty('AOE_DAMAGE_UPGRADE', 80 - 50)
+        end
+        if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_WU_TUGU_3_5"].Index) then
+            pUnit:SetProperty('WU_TUGU_AOE_EFFECT_UPGRADE', true)
+        end
+    end
 end
 
 function OnOnPillaged(iUnitPlayerID, iUnitID, eImprovement, eBuilding, eDistrict, iPlotIndex)
@@ -379,6 +389,74 @@ function ModifierCombatResult(info)
         if defend_damage > 0 then
             OnUnitGetArmorOrDamageDecreased(defend_unit)
         end
+
+
+
+        -- =====================HERO EFFECT=====================
+
+
+        -- 马超：西凉铁骑、浑天锤，攻击后敌方失去所有移动力
+        if IsUnitHaveAbility(attack_unit, 'ABILITY_TKH_EQUIPMENT_HunTianChui') or attack_unit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_MA_CHAO_1_5"].Index) then
+            UnitManager.ChangeMovesRemaining(defend_unit, -defend_unit:GetMovesRemaining())
+        end
+
+        -- 单位控制技能
+        if GameInfo.TKH_UnitTypeControlCrit[aUnitType] then
+            local basePercent = GameInfo.TKH_UnitTypeControlCrit[aUnitType].Percent
+            local extraPercent = attack_unit:GetProperty('EXTRA_CRIT_PERCENT') or 0
+            local lostMoves = math.max(0, defend_unit:GetMovesRemaining() - 1)
+            math.randomseed(GetRandomSeed())
+            if (basePercent + extraPercent) <= math.random(100) then
+                UnitManager.ChangeMovesRemaining(defend_unit, -lostMoves)
+            end
+        end
+
+        -- 蛮族
+        local diplomacy = Players[attack_unit:GetOwner()]:GetDiplomacy()
+        local adjUnits = GetNeighborUnits(defend_unit:GetX(), defend_unit:GetY(), 1)
+
+
+        if adjUnits ~= nil and #adjUnits > 0 then
+            -- 木鹿大王：攻击时可对目标单位两侧单元格上的敌方单位造成同等伤害。
+            if aUnitInfo.UnitType == 'UNIT_HERO_TKH_MU_LU' then
+                for _, adjUnit in ipairs(adjUnits) do
+                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
+                        DamageUnit(adjUnit, defend_damage)
+                    end
+                end
+            end
+
+            -- 铁石弹专属
+            if IsUnitHaveAbility(attack_unit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
+                for _, adjUnit in ipairs(adjUnits) do
+                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
+                        DamageUnit(adjUnit, 10)
+                    end
+                end
+            end
+
+            -- 祝融夫人：攻击时对与攻击目标相邻且不与祝融夫人相邻的单位造成30点溅射伤害。
+            if IsUnitHaveAbility(attack_unit, 'ABILITY_UNIT_HERO_TKH_ZHU_RONG') then
+                for _, adjUnit in ipairs(adjUnits) do
+                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID())
+                        and Map.GetPlotDistance(adjUnit:GetX(), adjUnit:GetY(), attack_unit:GetX(), attack_unit:GetY()) ~= 1 then
+                        DamageUnit(adjUnit, HeroConstants.ZHU_RONG_DAMAGE)
+                    end
+                end
+            end
+
+
+            -- 沙摩柯：攻击时对目标一个单元个内的所有敌方单位造成10点伤害
+            if IsUnitHaveAbility(attack_unit, 'ABILITY_UNIT_HERO_TKH_SHA_MOKE') then
+                for _, adjUnit in ipairs(adjUnits) do
+                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
+                        DamageUnit(adjUnit, HeroConstants.SHA_MOKE_DAMAGE)
+                    end
+                end
+            end
+        end
+
+        -- =====================HERO EFFECT=====================
     elseif info.CombatVersusType == 109217514 then
         -- 防御攻击单位
         local defend_unit = UnitManager.GetUnit(info.DefenderPlayerID, info.DefenderUnitID)

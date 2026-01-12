@@ -432,13 +432,14 @@ function CommandDealDamageAoe(eOwner, iUnitID, parameters)
 
     local x, y = pUnit:GetX(), pUnit:GetY()
     local range = 1
-    local damage = 10
+    local damage = nil
     local results = DB.Query(
         "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?",
         unitType, 'UNITCOMMAND_DEAL_DAMAGE_AOE')
 
-    local aoe_damage_upgrade = pUnit:GetProperty('AOE_DAMAGE_UPGRADE') or 0
-    damage = damage + aoe_damage_upgrade
+    if IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_WU_TUGU_1_4') then
+        damage = 80
+    end
 
     local diplomacy = Players[pUnit:GetOwner()]:GetDiplomacy()
 
@@ -459,7 +460,7 @@ function CommandDealDamageAoe(eOwner, iUnitID, parameters)
 
     local adjUnits = GetNeighborUnits(x, y, range)
 
-    local is_WU_TUGU_UPGRADE = pUnit:GetProperty('WU_TUGU_AOE_EFFECT_UPGRADE') or false
+    local is_WU_TUGU_UPGRADE = IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_WU_TUGU_3_5')
 
     for _, adjUnit in ipairs(adjUnits) do
         if adjUnit and diplomacy:IsAtWarWith(adjUnit:GetOwner()) then

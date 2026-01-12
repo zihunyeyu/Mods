@@ -308,16 +308,6 @@ function OnUnitPromoted(playerID, unitID)
     end
     pUnit:SetProperty('TKH_UNIT_PROMOTED_INDEXES', promotedIndexes)
     TreatArmor(pUnit, math.max(50 - pUnit:GetDamage(), 0))
-    -- 兀突骨 特殊技能
-    -- 飓风斩：旋风斩的伤害提高到80点
-    if pUnitType == 'UNIT_HERO_TKH_WU_TUGU' then
-        if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_WU_TUGU_1_4"].Index) then
-            pUnit:SetProperty('AOE_DAMAGE_UPGRADE', 80 - 50)
-        end
-        if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_WU_TUGU_3_5"].Index) then
-            pUnit:SetProperty('WU_TUGU_AOE_EFFECT_UPGRADE', true)
-        end
-    end
 end
 
 function OnOnPillaged(iUnitPlayerID, iUnitID, eImprovement, eBuilding, eDistrict, iPlotIndex)

@@ -178,8 +178,9 @@ m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.ResetDescription = function(pUnit
         end
     end
 
-    local aoe_damage_upgrade = pUnit:GetProperty('AOE_DAMAGE_UPGRADE') or 0
-    damage = damage + aoe_damage_upgrade
+    if IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_WU_TUGU_1_4') then
+        damage = 80
+    end
     return Locale.Lookup('LOC_UNITCOMMAND_DEAL_DAMAGE_AOE_HELP', aoe_range, damage)
 
 end

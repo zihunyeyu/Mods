@@ -29,8 +29,8 @@ include('TKH_Helper')
 local CONSTANT_DAMAGE_DECREASE_RATE = 0.3
 
 local COMBAT_DECREASE_VALUE = 30
-local MELEE_COMBAT_DFENDED_DECREASE_RATE = 0.7
-local MELEE_COMBAT_ATTACK_DECREASE_RATE = 0.5
+local MELEE_COMBAT_DFENDED_DECREASE_RATE = 0.95
+local MELEE_COMBAT_ATTACK_DECREASE_RATE = 0.3
 
 local RANGED_COMBAT_DEFEND_MAX_DAMAGE = 40
 
@@ -94,14 +94,16 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
     local aUnitType = aORb(aUnit ~= nil, GameInfo.Units[aUnit:GetType()].UnitType, false)
     local dUnitType = aORb(dUnit ~= nil, GameInfo.Units[dUnit:GetType()].UnitType, false)
 
-    print('原始伤害：', attack_damage, defend_damage)
+    print('原始伤害' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
     -- -- 吸血效果
     for ability, life_steal_rate in pairs(LIFE_STEAL_ABILITIES) do
         if aUnit and IsUnitHaveAbility(aUnit, ability) then
             TreatUnit(aUnit, math.floor(defend_damage * life_steal_rate))
+            print('吸血效果', defend_damage, defend_damage * life_steal_rate)
         end
         if dUnit and IsUnitHaveAbility(dUnit, ability) then
             TreatUnit(dUnit, math.floor(attack_damage * life_steal_rate))
+            print('吸血效果', attack_damage, attack_damage * life_steal_rate)
         end
     end
 
@@ -111,16 +113,22 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
 
     -- 1. 防御方固定减伤 30%
     defend_damage = math.floor(defend_damage * (1 - CONSTANT_DAMAGE_DECREASE_RATE))
-    print('固定减伤后：', defend_damage)
+    print('固定减伤' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
 
     -- 1.1 单位类型固定减伤
     if info.CombatType == MELEE_COMBAT then
         attack_damage = aORb(attack_damage > COMBAT_DECREASE_VALUE,
-            COMBAT_DECREASE_VALUE * MELEE_COMBAT_ATTACK_DECREASE_RATE, COMBAT_DECREASE_VALUE)
+            COMBAT_DECREASE_VALUE + (attack_damage - COMBAT_DECREASE_VALUE) * MELEE_COMBAT_ATTACK_DECREASE_RATE,
+            attack_damage)
+
         defend_damage = aORb(defend_damage > COMBAT_DECREASE_VALUE,
-            COMBAT_DECREASE_VALUE * MELEE_COMBAT_DFENDED_DECREASE_RATE, COMBAT_DECREASE_VALUE)
+            COMBAT_DECREASE_VALUE + (defend_damage - COMBAT_DECREASE_VALUE) * MELEE_COMBAT_DFENDED_DECREASE_RATE,
+            defend_damage)
+
+        print('近战减伤' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
     elseif info.CombatType == RANGED_COMBAT then
         defend_damage = CalculateRangeDamage(defend_damage)
+        print('远程减伤' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
     end
 
     -- 2. 技能减伤 加算
@@ -132,8 +140,7 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
         end
     end
     defend_damage = math.floor(defend_damage * (1 - math.min(1, ability_decrease_damage_percent)))
-    print('技能减伤后：', defend_damage)
-
+    print('技能减伤' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
 
     math.randomseed(GetRandomSeed())
 
@@ -193,7 +200,7 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
         if MatchUnitTag(aUnitType, 'CLASS_RANGED') and MatchUnitTag(dUnitType, { 'CLASS_HEAVY_CAVALRY', 'CLASS_HEAVY_CHARIOT', 'CLASS_LIGHT_CAVALRY', 'CLASS_LIGHT_CHARIOT', 'CLASS_ANTI_CAVALRY' }) then
             defend_damage = defend_damage + 5
         end
-        print('兵种克制：', defend_damage)
+        print('兵种克制' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
 
 
         -- 固定伤害类技能（无判断条件）
@@ -252,6 +259,8 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
     if IsUnitHaveAbility(aUnit, 'ABILITY_UNIT_HERO_TKH_XU_CHU') then
         attack_damage = 0
     end
+
+    print('最终伤害' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
 
     return attack_damage, defend_damage
 end
@@ -485,9 +494,9 @@ function ModifierCombatResult(info)
             math.randomseed(GetRandomSeed())
 
             if percent > 0 then
-                AddWorldViewText(defend_unit:GetX(), defend_unit:GetY(), 'LOC_TKH_LOST_MOVEMENT_CRIT')
                 if math.random(100) < percent then
                     UnitManager.ChangeMovesRemaining(defend_unit, -lostMoves)
+                    AddWorldViewText(defend_unit:GetX(), defend_unit:GetY(), 'LOC_TKH_LOST_MOVEMENT_CRIT')
                 end
             end
         end

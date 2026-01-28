@@ -645,29 +645,59 @@ function IsUnitHasPromotion(pUnit, promotionType)
     return false
 end
 
+function IsAbilityInAbilities(abilities, unitAbilities)
+    local matchAbilities = {}
+
+    if type(abilities) == 'string' then
+        -- matchAbilities = { abilities }
+        table.insert(matchAbilities, abilities)
+    elseif type(abilities) == 'table' then
+        for _, v in ipairs(abilities) do
+            table.insert(matchAbilities, v)
+        end
+    end
+    if (unitAbilities ~= nil) then
+        for _, ability in ipairs(unitAbilities) do
+            local abilityType = GameInfo.UnitAbilities[ability].UnitAbilityType
+            if abilityType ~= nil then
+                if IsInTable(matchAbilities, abilityType) then
+                    return true
+                end
+            end
+        end
+    end
+
+    return false
+end
+
 --- 判断单位是否拥有某能力
 --- @param pUnit table
 --- @param ability string|table
 function IsUnitHaveAbility(pUnit, ability)
-    local unitAbilities = pUnit:GetAbility()
-    if unitAbilities == nil then
+    local unitAbility = pUnit:GetAbility()
+    if unitAbility == nil then
         return false
     end
 
-    if type(ability) == 'string' then
-        local iCurrentCount = unitAbilities:GetAbilityCount(ability);
-        if iCurrentCount > 0 then
-            return true
-        end
-    elseif type(ability) == 'table' then
-        for _, v in ipairs(ability) do
-            local iCurrentCount = unitAbilities:GetAbilityCount(v);
+    -- print('unitAbilities.GetAbilityCount = ', unitAbilities.GetAbilityCount)
+    if unitAbility.GetAbilityCount == nil then
+        return IsAbilityInAbilities(ability, unitAbility:GetAbilities())
+    else
+        if type(ability) == 'string' then
+            local iCurrentCount = unitAbility:GetAbilityCount(ability);
             if iCurrentCount > 0 then
                 return true
             end
+        elseif type(ability) == 'table' then
+            for _, v in ipairs(ability) do
+                local iCurrentCount = unitAbility:GetAbilityCount(v);
+                if iCurrentCount > 0 then
+                    return true
+                end
+            end
+        else
+            return false
         end
-    else
-        return false
     end
 
     return false

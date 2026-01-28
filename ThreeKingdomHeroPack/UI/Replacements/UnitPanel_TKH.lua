@@ -80,6 +80,8 @@ function GetUnitActionsTable(pUnit)
                     if (pSelectedUnit == nil) then
                         return;
                     end
+                    -- ================= 传入行动UNIT_TYPE =============
+                    PlayerConfigurations[pSelectedUnit:GetOwner()]:SetValue('TKH_COMMAND_UNIT_ID', pSelectedUnit:GetID());
                     -- ============= 特殊命令 =============
                     if commandType == 'UNITCOMMAND_BUILD_IMPROVEMENT' then
                         local tParameters = {};
@@ -91,7 +93,6 @@ function GetUnitActionsTable(pUnit)
                     end
 
                     -- ============= 特殊命令 =============
-
                     if (pCommandTable.EventName ~= nil) then
                         local tParameters = {};
                         tParameters[UnitCommandTypes.PARAM_NAME] = pCommandTable.EventName or '';
@@ -149,38 +150,6 @@ function ReadUnitData(unit)
     return kSubjectData
 end
 
--- function ShowCombatAssessment()
---     m_kCombatResults              = GetCombatPreviewResults();
---     local attacker                = m_kCombatResults[CombatResultParameters.ATTACKER];
---     local defender                = m_kCombatResults[CombatResultParameters.DEFENDER];
---     local iAttackerCombatStrength = attacker[CombatResultParameters.COMBAT_STRENGTH];
---     local iDefenderCombatStrength = defender[CombatResultParameters.COMBAT_STRENGTH];
---     local iAttackerBonus          = attacker[CombatResultParameters.STRENGTH_MODIFIER];
---     local iDefenderBonus          = defender[CombatResultParameters.STRENGTH_MODIFIER];
---     local iAttackerStrength       = iAttackerCombatStrength + iAttackerBonus;
---     local iDefenderStrength       = iDefenderCombatStrength + iDefenderBonus;
-
-
---     local attackerID = attacker[CombatResultParameters.ID];
---     local defenderID = defender[CombatResultParameters.ID];
-
---     local kParameters = {};
---     kParameters.OnStart = "BalanceUnitCombatStrength"
---     kParameters.BalanceStrength = math.abs(iAttackerStrength - iDefenderStrength)
-
---     if iAttackerCombatStrength > iDefenderCombatStrength then
---         kParameters.UnitID = attackerID.id
---         kParameters.PlayerID = attackerID.player
---         UI.RequestPlayerOperation(attackerID.player, PlayerOperations.EXECUTE_SCRIPT, kParameters)
---     elseif iAttackerCombatStrength < iDefenderCombatStrength then
---         kParameters.UnitID = defenderID.id
---         kParameters.PlayerID = defenderID.player
-
---         UI.RequestPlayerOperation(attackerID.player, PlayerOperations.EXECUTE_SCRIPT, kParameters)
---     end
-
---     TKH_ShowCombatAssessment();
--- end
 
 -- ===========================================================================
 

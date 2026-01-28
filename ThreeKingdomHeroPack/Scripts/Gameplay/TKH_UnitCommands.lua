@@ -171,27 +171,45 @@ function OnTurnBegin()
     Game:SetProperty('CommandRecover', m_CommandRecover)
 end
 
+-- UNITCOMMAND_EX_ACTION
+-- EXTRA ACTIONS FROM [CAOSHIHUWEI_CAO_CAO,YIMUTONGBAO_SUN_QUAN,NAN_MAN_RU_QIN_DUO_SI]
+
+local ex_action_extra_ability = {
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO = 1,
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN = 1,
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NAN_MAN_RU_QIN_DUO_SI = 1,
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YUAN_SHAO = 1,
+    ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_SUMMON_LV_LINGQI = 4,
+}
+
 function OnUnitAbilityGained(playerID, unitID, unitAbilityIndex)
-    if unitAbilityIndex == CAOSHIHUWEI_CAO_CAO or unitAbilityIndex == YIMUTONGBAO_SUN_QUAN then
-        local pUnit = UnitManager.GetUnit(playerID, unitID)
-        if not pUnit then
-            return
+    local pUnit = UnitManager.GetUnit(playerID, unitID)
+    if not pUnit then
+        return
+    end
+    -- 羁绊效果增加使用次数
+    local ability = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
+    for key, value in pairs(ex_action_extra_ability) do
+        if ability == key then
+            local extraActions = pUnit:GetProperty('ExtraActions') or 0
+            extraActions = extraActions + value
+            pUnit:SetProperty('ExtraActions', extraActions)
         end
-        local extraActions = pUnit:GetProperty('ExtraActions') or 0
-        extraActions = extraActions + 1
-        pUnit:SetProperty('ExtraActions', extraActions)
     end
 end
 
 function OnUnitAbilityLost(playerID, unitID, unitAbilityIndex)
-    if unitAbilityIndex == CAOSHIHUWEI_CAO_CAO or unitAbilityIndex == YIMUTONGBAO_SUN_QUAN then
-        local pUnit = UnitManager.GetUnit(playerID, unitID)
-        if not pUnit then
-            return
+    local pUnit = UnitManager.GetUnit(playerID, unitID)
+    if not pUnit then
+        return
+    end
+    local ability = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
+    for key, value in pairs(ex_action_extra_ability) do
+        if ability == key then
+            local extraActions = pUnit:GetProperty('ExtraActions') or 0
+            extraActions = extraActions - value
+            pUnit:SetProperty('ExtraActions', math.max(0, extraActions))
         end
-        local extraActions = pUnit:GetProperty('ExtraActions') or 0
-        extraActions = math.max(extraActions - 1, 0)
-        pUnit:SetProperty('ExtraActions', extraActions)
     end
 end
 
@@ -205,7 +223,7 @@ function CommandChangePlot(eOwner, iUnitID, parameters)
         return
     end
     local unitType = GetUnitType(pUnit)
-    local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(unitType)
+    local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(unitType, parameters.CommandType)
 
     if changeType and changeItemIndex ~= -1 then
         local plot = Map.GetPlot(pUnit:GetX(), pUnit:GetY())
@@ -217,6 +235,29 @@ function CommandChangePlot(eOwner, iUnitID, parameters)
             TerrainBuilder.SetFeatureType(plot, changeItemIndex)
             UnitManager.ChangeMovesRemaining(pUnit, -pUnit:GetMovesRemaining())
             AfterAction(pUnit, parameters.CommandType)
+        end
+    end
+end
+
+function CommandChangeSelectedPlot(playerID, params)
+    local plot = Map.GetPlot(params.iX, params.iY)
+    local commandType = params.CommandType
+    local unitID = params.UnitID
+    local commandUnit = UnitManager.GetUnit(playerID, unitID)
+    if plot == nil or commandUnit == nil then
+        return
+    end
+
+    local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(GetUnitType(commandUnit), commandType)
+    if changeType and changeItemIndex ~= -1 then
+        if changeType == 'TerrainType' then
+            TerrainBuilder.SetTerrainType(plot, changeItemIndex)
+            -- UnitManager.ChangeMovesRemaining(commandUnit, -commandUnit:GetMovesRemaining())
+            AfterAction(commandUnit, params.CommandType)
+        elseif changeType == 'FeatureType' then
+            TerrainBuilder.SetFeatureType(plot, changeItemIndex)
+            -- UnitManager.ChangeMovesRemaining(commandUnit, -commandUnit:GetMovesRemaining())
+            AfterAction(commandUnit, params.CommandType)
         end
     end
 end
@@ -630,6 +671,7 @@ function Initialize()
     GameEvents.CommandCreateUnit.Add(CommandCreateUnit)
     GameEvents.CommandEndowAbility.Add(CommandEndowAbility)
     GameEvents.CommandChangePlot.Add(CommandChangePlot)
+    GameEvents.CommandChangeSelectedPlot.Add(CommandChangeSelectedPlot)
     GameEvents.CommandBurnMountain.Add(CommandBurnMountain)
     GameEvents.CommandBuildImprovement.Add(CommandBuildImprovement)
     GameEvents.CommandBuildDistrictEncampment.Add(CommandBuildDistrictEncampment)

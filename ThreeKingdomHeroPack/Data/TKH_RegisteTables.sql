@@ -54,7 +54,7 @@ CREATE TABLE IF NOT EXISTS TKH_EquipmentTypes (
 
 CREATE TABLE IF NOT EXISTS TKH_EquipmentSuits (
 	Suit TEXT NOT NULL, 
-	Name TEXT NOT NULL, 
+	Name TEXT, 
 	Description TEXT, 
 	SuitAbilities TEXT, 
 	SuitEquipmentAmount TEXT,

@@ -620,7 +620,6 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         if unit:GetHeroClassType() ~= -1 then
             if m_HeroRewardManager[unitType] then
                 for _, info in pairs(m_HeroRewardManager[unitType]) do
-
                     local rewardReq = info['RewardNeed']
                     info['Prograss'] = info['Prograss'] + 1
                     if info['Prograss'] == rewardReq then
@@ -629,8 +628,10 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
                             local e_index = IndexOf(m_EquipmentAllocator, info['Equipment'])
                             if e_index then
                                 table.remove(m_EquipmentAllocator, e_index)
-                                AllocateEquipmentToPlayerForReward(playerID, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL, info['Equipment'])
-                                SendEquipmentCreatedNotification(playerID, info['Equipment'], EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
+                                AllocateEquipmentToPlayerForReward(playerID, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
+                                    info['Equipment'])
+                                SendEquipmentCreatedNotification(playerID, info['Equipment'],
+                                    EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
                                     unit:GetX(),
                                     unit:GetY())
                             end
@@ -685,6 +686,7 @@ function InitializeEquipmentData()
             table.insert(m_EquipmentSuitManager[row.Suit].TKH_Equipments, row.Equipment)
         end
 
+        -- 初始化英雄击杀奖励管理器
         if row.HeroExclusive and row.RewardParam1 then
             m_HeroRewardManager['UNIT_HERO_TKH_' .. row.HeroExclusive] = m_HeroRewardManager
                 ['UNIT_HERO_TKH_' .. row.HeroExclusive] or {}
@@ -848,6 +850,12 @@ function ChangeHeroEquipmentAbility(e, heroClassIndex, status)
 
     -- ============================护甲逻辑============================
     local changeValue = equipmentInfo.Parameter1 or 0
+    local heroName = string.gsub(unitType, 'UNIT_HERO_TKH_', '')
+    if heroName == equipmentInfo.HeroExclusive then
+        changeValue = changeValue + (equipmentInfo.Parameter2 or 0)
+    end
+    -- print('ChangeHeroEquipmentAbility ', e, ' ', status, ' ChangeExtraMaxArmor ', changeValue)
+
     if status == EQUIPMENT_STATUS.TAKE_OFF then
         changeValue = -1 * changeValue
     end
@@ -906,15 +914,18 @@ function ChangeHeroUnitKPSkill(pUnit, upgradeInfo)
     if value > 0 then
         if kpSkillKey == "HERO_POINT_UPGRADE_EXTRA_MOVEMENT" then
             if value == 1 then
-                AddAbilityForUnit(pUnit:GetOwner(), pUnit:GetID(), "ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT1",
+                AddAbilityForUnit(pUnit:GetOwner(), pUnit:GetID(),
+                    "ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT1",
                     true)
             elseif value == 2 then
-                AddAbilityForUnit(pUnit:GetOwner(), pUnit:GetID(), "ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT1",
+                AddAbilityForUnit(pUnit:GetOwner(), pUnit:GetID(),
+                    "ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT1",
                     true)
-                AddAbilityForUnit(pUnit:GetOwner(), pUnit:GetID(), "ABILITY_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT2",
+                AddAbilityForUnit(pUnit:GetOwner(), pUnit:GetID(),
+                    "ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT2",
                     true)
             end
-        elseif IsInTable({ 'LONGWEIJIANGJUN', 'CAOSHIQINWEI', 'XIANGYU', 'XIANZHENYONGSHI', 'JIXINGJUN' }, upgradeInfo.Name) then
+        elseif IsInTable({ 'UNIQUE_ZHAO_YUN', 'UNIQUE_XU_CHU', 'UNIQUE_MU_LU', 'UNIQUE_ZHOU_TAI' }, upgradeInfo.Name) then
             pUnit:SetProperty('TKH_KILL_POINT_FINAL_SKILL_COOL_TURN', 0)
         else
             if uniqueAbility and upgradeInfo.Ability and GameInfo.UnitAbilities[upgradeInfo.Ability] then

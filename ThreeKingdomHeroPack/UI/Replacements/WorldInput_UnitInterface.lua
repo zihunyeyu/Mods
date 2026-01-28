@@ -17,6 +17,8 @@ INTERFACEMODE_EX_ACTION = DB.MakeHash("INTERFACEMODE_EX_ACTION")
 INTERFACEMODE_DEAL_DAMAGE = DB.MakeHash("INTERFACEMODE_DEAL_DAMAGE")
 INTERFACEMODE_BURN_VOLCAND = DB.MakeHash("INTERFACEMODE_BURN_VOLCAND")
 
+
+INTERFACEMODE_CHANGE_SELECTED_PLOT = DB.MakeHash("INTERFACEMODE_CHANGE_SELECTED_PLOT")
 -- ===========================================================================
 --	CACHE BASE FUNCTIONS
 -- ===========================================================================
@@ -185,7 +187,7 @@ InterfaceModes.INTERFACEMODE_EX_ACTION.OnInterfaceModeLeave = function(eNewMode)
 end
 
 ------------------------------------------------------------------------------------------------
--- INTERFACEMODE_EX_ACTION
+-- INTERFACEMODE_DEAL_DAMAGE
 ------------------------------------------------------------------------------------------------
 InterfaceModes.INTERFACEMODE_DEAL_DAMAGE = {}
 InterfaceModes.INTERFACEMODE_DEAL_DAMAGE.OnMouseEnd = function(pInputStruct)
@@ -314,6 +316,70 @@ InterfaceModes.INTERFACEMODE_BURN_VOLCAND.OnInterfaceModeLeave = function(eNewMo
     UILens.ClearLayerHexes(g_HexColoringAttack);
 end
 
+
+
+------------------------------------------------------------------------------------------------
+-- INTERFACEMODE_CHANGE_SELECTED_PLOT
+------------------------------------------------------------------------------------------------
+InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT = {}
+InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnMouseEnd = function(pInputStruct)
+    if g_isMouseDragging then
+        g_isMouseDragging = false;
+    elseif IsSelectionAllowedAt(UI.GetCursorPlotID()) then
+        InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.Action(pInputStruct);
+    end
+    EndDragMap();
+    g_isMouseDownInWorld = false;
+    return true;
+end
+InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.Action = function(pInputStruct)
+    local iPlayer = Game.GetLocalPlayer();
+    local plotID = UI.GetCursorPlotID();
+    local unitID = PlayerConfigurations[iPlayer]:GetValue('TKH_COMMAND_UNIT_ID')
+    local commandUnit = UnitManager.GetUnit(iPlayer, unitID)
+
+    if commandUnit == nil then
+        print("ERROR: Missing command unit");
+        return false
+    end
+    if Map.IsPlot(plotID) and IsTargetPlot(plotID) then
+        local plot = Map.GetPlotByIndex(plotID);
+
+        if (plot ~= nil) then
+            local kParameters = {};
+            kParameters.OnStart = "CommandChangeSelectedPlot";
+            kParameters.iX = plot:GetX()
+            kParameters.iY = plot:GetY()
+            kParameters.UnitID = unitID
+            kParameters.CommandType = 'UNITCOMMAND_CHANGE_SELECTED_PLOT'
+            UI.RequestPlayerOperation(iPlayer, PlayerOperations.EXECUTE_SCRIPT, kParameters)
+            UI.SetInterfaceMode(InterfaceModeTypes.SELECTION);
+            UI.PlaySound("Play_MP_Player_Ready");
+        else
+            print("ERROR: Missing head selected plot");
+        end
+    end
+    return true;
+end
+InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnInterfaceModeChange = function(eNewMode)
+    UIManager:SetUICursor(CursorTypes.WAIT);
+    local pSelectedUnit = UI.GetHeadSelectedUnit();
+    if (pSelectedUnit == nil) then
+        return;
+    end
+    g_targetPlots = GetCommandValidPlots(pSelectedUnit, 'UNITCOMMAND_CHANGE_SELECTED_PLOT')
+    if (table.count(g_targetPlots) ~= 0) then
+        local eLocalPlayer = Game.GetLocalPlayer();
+        UILens.ToggleLayerOn(g_HexColoringAttack);
+        UILens.SetLayerHexesArea(g_HexColoringAttack, eLocalPlayer, g_targetPlots);
+    end
+end
+InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnInterfaceModeLeave = function(eNewMode)
+    UIManager:SetUICursor(CursorTypes.NORMAL);
+    UILens.ToggleLayerOff(g_HexColoringAttack);
+    UILens.ClearLayerHexes(g_HexColoringAttack);
+end
+
 -- ===========================================================================
 --	OVERRIDE
 -- ===========================================================================
@@ -355,4 +421,14 @@ function LateInitialize()
     InterfaceModeMessageHandler[INTERFACEMODE_BURN_VOLCAND][MouseEvents.LButtonUp] =
         InterfaceModes.INTERFACEMODE_BURN_VOLCAND.OnMouseEnd
     InterfaceModeMessageHandler[INTERFACEMODE_BURN_VOLCAND][KeyEvents.KeyUp] = OnPlacementKeyUp;
+
+
+    InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT] = {};
+    InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT][INTERFACEMODE_ENTER] =
+        InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnInterfaceModeChange;
+    InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT][INTERFACEMODE_LEAVE] =
+        InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnInterfaceModeLeave;
+    InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT][MouseEvents.LButtonUp] =
+        InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnMouseEnd
+    InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT][KeyEvents.KeyUp] = OnPlacementKeyUp;
 end

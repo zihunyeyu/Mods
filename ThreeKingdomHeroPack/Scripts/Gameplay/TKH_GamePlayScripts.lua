@@ -452,13 +452,15 @@ function OnTurnEndUnitEffectHandler()
             local units = player:GetUnits()
             for _, unit in units:Members() do
                 if unit then
-                    local aUnitType = GameInfo.Units[unit:GetType()].UnitType
-
                     -- 沼泽伤害
                     if player:IsHuman() then
                         local plot = Map.GetPlot(unit:GetX(), unit:GetY())
                         if plot and plot:GetFeatureType() == FEATURE_MASH_INDEX then
-                            DamageUnit(unit, FEATURE_MASH_DAMAGE)
+                            if IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_ABILITY_TKH_EQUIPMENT_SUIT_DADI4') then
+                                TreatUnit(unit, 20)
+                            elseif IsUnitHaveAbility(unit, 'ABILITY_UNITS_GAIN_DEBUFF_IN_MASH') then
+                                DamageUnit(unit, FEATURE_MASH_DAMAGE)
+                            end
                         end
                     end
 
@@ -476,30 +478,18 @@ function OnTurnEndUnitEffectHandler()
                         end
                     end
 
-                    if IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_HE_BEI_SHUANG_XIONG_WEN_CHOU') then
-                        TreatUnit(unit, HeroConstants.HE_BEI_SHUANG_XIONG_HEAL)
-                    end
-
-                    if IsUnitHaveAbility(unit, 'ABILITY_TKH_EA_YILIAOBAO') then
-                        TreatUnit(unit, 7)
-                    end
-                    -- 大城市效果
-                    -- 许昌，回复生命
-                    if IsUnitHaveAbility(unit,
-                            { 'ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_XUCHANG_A',
-                                'ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_JIANG_A',
-                                'ABILITY_MODIFIER_GREAT_CITY_PROPERTY_GREAT_CITY_JI_A' }) then
-                        TreatUnit(unit, 10)
-                    end
-
-                    -- 单位满级晋升效果
-                    if unit:GetProperty('EXTRA_HEAL_TURNEND') then
-                        TreatUnit(unit, unit:GetProperty('EXTRA_HEAL_TURNEND') or 0)
-                    end
-
                     -- 满移动力恢复
                     if unit:GetMaxMoves() <= unit:GetMovesRemaining() then
                         TreatUnit(unit, 15)
+                    end
+
+                    -- 回合结束时恢复生命值或护甲值
+                    -- 1. 技能点
+                    local healPoint = unit:GetProperty(GameInfo.TKH_HeroKillPointSkill['HEAL'].PropertyKey) or 0
+                    -- 2. 各种技能效果
+                    healPoint = healPoint + (unit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0)
+                    if healPoint > 0 then
+                        TreatUnit(unit, healPoint)
                     end
                 end
             end

@@ -12,6 +12,7 @@ include('TKH_Helper')
 --	VARIABLES
 -- ===========================================================================
 local m_HeroManager = {}
+local m_sHeroManager = {}
 
 -- ===========================================================================
 --	HERO
@@ -58,7 +59,6 @@ function HeroUnit.ReInitialize(self, pUnit, oInfo)
     self.Exp = pUnit:GetExperience():GetExperiencePoints()
 end
 
-
 -- ===========================================================================
 --	HERO Record Exp
 -- ===========================================================================
@@ -83,6 +83,15 @@ function OnUnitCreated(playerID, unitID)
     local pUnit = UnitManager.GetUnit(playerID, unitID)
     local heroClassIndex = pUnit:GetHeroClassType()
     local unitInfo = GameInfo.Units[pUnit:GetType()]
+
+    for row in GameInfo.TKH_S_Heroes() do
+        if unitInfo.UnitType == 'UNIT_HERO_TKH_' .. row.Name then
+            m_sHeroManager[playerID] = m_sHeroManager[playerID] or {}
+            m_sHeroManager[playerID][unitID] = unitInfo.UnitType
+            Game:SetProperty('sHeroManager', m_sHeroManager)
+            break
+        end
+    end
 
     if heroClassIndex == -1 or not IsTkh(unitInfo.UnitType) then
         return
@@ -124,6 +133,8 @@ end
 
 function Initialize()
     m_HeroManager = Game:GetProperty('HeroManager') or {}
+    m_sHeroManager = Game:GetProperty('sHeroManager') or {}
+
     Events.UnitAddedToMap.Add(OnUnitCreated)
 end
 

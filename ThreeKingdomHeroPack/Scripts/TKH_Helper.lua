@@ -8,6 +8,24 @@ include('TKH_Constant')
 --	CORE LUA
 -- ===========================================================================
 
+---获取table长度
+---@param pTable table|any
+---@return number
+function GetTableLength(pTable)
+    if not type(pTable) == 'table' then
+        return 0
+    end
+
+    local length = 0
+    for _, value in pairs(pTable) do
+        if value then
+            length = length + 1
+        end
+    end
+
+    return length
+end
+
 ---分割字符串
 ---@param str string @目标字符串
 ---@param reps string @分隔符
@@ -20,6 +38,9 @@ function SplitString(str, reps)
     return resultStrList
 end
 
+--- element是否在table内
+---@param tTable table
+---@param element any
 function IsInTable(tTable, element)
     if tTable == nil or table.count(tTable) == 0 then
         return false
@@ -378,8 +399,8 @@ function TreatArmor(pUnit, treatValue)
 end
 
 ---对单位造成伤害（计算护甲）
----@param pUnit any
----@param damageValue any
+---@param pUnit table
+---@param damageValue integer 伤害值+
 function DamageUnit(pUnit, damageValue)
     if not pUnit then
         return
@@ -397,14 +418,15 @@ function DamageUnit(pUnit, damageValue)
             pUnit:SetProperty('TKH_Armor', currentArmor - damageValue)
             damageValue = 0
         end
-    else
-        damageValue = damageValue
     end
 
-    if pUnit:GetDamage() >= (100 - damageValue) then
-        UnitManager.Kill(pUnit)
-    else
-        pUnit:ChangeDamage(damageValue)
+    -- 再扣生命值
+    if damageValue > 0 then
+        if pUnit:GetDamage() >= (100 - damageValue) then
+            UnitManager.Kill(pUnit)
+        else
+            pUnit:ChangeDamage(damageValue)
+        end
     end
 end
 
@@ -416,20 +438,22 @@ function ChangeExtraMaxArmor(pUnit, changeValue)
         return
     end
 
-    local currentArmor = pUnit:GetProperty('TKH_Armor')
-    if not currentArmor then
-        return
-    end
+    local currentArmor = pUnit:GetProperty('TKH_Armor') or 0
     local maxArmor = pUnit:GetProperty('TKH_MaxArmor') or 0
+    local old_extra_value = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
+    -- 无论增减，额外最大护甲值最小为0
+    local new_extra_value = math.max(old_extra_value + changeValue, 0)
+    pUnit:SetProperty('TKH_ExtraMaxArmor', new_extra_value)
 
-    local oExtraValue = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
-    local nExtraValue = math.max(oExtraValue + changeValue, 0) -- 无论增减，额外最大护甲值最小为0
-    pUnit:SetProperty('TKH_ExtraMaxArmor', nExtraValue)
-    local changePercent = (maxArmor + nExtraValue) / (maxArmor + oExtraValue)
-    if changePercent > 1 then
-        TreatUnit(pUnit, math.floor((changePercent - 1) * currentArmor))
+    local extra_max_change_value = new_extra_value - old_extra_value
+
+    -- 调整当前护甲值
+    if extra_max_change_value > 0 then
+        TreatArmor(pUnit, extra_max_change_value)
     else
-        pUnit:SetProperty('TKH_Armor', math.max(0, math.floor(maxArmor * changePercent)))
+        if currentArmor > maxArmor + new_extra_value then
+            pUnit:SetProperty('TKH_Armor', maxArmor + new_extra_value)
+        end
     end
 end
 
@@ -606,6 +630,21 @@ end
 --	FUNCTIONS   UNIT
 -- ===========================================================================
 
+function IsUnitHasPromotion(pUnit, promotionType)
+    local exp = pUnit:GetExperience()
+    if exp == nil then
+        return false
+    end
+    local promotion = GameInfo.UnitPromotions[promotionType]
+    if promotion == nil then
+        return false
+    end
+    if exp:HasPromotion(promotion.Index) then
+        return true
+    end
+    return false
+end
+
 --- 判断单位是否拥有某能力
 --- @param pUnit table
 --- @param ability string|table
@@ -709,6 +748,36 @@ end
 --	FUNCTIONS   UNIT COMMAND
 -- ===========================================================================
 
+function GetCommandValidPlots(pUnit, commandType)
+    local range = 1
+    local g_targetPlots = {}
+    local pUnitAdjPlots = Map.GetNeighborPlots(pUnit:GetX(), pUnit:GetY(), range);
+    if commandType == 'UNITCOMMAND_CHANGE_SELECTED_PLOT' then
+        local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(GetUnitType(pUnit),
+            'UNITCOMMAND_CHANGE_SELECTED_PLOT')
+        if changeType == 'FeatureType' then
+            local validTerrainTypes = GetFeatureValidTerrainType(GameInfo.Features[changeItemIndex].FeatureType)
+            for _, pAdjPlot in ipairs(pUnitAdjPlots) do
+                if IsInTable(validTerrainTypes, GameInfo.Terrains[pAdjPlot:GetTerrainType()].TerrainType) then
+                    table.insert(g_targetPlots, pAdjPlot:GetIndex());
+                end
+            end
+        end
+    end
+
+    return g_targetPlots
+end
+
+function GetFeatureValidTerrainType(featureType)
+    local validTerrainTypes = {}
+    for row in GameInfo.Feature_ValidTerrains() do
+        if row.FeatureType == featureType then
+            table.insert(validTerrainTypes, row.TerrainType)
+        end
+    end
+    return validTerrainTypes
+end
+
 -- 获取符合地形地貌的资源
 function GetValidResources(plotID)
     local plot = Map.GetPlotByIndex(plotID)
@@ -727,7 +796,7 @@ function GetValidResources(plotID)
     return resources
 end
 
---- 
+---
 ---@param classType string
 ---@return table resources 资源索引列表
 function GetResouecesByClassType(classType)
@@ -778,7 +847,10 @@ end
 ---@return string changeTyp 单元格更改类型
 ---@return integer changeItemIndex 更改项索引
 ---@return string changeItemName 更改项名称
-function GetCommandPlotChangeInfo(pUnitType)
+function GetCommandPlotChangeInfo(pUnitType, commandType)
+    if commandType == nil then
+        commandType = 'UNITCOMMAND_CHANGE_PLOT'
+    end
     local changeType;
     local changeItemType;
     local changeItemIndex = -1
@@ -786,7 +858,7 @@ function GetCommandPlotChangeInfo(pUnitType)
 
     local results = DB.Query(
         "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
-        'UNITCOMMAND_CHANGE_PLOT');
+        commandType);
     if results then
         for _, row in ipairs(results) do
             changeType = row.Name
@@ -865,6 +937,8 @@ function GetCommandString(pUnitType, commandType)
             end
         end
 
+
+
         if sUnitType ~= nil then
             local unitName = Locale.Lookup('LOC_' .. sUnitType .. '_NAME')
             if form == '1' then
@@ -891,8 +965,11 @@ function GetCommandString(pUnitType, commandType)
         return Locale.Lookup('LOC_ENDOW_UNIT_ABILITY', Locale.Lookup(ability.Name),
             Locale.Lookup(ability.Description))
     elseif commandType == 'UNITCOMMAND_CHANGE_PLOT' then
-        local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(pUnitType)
+        local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(pUnitType, commandType)
         return Locale.Lookup('LOC_UNITCOMMAND_CHANGE_PLOT_HELP', changeItemName)
+    elseif commandType == 'UNITCOMMAND_CHANGE_SELECTED_PLOT' then
+        local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(pUnitType, commandType)
+        return Locale.Lookup('LOC_UNITCOMMAND_CHANGE_SELECTED_PLOT_HELP', changeItemName)
     end
 
     return helpTooltip

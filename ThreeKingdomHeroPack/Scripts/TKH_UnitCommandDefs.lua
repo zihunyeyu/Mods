@@ -167,7 +167,8 @@ m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.ResetDescription = function(pUnit
     local aoe_range = 1
     local damage = 10
     local results = DB.Query(
-        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", GetUnitType(pUnit), 'UNITCOMMAND_DEAL_DAMAGE_AOE')
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?",
+        GetUnitType(pUnit), 'UNITCOMMAND_DEAL_DAMAGE_AOE')
     if results then
         for _, row in ipairs(results) do
             if row.Name == 'Range' then
@@ -182,7 +183,6 @@ m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.ResetDescription = function(pUnit
         damage = 80
     end
     return Locale.Lookup('LOC_UNITCOMMAND_DEAL_DAMAGE_AOE_HELP', aoe_range, damage)
-
 end
 -- ===========================================================================
 --	UNITCOMMAND_BUILD_ROUTE
@@ -328,6 +328,45 @@ m_TKH_UnitCommands.UNITCOMMAND_CHANGE_PLOT.IsDisabled = function(pUnit)
 end
 m_TKH_UnitCommands.UNITCOMMAND_CHANGE_PLOT.ResetDescription = function(pUnit)
     return GetCommandString(GetUnitType(pUnit), 'UNITCOMMAND_CHANGE_PLOT')
+end
+
+
+-- ===========================================================================
+--	UNITCOMMAND_CHANGE_SELECTED_PLOT
+-- ===========================================================================
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT = {};
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT.EventName = nil
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT.Properties = {};
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT.IsVisible = function(pUnit)
+    local result = BaseVisibleCheck(pUnit) and pUnit:GetMovesRemaining() > 0
+
+    if GetUnitType(pUnit) == 'UNIT_HERO_TKH_DUO_SI' then
+        result = result and IsUnitHasPromotion(pUnit, 'PROMOTION_TK_DUO_SI_1_5')
+    end
+    return result
+end
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT.CanUse = function(pUnit)
+    return IsUnitHasCommand(pUnit, 'UNITCOMMAND_CHANGE_SELECTED_PLOT') and pUnit:GetMovesRemaining() > 0
+end
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT.IsDisabled = function(pUnit)
+    if not CheckCommandActions(pUnit, 'UNITCOMMAND_CHANGE_SELECTED_PLOT') then
+        return 'LOC_NO_ENOUGH_ACTION_CHARGES'
+    end
+
+    if (pUnit:GetMovesRemaining() == 0) then
+        return 'LOC_ACTION_DISABLE_TOOLTIP_NO_MOVEMENT'
+    end
+
+    local isExist = GetTableLength(GetCommandValidPlots(pUnit, 'UNITCOMMAND_CHANGE_SELECTED_PLOT')) > 0;
+    if (isExist == false) then
+        return 'LOC_ACTION_DISABLE_TOOLTIP_NO_TARGET';
+    end
+
+    return nil;
+end
+
+m_TKH_UnitCommands.UNITCOMMAND_CHANGE_SELECTED_PLOT.ResetDescription = function(pUnit)
+    return GetCommandString(GetUnitType(pUnit), 'UNITCOMMAND_CHANGE_SELECTED_PLOT')
 end
 
 -- ===========================================================================

@@ -26,11 +26,17 @@ include('TKH_Helper')
 -- local HEALTH_PERCENT_GOOD = 0.8;	-- This and above means a unit is still in good shape
 -- local HEALTH_PERCENT_BAD	= 0.4;	-- Above this the unit is okay but below it, the unit is considered to be in bad shape
 
+local CONSTANT_DAMAGE_DECREASE_RATE = 0.3
+
 local COMBAT_DECREASE_VALUE = 30
-local MELEE_COMBAT_DFENDE_DECREASE_RATE = 0.7
+local MELEE_COMBAT_DFENDED_DECREASE_RATE = 0.7
 local MELEE_COMBAT_ATTACK_DECREASE_RATE = 0.5
 
 local RANGED_COMBAT_DEFEND_MAX_DAMAGE = 40
+
+
+
+
 -- ===========================================================================
 --	VARIABLES
 -- ===========================================================================
@@ -38,6 +44,13 @@ local RANGED_COMBAT_DEFEND_MAX_DAMAGE = 40
 -- ===========================================================================
 --	FUNCTIONS
 -- ===========================================================================
+
+function GetUnitArmor(pUnit)
+    local armor = pUnit:GetProperty('TKH_Armor') or 0
+    local maxArmor = pUnit:GetProperty('TKH_MaxArmor') or 0
+    local extraMaxArmor = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
+    return armor, maxArmor, extraMaxArmor
+end
 
 --- 计算伤害减免
 ---@param damage integer 伤害值
@@ -75,44 +88,65 @@ end
 ---@param dUnit table 防守单位
 ---@param info table 战斗信息
 function UnitCombatDamageModifier(aUnit, dUnit, info)
+    -- 原始伤害
     local attack_damage = info.AttackerDamageTakenFromDefender
     local defend_damage = info.DefenderDamageTaken
+    local aUnitType = aORb(aUnit ~= nil, GameInfo.Units[aUnit:GetType()].UnitType, false)
+    local dUnitType = aORb(dUnit ~= nil, GameInfo.Units[dUnit:GetType()].UnitType, false)
 
-    math.randomseed(GetRandomSeed())
+    print('原始伤害：', attack_damage, defend_damage)
+    -- -- 吸血效果
+    for ability, life_steal_rate in pairs(LIFE_STEAL_ABILITIES) do
+        if aUnit and IsUnitHaveAbility(aUnit, ability) then
+            TreatUnit(aUnit, math.floor(defend_damage * life_steal_rate))
+        end
+        if dUnit and IsUnitHaveAbility(dUnit, ability) then
+            TreatUnit(dUnit, math.floor(attack_damage * life_steal_rate))
+        end
+    end
 
-    if not aUnit or not dUnit then
+    if aUnit == nil and dUnit == nil then
         return attack_damage, defend_damage
     end
 
-    local aUnitType = GameInfo.Units[aUnit:GetType()].UnitType
-    local dUnitType = GameInfo.Units[dUnit:GetType()].UnitType
+    -- 1. 防御方固定减伤 30%
+    defend_damage = math.floor(defend_damage * (1 - CONSTANT_DAMAGE_DECREASE_RATE))
+    print('固定减伤后：', defend_damage)
 
-    -- 8.兵种克制能力
-    if MatchUnitTag(aUnitType, 'CLASS_ANTI_CAVALRY') and MatchUnitTag(dUnitType, { 'CLASS_HEAVY_CAVALRY', 'CLASS_HEAVY_CHARIOT', 'CLASS_LIGHT_CAVALRY', 'CLASS_LIGHT_CHARIOT' }) then
-        defend_damage = defend_damage + 20
+    -- 1.1 单位类型固定减伤
+    if info.CombatType == MELEE_COMBAT then
+        attack_damage = aORb(attack_damage > COMBAT_DECREASE_VALUE,
+            COMBAT_DECREASE_VALUE * MELEE_COMBAT_ATTACK_DECREASE_RATE, COMBAT_DECREASE_VALUE)
+        defend_damage = aORb(defend_damage > COMBAT_DECREASE_VALUE,
+            COMBAT_DECREASE_VALUE * MELEE_COMBAT_DFENDED_DECREASE_RATE, COMBAT_DECREASE_VALUE)
+    elseif info.CombatType == RANGED_COMBAT then
+        defend_damage = CalculateRangeDamage(defend_damage)
     end
-    if MatchUnitTag(aUnitType, 'CLASS_MELEE') and MatchUnitTag(dUnitType, 'CLASS_ANTI_CAVALRY') then
-        defend_damage = defend_damage + 20
+
+    -- 2. 技能减伤 加算
+    local ability_decrease_damage_percent = 0
+    for ability, decrease_value in pairs(DECREASE_DAMAGE_ABILITIES) do
+        if IsUnitHaveAbility(dUnit, ability) then
+            -- defend_damage = math.floor(defend_damage * (1 - decrease_value))
+            ability_decrease_damage_percent = ability_decrease_damage_percent + decrease_value
+        end
     end
-    if MatchUnitTag(aUnitType, { 'CLASS_HEAVY_CAVALRY', 'CLASS_HEAVY_CHARIOT', 'CLASS_LIGHT_CAVALRY', 'CLASS_LIGHT_CHARIOT' }) and MatchUnitTag(dUnitType, 'CLASS_MELEE') then
-        defend_damage = defend_damage + 20
-    end
+    defend_damage = math.floor(defend_damage * (1 - math.min(1, ability_decrease_damage_percent)))
+    print('技能减伤后：', defend_damage)
+
+
+    math.randomseed(GetRandomSeed())
 
     if aUnit then
-        if info.CombatType == MELEE_COMBAT then
-            if attack_damage > 30 then
-                attack_damage = 30 + math.floor((attack_damage - 30) * 0.5)
-            end
-        end
-
-        -- 七星刀：攻击时有50%几率再造成一次同等伤害
+        -- 3. 攻击方伤害暴击
+        -- 3.1 七星刀：攻击时有50%几率再造成一次同等伤害
         if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_EQUIPMENT_QiXingDao') then
             if math.random() < EquipmentConstants.QI_XING_DAO_RATE then
-                defend_damage = defend_damage * 2
+                defend_damage = math.floor(defend_damage * 2)
             end
         end
 
-        -- 单位满级晋升增加伤害
+        -- 3.2 单位满级晋升增加伤害
         if aUnit:GetProperty('EXTRA_DAMAGE_BOUNS') then
             local damage_bouns = aUnit:GetProperty('EXTRA_DAMAGE_BOUNS') or {}
             for _, value in ipairs(damage_bouns) do
@@ -120,109 +154,129 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
                     math.randomseed(GetRandomSeed())
                     local percent = value[1]
                     local bouns = value[2]
-                    if percent <= math.random(100) then
-                        defend_damage = defend_damage * bouns
+                    if math.random(100) <= percent then
+                        defend_damage = math.floor(defend_damage * bouns)
                     end
                 end
             end
         end
 
-        -- 增加伤害
-        for ability, increase_value in pairs(INCREASE_DAMAGE_ABILITIES) do
+        -- 3.3 技能ABILITY增加伤害
+        for ability, value_info in pairs(INCREASE_DAMAGE_ABILITIES) do
             if IsUnitHaveAbility(aUnit, ability) then
-                if increase_value >= 1 then
-                    defend_damage = defend_damage + increase_value
-                else
-                    -- 百分比增加伤害
-                    defend_damage = math.floor(defend_damage * (1 + increase_value))
+                local percent = value_info[1]
+                local bouns = value_info[2]
+                math.randomseed(GetRandomSeed())
+                if math.random() <= percent then
+                    defend_damage = math.floor(defend_damage * bouns)
                 end
             end
-        end
-
-        -- 增加伤害 条件
-        -- 张郃
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TK_S_HERO_SKILL_ZHANG_HE_3') and MatchUnitTag(dUnitType, 'CLASS_RANGED') then
-            defend_damage = defend_damage + 40
-        end
-        -- 魏延
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TK_S_HERO_SKILL_WEI_YAN_2') and MatchUnitTag(dUnitType, 'CLASS_MELEE') then
-            defend_damage = defend_damage + 40
-        end
-
-        -- 卑弥呼
-        if IsUnitHaveAbility(aUnit, 'ABILITY_TK_S_HERO_SKILL_BEI_MI_HU_2') and MatchUnitTag(dUnitType, 'CLASS_TKH_CAVALRY') then
-            defend_damage = defend_damage + 40
         end
     end
 
+    -- 破甲伤害
+    if aUnitType and dUnitType then
+        -- 兵种克制能力
+        -- 抗骑兵单位（这个单位也包括“特种兵的抗骑兵”、“英雄的抗骑兵”）攻击轻重骑兵单位在正常伤害结算完成后再额外+20点破甲伤害。
+        if MatchUnitTag(aUnitType, 'CLASS_ANTI_CAVALRY') and MatchUnitTag(dUnitType, { 'CLASS_HEAVY_CAVALRY', 'CLASS_HEAVY_CHARIOT', 'CLASS_LIGHT_CAVALRY', 'CLASS_LIGHT_CHARIOT' }) then
+            defend_damage = defend_damage + 20
+        end
+        -- 近战单位攻击抗骑兵单位在正常伤害结算完成后再+20点破甲伤害
+        if MatchUnitTag(aUnitType, 'CLASS_MELEE') and MatchUnitTag(dUnitType, 'CLASS_ANTI_CAVALRY') then
+            defend_damage = defend_damage + 20
+        end
+        -- 骑兵单位攻击近战单位在正常伤害结算完成后再+20点破甲伤害
+        if MatchUnitTag(aUnitType, { 'CLASS_HEAVY_CAVALRY', 'CLASS_HEAVY_CHARIOT', 'CLASS_LIGHT_CAVALRY', 'CLASS_LIGHT_CHARIOT' }) and MatchUnitTag(dUnitType, 'CLASS_MELEE') then
+            defend_damage = defend_damage + 20
+        end
+        -- 远程单位攻击抗骑兵单位和轻重骑兵单位在正常伤害结算完成后再+5点破甲伤害
+        if MatchUnitTag(aUnitType, 'CLASS_RANGED') and MatchUnitTag(dUnitType, { 'CLASS_HEAVY_CAVALRY', 'CLASS_HEAVY_CHARIOT', 'CLASS_LIGHT_CAVALRY', 'CLASS_LIGHT_CHARIOT', 'CLASS_ANTI_CAVALRY' }) then
+            defend_damage = defend_damage + 5
+        end
+        print('兵种克制：', defend_damage)
+
+
+        -- 固定伤害类技能（无判断条件）
+        local CONSTANT_DAMAGE_ABILITIES = {
+            ABILITY_TKH_EQUIPMENT_SUIT_WUZHUI4 = 10,
+        }
+
+        for key, value in pairs(CONSTANT_DAMAGE_ABILITIES) do
+            if IsUnitHaveAbility(aUnit, key) then
+                defend_damage = defend_damage + value
+            end
+        end
+
+        -- 副将张郃的技能“偷袭”攻击远程单位额外+40点破甲伤害
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_S_HERO_SKILL_ZHANG_HE_3') and MatchUnitTag(dUnitType, 'CLASS_RANGED') then
+            defend_damage = defend_damage + 40
+        end
+        -- -- 魏延
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_S_HERO_SKILL_WEI_YAN_2') and MatchUnitTag(dUnitType, 'CLASS_MELEE') then
+            defend_damage = defend_damage + 40
+        end
+        -- 卑弥呼
+        if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_S_HERO_SKILL_BEI_MI_HU_2') and MatchUnitTag(dUnitType, 'CLASS_TKH_CAVALRY') then
+            defend_damage = defend_damage + 40
+        end
+
+        -- 对护甲或血量不满的单位额外造成破甲伤害
+        local damage = dUnit:GetDamage()
+        local armor, maxArmor, extraMaxArmor = GetUnitArmor(dUnit)
+        local decrease_armor = maxArmor + extraMaxArmor - armor
+        if damage > 0 or decrease_armor > 0 then
+            -- 张飞的技能“弱点打击”
+            if IsUnitHaveAbility(aUnit, 'ABILITY_UNIT_HERO_TKH_ZHANG_FEI') then
+                defend_damage = defend_damage + 25
+            end
+            -- 腐蚀箭：2个单元格内的白毦兵和远程单位攻击护甲或血量不满的单位额外+5点破甲伤害
+            if IsUnitHaveAbility(aUnit, 'ABILITY_MOD_ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_DUJIAN') then
+                defend_damage = defend_damage + 5
+            end
+        end
+    end
+
+    -- 闪避伤害
     if dUnit then
-        if info.CombatType == MELEE_COMBAT then
-            if defend_damage > COMBAT_DECREASE_VALUE then
-                defend_damage = COMBAT_DECREASE_VALUE +
-                    math.floor((defend_damage - COMBAT_DECREASE_VALUE) * MELEE_COMBAT_DFENDE_DECREASE_RATE)
-            else
-                defend_damage = math.floor(defend_damage * MELEE_COMBAT_DFENDE_DECREASE_RATE)
-            end
-        elseif info.CombatType == RANGED_COMBAT then
-            defend_damage = CalculateRangeDamage(defend_damage)
-        end
-
-        -- 闪避伤害
+        local doogeRate = 0
         for ability, dooge_rate in pairs(DODGE_ABILITIES) do
-            if IsUnitHaveAbility(dUnit, ability) and math.random() <= dooge_rate then
-                defend_damage = 0
-            end
-        end
-
-        -- 减少伤害
-        for ability, decrease_value in pairs(DECREASE_DAMAGE_ABILITIES) do
             if IsUnitHaveAbility(dUnit, ability) then
-                if decrease_value >= 1 then
-                    defend_damage = math.max(0, defend_damage - decrease_value)
-                else
-                    -- 百分比减少伤害
-                    defend_damage = math.floor(defend_damage * (1 - decrease_value))
-                end
+                doogeRate = doogeRate + dooge_rate
             end
         end
+        if math.random() <= doogeRate then
+            defend_damage = 0
+        end
+    end
+
+    if IsUnitHaveAbility(aUnit, 'ABILITY_UNIT_HERO_TKH_XU_CHU') then
+        attack_damage = 0
     end
 
     return attack_damage, defend_damage
 end
 
 function OnUnitGetArmorOrDamageDecreased(pUnit)
-    -- 无火洞主动2：战斗后回复5点生命值
-    if IsUnitHaveAbility(pUnit, 'ABILITY_TK_S_HERO_SKILL_WU_HUO_DONG_ZHU_2') then
+    -- 无火洞主-晋升：战斗后回复5点生命值
+    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_S_HERO_SKILL_WU_HUO_DONG_ZHU_2') then
         TreatUnit(pUnit, 5)
     end
 end
 
 function OnUnitArmorChanged(pUnit)
-    -- HUA_XIONG_BAO_ZOU：护甲减少时，提升攻击力
-    if IsUnitHaveAbility(pUnit, 'ABILITY_TK_S_HERO_SKILL_HUA_XIONG_2') then
-        local armor = pUnit:GetProperty('TKH_Armor') or 0
-        local maxArmor = pUnit:GetProperty('TKH_MaxArmor') or 0
-        local extraMaxArmor = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
-        local decrease_armor = maxArmor + extraMaxArmor - armor
-        if decrease_armor >= 10 then
-            pUnit:SetProperty('HUA_XIONG_BAO_ZOU', 10)
-        else
-            pUnit:SetProperty('HUA_XIONG_BAO_ZOU', 0)
-        end
+    local armor, maxArmor, extraMaxArmor = GetUnitArmor(pUnit)
+    local decrease_armor = maxArmor + extraMaxArmor - armor
+
+
+    -- 华雄-暴走：护甲减少时，提升攻击力
+    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_S_HERO_SKILL_HUA_XIONG_2') then
+        pUnit:SetProperty('HUA_XIONG_BAO_ZOU', aORb(decrease_armor >= 200, 10, 0))
     end
 
     -- 周泰-浴血奋战：护甲减少攻击力提升
     if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_ZHOU_TAI_3_5"].Index) then
-        local dUnitDamage = pUnit:GetDamage()
-        if dUnitDamage > 0 then
-            local armor = pUnit:GetProperty('TKH_Armor') or 0
-            local maxArmor = pUnit:GetProperty('TKH_MaxArmor') or 0
-            local extraMaxArmor = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
-            local adjustStrength = (math.floor((maxArmor + extraMaxArmor - armor) / 50)) *
-                HeroConstants.ZHOU_TAI_YU_XUE_ATTACK
-            adjustStrength = math.min(15, adjustStrength)
-            pUnit:SetProperty('COMBAT_STRENGTH_BY_LOST_HEALTH', adjustStrength)
-        end
+        local adjustStrength = math.min(15, (math.floor(decrease_armor / 50)) * HeroConstants.ZHOU_TAI_YU_XUE_ATTACK)
+        pUnit:SetProperty('COMBAT_STRENGTH_BY_LOST_HEALTH', adjustStrength)
     end
 end
 
@@ -277,8 +331,24 @@ function OnUnitAbilityGained(playerID, unitID, unitAbilityIndex)
     local abilityType = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
 
     if string.match(abilityType, 'ABILITY_TKH_EA_ARMOR_') ~= nil then
-        local changeValue = abilityType == 'ABILITY_TKH_EA_ARMOR_JINZHANGANGBANJIA' and 100 or 50
-        ChangeExtraMaxArmor(pUnit, changeValue)
+        ChangeExtraMaxArmor(pUnit, aORb(abilityType == 'ABILITY_TKH_EA_ARMOR_JINZHANGANGBANJIA', 100, 50))
+    end
+
+    for atype, value in pairs(ABILITIES_ARMOR) do
+        if abilityType == atype then
+            ChangeExtraMaxArmor(pUnit, value)
+        end
+    end
+end
+
+function OnUnitAbilityLost(playerID, unitID, unitAbilityIndex)
+    local pUnit = UnitManager.GetUnit(playerID, unitID)
+    local abilityType = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
+
+    for atype, value in pairs(ABILITIES_ARMOR) do
+        if abilityType == atype then
+            ChangeExtraMaxArmor(pUnit, -value)
+        end
     end
 end
 
@@ -329,7 +399,7 @@ function OnOnPillaged(iUnitPlayerID, iUnitID, eImprovement, eBuilding, eDistrict
     end
 end
 
---- 更改战斗信息
+--- 更改战斗伤害结果
 ---@param info table
 function ModifierCombatResult(info)
     if info.UseAvergeDamage then
@@ -343,14 +413,13 @@ function ModifierCombatResult(info)
         local defend_unit = UnitManager.GetUnit(info.DefenderPlayerID, info.DefenderUnitID)
         local dUnitType = GameInfo.Units[defend_unit:GetType()].UnitType
 
-        if not attack_unit or not defend_unit then
+        if (not attack_unit) or (not defend_unit) then
             return
         end
 
         local attack_damage, defend_damage = UnitCombatDamageModifier(attack_unit, defend_unit, info)
         local attack_unit_armor = attack_unit:GetProperty('TKH_Armor') or 0
         local defend_unit_armor = defend_unit:GetProperty('TKH_Armor') or 0
-
 
 
         info.AttackerDamageTakenFromDefender, attack_unit_armor, armorChangeValue = CalculateArmorReduce(attack_damage,
@@ -365,17 +434,6 @@ function ModifierCombatResult(info)
         UnitArmorChangeText(defend_unit, -armorChangeValue)
         OnUnitArmorChanged(defend_unit)
 
-        -- 吸血效果
-        -- 增加伤害
-        for ability, life_steal_rate in pairs(LIFE_STEAL_ABILITIES) do
-            if IsUnitHaveAbility(attack_unit, ability) then
-                TreatUnit(attack_unit, math.floor(defend_damage * life_steal_rate))
-            end
-            if IsUnitHaveAbility(defend_unit, ability) then
-                TreatUnit(defend_unit, math.floor(attack_damage * life_steal_rate))
-            end
-        end
-
         if defend_damage > 0 then
             OnUnitGetArmorOrDamageDecreased(defend_unit)
         end
@@ -383,21 +441,54 @@ function ModifierCombatResult(info)
 
 
         -- =====================HERO EFFECT=====================
-
+        math.randomseed(GetRandomSeed())
 
         -- 马超：西凉铁骑、浑天锤，攻击后敌方失去所有移动力
-        if IsUnitHaveAbility(attack_unit, 'ABILITY_TKH_EQUIPMENT_HunTianChui') or attack_unit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_MA_CHAO_1_5"].Index) then
+        if attack_unit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_MA_CHAO_1_5"].Index) then
+            AddWorldViewText(defend_unit:GetX(), defend_unit:GetY(), 'LOC_TKH_LOST_MOVEMENT_PARAMETER',
+                defend_unit:GetMovesRemaining())
+
+            UnitManager.ChangeMovesRemaining(defend_unit, -defend_unit:GetMovesRemaining())
+        end
+        if IsUnitHaveAbility(attack_unit, { 'ABILITY_TKH_EQUIPMENT_FeiJiangZhanGong' }) and math.random(100) < 20 then
             UnitManager.ChangeMovesRemaining(defend_unit, -defend_unit:GetMovesRemaining())
         end
 
-        -- 单位控制技能
+        if IsUnitHaveAbility(attack_unit, { 'ABILITY_UNIT_HERO_TKH_XIAHOU_YUAN' }) and math.random(100) < 20 then
+            UnitManager.ChangeMovesRemaining(defend_unit, -defend_unit:GetMovesRemaining())
+        end
+
+        if IsUnitHaveAbility(attack_unit, { 'ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_UNIQUE_XIAHOU_YUAN' }) and math.random(100) < 40 then
+            UnitManager.ChangeMovesRemaining(defend_unit, -defend_unit:GetMovesRemaining())
+        end
+        -- 单位控制技能 命中要害
         if GameInfo.TKH_UnitTypeControlCrit[aUnitType] then
-            local basePercent = GameInfo.TKH_UnitTypeControlCrit[aUnitType].Percent
-            local extraPercent = attack_unit:GetProperty('EXTRA_CRIT_PERCENT') or 0
+            local basePercent = aORb(GameInfo.TKH_UnitTypeControlCrit[aUnitType] ~= nil,
+                GameInfo.TKH_UnitTypeControlCrit[aUnitType].Percent, 0)
+            local percent = basePercent + (attack_unit:GetProperty('EXTRA_CRIT_PERCENT') or 0)
+
+            -- 技能增加几率
+            for ability, value in pairs(ABILITIES_CRIT_PERCENT) do
+                if IsUnitHaveAbility(attack_unit, ability) then
+                    percent = percent + value
+                end
+            end
+
+            -- 免疫命中要害 = 几率变0
+            if IsUnitHaveAbility(defend_unit, 'ABILITY_TKH_EQUIPMENT_WuWangBaoYu') or
+                IsUnitHaveAbility(defend_unit, 'ABILITY_TKH_EQUIPMENT_HanHuangBaoYu') or
+                IsUnitHaveAbility(defend_unit, 'ABILITY_TKH_EQUIPMENT_WeiWangBaoYu') then
+                percent = 0
+                AddWorldViewText(defend_unit:GetX(), defend_unit:GetY(), 'LOC_TKH_LOST_MOVEMENT_NON_CRIT')
+            end
             local lostMoves = math.max(0, defend_unit:GetMovesRemaining() - 1)
             math.randomseed(GetRandomSeed())
-            if (basePercent + extraPercent) <= math.random(100) then
-                UnitManager.ChangeMovesRemaining(defend_unit, -lostMoves)
+
+            if percent > 0 then
+                AddWorldViewText(defend_unit:GetX(), defend_unit:GetY(), 'LOC_TKH_LOST_MOVEMENT_CRIT')
+                if math.random(100) < percent then
+                    UnitManager.ChangeMovesRemaining(defend_unit, -lostMoves)
+                end
             end
         end
 
@@ -408,7 +499,7 @@ function ModifierCombatResult(info)
 
         if adjUnits ~= nil and #adjUnits > 0 then
             -- 木鹿大王：攻击时可对目标单位两侧单元格上的敌方单位造成同等伤害。
-            if aUnitInfo.UnitType == 'UNIT_HERO_TKH_MU_LU' then
+            if aUnitType == 'UNIT_HERO_TKH_MU_LU' then
                 for _, adjUnit in ipairs(adjUnits) do
                     if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
                         DamageUnit(adjUnit, defend_damage)
@@ -416,17 +507,8 @@ function ModifierCombatResult(info)
                 end
             end
 
-            -- 铁石弹专属
-            if IsUnitHaveAbility(attack_unit, 'ABILITY_TKH_EQUIPMENT_TIESHIDAN_HeroExclusive') then
-                for _, adjUnit in ipairs(adjUnits) do
-                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
-                        DamageUnit(adjUnit, 10)
-                    end
-                end
-            end
-
             -- 祝融夫人：攻击时对与攻击目标相邻且不与祝融夫人相邻的单位造成30点溅射伤害。
-            if IsUnitHaveAbility(attack_unit, 'ABILITY_UNIT_HERO_TKH_ZHU_RONG') then
+            if aUnitType == 'UNIT_HERO_TKH_ZHU_RONG' then
                 for _, adjUnit in ipairs(adjUnits) do
                     if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID())
                         and Map.GetPlotDistance(adjUnit:GetX(), adjUnit:GetY(), attack_unit:GetX(), attack_unit:GetY()) ~= 1 then
@@ -435,12 +517,20 @@ function ModifierCombatResult(info)
                 end
             end
 
-
             -- 沙摩柯：攻击时对目标一个单元个内的所有敌方单位造成10点伤害
-            if IsUnitHaveAbility(attack_unit, 'ABILITY_UNIT_HERO_TKH_SHA_MOKE') then
+            if aUnitType == 'UNIT_HERO_TKH_SHA_MOKE' then
                 for _, adjUnit in ipairs(adjUnits) do
                     if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
                         DamageUnit(adjUnit, HeroConstants.SHA_MOKE_DAMAGE)
+                    end
+                end
+            end
+
+            -- 铁石弹专属
+            if IsUnitHaveAbility(attack_unit, 'ABILITY_TKH_EQUIPMENT_TieShiDan_HeroExclusive') then
+                for _, adjUnit in ipairs(adjUnits) do
+                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
+                        DamageUnit(adjUnit, 10)
                     end
                 end
             end
@@ -448,13 +538,13 @@ function ModifierCombatResult(info)
 
         -- =====================HERO EFFECT=====================
     elseif info.CombatVersusType == 109217514 then
-        -- 防御攻击单位
+        -- 防御区域攻击单位
         local defend_unit = UnitManager.GetUnit(info.DefenderPlayerID, info.DefenderUnitID)
         if not defend_unit then
             return
         end
 
-        local attack_damage, defend_damage = UnitCombatDamageModifier(nil, defend_unit, info)
+        local _, defend_damage = UnitCombatDamageModifier(nil, defend_unit, info)
         local defend_unit_armor = defend_unit:GetProperty('TKH_Armor') or 0
         info.DefenderDamageTaken, defend_unit_armor, armorChangeValue = CalculateArmorReduce(defend_damage,
             defend_unit_armor)
@@ -466,13 +556,13 @@ function ModifierCombatResult(info)
             OnUnitGetArmorOrDamageDecreased(defend_unit)
         end
     elseif info.CombatVersusType == -1024206813 then
-        -- 单位攻击防御
+        -- 单位攻击防御区域
         local attack_unit = UnitManager.GetUnit(info.AttackerPlayerID, info.AttackerUnitID)
         if not attack_unit then
             return
         end
 
-        local attack_damage, defend_damage = UnitCombatDamageModifier(attack_unit, nil, info)
+        local attack_damage, _ = UnitCombatDamageModifier(attack_unit, nil, info)
         local attack_unit_armor = attack_unit:GetProperty('TKH_Armor') or 0
         info.AttackerDamageTakenFromDefender, attack_unit_armor, armorChangeValue = CalculateArmorReduce(attack_damage,
             attack_unit_armor)
@@ -490,6 +580,7 @@ end
 function Initialize()
     Events.UnitAddedToMap.Add(RegisterArmor)
     Events.UnitAbilityGained.Add(OnUnitAbilityGained)
+    Events.UnitAbilityLost.Add(OnUnitAbilityLost)
 
     Events.UnitPromoted.Add(OnUnitPromoted)
 

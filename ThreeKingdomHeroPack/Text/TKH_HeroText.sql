@@ -533,7 +533,7 @@ VALUES
 ('zh_Hans_CN', 'LOC_PROMOTION_TK_ZHANG_FEI_3_4_NAME', '练魄'),
 ('zh_Hans_CN', 'LOC_PROMOTION_TK_ZHANG_FEI_3_4_DESCRIPTION', '+3 [ICON_Strength] 战斗力'),
 ('zh_Hans_CN', 'LOC_PROMOTION_TK_ZHANG_FEI_3_5_NAME', '怒吓'),
-('zh_Hans_CN', 'LOC_PROMOTION_TK_ZHANG_FEI_3_5_DESCRIPTION', '2个单元格以内的单位-1 [ICON_MOVEMENT] 移动力，攻击时+5 [ICON_Strength] 战斗力'),
+('zh_Hans_CN', 'LOC_PROMOTION_TK_ZHANG_FEI_3_5_DESCRIPTION', '3个单元格以内的敌方单位-1 [ICON_MOVEMENT] 移动力，攻击时-5 [ICON_Strength] 战斗力'),
 ('zh_Hans_CN', 'LOC_PROMOTION_TK_MA_CHAO_1_1_NAME', '灭弓'),
 ('zh_Hans_CN', 'LOC_PROMOTION_TK_MA_CHAO_1_1_DESCRIPTION', '攻击远程单位+5 [ICON_Strength] 战斗力'),
 ('zh_Hans_CN', 'LOC_PROMOTION_TK_MA_CHAO_1_2_NAME', '马术'),

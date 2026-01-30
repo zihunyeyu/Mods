@@ -1018,7 +1018,8 @@ VALUES
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_ATTACK_CITY_DEFENDE_DESC',	'特殊：攻击区域防御时+{1_Amount} [ICON_Strength] 战斗力'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_ATTACK_AFTER_MOVE_MINJIE_DESC',	'攻击后可移动。'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_YUANSHE_DESC',	'专属：1个单元格以内的远程单位+1 [ICON_Range] 射程'),
-('zh_Hans_CN',	'LOC_TKH_HERO_POINT_UNIQUE_ZHAO_YUN_DESC',	'专属：获得+10 [ICON_Strength] 防御力，回合结束时恢复10点生命值，持续3回合，冷却时间6回合。'),
+('zh_Hans_CN',	'LOC_TKH_HERO_POINT_UNIQUE_ZHAO_YUN_HEAL_DESC',	'专属：获得+10 [ICON_Strength] 防御力，回合结束时恢复10点生命值，持续3回合，冷却时间6回合。'),
+('zh_Hans_CN',	'LOC_TKH_HERO_POINT_UNIQUE_ZHAO_YUN_DESC',	'专属：5个单元格内的赵统及“龙威豪骑”战斗时+5 [ICON_Strength] 战斗力、+1 [ICON_Movement] 移动力'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_CAOSHIQINWEI_DESC',	'专属：获得+25 [ICON_Strength] 远程防御力，持续3回合，冷却时间6回合。'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_UNIQUE_MU_LU_DESC',	'专属：获得回合结束时恢复20点生命值，持续3回合，冷却时间6回合。'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_UNIQUE_ZHOU_TAI_DESC',	'专属：获得4个单元格内的非英雄近战单位+15 [ICON_Strength] 战斗力'),
@@ -1049,6 +1050,7 @@ VALUES
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_SUMMON_ZHANG_FEI_DESC',	'特殊：召唤张星彩'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_SUMMON_MA_CHAO_DESC',	'特殊：召唤马云禄'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_SUMMON_GUAN_YU_DESC',	'特殊：召唤关银屏'),
+('zh_Hans_CN',	'LOC_TKH_HERO_POINT_SUMMON_ZHAO_YUN_DESC',	'特殊：召唤赵统'),
 ('zh_Hans_CN',	'LOC_TKH_HERO_POINT_UNIQUE_GUAN_YU_DESC',	'特殊：5个单元格的武圣骁卫和关银屏+5 [ICON_Strength] 战斗力、+1 [ICON_Movement] 移动力'),
 
 
@@ -1266,7 +1268,7 @@ VALUES
 ('zh_Hans_CN',	'LOC_EQUIPMENT_DianYunDun_NAME',	'电云盾'),
 ('zh_Hans_CN',	'LOC_EQUIPMENT_DianYunDun_DESCRIPTION',	'电云盾：在丘陵地貌防御时+10 [ICON_Strength] 战斗力'),
 ('zh_Hans_CN',	'LOC_EQUIPMENT_XueYinZhangDao_NAME',	'血饮长刀'),
-('zh_Hans_CN',	'LOC_EQUIPMENT_XueYinZhangDao_DESCRIPTION',	'血饮长刀：攻击时+6 [ICON_Strength] 战斗力'),
+('zh_Hans_CN',	'LOC_EQUIPMENT_XueYinZhangDao_DESCRIPTION',	'血饮长刀：+6 [ICON_Strength] 战斗力'),
 ('zh_Hans_CN',	'LOC_EQUIPMENT_YinXueZhanJia_NAME',	'饮血战甲'),
 ('zh_Hans_CN',	'LOC_EQUIPMENT_YinXueZhanJia_DESCRIPTION',	'饮血战甲：防御时+8 [ICON_Strength] 战斗力，攻击时+10%的吸血效果。'),
 ('zh_Hans_CN',	'LOC_EQUIPMENT_YinXueJu_NAME',	'饮血驹'),

@@ -597,16 +597,16 @@ m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF = {};
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.EventName = 'CommandAddBuff'
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.Properties = {};
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.IsVisible = function(pUnit)
-    if pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") then
-        return true
-    end
-    return BaseVisibleCheck(pUnit) and pUnit:GetMovesRemaining() > 0
+    -- if pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") then
+    --     return true
+    -- end
+    return BaseVisibleCheck(pUnit) and pUnit:GetMovesRemaining() > 0 and (pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") ~= nil)
 end
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.CanUse = function(pUnit)
-    if pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") then
-        return true
-    end
-    return IsUnitHasCommand(pUnit, 'UNITCOMMAND_ADD_BUFF') and pUnit:GetMovesRemaining() > 0
+    -- if pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") then
+    --     return true
+    -- end
+    return IsUnitHasCommand(pUnit, 'UNITCOMMAND_ADD_BUFF') and pUnit:GetMovesRemaining() > 0 and (pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") ~= nil)
 end
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.IsDisabled = function(pUnit)
     local coolTurn = pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN")
@@ -643,8 +643,11 @@ m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.ResetDescription = function(pUnit)
     --     coolString = coolString .. '(' .. Locale.Lookup('LOC_ACTION_DISABLE_TOOLTIP_LEFT_TURN', coolTurn) .. ')'
     -- end
 
+    local abilityDes = aORb(abilityInfo.Description ~= nil, abilityInfo.Description,
+        'LOC_' .. abilityInfo.UnitAbilityType .. '_DESCRIPTION')
+
     return Locale.Lookup('LOC_UNITCOMMAND_ADD_BUFF_HELP_EXTRA',
-        string.gsub(Locale.Lookup(abilityInfo.Description), '。', ''),
+        string.gsub(Locale.Lookup(abilityDes), '。', ''),
         Locale.Lookup(lastedTurn), coolString)
 end
 

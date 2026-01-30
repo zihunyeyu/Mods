@@ -458,8 +458,11 @@ function OnTurnEndUnitEffectHandler()
                         if plot and plot:GetFeatureType() == FEATURE_MASH_INDEX then
                             if IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_ABILITY_TKH_EQUIPMENT_SUIT_DADI4') then
                                 TreatUnit(unit, 20)
-                            elseif IsUnitHaveAbility(unit, 'ABILITY_UNITS_GAIN_DEBUFF_IN_MASH') then
-                                DamageUnit(unit, FEATURE_MASH_DAMAGE)
+                            end
+                            if IsUnitHaveAbility(unit, 'ABILITY_UNITS_GAIN_DEBUFF_IN_MASH') then
+                                if not IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_ABILITY_TKH_EQUIPMENT_SUIT_DADI4') then
+                                    DamageUnit(unit, FEATURE_MASH_DAMAGE)
+                                end
                             end
                         end
                     end

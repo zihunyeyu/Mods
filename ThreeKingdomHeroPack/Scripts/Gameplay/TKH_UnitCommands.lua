@@ -478,10 +478,6 @@ function CommandDealDamageAoe(eOwner, iUnitID, parameters)
         "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?",
         unitType, 'UNITCOMMAND_DEAL_DAMAGE_AOE')
 
-    if IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_WU_TUGU_1_4') then
-        damage = 80
-    end
-
     local diplomacy = Players[pUnit:GetOwner()]:GetDiplomacy()
 
     for _, result in ipairs(results) do
@@ -490,6 +486,10 @@ function CommandDealDamageAoe(eOwner, iUnitID, parameters)
         elseif result.Name == 'Damage' then
             damage = tonumber(result.Value)
         end
+    end
+
+    if IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_WU_TUGU_1_4') then
+        damage = 80
     end
 
     if not damage then

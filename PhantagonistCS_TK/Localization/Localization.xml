@@ -1,0 +1,2086 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<GameData>
+	<LocalizedText>
+		
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_NAME" Language="en_US">
+			<Text>Zhao Fan (Guiyang)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_DESCRIPTION" Language="en_US">
+			<Text>Zhao Fan (Guiyang) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_ADJECTIVE" Language="en_US">
+			<Text>Zhao Fan (Guiyang)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_GUIYANG" Language="en_US">
+			<Text>Guiyang</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GUIYANG_NAME" Language="en_US">
+			<Text>Zhao Fan (Guiyang) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GUIYANG_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_NAME" Language="en_US">
+			<Text>Liu Du (Lingling)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_DESCRIPTION" Language="en_US">
+			<Text>Liu Du (Lingling) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_ADJECTIVE" Language="en_US">
+			<Text>Liu Du (Lingling)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_LINGLING" Language="en_US">
+			<Text>Lingling</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LINGLING_NAME" Language="en_US">
+			<Text>Liu Du (Lingling) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LINGLING_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_NAME" Language="en_US">
+			<Text>Han Xuan (Changsha)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_DESCRIPTION" Language="en_US">
+			<Text>Han Xuan (Changsha) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_ADJECTIVE" Language="en_US">
+			<Text>Han Xuan (Changsha)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHANGSHA" Language="en_US">
+			<Text>Changsha</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHANGSHA_NAME" Language="en_US">
+			<Text>Han Xuan (Changsha) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHANGSHA_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_NAME" Language="en_US">
+			<Text>Jin Xuan (Wuling)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_DESCRIPTION" Language="en_US">
+			<Text>Jin Xuan (Wuling) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_ADJECTIVE" Language="en_US">
+			<Text>Jin Xuan (Wuling)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WULING" Language="en_US">
+			<Text>Wuling</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WULING_NAME" Language="en_US">
+			<Text>Jin Xuan (Wuling) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WULING_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_NAME" Language="en_US">
+			<Text>Han Sui (Jincheng)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_DESCRIPTION" Language="en_US">
+			<Text>Han Sui (Jincheng) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_ADJECTIVE" Language="en_US">
+			<Text>Han Sui (Jincheng)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINCHENG" Language="en_US">
+			<Text>Jincheng</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINCHENG_NAME" Language="en_US">
+			<Text>Han Sui (Jincheng) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINCHENG_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_NAME" Language="en_US">
+			<Text>Song Jian (Fuhan)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_DESCRIPTION" Language="en_US">
+			<Text>Song Jian (Fuhan) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_ADJECTIVE" Language="en_US">
+			<Text>Song Jian (Fuhan)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_FUHAN" Language="en_US">
+			<Text>Fuhan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_FUHAN_NAME" Language="en_US">
+			<Text>Song Jian (Fuhan) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_FUHAN_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_NAME" Language="en_US">
+			<Text>Zhang Yang (Henei)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_DESCRIPTION" Language="en_US">
+			<Text>Zhang Yang (Henei) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_ADJECTIVE" Language="en_US">
+			<Text>Zhang Yang (Henei)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_HENEI" Language="en_US">
+			<Text>Henei</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HENEI_NAME" Language="en_US">
+			<Text>Zhang Yang (Henei) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HENEI_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_NAME" Language="en_US">
+			<Text>Zhang Miao (Chenliu)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_DESCRIPTION" Language="en_US">
+			<Text>Zhang Miao (Chenliu) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_ADJECTIVE" Language="en_US">
+			<Text>Zhang Miao (Chenliu)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHENLIU" Language="en_US">
+			<Text>Chenliu</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHENLIU_NAME" Language="en_US">
+			<Text>Zhang Miao (Chenliu) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHENLIU_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_NAME" Language="en_US">
+			<Text>Yizhou</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_DESCRIPTION" Language="en_US">
+			<Text>Yizhou city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_ADJECTIVE" Language="en_US">
+			<Text>Yizhou</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_YIZHOU" Language="en_US">
+			<Text>Yizhou</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YIZHOU_NAME" Language="en_US">
+			<Text>Yizhou Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YIZHOU_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_NAME" Language="en_US">
+			<Text>Jinhan</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_DESCRIPTION" Language="en_US">
+			<Text>Jinhan city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_ADJECTIVE" Language="en_US">
+			<Text>Jinhan</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINHAN" Language="en_US">
+			<Text>Jinhan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINHAN_NAME" Language="en_US">
+			<Text>Jinhan Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINHAN_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_NAME" Language="en_US">
+			<Text>Baibo Army</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_DESCRIPTION" Language="en_US">
+			<Text>Baibo Army city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_ADJECTIVE" Language="en_US">
+			<Text>Baibo Army</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_BAIBO" Language="en_US">
+			<Text>Baibo Valley</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BAIBO_NAME" Language="en_US">
+			<Text>Baibo Army Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BAIBO_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_NAME" Language="en_US">
+			<Text>Runan Yellow Turbans</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_DESCRIPTION" Language="en_US">
+			<Text>Runan Yellow Turbans city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_ADJECTIVE" Language="en_US">
+			<Text>Runan Yellow Turbans</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_RUNAN" Language="en_US">
+			<Text>Runan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_RUNAN_NAME" Language="en_US">
+			<Text>Runan Yellow Turbans Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_RUNAN_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_NAME" Language="en_US">
+			<Text>Taishan Bandits</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_DESCRIPTION" Language="en_US">
+			<Text>Taishan Bandits city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_ADJECTIVE" Language="en_US">
+			<Text>Taishan Bandits</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_TAISHAN" Language="en_US">
+			<Text>Taishan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_TAISHAN_NAME" Language="en_US">
+			<Text>Taishan Bandits Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_TAISHAN_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_NAME" Language="en_US">
+			<Text>Heishan Army</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_DESCRIPTION" Language="en_US">
+			<Text>Heishan Army city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_ADJECTIVE" Language="en_US">
+			<Text>Heishan Army</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_HEISHAN" Language="en_US">
+			<Text>Heishan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HEISHAN_NAME" Language="en_US">
+			<Text>Heishan Army Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HEISHAN_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_NAME" Language="en_US">
+			<Text>Wang Lang (Kuaiji)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_DESCRIPTION" Language="en_US">
+			<Text>Wang Lang (Kuaiji) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_ADJECTIVE" Language="en_US">
+			<Text>Wang Lang (Kuaiji)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_KUAIJI" Language="en_US">
+			<Text>Kuaiji</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUAIJI_NAME" Language="en_US">
+			<Text>Wang Lang (Kuaiji) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUAIJI_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_NAME" Language="en_US">
+			<Text>Wu Ju (Cangwu)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_DESCRIPTION" Language="en_US">
+			<Text>Wu Ju (Cangwu) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_ADJECTIVE" Language="en_US">
+			<Text>Wu Ju (Cangwu)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CANGWU" Language="en_US">
+			<Text>Cangwu</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CANGWU_NAME" Language="en_US">
+			<Text>Wu Ju (Cangwu) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CANGWU_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_NAME" Language="en_US">
+			<Text>Yamatai</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_DESCRIPTION" Language="en_US">
+			<Text>Yamatai city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_ADJECTIVE" Language="en_US">
+			<Text>Yamatai</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_YAMATAI" Language="en_US">
+			<Text>Yamatai</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YAMATAI_NAME" Language="en_US">
+			<Text>Yamatai Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YAMATAI_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_NAME" Language="en_US">
+			<Text>Byeonhan</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_DESCRIPTION" Language="en_US">
+			<Text>Byeonhan city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_ADJECTIVE" Language="en_US">
+			<Text>Byeonhan</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_BYEONHAN" Language="en_US">
+			<Text>Byeonhan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BYEONHAN_NAME" Language="en_US">
+			<Text>Byeonhan Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BYEONHAN_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_NAME" Language="en_US">
+			<Text>Qiang</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_DESCRIPTION" Language="en_US">
+			<Text>Qiang city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_ADJECTIVE" Language="en_US">
+			<Text>Qiang</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_QIANG" Language="en_US">
+			<Text>Qiang</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QIANG_NAME" Language="en_US">
+			<Text>Qiang Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QIANG_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). You gain a free light cavalry unit when you become this City-State’s suzerain for the first time.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_NAME" Language="en_US">
+			<Text>Di</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_DESCRIPTION" Language="en_US">
+			<Text>Di city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_ADJECTIVE" Language="en_US">
+			<Text>Di</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_DI" Language="en_US">
+			<Text>Di</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DI_NAME" Language="en_US">
+			<Text>Di Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DI_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). You gain a free light cavalry unit when you become this City-State’s suzerain for the first time.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_NAME" Language="en_US">
+			<Text>Zhang Xiu (Wancheng)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_DESCRIPTION" Language="en_US">
+			<Text>Zhang Xiu (Wancheng) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_ADJECTIVE" Language="en_US">
+			<Text>Zhang Xiu (Wancheng)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WANCHENG" Language="en_US">
+			<Text>Wancheng</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WANCHENG_NAME" Language="en_US">
+			<Text>Zhang Xiu (Wancheng) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WANCHENG_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_NAME" Language="en_US">
+			<Text>Huang Zu (Jiangxia)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_DESCRIPTION" Language="en_US">
+			<Text>Huang Zu (Jiangxia) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_ADJECTIVE" Language="en_US">
+			<Text>Huang Zu (Jiangxia)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JIANGXIA" Language="en_US">
+			<Text>Jiangxia</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JIANGXIA_NAME" Language="en_US">
+			<Text>Huang Zu (Jiangxia) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JIANGXIA_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_NAME" Language="en_US">
+			<Text>Xianbei</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_DESCRIPTION" Language="en_US">
+			<Text>Xianbei city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_ADJECTIVE" Language="en_US">
+			<Text>Xianbei</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_XIANBEI" Language="en_US">
+			<Text>Xianbei</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_XIANBEI_NAME" Language="en_US">
+			<Text>Xianbei Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_XIANBEI_DESCRIPTION" Language="en_US">
+			<Text>You gain a free light cavalry unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards light cavalry units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_NAME" Language="en_US">
+			<Text>Southern Xiongnu</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_DESCRIPTION" Language="en_US">
+			<Text>Southern Xiongnu city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_ADJECTIVE" Language="en_US">
+			<Text>Southern Xiongnu</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_SOUTHERN_XIONGNU" Language="en_US">
+			<Text>Southern Xiongnu</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SOUTHERN_XIONGNU_NAME" Language="en_US">
+			<Text>Southern Xiongnu Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SOUTHERN_XIONGNU_DESCRIPTION" Language="en_US">
+			<Text>You gain a free light cavalry unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards light cavalry units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_NAME" Language="en_US">
+			<Text>Liaoxi Wuhuan</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_DESCRIPTION" Language="en_US">
+			<Text>Liaoxi Wuhuan city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_ADJECTIVE" Language="en_US">
+			<Text>Liaoxi Wuhuan</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_LIAOXI_WUHUAN" Language="en_US">
+			<Text>Liaoxi Wuhuan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LIAOXI_WUHUAN_NAME" Language="en_US">
+			<Text>Liaoxi Wuhuan Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LIAOXI_WUHUAN_DESCRIPTION" Language="en_US">
+			<Text>You gain a free light cavalry unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards light cavalry units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_NAME" Language="en_US">
+			<Text>Shanyue</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_DESCRIPTION" Language="en_US">
+			<Text>Shanyue city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_ADJECTIVE" Language="en_US">
+			<Text>Shanyue</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_SHANYUE" Language="en_US">
+			<Text>Shanyue</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SHANYUE_NAME" Language="en_US">
+			<Text>Shanyue Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SHANYUE_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_NAME" Language="en_US">
+			<Text>Yan Baihu (Wu)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_DESCRIPTION" Language="en_US">
+			<Text>Yan Baihu (Wu) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_ADJECTIVE" Language="en_US">
+			<Text>Yan Baihu (Wu)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WU" Language="en_US">
+			<Text>Wu</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WU_NAME" Language="en_US">
+			<Text>Yan Baihu (Wu) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WU_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_NAME" Language="en_US">
+			<Text>Liu Chong (Chen)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_DESCRIPTION" Language="en_US">
+			<Text>Liu Chong (Chen) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_ADJECTIVE" Language="en_US">
+			<Text>Liu Chong (Chen)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHEN" Language="en_US">
+			<Text>Chen</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHEN_NAME" Language="en_US">
+			<Text>Liu Chong (Chen) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHEN_DESCRIPTION" Language="en_US">
+			<Text>You gain a free ranged unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards ranged units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_NAME" Language="en_US">
+			<Text>Goguryeo</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_DESCRIPTION" Language="en_US">
+			<Text>Goguryeo city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_ADJECTIVE" Language="en_US">
+			<Text>Goguryeo</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_GOGURYEO" Language="en_US">
+			<Text>Goguryeo</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GOGURYEO_NAME" Language="en_US">
+			<Text>Goguryeo Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GOGURYEO_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_NAME" Language="en_US">
+			<Text>Mahan</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_DESCRIPTION" Language="en_US">
+			<Text>Mahan city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_ADJECTIVE" Language="en_US">
+			<Text>Mahan</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_MAHAN" Language="en_US">
+			<Text>Mahan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MAHAN_NAME" Language="en_US">
+			<Text>Mahan Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MAHAN_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_NAME" Language="en_US">
+			<Text>Li Jue (Chiyang)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_DESCRIPTION" Language="en_US">
+			<Text>Li Jue (Chiyang) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_ADJECTIVE" Language="en_US">
+			<Text>Li Jue (Chiyang)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHIYANG" Language="en_US">
+			<Text>Chiyang</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHIYANG_NAME" Language="en_US">
+			<Text>Li Jue (Chiyang) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHIYANG_DESCRIPTION" Language="en_US">
+			<Text>You gain a free heavy cavalry unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards heavy cavalry units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_NAME" Language="en_US">
+			<Text>Guo Si (Mei)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_DESCRIPTION" Language="en_US">
+			<Text>Guo Si (Mei) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_ADJECTIVE" Language="en_US">
+			<Text>Guo Si (Mei)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_MEI" Language="en_US">
+			<Text>Mei</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MEI_NAME" Language="en_US">
+			<Text>Guo Si (Mei) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MEI_DESCRIPTION" Language="en_US">
+			<Text>You gain a free heavy cavalry unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards heavy cavalry units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_NAME" Language="en_US">
+			<Text>Zhang Xian (Jingnan)</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_DESCRIPTION" Language="en_US">
+			<Text>Zhang Xian (Jingnan) city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_ADJECTIVE" Language="en_US">
+			<Text>Zhang Xian (Jingnan)</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINGNAN" Language="en_US">
+			<Text>Changsha</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINGNAN_NAME" Language="en_US">
+			<Text>Zhang Xian (Jingnan) Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINGNAN_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_NAME" Language="en_US">
+			<Text>Dongye</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_DESCRIPTION" Language="en_US">
+			<Text>Dongye city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_ADJECTIVE" Language="en_US">
+			<Text>Dongye</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_DONGYE" Language="en_US">
+			<Text>Dongye</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DONGYE_NAME" Language="en_US">
+			<Text>Dongye Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DONGYE_DESCRIPTION" Language="en_US">
+			<Text>+1 [ICON_TradeRoute] Trade Route capacity. [ICON_TradeRoute] Trade Routes provide +5 [ICON_Gold] Gold.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_NAME" Language="en_US">
+			<Text>Qingzhou Yellow Turbans</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_DESCRIPTION" Language="en_US">
+			<Text>Qingzhou Yellow Turbans city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_ADJECTIVE" Language="en_US">
+			<Text>Qingzhou Yellow Turbans</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_QINGZHOU" Language="en_US">
+			<Text>Qingzhou</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QINGZHOU_NAME" Language="en_US">
+			<Text>Qingzhou Yellow Turbans Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QINGZHOU_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_NAME" Language="en_US">
+			<Text>Okjeo</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_DESCRIPTION" Language="en_US">
+			<Text>Okjeo city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_ADJECTIVE" Language="en_US">
+			<Text>Okjeo</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_OKJEO" Language="en_US">
+			<Text>Okjeo</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_OKJEO_NAME" Language="en_US">
+			<Text>Okjeo Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_OKJEO_DESCRIPTION" Language="en_US">
+			<Text>Killing a unit provides [ICON_Faith] Faith equal to 25% of the defeated unit’s [ICON_Strength] Combat Strength (at standard speed). May purchase melee units, anti-cavalry units and recon units with [ICON_Faith] Faith.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_NAME" Language="en_US">
+			<Text>Kunakoku</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_DESCRIPTION" Language="en_US">
+			<Text>Kunakoku city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_ADJECTIVE" Language="en_US">
+			<Text>Kunakoku</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_KUNAKOKU" Language="en_US">
+			<Text>Kunakoku</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUNAKOKU_NAME" Language="en_US">
+			<Text>Kunakoku Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUNAKOKU_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_NAME" Language="en_US">
+			<Text>Wuximan</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_DESCRIPTION" Language="en_US">
+			<Text>Wuximan city-state</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_ADJECTIVE" Language="en_US">
+			<Text>Wuximan</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WUXIMAN" Language="en_US">
+			<Text>Wuximan</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WUXIMAN_NAME" Language="en_US">
+			<Text>Wuximan Suzerain Bonus</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WUXIMAN_DESCRIPTION" Language="en_US">
+			<Text>You gain a free melee unit when you become this City-State’s suzerain for the first time. +20% [ICON_Production] Production towards melee units.</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PHANTA_LIU_XIE_NAME" Language="en_US">
+			<Text>Liu Xie the Emperor</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PHANTA_LIU_XIE_DESCRIPTION" Language="en_US">
+			<Text>A civilian unit exclusive to the scenario. Player who controls Liu Xie the Emperor receives +3 [ICON_Favor] Diplomatic Favor and +5 Influence points per turn. -30% war weariness.</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_PHANTA_LIU_XIE_DESCRIPTION" Language="en_US">
+			<Text>+3 [ICON_Favor] Diplomatic Favor and +5 Influence points per turn. -30% war weariness.</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_NAME" Language="zh_Hant_HK">
+			<Text>趙範（桂陽）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>趙範（桂陽）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>趙範（桂陽）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_GUIYANG" Language="zh_Hant_HK">
+			<Text>桂陽</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GUIYANG_NAME" Language="zh_Hant_HK">
+			<Text>趙範（桂陽）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GUIYANG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_NAME" Language="zh_Hant_HK">
+			<Text>劉度（零陵）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>劉度（零陵）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>劉度（零陵）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_LINGLING" Language="zh_Hant_HK">
+			<Text>零陵</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LINGLING_NAME" Language="zh_Hant_HK">
+			<Text>劉度（零陵）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LINGLING_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_NAME" Language="zh_Hant_HK">
+			<Text>韓玄（長沙）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>韓玄（長沙）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>韓玄（長沙）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHANGSHA" Language="zh_Hant_HK">
+			<Text>長沙</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHANGSHA_NAME" Language="zh_Hant_HK">
+			<Text>韓玄（長沙）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHANGSHA_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_NAME" Language="zh_Hant_HK">
+			<Text>金旋（武陵）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>金旋（武陵）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>金旋（武陵）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WULING" Language="zh_Hant_HK">
+			<Text>武陵</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WULING_NAME" Language="zh_Hant_HK">
+			<Text>金旋（武陵）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WULING_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_NAME" Language="zh_Hant_HK">
+			<Text>韓遂（金城）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>韓遂（金城）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>韓遂（金城）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINCHENG" Language="zh_Hant_HK">
+			<Text>金城</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINCHENG_NAME" Language="zh_Hant_HK">
+			<Text>韓遂（金城）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINCHENG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_NAME" Language="zh_Hant_HK">
+			<Text>宋建（枹罕）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>宋建（枹罕）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>宋建（枹罕）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_FUHAN" Language="zh_Hant_HK">
+			<Text>枹罕</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_FUHAN_NAME" Language="zh_Hant_HK">
+			<Text>宋建（枹罕）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_FUHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_NAME" Language="zh_Hant_HK">
+			<Text>張楊（河內）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>張楊（河內）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>張楊（河內）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_HENEI" Language="zh_Hant_HK">
+			<Text>河內</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HENEI_NAME" Language="zh_Hant_HK">
+			<Text>張楊（河內）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HENEI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_NAME" Language="zh_Hant_HK">
+			<Text>張邈（陳留）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>張邈（陳留）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>張邈（陳留）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHENLIU" Language="zh_Hant_HK">
+			<Text>陳留</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHENLIU_NAME" Language="zh_Hant_HK">
+			<Text>張邈（陳留）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHENLIU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_NAME" Language="zh_Hant_HK">
+			<Text>夷洲</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>夷洲城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>夷洲的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_YIZHOU" Language="zh_Hant_HK">
+			<Text>夷洲</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YIZHOU_NAME" Language="zh_Hant_HK">
+			<Text>夷洲宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YIZHOU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_NAME" Language="zh_Hant_HK">
+			<Text>辰韓</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>辰韓城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>辰韓的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINHAN" Language="zh_Hant_HK">
+			<Text>辰韓</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINHAN_NAME" Language="zh_Hant_HK">
+			<Text>辰韓宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_NAME" Language="zh_Hant_HK">
+			<Text>白波軍</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>白波軍城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>白波軍的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_BAIBO" Language="zh_Hant_HK">
+			<Text>白波谷</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BAIBO_NAME" Language="zh_Hant_HK">
+			<Text>白波軍宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BAIBO_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_NAME" Language="zh_Hant_HK">
+			<Text>汝南黃巾</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>汝南黃巾城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>汝南黃巾的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_RUNAN" Language="zh_Hant_HK">
+			<Text>汝南</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_RUNAN_NAME" Language="zh_Hant_HK">
+			<Text>汝南黃巾宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_RUNAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_NAME" Language="zh_Hant_HK">
+			<Text>泰山賊</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>泰山賊城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>泰山賊的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_TAISHAN" Language="zh_Hant_HK">
+			<Text>泰山</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_TAISHAN_NAME" Language="zh_Hant_HK">
+			<Text>泰山賊宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_TAISHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_NAME" Language="zh_Hant_HK">
+			<Text>黑山軍</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>黑山軍城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>黑山軍的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_HEISHAN" Language="zh_Hant_HK">
+			<Text>黑山</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HEISHAN_NAME" Language="zh_Hant_HK">
+			<Text>黑山軍宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HEISHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_NAME" Language="zh_Hant_HK">
+			<Text>王朗（會稽）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>王朗（會稽）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>王朗（會稽）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_KUAIJI" Language="zh_Hant_HK">
+			<Text>會稽</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUAIJI_NAME" Language="zh_Hant_HK">
+			<Text>王朗（會稽）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUAIJI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_NAME" Language="zh_Hant_HK">
+			<Text>吳巨（蒼梧）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>吳巨（蒼梧）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>吳巨（蒼梧）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CANGWU" Language="zh_Hant_HK">
+			<Text>蒼梧</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CANGWU_NAME" Language="zh_Hant_HK">
+			<Text>吳巨（蒼梧）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CANGWU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_NAME" Language="zh_Hant_HK">
+			<Text>邪馬台</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>邪馬台城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>邪馬台的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_YAMATAI" Language="zh_Hant_HK">
+			<Text>邪馬台</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YAMATAI_NAME" Language="zh_Hant_HK">
+			<Text>邪馬台宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YAMATAI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_NAME" Language="zh_Hant_HK">
+			<Text>弁韓</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>弁韓城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>弁韓的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_BYEONHAN" Language="zh_Hant_HK">
+			<Text>弁韓</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BYEONHAN_NAME" Language="zh_Hant_HK">
+			<Text>弁韓宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BYEONHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買騎兵單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_NAME" Language="zh_Hant_HK">
+			<Text>羌</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>羌城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>羌的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_QIANG" Language="zh_Hant_HK">
+			<Text>羌</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QIANG_NAME" Language="zh_Hant_HK">
+			<Text>羌宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QIANG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。當您首次成為此城邦宗主國時，獲得一個輕騎兵單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_NAME" Language="zh_Hant_HK">
+			<Text>氐</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>氐城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>氐的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_DI" Language="zh_Hant_HK">
+			<Text>氐</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DI_NAME" Language="zh_Hant_HK">
+			<Text>氐宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。當您首次成為此城邦宗主國時，獲得一個輕騎兵單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_NAME" Language="zh_Hant_HK">
+			<Text>張繡（宛城）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>張繡（宛城）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>張繡（宛城）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WANCHENG" Language="zh_Hant_HK">
+			<Text>宛城</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WANCHENG_NAME" Language="zh_Hant_HK">
+			<Text>張繡（宛城）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WANCHENG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_NAME" Language="zh_Hant_HK">
+			<Text>黃祖（江夏）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>黃祖（江夏）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>黃祖（江夏）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JIANGXIA" Language="zh_Hant_HK">
+			<Text>江夏</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JIANGXIA_NAME" Language="zh_Hant_HK">
+			<Text>黃祖（江夏）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JIANGXIA_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_NAME" Language="zh_Hant_HK">
+			<Text>鮮卑</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>鮮卑城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>鮮卑的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_XIANBEI" Language="zh_Hant_HK">
+			<Text>鮮卑</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_XIANBEI_NAME" Language="zh_Hant_HK">
+			<Text>鮮卑宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_XIANBEI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個輕騎兵單位。訓練輕騎兵單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_NAME" Language="zh_Hant_HK">
+			<Text>南匈奴</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>南匈奴城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>南匈奴的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_SOUTHERN_XIONGNU" Language="zh_Hant_HK">
+			<Text>南匈奴</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SOUTHERN_XIONGNU_NAME" Language="zh_Hant_HK">
+			<Text>南匈奴宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SOUTHERN_XIONGNU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個輕騎兵單位。訓練輕騎兵單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_NAME" Language="zh_Hant_HK">
+			<Text>遼西烏桓</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>遼西烏桓城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>遼西烏桓的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_LIAOXI_WUHUAN" Language="zh_Hant_HK">
+			<Text>遼西烏桓</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LIAOXI_WUHUAN_NAME" Language="zh_Hant_HK">
+			<Text>遼西烏桓宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LIAOXI_WUHUAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個輕騎兵單位。訓練輕騎兵單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_NAME" Language="zh_Hant_HK">
+			<Text>山越</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>山越城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>山越的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_SHANYUE" Language="zh_Hant_HK">
+			<Text>山越</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SHANYUE_NAME" Language="zh_Hant_HK">
+			<Text>山越宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SHANYUE_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_NAME" Language="zh_Hant_HK">
+			<Text>嚴白虎（吳）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>嚴白虎（吳）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>嚴白虎（吳）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WU" Language="zh_Hant_HK">
+			<Text>吳</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WU_NAME" Language="zh_Hant_HK">
+			<Text>嚴白虎（吳）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_NAME" Language="zh_Hant_HK">
+			<Text>劉寵（陳）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>劉寵（陳）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>劉寵（陳）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHEN" Language="zh_Hant_HK">
+			<Text>陳</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHEN_NAME" Language="zh_Hant_HK">
+			<Text>劉寵（陳）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHEN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個遠程單位。訓練遠程單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_NAME" Language="zh_Hant_HK">
+			<Text>高句麗</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>高句麗城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>高句麗的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_GOGURYEO" Language="zh_Hant_HK">
+			<Text>高句麗</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GOGURYEO_NAME" Language="zh_Hant_HK">
+			<Text>高句麗宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GOGURYEO_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_NAME" Language="zh_Hant_HK">
+			<Text>馬韓</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>馬韓城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>馬韓的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_MAHAN" Language="zh_Hant_HK">
+			<Text>馬韓</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MAHAN_NAME" Language="zh_Hant_HK">
+			<Text>馬韓宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MAHAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_NAME" Language="zh_Hant_HK">
+			<Text>李傕（池陽）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>李傕（池陽）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>李傕（池陽）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHIYANG" Language="zh_Hant_HK">
+			<Text>池陽</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHIYANG_NAME" Language="zh_Hant_HK">
+			<Text>李傕（池陽）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHIYANG_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個重騎兵單位。訓練重騎兵單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_NAME" Language="zh_Hant_HK">
+			<Text>郭汜（郿）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>郭汜（郿）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>郭汜（郿）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_MEI" Language="zh_Hant_HK">
+			<Text>郿</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MEI_NAME" Language="zh_Hant_HK">
+			<Text>郭汜（郿）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MEI_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個重騎兵單位。訓練重騎兵單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_NAME" Language="zh_Hant_HK">
+			<Text>張羨（荊南四郡）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>張羨（荊南四郡）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>張羨（荊南四郡）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINGNAN" Language="zh_Hant_HK">
+			<Text>長沙</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINGNAN_NAME" Language="zh_Hant_HK">
+			<Text>張羨（荊南四郡）宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINGNAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_NAME" Language="zh_Hant_HK">
+			<Text>東濊</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>東濊城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>東濊的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_DONGYE" Language="zh_Hant_HK">
+			<Text>東濊</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DONGYE_NAME" Language="zh_Hant_HK">
+			<Text>東濊宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DONGYE_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>+1 [ICON_TradeRoute] 貿易路線上限。 [ICON_TradeRoute] 貿易路線提供+5 [ICON_Gold] 金幣。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_NAME" Language="zh_Hant_HK">
+			<Text>青州黃巾</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>青州黃巾城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>青州黃巾的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_QINGZHOU" Language="zh_Hant_HK">
+			<Text>青州</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QINGZHOU_NAME" Language="zh_Hant_HK">
+			<Text>青州黃巾宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QINGZHOU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_NAME" Language="zh_Hant_HK">
+			<Text>沃沮</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>沃沮城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>沃沮的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_OKJEO" Language="zh_Hant_HK">
+			<Text>沃沮</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_OKJEO_NAME" Language="zh_Hant_HK">
+			<Text>沃沮宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_OKJEO_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>擊殺敵軍單位後，獲得等同於被擊殺單位 [ICON_Strength] 戰鬥力25%的 [ICON_Faith] 信仰值（標準速度下）。可以使用 [ICON_Faith] 信仰值購買近戰單位、抗騎兵單位和偵察單位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_NAME" Language="zh_Hant_HK">
+			<Text>狗奴國</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>狗奴國城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>狗奴國的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_KUNAKOKU" Language="zh_Hant_HK">
+			<Text>狗奴國</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUNAKOKU_NAME" Language="zh_Hant_HK">
+			<Text>狗奴國宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUNAKOKU_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_NAME" Language="zh_Hant_HK">
+			<Text>五溪蠻</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>五溪蠻城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_ADJECTIVE" Language="zh_Hant_HK">
+			<Text>五溪蠻的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WUXIMAN" Language="zh_Hant_HK">
+			<Text>五溪蠻</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WUXIMAN_NAME" Language="zh_Hant_HK">
+			<Text>五溪蠻宗主國加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WUXIMAN_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>當您首次成為此城邦宗主國時，獲得一個近戰單位。訓練近戰單位時+20% [ICON_Production] 生產力。</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PHANTA_LIU_XIE_NAME" Language="zh_Hant_HK">
+			<Text>天子劉協</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PHANTA_LIU_XIE_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>情景專屬的平民單位。控制天子劉協的玩家每回合+3 [ICON_Favor] 外交支持和+5影響力。-30%厭戰度。</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_PHANTA_LIU_XIE_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>每回合+3 [ICON_Favor] 外交支持和+5影響力。-30%厭戰度。</Text>
+		</Row>
+
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_NAME" Language="zh_Hans_CN">
+			<Text>赵范（桂阳）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>赵范（桂阳）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GUIYANG_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>赵范（桂阳）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_GUIYANG" Language="zh_Hans_CN">
+			<Text>桂阳</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GUIYANG_NAME" Language="zh_Hans_CN">
+			<Text>赵范（桂阳）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GUIYANG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_NAME" Language="zh_Hans_CN">
+			<Text>刘度（零陵）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>刘度（零陵）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LINGLING_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>刘度（零陵）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_LINGLING" Language="zh_Hans_CN">
+			<Text>零陵</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LINGLING_NAME" Language="zh_Hans_CN">
+			<Text>刘度（零陵）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LINGLING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_NAME" Language="zh_Hans_CN">
+			<Text>韩玄（长沙）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>韩玄（长沙）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHANGSHA_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>韩玄（长沙）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHANGSHA" Language="zh_Hans_CN">
+			<Text>长沙</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHANGSHA_NAME" Language="zh_Hans_CN">
+			<Text>韩玄（长沙）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHANGSHA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_NAME" Language="zh_Hans_CN">
+			<Text>金旋（武陵）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>金旋（武陵）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WULING_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>金旋（武陵）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WULING" Language="zh_Hans_CN">
+			<Text>武陵</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WULING_NAME" Language="zh_Hans_CN">
+			<Text>金旋（武陵）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WULING_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_NAME" Language="zh_Hans_CN">
+			<Text>韩遂（金城）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>韩遂（金城）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINCHENG_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>韩遂（金城）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINCHENG" Language="zh_Hans_CN">
+			<Text>金城</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINCHENG_NAME" Language="zh_Hans_CN">
+			<Text>韩遂（金城）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINCHENG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_NAME" Language="zh_Hans_CN">
+			<Text>宋建（枹罕）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>宋建（枹罕）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_FUHAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>宋建（枹罕）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_FUHAN" Language="zh_Hans_CN">
+			<Text>枹罕</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_FUHAN_NAME" Language="zh_Hans_CN">
+			<Text>宋建（枹罕）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_FUHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_NAME" Language="zh_Hans_CN">
+			<Text>张杨（河内）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>张杨（河内）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HENEI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>张杨（河内）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_HENEI" Language="zh_Hans_CN">
+			<Text>河内</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HENEI_NAME" Language="zh_Hans_CN">
+			<Text>张杨（河内）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HENEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_NAME" Language="zh_Hans_CN">
+			<Text>张邈（陈留）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>张邈（陈留）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHENLIU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>张邈（陈留）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHENLIU" Language="zh_Hans_CN">
+			<Text>陈留</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHENLIU_NAME" Language="zh_Hans_CN">
+			<Text>张邈（陈留）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHENLIU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_NAME" Language="zh_Hans_CN">
+			<Text>夷洲</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>夷洲城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YIZHOU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>夷洲的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_YIZHOU" Language="zh_Hans_CN">
+			<Text>夷洲</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YIZHOU_NAME" Language="zh_Hans_CN">
+			<Text>夷洲宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YIZHOU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_NAME" Language="zh_Hans_CN">
+			<Text>辰韩</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>辰韩城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINHAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>辰韩的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINHAN" Language="zh_Hans_CN">
+			<Text>辰韩</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINHAN_NAME" Language="zh_Hans_CN">
+			<Text>辰韩宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_NAME" Language="zh_Hans_CN">
+			<Text>白波军</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>白波军城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BAIBO_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>白波军的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_BAIBO" Language="zh_Hans_CN">
+			<Text>白波谷</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BAIBO_NAME" Language="zh_Hans_CN">
+			<Text>白波军宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BAIBO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_NAME" Language="zh_Hans_CN">
+			<Text>汝南黄巾</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>汝南黄巾城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_RUNAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>汝南黄巾的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_RUNAN" Language="zh_Hans_CN">
+			<Text>汝南</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_RUNAN_NAME" Language="zh_Hans_CN">
+			<Text>汝南黄巾宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_RUNAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_NAME" Language="zh_Hans_CN">
+			<Text>泰山贼</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>泰山贼城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_TAISHAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>泰山贼的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_TAISHAN" Language="zh_Hans_CN">
+			<Text>泰山</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_TAISHAN_NAME" Language="zh_Hans_CN">
+			<Text>泰山贼宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_TAISHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_NAME" Language="zh_Hans_CN">
+			<Text>黑山军</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>黑山军城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_HEISHAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>黑山军的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_HEISHAN" Language="zh_Hans_CN">
+			<Text>黑山</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HEISHAN_NAME" Language="zh_Hans_CN">
+			<Text>黑山军宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_HEISHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_NAME" Language="zh_Hans_CN">
+			<Text>王朗（会稽）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>王朗（会稽）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUAIJI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>王朗（会稽）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_KUAIJI" Language="zh_Hans_CN">
+			<Text>会稽</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUAIJI_NAME" Language="zh_Hans_CN">
+			<Text>王朗（会稽）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUAIJI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_NAME" Language="zh_Hans_CN">
+			<Text>吴巨（苍梧）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>吴巨（苍梧）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CANGWU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>吴巨（苍梧）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CANGWU" Language="zh_Hans_CN">
+			<Text>苍梧</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CANGWU_NAME" Language="zh_Hans_CN">
+			<Text>吴巨（苍梧）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CANGWU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_NAME" Language="zh_Hans_CN">
+			<Text>邪马台</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>邪马台城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_YAMATAI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>邪马台的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_YAMATAI" Language="zh_Hans_CN">
+			<Text>邪马台</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YAMATAI_NAME" Language="zh_Hans_CN">
+			<Text>邪马台宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_YAMATAI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_NAME" Language="zh_Hans_CN">
+			<Text>弁韩</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>弁韩城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_BYEONHAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>弁韩的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_BYEONHAN" Language="zh_Hans_CN">
+			<Text>弁韩</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BYEONHAN_NAME" Language="zh_Hans_CN">
+			<Text>弁韩宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_BYEONHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。当您首次成为此城邦宗主国时，获得一个轻骑兵单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_NAME" Language="zh_Hans_CN">
+			<Text>羌</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>羌城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QIANG_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>羌的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_QIANG" Language="zh_Hans_CN">
+			<Text>羌</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QIANG_NAME" Language="zh_Hans_CN">
+			<Text>羌宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QIANG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。当您首次成为此城邦宗主国时，获得一个轻骑兵单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_NAME" Language="zh_Hans_CN">
+			<Text>氐</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>氐城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>氐的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_DI" Language="zh_Hans_CN">
+			<Text>氐</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DI_NAME" Language="zh_Hans_CN">
+			<Text>氐宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买骑兵单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_NAME" Language="zh_Hans_CN">
+			<Text>张绣（宛城）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>张绣（宛城）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WANCHENG_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>张绣（宛城）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WANCHENG" Language="zh_Hans_CN">
+			<Text>宛城</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WANCHENG_NAME" Language="zh_Hans_CN">
+			<Text>张绣（宛城）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WANCHENG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_NAME" Language="zh_Hans_CN">
+			<Text>黄祖（江夏）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>黄祖（江夏）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JIANGXIA_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>黄祖（江夏）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JIANGXIA" Language="zh_Hans_CN">
+			<Text>江夏</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JIANGXIA_NAME" Language="zh_Hans_CN">
+			<Text>黄祖（江夏）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JIANGXIA_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_NAME" Language="zh_Hans_CN">
+			<Text>鲜卑</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>鲜卑城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_XIANBEI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>鲜卑的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_XIANBEI" Language="zh_Hans_CN">
+			<Text>鲜卑</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_XIANBEI_NAME" Language="zh_Hans_CN">
+			<Text>鲜卑宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_XIANBEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个轻骑兵单位。训练轻骑兵单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_NAME" Language="zh_Hans_CN">
+			<Text>南匈奴</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>南匈奴城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SOUTHERN_XIONGNU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>南匈奴的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_SOUTHERN_XIONGNU" Language="zh_Hans_CN">
+			<Text>南匈奴</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SOUTHERN_XIONGNU_NAME" Language="zh_Hans_CN">
+			<Text>南匈奴宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SOUTHERN_XIONGNU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个轻骑兵单位。训练轻骑兵单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_NAME" Language="zh_Hans_CN">
+			<Text>辽西乌桓</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>辽西乌桓城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_LIAOXI_WUHUAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>辽西乌桓的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_LIAOXI_WUHUAN" Language="zh_Hans_CN">
+			<Text>辽西乌桓</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LIAOXI_WUHUAN_NAME" Language="zh_Hans_CN">
+			<Text>辽西乌桓宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_LIAOXI_WUHUAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个轻骑兵单位。训练轻骑兵单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_NAME" Language="zh_Hans_CN">
+			<Text>山越</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>山越城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_SHANYUE_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>山越的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_SHANYUE" Language="zh_Hans_CN">
+			<Text>山越</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SHANYUE_NAME" Language="zh_Hans_CN">
+			<Text>山越宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_SHANYUE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_NAME" Language="zh_Hans_CN">
+			<Text>严白虎（吴）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>严白虎（吴）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>严白虎（吴）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WU" Language="zh_Hans_CN">
+			<Text>吴</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WU_NAME" Language="zh_Hans_CN">
+			<Text>严白虎（吴）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_NAME" Language="zh_Hans_CN">
+			<Text>刘宠（陈）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>刘宠（陈）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHEN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>刘宠（陈）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHEN" Language="zh_Hans_CN">
+			<Text>陈</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHEN_NAME" Language="zh_Hans_CN">
+			<Text>刘宠（陈）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个远程单位。训练远程单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_NAME" Language="zh_Hans_CN">
+			<Text>高句丽</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>高句丽城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_GOGURYEO_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>高句丽的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_GOGURYEO" Language="zh_Hans_CN">
+			<Text>高句丽</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GOGURYEO_NAME" Language="zh_Hans_CN">
+			<Text>高句丽宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_GOGURYEO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_NAME" Language="zh_Hans_CN">
+			<Text>马韩</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>马韩城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MAHAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>马韩的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_MAHAN" Language="zh_Hans_CN">
+			<Text>马韩</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MAHAN_NAME" Language="zh_Hans_CN">
+			<Text>马韩宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MAHAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_NAME" Language="zh_Hans_CN">
+			<Text>李傕（池阳）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>李傕（池阳）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_CHIYANG_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>李傕（池阳）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_CHIYANG" Language="zh_Hans_CN">
+			<Text>池阳</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHIYANG_NAME" Language="zh_Hans_CN">
+			<Text>李傕（池阳）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_CHIYANG_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个重骑兵单位。训练重骑兵单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_NAME" Language="zh_Hans_CN">
+			<Text>郭汜（郿）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>郭汜（郿）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_MEI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>郭汜（郿）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_MEI" Language="zh_Hans_CN">
+			<Text>郿</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MEI_NAME" Language="zh_Hans_CN">
+			<Text>郭汜（郿）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_MEI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个重骑兵单位。训练重骑兵单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_NAME" Language="zh_Hans_CN">
+			<Text>张羡（荆南四郡）</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>张羡（荆南四郡）城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_JINGNAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>张羡（荆南四郡）的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_JINGNAN" Language="zh_Hans_CN">
+			<Text>长沙</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINGNAN_NAME" Language="zh_Hans_CN">
+			<Text>张羡（荆南四郡）宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_JINGNAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_NAME" Language="zh_Hans_CN">
+			<Text>东濊</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>东濊城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_DONGYE_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>东濊的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_DONGYE" Language="zh_Hans_CN">
+			<Text>东濊</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DONGYE_NAME" Language="zh_Hans_CN">
+			<Text>东濊宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_DONGYE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>+1 [ICON_TradeRoute] 贸易路线上限。 [ICON_TradeRoute] 贸易路线提供+5 [ICON_Gold] 金币。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_NAME" Language="zh_Hans_CN">
+			<Text>青州黄巾</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>青州黄巾城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_QINGZHOU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>青州黄巾的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_QINGZHOU" Language="zh_Hans_CN">
+			<Text>青州</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QINGZHOU_NAME" Language="zh_Hans_CN">
+			<Text>青州黄巾宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_QINGZHOU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_NAME" Language="zh_Hans_CN">
+			<Text>沃沮</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>沃沮城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_OKJEO_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>沃沮的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_OKJEO" Language="zh_Hans_CN">
+			<Text>沃沮</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_OKJEO_NAME" Language="zh_Hans_CN">
+			<Text>沃沮宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_OKJEO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>击杀敌军单位后，获得等同于被击杀单位 [ICON_Strength] 战斗力25%的 [ICON_Faith] 信仰值（标准速度下）。可以使用 [ICON_Faith] 信仰值购买近战单位、抗骑兵单位和侦察单位。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_NAME" Language="zh_Hans_CN">
+			<Text>狗奴</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>狗奴城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_KUNAKOKU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>狗奴的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_KUNAKOKU" Language="zh_Hans_CN">
+			<Text>狗奴</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUNAKOKU_NAME" Language="zh_Hans_CN">
+			<Text>狗奴宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_KUNAKOKU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_NAME" Language="zh_Hans_CN">
+			<Text>五溪蛮</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>五溪蛮城邦</Text>
+		</Row>
+		<Row Tag="LOC_CIVILIZATION_PHANTA_CS_TK_WUXIMAN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>五溪蛮的</Text>
+		</Row>
+		<Row Tag="LOC_CITY_NAME_PHANTA_CS_TK_WUXIMAN" Language="zh_Hans_CN">
+			<Text>五溪蛮</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WUXIMAN_NAME" Language="zh_Hans_CN">
+			<Text>五溪蛮宗主国加成</Text>
+		</Row>
+		<Row Tag="LOC_LEADER_TRAIT_PHANTA_CS_TK_WUXIMAN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>当您首次成为此城邦宗主国时，获得一个近战单位。训练近战单位时+20% [ICON_Production] 生产力。</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PHANTA_LIU_XIE_NAME" Language="zh_Hans_CN">
+			<Text>天子刘协</Text>
+		</Row>
+		<Row Tag="LOC_UNIT_PHANTA_LIU_XIE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>情景专属的平民单位。控制天子刘协的玩家每回合+3 [ICON_Favor] 外交支持和+5影响力。-30%厌战度。</Text>
+		</Row>
+		<Row Tag="LOC_ABILITY_PHANTA_LIU_XIE_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>每回合+3 [ICON_Favor] 外交支持和+5影响力。-30%厌战度。</Text>
+		</Row>
+	</LocalizedText>
+</GameData>

@@ -1,0 +1,1620 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TEXT01 -->
+<!-- Author: hnoyy -->
+<!-- DateCreated: 4/1/2024 10:10:48 PM -->
+<GameData>
+
+	<LocalizedText>
+
+
+
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_NAME" Language="en_US">
+			<Text>[COLOR_FLOAT_FOOD]NEA Three Kingdom Scenario：Battle of Xiangfan[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_NAME" Language="zh_Hans_CN">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国情景：襄樊之战[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_DESCRIPTION" Language="en_US">
+			<Text>[COLOR_FLOAT_FOOD]NEA Three Kingdom Scenario：Battle of Xiangfan[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国情景：襄樊之战[[ENDCOLOR]</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_NAME" Language="zh_Hant_HK">
+			<Text>[COLOR_FLOAT_FOOD]NEA三國情景：襄樊之戰[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_NAME" Language="ja_JP">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国志シナリオ：襄樊の戦い[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>[COLOR_FLOAT_FOOD]NEA三國情景：襄樊之戦[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_02_DESCRIPTION" Language="ja_JP">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国志シナリオ：襄樊の戦い[ENDCOLOR]</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_UNIT_PHANTA_SUN_CE_TIGER_RETINUE_CAVALRY_DESCRIPTION" Language="en_US">
+			<Text>Chinese unique unit when Sun Ce is their leader. Powerful cavalry unit with 10 turns of [ICON_Lifespan] Lifespan, and cannot be upgraded or promoted. Has base [ICON_Strength] Combat Strength equal to the strongest unit your cities have produced. Can move after attacking. +5 [ICON_Strength] Combat Strength when attacking, and deals full damage to the city's walls.</Text>
+		</Replace>
+
+		<Replace Tag="LOC_UNIT_PHANTA_SUN_CE_TIGER_RETINUE_WARSHIP_DESCRIPTION" Language="en_US">
+			<Text>Chinese unique unit when Sun Ce is their leader. Powerful naval melee unit with 10 turns of [ICON_Lifespan] Lifespan, and cannot be upgraded or promoted. Has base [ICON_Strength] Combat Strength equal to the strongest unit your cities have produced. Can move after attacking. +5 [ICON_Strength] Combat Strength when attacking, and deals full damage to the city's walls.</Text>
+		</Replace>
+
+		<Replace Tag="LOC_UNIT_PHANTA_SUN_CE_TIGER_RETINUE_CAVALRY_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>孫策作為領袖時的中國特色單位。擁有10回合 [ICON_Lifespan] 壽命的強力騎兵單位，無法升級或強化。其基礎 [ICON_Strength] 戰鬥力等於城市曾生産之最強單位的戰鬥力。攻擊後可以移動。攻擊時+5 [ICON_Strength] 戰鬥力，並對城牆造成全額傷害。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_UNIT_PHANTA_SUN_CE_TIGER_RETINUE_WARSHIP_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>孫策作為領袖時的中國特色單位。擁有10回合 [ICON_Lifespan] 壽命的強力海軍近戰單位，無法升級或強化。其基礎 [ICON_Strength] 戰鬥力等於城市曾生産之最強單位的戰鬥力。攻擊後可以移動。攻擊時+5 [ICON_Strength] 戰鬥力，並對城牆造成全額傷害。</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_UNIT_PHANTA_SUN_CE_TIGER_RETINUE_CAVALRY_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>孙策作为领袖时的中国特色单位。拥有10回合 [ICON_Lifespan] 寿命的强力骑兵单位，无法升级或强化。其基础 [ICON_Strength] 战斗力等于城市曾生産之最强单位的战斗力。攻击后可以移动。攻击时+5 [ICON_Strength] 战斗力，并对城牆造成全额伤害。</Text>
+		</Replace>
+
+		<Replace Tag="LOC_UNIT_PHANTA_SUN_CE_TIGER_RETINUE_WARSHIP_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>孙策作为领袖时的中国特色单位。拥有10回合 [ICON_Lifespan] 寿命的强力海军近战单位，无法升级或强化。其基础 [ICON_Strength] 战斗力等于城市曾生産之最强单位的战斗力。攻击后可以移动。攻击时+5 [ICON_Strength] 战斗力，并对城牆造成全额伤害。</Text>
+		</Replace>
+		
+		
+		
+		
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_NAME" Language="en_US">
+			<Text>[COLOR_FLOAT_FOOD]NEA Three Kingdom Scenario：Battle of Puyang[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_NAME" Language="zh_Hans_CN">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国情景：濮阳之战[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_DESCRIPTION" Language="en_US">
+			<Text>[COLOR_FLOAT_FOOD]NEA Three Kingdom Scenario：Battle of Puyang[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国情景：濮阳之战[[ENDCOLOR]</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_NAME" Language="zh_Hant_HK">
+			<Text>[COLOR_FLOAT_FOOD]NEA三國情景：濮陽之戰[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_NAME" Language="ja_JP">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国志シナリオ：濮陽の戦い[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>[COLOR_FLOAT_FOOD]NEA三國情景：濮陽之戦[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_DESCRIPTION" Language="ja_JP">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国志シナリオ：濮陽の戦い[ENDCOLOR]</Text>
+		</Replace>
+
+
+
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_NAME" Language="en_US">
+			<Text>[COLOR_FLOAT_FOOD]NEA Three Kingdom Scenario：Heros[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_NAME" Language="zh_Hans_CN">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国情景：英雄集结[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_DESCRIPTION" Language="en_US">
+			<Text>[COLOR_FLOAT_FOOD]NEA Three Kingdom Scenario：Heros[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国情景：英雄集结[[ENDCOLOR]</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_NAME" Language="zh_Hant_HK">
+			<Text>[COLOR_FLOAT_FOOD]NEA三國情景：英雄集结[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_NAME" Language="ja_JP">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国志シナリオ：英雄集结[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_DESCRIPTION" Language="zh_Hant_HK">
+			<Text>[COLOR_FLOAT_FOOD]NEA三國情景：英雄集结[ENDCOLOR]</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_PLUS_01_DESCRIPTION" Language="ja_JP">
+			<Text>[COLOR_FLOAT_FOOD]NEA三国志シナリオ：英雄集结[ENDCOLOR]</Text>
+		</Replace>
+
+
+		<!-- 上党 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGDANG" Language="en_US">
+			<Text>Shangdang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGDANG" Language="zh_Hans_CN">
+			<Text>上党</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGDANG" Language="ja_JP">
+			<Text>上黨</Text>
+		</Replace>
+
+		<!-- 上庸 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGYONG" Language="en_US">
+			<Text>Shangyong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGYONG" Language="zh_Hans_CN">
+			<Text>上庸</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGYONG" Language="ja_JP">
+			<Text>上庸</Text>
+		</Replace>
+
+		<!-- 上谷 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGGU" Language="en_US">
+			<Text>Shanggu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGGU" Language="zh_Hans_CN">
+			<Text>上谷</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGGU" Language="ja_JP">
+			<Text>上谷</Text>
+		</Replace>
+
+		<!-- 下邳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAPI" Language="en_US">
+			<Text>Xiapi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAPI" Language="zh_Hans_CN">
+			<Text>下邳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAPI" Language="ja_JP">
+			<Text>下邳</Text>
+		</Replace>
+
+		<!-- 且兰 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIELAN" Language="en_US">
+			<Text>Qielan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIELAN" Language="zh_Hans_CN">
+			<Text>且兰</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIELAN" Language="ja_JP">
+			<Text>且蘭</Text>
+		</Replace>
+
+		<!-- 东海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGHAI" Language="en_US">
+			<Text>Donghai</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGHAI" Language="zh_Hans_CN">
+			<Text>东海</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGHAI" Language="ja_JP">
+			<Text>東海</Text>
+		</Replace>
+
+		<!-- 东羌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGQIANG" Language="en_US">
+			<Text>Dongqiang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGQIANG" Language="zh_Hans_CN">
+			<Text>东羌</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGQIANG" Language="ja_JP">
+			<Text>東羌</Text>
+		</Replace>
+
+		<!-- 东莱 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGLAI" Language="en_US">
+			<Text>Donglai</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGLAI" Language="zh_Hans_CN">
+			<Text>东莱</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGLAI" Language="ja_JP">
+			<Text>東萊</Text>
+		</Replace>
+
+		<!-- 东部鲜卑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGBUXIANBEI" Language="en_US">
+			<Text>Dongbu Xianbei</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGBUXIANBEI" Language="zh_Hans_CN">
+			<Text>东部鲜卑</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGBUXIANBEI" Language="ja_JP">
+			<Text>東部鮮卑</Text>
+		</Replace>
+
+		<!-- 中山 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGSHAN" Language="en_US">
+			<Text>Zhongshan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGSHAN" Language="zh_Hans_CN">
+			<Text>中山</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGSHAN" Language="ja_JP">
+			<Text>中山</Text>
+		</Replace>
+
+		<!-- 中部鲜卑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGBUXIANBEI" Language="en_US">
+			<Text>Zhongbu Xianbei</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGBUXIANBEI" Language="zh_Hans_CN">
+			<Text>中部鲜卑</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGBUXIANBEI" Language="ja_JP">
+			<Text>中部鮮卑</Text>
+		</Replace>
+
+		<!-- 临淄 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LINZI" Language="en_US">
+			<Text>Linzi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LINZI" Language="zh_Hans_CN">
+			<Text>临淄</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LINZI" Language="ja_JP">
+			<Text>臨淄</Text>
+		</Replace>
+
+		<!-- 乌丸 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWAN" Language="en_US">
+			<Text>Wuvan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWAN" Language="zh_Hans_CN">
+			<Text>乌丸</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWAN" Language="ja_JP">
+			<Text>烏丸</Text>
+		</Replace>
+
+		<!-- 乐浪 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LELANG" Language="en_US">
+			<Text>Lelang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LELANG" Language="zh_Hans_CN">
+			<Text>乐浪</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LELANG" Language="ja_JP">
+			<Text>樂浪</Text>
+		</Replace>
+
+		<!-- 九真 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUZHEN" Language="en_US">
+			<Text>Jiuzhen</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUZHEN" Language="zh_Hans_CN">
+			<Text>九真</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUZHEN" Language="ja_JP">
+			<Text>九真</Text>
+		</Replace>
+
+		<!-- 交趾 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOZHI" Language="en_US">
+			<Text>Jiaozhi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOZHI" Language="zh_Hans_CN">
+			<Text>交趾</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOZHI" Language="ja_JP">
+			<Text>交趾</Text>
+		</Replace>
+
+		<!-- 伊都 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIDU" Language="en_US">
+			<Text>Yidu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIDU" Language="zh_Hans_CN">
+			<Text>伊都</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIDU" Language="ja_JP">
+			<Text>伊都</Text>
+		</Replace>
+
+		<!-- 北海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_BEIGAO" Language="en_US">
+			<Text>Beigao</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_BEIGAO" Language="zh_Hans_CN">
+			<Text>北海</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_BEIGAO" Language="ja_JP">
+			<Text>北海</Text>
+		</Replace>
+
+		<!-- 南昌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANCHANG" Language="en_US">
+			<Text>Nanchang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANCHANG" Language="zh_Hans_CN">
+			<Text>南昌</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANCHANG" Language="ja_JP">
+			<Text>南昌</Text>
+		</Replace>
+
+		<!-- 南海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANHAI" Language="en_US">
+			<Text>Nanhai</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANHAI" Language="zh_Hans_CN">
+			<Text>南海</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANHAI" Language="ja_JP">
+			<Text>南海</Text>
+		</Replace>
+
+		<!-- 右北平 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YOUBEIPING" Language="en_US">
+			<Text>Youbeiping</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YOUBEIPING" Language="zh_Hans_CN">
+			<Text>右北平</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YOUBEIPING" Language="ja_JP">
+			<Text>右北平</Text>
+		</Replace>
+
+		<!-- 合浦 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEPU" Language="en_US">
+			<Text>Hepu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEPU" Language="zh_Hans_CN">
+			<Text>合浦</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEPU" Language="ja_JP">
+			<Text>合浦</Text>
+		</Replace>
+
+		<!-- 合肥 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEFEI" Language="en_US">
+			<Text>Hefei</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEFEI" Language="zh_Hans_CN">
+			<Text>合肥</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEFEI" Language="ja_JP">
+			<Text>合肥</Text>
+		</Replace>
+
+		<!-- 夜郎 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YELANG" Language="en_US">
+			<Text>Yelang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YELANG" Language="zh_Hans_CN">
+			<Text>夜郎</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YELANG" Language="ja_JP">
+			<Text>夜郎</Text>
+		</Replace>
+
+		<!-- 天水 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_TIANSHUI" Language="en_US">
+			<Text>Tianshui</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_TIANSHUI" Language="zh_Hans_CN">
+			<Text>天水</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_TIANSHUI" Language="ja_JP">
+			<Text>天水</Text>
+		</Replace>
+
+		<!-- 夷陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YILING" Language="en_US">
+			<Text>Yiling</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YILING" Language="zh_Hans_CN">
+			<Text>夷陵</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YILING" Language="ja_JP">
+			<Text>夷陵</Text>
+		</Replace>
+
+		<!-- 安定 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANDING" Language="en_US">
+			<Text>Anding</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANDING" Language="zh_Hans_CN">
+			<Text>安定</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANDING" Language="ja_JP">
+			<Text>安定</Text>
+		</Replace>
+
+		<!-- 安邑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANYI" Language="en_US">
+			<Text>Anyi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANYI" Language="zh_Hans_CN">
+			<Text>安邑</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANYI" Language="ja_JP">
+			<Text>安邑</Text>
+		</Replace>
+
+		<!-- 定襄 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DINGXIANG" Language="en_US">
+			<Text>Dingxiang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DINGXIANG" Language="zh_Hans_CN">
+			<Text>定襄</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DINGXIANG" Language="ja_JP">
+			<Text>定襄</Text>
+		</Replace>
+
+		<!-- 宛 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WAN" Language="en_US">
+			<Text>Wan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WAN" Language="zh_Hans_CN">
+			<Text>宛</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WAN" Language="ja_JP">
+			<Text>宛</Text>
+		</Replace>
+
+		<!-- 寿春 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHOUCHUN" Language="en_US">
+			<Text>Shouchun</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHOUCHUN" Language="zh_Hans_CN">
+			<Text>寿春</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHOUCHUN" Language="ja_JP">
+			<Text>壽春</Text>
+		</Replace>
+
+		<!-- 小沛 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAOPEI" Language="en_US">
+			<Text>Xiaopei</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAOPEI" Language="zh_Hans_CN">
+			<Text>小沛</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAOPEI" Language="ja_JP">
+			<Text>小沛</Text>
+		</Replace>
+
+		<!-- 常山 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGSHAN" Language="en_US">
+			<Text>Changshan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGSHAN" Language="zh_Hans_CN">
+			<Text>常山</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGSHAN" Language="ja_JP">
+			<Text>常山</Text>
+		</Replace>
+
+		<!-- 平原 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_PINGYUAN" Language="en_US">
+			<Text>Pingyuan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_PINGYUAN" Language="zh_Hans_CN">
+			<Text>平原</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_PINGYUAN" Language="ja_JP">
+			<Text>平原</Text>
+		</Replace>
+
+		<!-- 广陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_GUANGLING" Language="en_US">
+			<Text>Guangling</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_GUANGLING" Language="zh_Hans_CN">
+			<Text>广陵</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_GUANGLING" Language="ja_JP">
+			<Text>廣陵</Text>
+		</Replace>
+
+		<!-- 庐江 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUJIANG" Language="en_US">
+			<Text>Lujiang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUJIANG" Language="zh_Hans_CN">
+			<Text>庐江</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUJIANG" Language="ja_JP">
+			<Text>廬江</Text>
+		</Replace>
+
+		<!-- 延津 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANJIN" Language="en_US">
+			<Text>Yanjin</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANJIN" Language="zh_Hans_CN">
+			<Text>延津</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANJIN" Language="ja_JP">
+			<Text>延津</Text>
+		</Replace>
+
+		<!-- 建宁 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANNING" Language="en_US">
+			<Text>Jianning</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANNING" Language="zh_Hans_CN">
+			<Text>建宁</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANNING" Language="ja_JP">
+			<Text>建寧</Text>
+		</Replace>
+
+		<!-- 建安 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANAN" Language="en_US">
+			<Text>Jianan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANAN" Language="zh_Hans_CN">
+			<Text>建安</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANAN" Language="ja_JP">
+			<Text>建安</Text>
+		</Replace>
+
+		<!-- 张掖 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHANGYE" Language="en_US">
+			<Text>Zhangye</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHANGYE" Language="zh_Hans_CN">
+			<Text>张掖</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHANGYE" Language="ja_JP">
+			<Text>張掖</Text>
+		</Replace>
+
+		<!-- 徼外夜郎 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOWAIYELANG" Language="en_US">
+			<Text>Jiaowai Yelang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOWAIYELANG" Language="zh_Hans_CN">
+			<Text>徼外夜郎</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOWAIYELANG" Language="ja_JP">
+			<Text>徼外夜郎</Text>
+		</Replace>
+
+		<!-- 成都 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGDU" Language="en_US">
+			<Text>Chengdu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGDU" Language="zh_Hans_CN">
+			<Text>成都</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGDU" Language="ja_JP">
+			<Text>成都</Text>
+		</Replace>
+
+		<!-- 敦煌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DUNHUANG" Language="en_US">
+			<Text>Dunhuang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DUNHUANG" Language="zh_Hans_CN">
+			<Text>敦煌</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_DUNHUANG" Language="ja_JP">
+			<Text>敦煌</Text>
+		</Replace>
+
+		<!-- 新野 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XINYE" Language="en_US">
+			<Text>Xinye</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XINYE" Language="zh_Hans_CN">
+			<Text>新野</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XINYE" Language="ja_JP">
+			<Text>新野</Text>
+		</Replace>
+
+		<!-- 易京 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIJING" Language="en_US">
+			<Text>Yijing</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIJING" Language="zh_Hans_CN">
+			<Text>易京</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIJING" Language="ja_JP">
+			<Text>易京</Text>
+		</Replace>
+
+		<!-- 晋阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINYANG" Language="en_US">
+			<Text>Jinyang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINYANG" Language="zh_Hans_CN">
+			<Text>晋阳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINYANG" Language="ja_JP">
+			<Text>晉陽</Text>
+		</Replace>
+
+		<!-- 曲阿 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_QUA" Language="en_US">
+			<Text>Qua</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_QUA" Language="zh_Hans_CN">
+			<Text>曲阿</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_QUA" Language="ja_JP">
+			<Text>曲阿</Text>
+		</Replace>
+
+		<!-- 朱提 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUYI" Language="en_US">
+			<Text>Zhuyi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUYI" Language="zh_Hans_CN">
+			<Text>朱提</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUYI" Language="ja_JP">
+			<Text>朱提</Text>
+		</Replace>
+
+		<!-- 柴桑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHAISANG" Language="en_US">
+			<Text>Chaisang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHAISANG" Language="zh_Hans_CN">
+			<Text>柴桑</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHAISANG" Language="ja_JP">
+			<Text>柴桑</Text>
+		</Replace>
+
+		<!-- 梓潼 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZITONG" Language="en_US">
+			<Text>Zitong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZITONG" Language="zh_Hans_CN">
+			<Text>梓潼</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZITONG" Language="ja_JP">
+			<Text>梓潼</Text>
+		</Replace>
+
+		<!-- 武威 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWEI" Language="en_US">
+			<Text>Wuwei</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWEI" Language="zh_Hans_CN">
+			<Text>武威</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWEI" Language="ja_JP">
+			<Text>武威</Text>
+		</Replace>
+
+		<!-- 武都 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUDU" Language="en_US">
+			<Text>Wudu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUDU" Language="zh_Hans_CN">
+			<Text>武都</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUDU" Language="ja_JP">
+			<Text>武都</Text>
+		</Replace>
+
+		<!-- 永昌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YONGCHANG" Language="en_US">
+			<Text>Yongchang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YONGCHANG" Language="zh_Hans_CN">
+			<Text>永昌</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YONGCHANG" Language="ja_JP">
+			<Text>永昌</Text>
+		</Replace>
+
+		<!-- 汉中 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANZHONG" Language="en_US">
+			<Text>Hanzhong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANZHONG" Language="zh_Hans_CN">
+			<Text>汉中</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANZHONG" Language="ja_JP">
+			<Text>漢中</Text>
+		</Replace>
+
+		<!-- 汉嘉 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANJIA" Language="en_US">
+			<Text>Hanjia</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANJIA" Language="zh_Hans_CN">
+			<Text>汉嘉</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANJIA" Language="ja_JP">
+			<Text>漢嘉</Text>
+		</Replace>
+
+		<!-- 汝阴 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_RUYIN" Language="en_US">
+			<Text>Ruyin</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_RUYIN" Language="zh_Hans_CN">
+			<Text>汝阴</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_RUYIN" Language="ja_JP">
+			<Text>汝陰</Text>
+		</Replace>
+
+		<!-- 江州 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGZHOU" Language="en_US">
+			<Text>Jiangzhou</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGZHOU" Language="zh_Hans_CN">
+			<Text>江州</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGZHOU" Language="ja_JP">
+			<Text>江州</Text>
+		</Replace>
+
+		<!-- 江阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGYANG" Language="en_US">
+			<Text>Jiangyang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGYANG" Language="zh_Hans_CN">
+			<Text>江阳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGYANG" Language="ja_JP">
+			<Text>江陽</Text>
+		</Replace>
+
+		<!-- 江陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGLING" Language="en_US">
+			<Text>Jiangling</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGLING" Language="zh_Hans_CN">
+			<Text>江陵</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGLING" Language="ja_JP">
+			<Text>江陵</Text>
+		</Replace>
+
+		<!-- 沓中 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_TAZHONG" Language="en_US">
+			<Text>Tazhong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_TAZHONG" Language="zh_Hans_CN">
+			<Text>沓中</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_TAZHONG" Language="ja_JP">
+			<Text>沓中</Text>
+		</Replace>
+
+		<!-- 河间 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEJIAN" Language="en_US">
+			<Text>Hejian</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEJIAN" Language="zh_Hans_CN">
+			<Text>河间</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEJIAN" Language="ja_JP">
+			<Text>河間</Text>
+		</Replace>
+
+		<!-- 洛阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUOYANG" Language="en_US">
+			<Text>Luoyang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUOYANG" Language="zh_Hans_CN">
+			<Text>洛阳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUOYANG" Language="ja_JP">
+			<Text>洛陽</Text>
+		</Replace>
+
+		<!-- 济南 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINAN" Language="en_US">
+			<Text>Jinan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINAN" Language="zh_Hans_CN">
+			<Text>济南</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINAN" Language="ja_JP">
+			<Text>濟南</Text>
+		</Replace>
+
+		<!-- 涿 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUO" Language="en_US">
+			<Text>Zhuo</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUO" Language="zh_Hans_CN">
+			<Text>涿</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUO" Language="ja_JP">
+			<Text>涿</Text>
+		</Replace>
+
+		<!-- 淮阴 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HUAIYIN" Language="en_US">
+			<Text>Huaiyin</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HUAIYIN" Language="zh_Hans_CN">
+			<Text>淮阴</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_HUAIYIN" Language="ja_JP">
+			<Text>淮陰</Text>
+		</Replace>
+
+		<!-- 渔阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUYANG" Language="en_US">
+			<Text>Yuyang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUYANG" Language="zh_Hans_CN">
+			<Text>渔阳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUYANG" Language="ja_JP">
+			<Text>漁陽</Text>
+		</Replace>
+
+		<!-- 渤海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_BOHAI" Language="en_US">
+			<Text>Bohai</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_BOHAI" Language="zh_Hans_CN">
+			<Text>渤海</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_BOHAI" Language="ja_JP">
+			<Text>渤海</Text>
+		</Replace>
+
+		<!-- 潼关 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_TONGGUAN" Language="en_US">
+			<Text>Tongguan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_TONGGUAN" Language="zh_Hans_CN">
+			<Text>潼关</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_TONGGUAN" Language="ja_JP">
+			<Text>潼關</Text>
+		</Replace>
+
+		<!-- 濮阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_PUYANG" Language="en_US">
+			<Text>Puyang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_PUYANG" Language="zh_Hans_CN">
+			<Text>濮阳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_PUYANG" Language="ja_JP">
+			<Text>濮陽</Text>
+		</Replace>
+
+		<!-- 牛渚 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_NIUZHU" Language="en_US">
+			<Text>Niuzhu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_NIUZHU" Language="zh_Hans_CN">
+			<Text>牛渚</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_NIUZHU" Language="ja_JP">
+			<Text>牛渚</Text>
+		</Replace>
+
+		<!-- 琅琊 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGYA" Language="en_US">
+			<Text>Langya</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGYA" Language="zh_Hans_CN">
+			<Text>琅琊</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGYA" Language="ja_JP">
+			<Text>琅琊</Text>
+		</Replace>
+
+		<!-- 白帝城 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_BAIDICHENG" Language="en_US">
+			<Text>Baidicheng</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_BAIDICHENG" Language="zh_Hans_CN">
+			<Text>白帝城</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_BAIDICHENG" Language="ja_JP">
+			<Text>白帝城</Text>
+		</Replace>
+
+		<!-- 秣陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_MOLING" Language="en_US">
+			<Text>Moling</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_MOLING" Language="zh_Hans_CN">
+			<Text>秣陵</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_MOLING" Language="ja_JP">
+			<Text>秣陵</Text>
+		</Replace>
+
+		<!-- 襄阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIANGYANG" Language="en_US">
+			<Text>Xiangyang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIANGYANG" Language="zh_Hans_CN">
+			<Text>襄阳</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIANGYANG" Language="ja_JP">
+			<Text>襄陽</Text>
+		</Replace>
+
+		<!-- 西城 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XICHENG" Language="en_US">
+			<Text>Xicheng</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XICHENG" Language="zh_Hans_CN">
+			<Text>西城</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XICHENG" Language="ja_JP">
+			<Text>西城</Text>
+		</Replace>
+
+		<!-- 西平 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIPING" Language="en_US">
+			<Text>Xiping</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIPING" Language="zh_Hans_CN">
+			<Text>西平</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIPING" Language="ja_JP">
+			<Text>西平</Text>
+		</Replace>
+
+		<!-- 西羌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIQIANG" Language="en_US">
+			<Text>Xiqiang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIQIANG" Language="zh_Hans_CN">
+			<Text>西羌</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIQIANG" Language="ja_JP">
+			<Text>西羌</Text>
+		</Replace>
+
+		<!-- 西部鲜卑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIBUXIANBEI" Language="en_US">
+			<Text>Xibu Xianbei</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIBUXIANBEI" Language="zh_Hans_CN">
+			<Text>西部鲜卑</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIBUXIANBEI" Language="ja_JP">
+			<Text>西部鮮卑</Text>
+		</Replace>
+
+		<!-- 许 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XU" Language="en_US">
+			<Text>Xu</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XU" Language="zh_Hans_CN">
+			<Text>许</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_XU" Language="ja_JP">
+			<Text>許</Text>
+		</Replace>
+
+		<!-- 谯 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIAO" Language="en_US">
+			<Text>Qiao</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIAO" Language="zh_Hans_CN">
+			<Text>谯</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIAO" Language="ja_JP">
+			<Text>譙</Text>
+		</Replace>
+
+		<!-- 赤壁 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHIBI" Language="en_US">
+			<Text>Chibi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHIBI" Language="zh_Hans_CN">
+			<Text>赤壁</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHIBI" Language="ja_JP">
+			<Text>赤壁</Text>
+		</Replace>
+
+		<!-- 越嵩 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUESONG" Language="en_US">
+			<Text>Yuesong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUESONG" Language="zh_Hans_CN">
+			<Text>越嵩</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUESONG" Language="ja_JP">
+			<Text>越嵩</Text>
+		</Replace>
+
+		<!-- 辽东 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAODONG" Language="en_US">
+			<Text>Liaodong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAODONG" Language="zh_Hans_CN">
+			<Text>辽东</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAODONG" Language="ja_JP">
+			<Text>遼東</Text>
+		</Replace>
+
+		<!-- 辽西 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAOXI" Language="en_US">
+			<Text>Liaoxi</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAOXI" Language="zh_Hans_CN">
+			<Text>辽西</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAOXI" Language="ja_JP">
+			<Text>遼西</Text>
+		</Replace>
+
+		<!-- 邺 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YE" Language="en_US">
+			<Text>Ye</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YE" Language="zh_Hans_CN">
+			<Text>邺</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YE" Language="ja_JP">
+			<Text>鄴</Text>
+		</Replace>
+
+		<!-- 鄄城 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JUANCHENG" Language="en_US">
+			<Text>Juancheng</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JUANCHENG" Language="zh_Hans_CN">
+			<Text>鄄城</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JUANCHENG" Language="ja_JP">
+			<Text>鄄城</Text>
+		</Replace>
+
+		<!-- 酒泉 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUQUAN" Language="en_US">
+			<Text>Jiuquan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUQUAN" Language="zh_Hans_CN">
+			<Text>酒泉</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUQUAN" Language="ja_JP">
+			<Text>酒泉</Text>
+		</Replace>
+
+		<!-- 长安 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGAN" Language="en_US">
+			<Text>Changan</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGAN" Language="zh_Hans_CN">
+			<Text>长安</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGAN" Language="ja_JP">
+			<Text>長安</Text>
+		</Replace>
+
+		<!-- 阆中 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGZHONG" Language="en_US">
+			<Text>Langzhong</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGZHONG" Language="zh_Hans_CN">
+			<Text>阆中</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGZHONG" Language="ja_JP">
+			<Text>閬中</Text>
+		</Replace>
+
+		<!-- 阴晋 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YINJIN" Language="en_US">
+			<Text>Yinjin</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YINJIN" Language="zh_Hans_CN">
+			<Text>阴晋</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YINJIN" Language="ja_JP">
+			<Text>陰晉</Text>
+		</Replace>
+
+		<!-- 陈仓 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGCANG" Language="en_US">
+			<Text>Chencang</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGCANG" Language="zh_Hans_CN">
+			<Text>陈仓</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGCANG" Language="ja_JP">
+			<Text>陳倉</Text>
+		</Replace>
+
+		<!-- 雁门 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANMEN" Language="en_US">
+			<Text>Yanmen</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANMEN" Language="zh_Hans_CN">
+			<Text>雁门</Text>
+		</Replace>
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANMEN" Language="ja_JP">
+			<Text>雁門</Text>
+		</Replace>
+
+
+
+		<!-- 上党 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGDANG" Language="zh_Hant_HK">
+			<Text>上黨</Text>
+		</Replace>
+
+		<!-- 上庸 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGYONG" Language="zh_Hant_HK">
+			<Text>上庸</Text>
+		</Replace>
+
+		<!-- 上谷 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHANGGU" Language="zh_Hant_HK">
+			<Text>上谷</Text>
+		</Replace>
+
+		<!-- 下邳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAPI" Language="zh_Hant_HK">
+			<Text>下邳</Text>
+		</Replace>
+
+		<!-- 且兰 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIELAN" Language="zh_Hant_HK">
+			<Text>且蘭</Text>
+		</Replace>
+
+		<!-- 东海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGHAI" Language="zh_Hant_HK">
+			<Text>東海</Text>
+		</Replace>
+
+		<!-- 东羌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGQIANG" Language="zh_Hant_HK">
+			<Text>東羌</Text>
+		</Replace>
+
+		<!-- 东莱 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGLAI" Language="zh_Hant_HK">
+			<Text>東萊</Text>
+		</Replace>
+
+		<!-- 东部鲜卑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DONGBUXIANBEI" Language="zh_Hant_HK">
+			<Text>東部鮮卑</Text>
+		</Replace>
+
+		<!-- 中山 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGSHAN" Language="zh_Hant_HK">
+			<Text>中山</Text>
+		</Replace>
+
+		<!-- 中部鲜卑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHONGBUXIANBEI" Language="zh_Hant_HK">
+			<Text>中部鮮卑</Text>
+		</Replace>
+
+		<!-- 临淄 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LINZI" Language="zh_Hant_HK">
+			<Text>臨淄</Text>
+		</Replace>
+
+		<!-- 乌丸 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWAN" Language="zh_Hant_HK">
+			<Text>烏丸</Text>
+		</Replace>
+
+		<!-- 乐浪 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LELANG" Language="zh_Hant_HK">
+			<Text>樂浪</Text>
+		</Replace>
+
+		<!-- 九真 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUZHEN" Language="zh_Hant_HK">
+			<Text>九真</Text>
+		</Replace>
+
+		<!-- 交趾 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOZHI" Language="zh_Hant_HK">
+			<Text>交趾</Text>
+		</Replace>
+
+		<!-- 伊都 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIDU" Language="zh_Hant_HK">
+			<Text>伊都</Text>
+		</Replace>
+
+		<!-- 北海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_BEIGAO" Language="zh_Hant_HK">
+			<Text>北海</Text>
+		</Replace>
+
+		<!-- 南昌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANCHANG" Language="zh_Hant_HK">
+			<Text>南昌</Text>
+		</Replace>
+
+		<!-- 南海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_NANHAI" Language="zh_Hant_HK">
+			<Text>南海</Text>
+		</Replace>
+
+		<!-- 右北平 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YOUBEIPING" Language="zh_Hant_HK">
+			<Text>右北平</Text>
+		</Replace>
+
+		<!-- 合浦 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEPU" Language="zh_Hant_HK">
+			<Text>合浦</Text>
+		</Replace>
+
+		<!-- 合肥 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEFEI" Language="zh_Hant_HK">
+			<Text>合肥</Text>
+		</Replace>
+
+		<!-- 夜郎 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YELANG" Language="zh_Hant_HK">
+			<Text>夜郎</Text>
+		</Replace>
+
+		<!-- 天水 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_TIANSHUI" Language="zh_Hant_HK">
+			<Text>天水</Text>
+		</Replace>
+
+		<!-- 夷陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YILING" Language="zh_Hant_HK">
+			<Text>夷陵</Text>
+		</Replace>
+
+		<!-- 安定 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANDING" Language="zh_Hant_HK">
+			<Text>安定</Text>
+		</Replace>
+
+		<!-- 安邑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ANYI" Language="zh_Hant_HK">
+			<Text>安邑</Text>
+		</Replace>
+
+		<!-- 定襄 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DINGXIANG" Language="zh_Hant_HK">
+			<Text>定襄</Text>
+		</Replace>
+
+		<!-- 宛 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WAN" Language="zh_Hant_HK">
+			<Text>宛</Text>
+		</Replace>
+
+		<!-- 寿春 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_SHOUCHUN" Language="zh_Hant_HK">
+			<Text>壽春</Text>
+		</Replace>
+
+		<!-- 小沛 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIAOPEI" Language="zh_Hant_HK">
+			<Text>小沛</Text>
+		</Replace>
+
+		<!-- 常山 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGSHAN" Language="zh_Hant_HK">
+			<Text>常山</Text>
+		</Replace>
+
+		<!-- 平原 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_PINGYUAN" Language="zh_Hant_HK">
+			<Text>平原</Text>
+		</Replace>
+
+		<!-- 广陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_GUANGLING" Language="zh_Hant_HK">
+			<Text>廣陵</Text>
+		</Replace>
+
+		<!-- 庐江 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUJIANG" Language="zh_Hant_HK">
+			<Text>廬江</Text>
+		</Replace>
+
+		<!-- 延津 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANJIN" Language="zh_Hant_HK">
+			<Text>延津</Text>
+		</Replace>
+
+		<!-- 建宁 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANNING" Language="zh_Hant_HK">
+			<Text>建寧</Text>
+		</Replace>
+
+		<!-- 建安 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANAN" Language="zh_Hant_HK">
+			<Text>建安</Text>
+		</Replace>
+
+		<!-- 张掖 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHANGYE" Language="zh_Hant_HK">
+			<Text>張掖</Text>
+		</Replace>
+
+		<!-- 徼外夜郎 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIAOWAIYELANG" Language="zh_Hant_HK">
+			<Text>徼外夜郎</Text>
+		</Replace>
+
+		<!-- 成都 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGDU" Language="zh_Hant_HK">
+			<Text>成都</Text>
+		</Replace>
+
+		<!-- 敦煌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_DUNHUANG" Language="zh_Hant_HK">
+			<Text>敦煌</Text>
+		</Replace>
+
+		<!-- 新野 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XINYE" Language="zh_Hant_HK">
+			<Text>新野</Text>
+		</Replace>
+
+		<!-- 易京 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YIJING" Language="zh_Hant_HK">
+			<Text>易京</Text>
+		</Replace>
+
+		<!-- 晋阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINYANG" Language="zh_Hant_HK">
+			<Text>晉陽</Text>
+		</Replace>
+
+		<!-- 曲阿 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_QUA" Language="zh_Hant_HK">
+			<Text>曲阿</Text>
+		</Replace>
+
+		<!-- 朱提 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUYI" Language="zh_Hant_HK">
+			<Text>朱提</Text>
+		</Replace>
+
+		<!-- 柴桑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHAISANG" Language="zh_Hant_HK">
+			<Text>柴桑</Text>
+		</Replace>
+
+		<!-- 梓潼 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZITONG" Language="zh_Hant_HK">
+			<Text>梓潼</Text>
+		</Replace>
+
+		<!-- 武威 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUWEI" Language="zh_Hant_HK">
+			<Text>武威</Text>
+		</Replace>
+
+		<!-- 武都 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_WUDU" Language="zh_Hant_HK">
+			<Text>武都</Text>
+		</Replace>
+
+		<!-- 永昌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YONGCHANG" Language="zh_Hant_HK">
+			<Text>永昌</Text>
+		</Replace>
+
+		<!-- 汉中 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANZHONG" Language="zh_Hant_HK">
+			<Text>漢中</Text>
+		</Replace>
+
+		<!-- 汉嘉 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HANJIA" Language="zh_Hant_HK">
+			<Text>漢嘉</Text>
+		</Replace>
+
+		<!-- 汝阴 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_RUYIN" Language="zh_Hant_HK">
+			<Text>汝陰</Text>
+		</Replace>
+
+		<!-- 江州 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGZHOU" Language="zh_Hant_HK">
+			<Text>江州</Text>
+		</Replace>
+
+		<!-- 江阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGYANG" Language="zh_Hant_HK">
+			<Text>江陽</Text>
+		</Replace>
+
+		<!-- 江陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIANGLING" Language="zh_Hant_HK">
+			<Text>江陵</Text>
+		</Replace>
+
+		<!-- 沓中 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_TAZHONG" Language="zh_Hant_HK">
+			<Text>沓中</Text>
+		</Replace>
+
+		<!-- 河间 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HEJIAN" Language="zh_Hant_HK">
+			<Text>河間</Text>
+		</Replace>
+
+		<!-- 洛阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LUOYANG" Language="zh_Hant_HK">
+			<Text>洛陽</Text>
+		</Replace>
+
+		<!-- 济南 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JINAN" Language="zh_Hant_HK">
+			<Text>濟南</Text>
+		</Replace>
+
+		<!-- 涿 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_ZHUO" Language="zh_Hant_HK">
+			<Text>涿</Text>
+		</Replace>
+
+		<!-- 淮阴 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_HUAIYIN" Language="zh_Hant_HK">
+			<Text>淮陰</Text>
+		</Replace>
+
+		<!-- 渔阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUYANG" Language="zh_Hant_HK">
+			<Text>漁陽</Text>
+		</Replace>
+
+		<!-- 渤海 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_BOHAI" Language="zh_Hant_HK">
+			<Text>渤海</Text>
+		</Replace>
+
+		<!-- 潼关 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_TONGGUAN" Language="zh_Hant_HK">
+			<Text>潼關</Text>
+		</Replace>
+
+		<!-- 濮阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_PUYANG" Language="zh_Hant_HK">
+			<Text>濮陽</Text>
+		</Replace>
+
+		<!-- 牛渚 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_NIUZHU" Language="zh_Hant_HK">
+			<Text>牛渚</Text>
+		</Replace>
+
+		<!-- 琅琊 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGYA" Language="zh_Hant_HK">
+			<Text>琅琊</Text>
+		</Replace>
+
+		<!-- 白帝城 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_BAIDICHENG" Language="zh_Hant_HK">
+			<Text>白帝城</Text>
+		</Replace>
+
+		<!-- 秣陵 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_MOLING" Language="zh_Hant_HK">
+			<Text>秣陵</Text>
+		</Replace>
+
+		<!-- 襄阳 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIANGYANG" Language="zh_Hant_HK">
+			<Text>襄陽</Text>
+		</Replace>
+
+		<!-- 西城 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XICHENG" Language="zh_Hant_HK">
+			<Text>西城</Text>
+		</Replace>
+
+		<!-- 西平 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIPING" Language="zh_Hant_HK">
+			<Text>西平</Text>
+		</Replace>
+
+		<!-- 西羌 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIQIANG" Language="zh_Hant_HK">
+			<Text>西羌</Text>
+		</Replace>
+
+		<!-- 西部鲜卑 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XIBUXIANBEI" Language="zh_Hant_HK">
+			<Text>西部鮮卑</Text>
+		</Replace>
+
+		<!-- 许 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_XU" Language="zh_Hant_HK">
+			<Text>許</Text>
+		</Replace>
+
+		<!-- 谯 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_QIAO" Language="zh_Hant_HK">
+			<Text>譙</Text>
+		</Replace>
+
+		<!-- 赤壁 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHIBI" Language="zh_Hant_HK">
+			<Text>赤壁</Text>
+		</Replace>
+
+		<!-- 越嵩 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YUESONG" Language="zh_Hant_HK">
+			<Text>越嵩</Text>
+		</Replace>
+
+		<!-- 辽东 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAODONG" Language="zh_Hant_HK">
+			<Text>遼東</Text>
+		</Replace>
+
+		<!-- 辽西 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LIAOXI" Language="zh_Hant_HK">
+			<Text>遼西</Text>
+		</Replace>
+
+		<!-- 邺 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YE" Language="zh_Hant_HK">
+			<Text>鄴</Text>
+		</Replace>
+
+		<!-- 鄄城 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JUANCHENG" Language="zh_Hant_HK">
+			<Text>鄄城</Text>
+		</Replace>
+
+		<!-- 酒泉 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_JIUQUAN" Language="zh_Hant_HK">
+			<Text>酒泉</Text>
+		</Replace>
+
+		<!-- 长安 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHANGAN" Language="zh_Hant_HK">
+			<Text>長安</Text>
+		</Replace>
+
+		<!-- 阆中 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_LANGZHONG" Language="zh_Hant_HK">
+			<Text>閬中</Text>
+		</Replace>
+
+		<!-- 阴晋 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YINJIN" Language="zh_Hant_HK">
+			<Text>陰晉</Text>
+		</Replace>
+
+		<!-- 陈仓 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_CHENGCANG" Language="zh_Hant_HK">
+			<Text>陳倉</Text>
+		</Replace>
+
+		<!-- 雁门 -->
+		<Replace Tag="LOC_NEA_SR_SANGUO_YANMEN" Language="zh_Hant_HK">
+			<Text>雁門</Text>
+		</Replace>
+	</LocalizedText>
+
+</GameData>

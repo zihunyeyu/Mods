@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- TEXT02 -->
+<!-- Author: hnoyy -->
+<!-- DateCreated: 10/5/2025 10:59:38 PM -->
+<GameData>
+
+	<LocalizedText>
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_NAME" Language="en_US">
+			<Text>Wuxi Babarian</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_NAME" Language="zh_Hans_CN">
+			<Text>五溪蛮</Text>
+		</Replace>
+
+		<Replace Tag="LOC_NEAMAP_SR_SANGUO_01_NAME" Language="zh_Hant_HK">
+			<Text>五溪蛮</Text>
+		</Replace>
+
+
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_NAME" Language="en_US">
+			<Text>Wuxi Babarian</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_NAME" Language="zh_Hans_CN">
+			<Text>五溪蛮</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_NAME" Language="zh_Hant_HK">
+			<Text>五溪蛮</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_YONGBAO_NAME" Language="en_US">
+			<Text>Wuxi Babarian Suzerain Bonus</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_YONGBAO_NAME" Language="zh_Hans_CN">
+			<Text>五溪蛮宗主国加成</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_MODIF_NEA_CITISTATE_YONGBAO_LEVY_STRENGTH_DESCRIPTION"  Language="en_US">
+			<Text>If you Levy troops from a City-State receive 1 [ICON_ENVOY] Envoys with that City-State. All units +2 [ICON_Strength] Combat Strength for each adjacent Levied unit.</Text>
+		</Replace>
+
+		<Replace Tag="LOC_MODIF_NEA_CITISTATE_YONGBAO_LEVY_STRENGTH_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>征集城邦军队时可在该城邦增加1名 [ICON_ENVOY] 使者。每个征集单位为相邻单位提供+3 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_YONGBAO_DESCRIPTION" Language="en_US">
+			<Text> If you Levy troops from a City-State receive 1 [ICON_ENVOY] Envoys with that City-State. All units +2 [ICON_Strength] Combat Strength for each adjacent Levied unit. </Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_YONGBAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>征集城邦军队时可在该城邦增加1名 [ICON_ENVOY] 使者。每个征集单位为相邻单位提供+3 [ICON_Strength] 战斗力。</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_ADJECTIVE" Language="en_US">
+			<Text>Wuxi Babarian</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>五溪蛮的</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_DESCRIPTION" Language="en_US">
+			<Text>Wuxi Babarian city-state</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YONGBAO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>五溪蛮城邦</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_YONGBAO" Language="en_US">
+			<Text>Wuxi Babarian</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_YONGBAO" Language="zh_Hans_CN">
+			<Text>五溪蛮</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_GUSILUO_NAME" Language="en_US">
+			<Text>Western Qiang</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_GUSILUO_NAME" Language="zh_Hans_CN">
+			<Text>西羌</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_GUSILUO_NAME" Language="en_US">
+			<Text>Western Qiang Suzerain Bonus</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_GUSILUO_NAME" Language="zh_Hans_CN">
+			<Text>西羌宗主国加成</Text>
+		</Replace>
+
+
+	
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_GUSILUO_ADJECTIVE" Language="en_US">
+			<Text>Western Qiang</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_GUSILUO_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>西羌的</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_GUSILUO_DESCRIPTION" Language="en_US">
+			<Text>Western Qiang city-state</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_GUSILUO_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>西羌城邦</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_GUSILUO" Language="en_US">
+			<Text>Western Qiang</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_GUSILUO" Language="zh_Hans_CN">
+			<Text>西羌</Text>
+		</Replace>
+
+
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_HAIYANGJURCHEN_NAME" Language="en_US">
+			<Text>Yilou</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_HAIYANGJURCHEN_NAME" Language="zh_Hans_CN">
+			<Text>挹娄</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_HAIYANGJURCHEN_NAME" Language="en_US">
+			<Text>Yilou Suzerain Bonus</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_HAIYANGJURCHEN_NAME" Language="zh_Hans_CN">
+			<Text>挹娄宗主国加成</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_HAIYANGJURCHEN_DESCRIPTION" Language="en_US">
+			<Text>
+				All naval units can do coastal raiding. Coastal raiding cost no [ICON_MOVEMENT]movement and gain additional 50 [ICON_GOLD] gold.
+			</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_HAIYANGJURCHEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				所有海军单位可以发动海岸突袭。海岸突袭不消耗[ICON_MOVEMENT]移动力 且额外产出50[ICON_GOLD]金币
+			</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_HAIYANGJURCHEN_ADJECTIVE" Language="en_US">
+			<Text>Yilou</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_HAIYANGJURCHEN_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>挹娄的</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_HAIYANGJURCHEN_DESCRIPTION" Language="en_US">
+			<Text>Yilou city-state</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_HAIYANGJURCHEN_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>挹娄城邦</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_HAIYANGJURCHEN" Language="en_US">
+			<Text>HAIYANG JURCHEN</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_HAIYANGJURCHEN" Language="zh_Hans_CN">
+			<Text>挹娄</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_ABILITY_NEA_HAIYANGJURCHEN_NAVAL_COASTAL_RAID_NAME" Language="en_US">
+			<Text>  </Text>
+		</Replace>
+
+		<Replace Tag="LOC_ABILITY_NEA_HAIYANGJURCHEN_NAVAL_COASTAL_RAID_NAME" Language="zh_Hans_CN">
+			<Text>  </Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_ABILITY_NEA_HAIYANGJURCHEN_NAVAL_COASTAL_RAID_DESCRIPTION" Language="en_US">
+			<Text>  </Text>
+		</Replace>
+
+		<Replace Tag="LOC_ABILITY_NEA_HAIYANGJURCHEN_NAVAL_COASTAL_RAID_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>  </Text>
+		</Replace>
+
+
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_BOZHOU_NAME" Language="en_US">
+			<Text>Cong</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_BOZHOU_NAME" Language="zh_Hans_CN">
+			<Text>賨</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_BOZHOU_NAME" Language="en_US">
+			<Text>Cong Suzerain Bonus</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_BOZHOU_NAME" Language="zh_Hans_CN">
+			<Text>賨宗主国加成</Text>
+		</Replace>
+
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_BOZHOU_ADJECTIVE" Language="en_US">
+			<Text>Cong</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_BOZHOU_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>賨的</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_BOZHOU_DESCRIPTION" Language="en_US">
+			<Text>Cong city-state</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_BOZHOU_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>賨城邦</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_BOZHOU" Language="en_US">
+			<Text>Cong</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_BOZHOU" Language="zh_Hans_CN">
+			<Text>賨</Text>
+		</Replace>
+
+
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YUEZHI_NAME" Language="en_US">
+			<Text>Lushuihu</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YUEZHI_NAME" Language="zh_Hans_CN">
+			<Text>卢水胡</Text>
+		</Replace>
+
+
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_YUEZHI_NAME" Language="en_US">
+			<Text>Lushuihu Suzerain Bonus</Text>
+		</Replace>
+
+		<Replace Tag="LOC_LEADER_TRAIT_NEA_CITYSTATE_YUEZHI_NAME" Language="zh_Hans_CN">
+			<Text>卢水胡宗主国加成</Text>
+		</Replace>
+
+
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YUEZHI_ADJECTIVE" Language="en_US">
+			<Text>Lushuihu</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YUEZHI_ADJECTIVE" Language="zh_Hans_CN">
+			<Text>卢水胡的</Text>
+		</Replace>
+
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YUEZHI_DESCRIPTION" Language="en_US">
+			<Text>Lushuihu city-state</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CIVILIZATION_NEA_CITYSTATE_YUEZHI_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>卢水胡城邦</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_YUEZHI" Language="en_US">
+			<Text>Lushuihu</Text>
+		</Replace>
+
+		<Replace Tag="LOC_CITY_NAME_NEA_CITYSTATE_YUEZHI" Language="zh_Hans_CN">
+			<Text>卢水胡</Text>
+		</Replace>
+	</LocalizedText>
+
+
+
+</GameData>

@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- GameData1 -->
+<!-- Author: hnoyy -->
+<!-- DateCreated: 7/21/2025 8:07:49 PM -->
+<GameData>
+
+
+
+	<GlobalParameters>
+		<Update>
+			<Where Name="CITY_MIN_RANGE"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
+			<Where Name="CAPITAL_IDENTITY_PRESSURE_TILE_RADIUS_MAXIUMUM_BASE"/>
+			<Set Value="10"/>
+		</Update>
+
+		<Update>
+			<Where Name="CITIZEN_IDENTITY_PRESSURE_RADIUS_CUTOFF"/>
+			<Set Value="10"/>
+		</Update>
+		
+
+	</GlobalParameters>
+
+
+
+
+
+	<GlobalParameters>
+
+
+
+		<Update>
+			<Where Name="TECH_COST_PERCENT_CHANGE_AFTER_GAME_ERA"/>
+			<Set Value="28"/>
+		</Update>
+
+		<Update>
+			<Where Name="CIVIC_COST_PERCENT_CHANGE_AFTER_GAME_ERA"/>
+			<Set Value="28"/>
+		</Update>
+
+		<Update>
+			<Where Name="COMBAT_KEEP_ALL_CITIES_ON_CAPTURE"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
+			<Where Name="COMBAT_RAZE_ANY_CITY"/>
+			<Set Value="0"/>
+		</Update>
+
+		<Update>
+			<Where Name="DIPLOMACY_WAR_MIN_TURNS"/>
+			<Set Value="13"/>
+		</Update>
+
+		<Update>
+			<Where Name="DIPLOMACY_DECLARED_FRIENDSHIP_TIME_LIMIT"/>
+			<Set Value="15"/>
+		</Update>
+
+		<Update>
+			<Where Name="DIPLOMACY_ALLIANCE_TIME_LIMIT"/>
+			<Set Value="15"/>
+		</Update>
+
+
+		<Update>
+			<Where Name="TOURISM_ADVANCED_ERA_WONDER"/>
+			<Set Value="3"/>
+		</Update>
+
+		<Update>
+			<Where Name="WAR_WEARINESS_PER_COMBAT_IN_ALLIED_LANDS"/>
+			<Set Value="2"/>
+		</Update>
+
+		<Update>
+			<Where Name="WAR_WEARINESS_PER_COMBAT_IN_FOREIGN_LANDS"/>
+			<Set Value="2"/>
+		</Update>
+
+		<Update>
+			<Where Name="WAR_WEARINESS_POINTS_FOR_AMENITY_LOSS"/>
+			<Set Value="250"/>
+		</Update>
+
+		<Update>
+			<Where Name="WAR_WEARINESS_PER_UNIT_KILLED"/>
+			<Set Value="6"/>
+		</Update>
+
+		<Update>
+			<Where Name="WAR_WEARINESS_DECAY_TURN_AT_WAR"/>
+			<Set Value="100"/>
+		</Update>
+
+
+		<Update>
+			<Where Name="WAR_WEARINESS_DECAY_TURN_AT_PEACE"/>
+			<Set Value="600"/>
+		</Update>
+
+		<Update>
+			<Where Name="WAR_WEARINESS_DECAY_PEACE_DECLARED"/>
+			<Set Value="8000"/>
+		</Update>
+
+		<Update>
+			<Where Name="WORLD_CONGRESS_INITIAL_ERA"/>
+			<Set Value="1"/>
+		</Update>
+
+		<Update>
+			<Where Name="WORLD_CONGRESS_MAX_TIME_BETWEEN_MEETINGS"/>
+			<Set Value="15"/>
+		</Update>
+
+		<Update>
+			<Where Name="WORLD_CONGRESS_MIN_TIME_BETWEEN_SPECIAL_SESSIONS"/>
+			<Set Value="8"/>
+		</Update>
+	</GlobalParameters>
+
+
+	<CivicModifiers>
+
+		<Row>
+			<CivicType>CIVIC_CODE_OF_LAWS</CivicType>
+			<ModifierId>MODIF_NEA_SRSANGUO_CITY_IDENTITY</ModifierId>
+		</Row>
+
+		<Row>
+			<CivicType>CIVIC_CODE_OF_LAWS</CivicType>
+			<ModifierId>MODIF_NEA_SRSANGUO_CITY_AMENITY</ModifierId>
+		</Row>
+		<!--<Row>
+			<CivicType>CIVIC_CODE_OF_LAWS</CivicType>
+			<ModifierId>MODIF_NEA_FERRY_GRANT_INGORE_SHORES_ABILITY</ModifierId>
+		</Row>-->
+
+
+
+		<!--<Row>
+			<CivicType>CIVIC_CODE_OF_LAWS</CivicType>
+			<ModifierId>MODIF_NEA_FERRY_INGORE_SHORES</ModifierId>
+		</Row>-->
+
+	</CivicModifiers>
+
+	<Units>
+		<Update>
+			<Where UnitType="UNIT_SETTLER"/>
+			<Set ObsoleteTech="TECH_WRITING"/>
+		</Update>
+		<Update>
+			<Where UnitType="UNIT_HEAVY_CHARIOT"/>
+			<Set Combat="32"/>
+		</Update>
+
+		<Update>
+			<Where UnitType="UNIT_PHANTA_NANZHONG_WAR_ELEPHANT"/>
+			<Set BaseMoves="3"/>
+		</Update>
+
+		
+
+	</Units>
+
+
+	<DiplomaticActions>
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_ALLIANCE_RESEARCH"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS" TargetPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_ALLIANCE_MILITARY"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS" TargetPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_ALLIANCE_ECONOMIC"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS" TargetPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_ALLIANCE_CULTURAL"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS" TargetPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_ALLIANCE_RELIGIOUS"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS" TargetPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_RENEW_ALLIANCE"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS" TargetPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+		<Update>
+			<Where DiplomaticActionType="DIPLOACTION_DECLARE_TERRITORIAL_WAR"/>
+			<Set InitiatorPrereqCivic="CIVIC_CODE_OF_LAWS"/>
+		</Update>
+
+	</DiplomaticActions>
+
+	<Districts>
+
+		<Update>
+			<Where DistrictType="DISTRICT_DAM"  />
+			<Set PrereqTech="TECH_ENGINEERING"/>
+		</Update>
+
+		<Update>
+			<Where DistrictType="DISTRICT_CANAL"  />
+			<Set PrereqTech="TECH_ENGINEERING"/>
+		</Update>
+
+	</Districts>
+
+
+	<Modifiers>
+		<Row>
+			<ModifierId>MODIF_NEA_SRSANGUO_CITY_IDENTITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_IDENTITY_PER_TURN</ModifierType>
+		</Row>
+
+		<Row>
+			<ModifierId>MODIF_NEA_SRSANGUO_CITY_AMENITY</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_CITIES_ADJUST_TRAIT_AMENITY</ModifierType>
+		</Row>
+
+	</Modifiers>
+
+
+	<ModifierArguments>
+
+		<Row>
+			<ModifierId>MODIF_NEA_SRSANGUO_CITY_IDENTITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>25</Value>
+		</Row>
+
+
+		<Row>
+			<ModifierId>MODIF_NEA_SRSANGUO_CITY_AMENITY</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+	</ModifierArguments>
+
+	<CityNames>
+		<Delete CivilizationType="CIVILIZATION_CHINA"/>
+		<Delete CivilizationType="CIVILIZATION_PHANTA_XIONGNU"/>
+		<Delete />
+		<Row>
+			<CivilizationType>CIVILIZATION_VIETNAM</CivilizationType>
+			<CityName>LOC_NEA_SRSANGUO_NEWCITY_02</CityName>
+			<ID>66623</ID>
+		</Row>
+		
+		<Row>
+			<CivilizationType>CIVILIZATION_CHINA</CivilizationType>
+			<CityName>LOC_NEA_SRSANGUO_NEWCITY_02</CityName>
+			<ID>66622</ID>
+		</Row>
+
+<!--		<Row>
+			<CivilizationType>CIVILIZATION_PHANTA_XIONGNU</CivilizationType>
+			<CityName>LOC_NEA_SRSANGUO_NEWCITY</CityName>
+			<ID>66621</ID>
+		</Row>	-->
+
+
+	</CityNames>
+
+	<Units>
+
+		<Update>
+			<Where UnitType="UNIT_PHANTA_XIONGNU_STRINGDRAWER"/>
+			<Set Range="1"/>
+		</Update>
+
+		<Update>
+			<Where UnitType="UNIT_PHANTA_HUFU_HORSE_ARCHER"/>
+			<Set Range="1"/>
+		</Update>
+
+	</Units>
+
+	<Building_YieldChanges>
+
+		<!-- <Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<YieldType>YIELD_PRODUCTION</YieldType>
+			<YieldChange>30</YieldChange>
+		</Row>-->
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_PRODUCTION"/>
+			<Set YieldChange="10"/>
+		</Update>
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_SCIENCE"/>
+			<Set YieldChange="10"/>
+		</Update>
+
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_CULTURE"/>
+			<Set YieldChange="10"/>
+		</Update>
+
+
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_FOOD"/>
+			<Set YieldChange="10"/>
+		</Update>
+
+		<Update>
+			<Where BuildingType="BUILDING_PALACE" YieldType="YIELD_GOLD"/>
+			<Set YieldChange="20"/>
+		</Update>
+
+	</Building_YieldChanges>
+
+
+
+	<StartEras>
+		<Update>
+			<Where EraType="ERA_CLASSICAL"/>
+			<Set>
+				<Faith>0</Faith>
+				<Year>194</Year>
+				<FirstTurnCivicChange>0</FirstTurnCivicChange>
+				<ProductionRate>0</ProductionRate>
+				<StartingAmenitiesCapital>2</StartingAmenitiesCapital>
+				<StartingHousingCapital>10</StartingHousingCapital>
+				<StartingHousingOtherCities>10</StartingHousingOtherCities>
+				<StartingRangedStrengthMajor>25</StartingRangedStrengthMajor>
+				<StartingRangedStrengthMinor>25</StartingRangedStrengthMinor>
+				<Tiles>0</Tiles>
+				<StartingPopulationCapital>1</StartingPopulationCapital>
+				<StartingPopulationOtherCities>1</StartingPopulationOtherCities>
+			</Set>
+		</Update>
+	</StartEras>
+
+
+	<GameSpeed_Turns>
+		<Delete/>
+		<Row>
+			<GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>
+			<MonthIncrement>2796</MonthIncrement>
+			<TurnsPerIncrement>18</TurnsPerIncrement>
+		</Row>
+		<!--<Row>
+			<GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>
+			<MonthIncrement>300</MonthIncrement>
+			<TurnsPerIncrement>50</TurnsPerIncrement>
+		</Row>-->
+
+		<Row>
+			<GameSpeedType>GAMESPEED_STANDARD</GameSpeedType>
+			<MonthIncrement>1</MonthIncrement>
+			<TurnsPerIncrement>300</TurnsPerIncrement>
+		</Row>
+	</GameSpeed_Turns>
+
+	<StartingGovernments>
+
+		<Update>
+			<Set Change="1" />
+		</Update>
+	</StartingGovernments>
+
+	<Unit_BuildingPrereqs>
+		<Delete Unit="UNIT_MILITARY_ENGINEER"/>
+
+
+	</Unit_BuildingPrereqs>
+
+	<Buildings>
+		<Update>
+			<Where BuildingType="BUILDING_WALLS"/>
+			<Set OuterDefenseHitPoints="150" OuterDefenseStrength="3"/>
+		</Update>
+
+		<Update>
+			<Where BuildingType="BUILDING_CASTLE"/>
+			<Set OuterDefenseHitPoints="300" OuterDefenseStrength="6"/>
+		</Update>
+
+		<Update>
+			<Where BuildingType="BUILDING_STAR_FORT"/>
+			<Set OuterDefenseHitPoints="500" OuterDefenseStrength="9"/>
+		</Update>
+	</Buildings>
+
+	<StartingBoostedTechnologies>
+		<Delete Era="ERA_CLASSICAL"/>
+
+	</StartingBoostedTechnologies>
+
+	<StartingBoostedCivics>
+		<Delete Era="ERA_CLASSICAL"/>
+
+	</StartingBoostedCivics>
+
+	<BuildingModifiers>
+
+		<!---->
+		<Row>
+			<BuildingType>BUILDING_PALACE</BuildingType>
+			<ModifierId>MODIF_NEA_SRSANGUO_INFLUENCE_TOKEN</ModifierId>
+		</Row>
+
+
+	</BuildingModifiers>
+
+
+	<Modifiers>
+		<Row>
+			<ModifierId>MODIF_NEA_SRSANGUO_INFLUENCE_TOKEN</ModifierId>
+			<ModifierType>MODIFIER_PLAYER_GRANT_INFLUENCE_TOKEN</ModifierType>
+		</Row>
+
+
+	</Modifiers>
+
+
+	<ModifierArguments>
+
+		<Row>
+			<ModifierId>MODIF_NEA_SRSANGUO_INFLUENCE_TOKEN</ModifierId>
+			<Name>Amount</Name>
+			<Value>3</Value>
+		</Row>
+
+	</ModifierArguments>
+
+
+	<Boosts>
+
+		<Update>
+			<Where TechnologyType="TECH_HORSEBACK_RIDING" />
+			<Set NumItems="4" TriggerDescription="LOC_BOOST_TRIGGER_NEA_HORSEBACK_RIDING" Boost="20" />
+		</Update>
+
+		<Update>
+			<Where Boost="40" />
+			<Set  Boost="20" />
+		</Update>
+	</Boosts>
+
+
+</GameData>

@@ -1,0 +1,265 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!-- Config -->
+<!-- Author: hnoyy -->
+<!-- DateCreated: 6/15/2025 11:14:14 AM -->
+<GameData>
+
+
+
+	<Maps>
+
+		<!--<Row Domain="Maps:Expansion2Maps" File="{9eb62bc8-0734-45b4-a852-1cc9068c5aac}NEA_ceshi0___.Civ6Map" Name="LOC_MAP_TSLEAST_ASIA_STANDARD_NAME324" Description="LOC_MAP_TSLEAST_ASIA_STANDARD_DESCRIPTION234" StaticMap="0" Image="Map_TrueStartEastAsia"  SortIndex="622"/>-->
+
+
+		<Row Domain="Maps:Expansion2Maps" File="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" Name="LOC_NEAMAP_SR_SANGUO_01_NAME" Description="LOC_NEAMAP_SR_SANGUO_01_DESCRIPTION" StaticMap="1" Image="Map_EastAsia" SortIndex="321"/>
+
+		<Row Domain="Maps:Expansion2Maps" File="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" Name="LOC_NEAMAP_SR_SANGUO_02_NAME" Description="LOC_NEAMAP_SR_SANGUO_02_DESCRIPTION" StaticMap="1" Image="Map_EastAsia" SortIndex="322"/>
+
+		<Row Domain="Maps:Expansion2Maps" File="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" Name="LOC_NEAMAP_SR_SANGUO_PLUS_01_NAME" Description="LOC_NEAMAP_SR_SANGUO_PLUS_01_DESCRIPTION" StaticMap="1" Image="Map_EastAsia" SortIndex="321"/>
+
+		<!--<Row Domain="Maps:Expansion2Maps" File="{4566d0c7-a5f1-419c-a9d9-494641197e2f}NEA_SR_WW2_FE_1948.Civ6Map" Name="LOC_NEAMAP_SR_WW2_FE_1948_NAME" Description="LOC_NEAMAP_SR_WW2_FE_1948_DESCRIPTION" StaticMap="1" Image="Map_EastAsia" SortIndex="621"/>-->
+
+	</Maps>
+
+
+	<MapLeaders>
+		
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_LADY_TRIEU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_CAO_CAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_GONGSUN_DU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_GONGSUN_ZAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_KONG_RONG"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_BEI"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_BIAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_YAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_YAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_LV_BU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_MA_TENG"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_MENG_HUO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_SHI_XIE"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_SUN_CE"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_TAO_QIAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_YUAN_SHAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_YUAN_SHU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="LEADER_PHANTA_ZHANG_LU"/>
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" LeaderType="RANDOM"/>
+
+	</MapLeaders>
+
+
+
+
+	<MapDomainOverrides>
+		<!--未知-->
+		
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="MapSize" Domain="NEA_SR_SANGUO_01_MapSize"/>
+
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="GameStartEra" Domain="NEA_SR_SANGUO_01_Era"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="GameSpeeds" Domain="NEA_SR_SANGUO_01_GameSpeeds"/>
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="StartPosition" Domain="NEA_StartPosition"/>
+
+
+
+
+	</MapDomainOverrides>
+
+
+	<MapSizes>
+		<!--<Row Domain="NEA_SR_SANGUO_01_MapSize" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="11" MaxPlayers="12" DefaultPlayers="11" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="10"/>-->
+
+		<Row Domain="NEA_SR_SANGUO_01_MapSize" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="18" MaxPlayers="19" DefaultPlayers="18" MinCityStates="40" MaxCityStates="40" DefaultCityStates="40" SortIndex="10"/>
+		
+
+	</MapSizes>
+
+
+
+
+
+	
+
+
+	<Eras>
+		<Row Domain="NEA_SR_SANGUO_01_Era" EraType="ERA_CLASSICAL" Name="LOC_ERA_CLASSICAL_NAME" Description="LOC_ERA_CLASSICAL_DESCRIPTION" SortIndex="8"/>
+	</Eras>
+	<GameSpeeds>
+		<Row Domain="NEA_SR_SANGUO_01_GameSpeeds" GameSpeedType="GAMESPEED_STANDARD" Name="LOC_GAMESPEED_STANDARD_NAME" Description="LOC_GAMESPEED_STANDARD_HELP" SortIndex="8"/>
+	</GameSpeeds>
+
+
+
+
+
+
+	<MapLeaders>
+
+		<!--<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_LADY_TRIEU"/>-->
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_CAO_CAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_GONGSUN_DU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_GONGSUN_ZAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_KONG_RONG"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_BEI"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_BIAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_YAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_MA_TENG"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_MENG_HUO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_SHI_XIE"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_SUN_CE"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_TAO_QIAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_YUAN_SHAO"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_YUAN_SHU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_ZHANG_LU"/>
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_SUN_JIAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_ZHANG_JUE"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_LIU_YU_TK"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_SUN_QUAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="LEADER_PHANTA_DONG_ZHUO"/>
+
+		
+		
+		
+		
+		
+
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" LeaderType="RANDOM"/>
+
+	</MapLeaders>
+
+
+
+
+	<MapDomainOverrides>
+		<!--未知-->
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" ParameterId="MapSize" Domain="NEA_SR_SANGUO_PLUS_01_MapSize"/>
+
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" ParameterId="GameStartEra" Domain="NEA_SR_SANGUO_PLUS_01_Era"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" ParameterId="GameSpeeds" Domain="NEA_SR_SANGUO_PLUS_01_GameSpeeds"/>
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" ParameterId="StartPosition" Domain="NEA_StartPosition"/>
+
+
+
+
+	</MapDomainOverrides>
+
+
+	<MapSizes>
+		<!--<Row Domain="NEA_SR_SANGUO_PLUS_01_MapSize" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="11" MaxPlayers="12" DefaultPlayers="11" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="10"/>-->
+
+		<Row Domain="NEA_SR_SANGUO_PLUS_01_MapSize" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="20" MaxPlayers="20" DefaultPlayers="20" MinCityStates="42" MaxCityStates="42" DefaultCityStates="42" SortIndex="10"/>
+
+
+	</MapSizes>
+
+
+
+
+
+
+
+
+	<Eras>
+		<Row Domain="NEA_SR_SANGUO_PLUS_01_Era" EraType="ERA_CLASSICAL" Name="LOC_ERA_CLASSICAL_NAME" Description="LOC_ERA_CLASSICAL_DESCRIPTION" SortIndex="8"/>
+	</Eras>
+	<GameSpeeds>
+		<Row Domain="NEA_SR_SANGUO_PLUS_01_GameSpeeds" GameSpeedType="GAMESPEED_STANDARD" Name="LOC_GAMESPEED_STANDARD_NAME" Description="LOC_GAMESPEED_STANDARD_HELP" SortIndex="8"/>
+	</GameSpeeds>
+
+
+
+	<MapLeaders>
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_LADY_TRIEU"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_PHANTA_CAO_CAO"/>
+		
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_PHANTA_LIU_BEI"/>
+		
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_PHANTA_SUN_QUAN"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_PHANTA_SHI_XIE"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_PHANTA_GONGSUN_DU"/>
+		
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="LEADER_PHANTA_MENG_HUO"/>
+		
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" LeaderType="RANDOM"/>
+
+	</MapLeaders>
+
+
+
+
+	<MapDomainOverrides>
+		<!--未知-->
+		
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" ParameterId="MapSize" Domain="NEA_SR_SANGUO_02_MapSize"/>
+
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" ParameterId="GameStartEra" Domain="NEA_SR_SANGUO_02_Era"/>
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" ParameterId="GameSpeeds" Domain="NEA_SR_SANGUO_02_GameSpeeds"/>
+
+		<Row Map="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" ParameterId="StartPosition" Domain="NEA_StartPosition"/>
+
+
+
+
+	</MapDomainOverrides>
+
+
+	<MapSizes>
+		<!--<Row Domain="NEA_SR_SANGUO_02_MapSize" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="11" MaxPlayers="12" DefaultPlayers="11" MinCityStates="0" MaxCityStates="0" DefaultCityStates="0" SortIndex="10"/>-->
+
+		<Row Domain="NEA_SR_SANGUO_02_MapSize" MapSizeType="MAPSIZE_HUGE" Name="LOC_MAPSIZE_HUGE_NAME" Description="LOC_MAPSIZE_HUGE_DESCRIPTION" MinPlayers="7" MaxPlayers="8" DefaultPlayers="7" MinCityStates="26" MaxCityStates="26" DefaultCityStates="26" SortIndex="10"/>
+
+
+	</MapSizes>
+
+
+
+
+
+
+
+
+	<Eras>
+		<Row Domain="NEA_SR_SANGUO_02_Era" EraType="ERA_CLASSICAL" Name="LOC_ERA_CLASSICAL_NAME" Description="LOC_ERA_CLASSICAL_DESCRIPTION" SortIndex="8"/>
+	</Eras>
+	<GameSpeeds>
+		<Row Domain="NEA_SR_SANGUO_02_GameSpeeds" GameSpeedType="GAMESPEED_STANDARD" Name="LOC_GAMESPEED_STANDARD_NAME" Description="LOC_GAMESPEED_STANDARD_HELP" SortIndex="8"/>
+	</GameSpeeds>
+
+
+
+	<Parameters>
+		<Update>
+			<Where ParameterId="NoDupeCivilizations"/>
+			<Set  DefaultValue="0"/>
+		</Update>
+
+		<!--<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="GameMode_NEA_SR_SANGUO_01" Name="LOC_GAMEMODE_NEA_SR_SANGUO_01_NAME" Description="LOC_GAMEMODE_NEA_SR_SANGUO_01_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_NEA_NEA_SR_SANGUO_01" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameOptions" SortIndex="-100"/>-->
+		
+
+		<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="NEA_SR_SANGUO_01_MAP_Name" 		Name="MapName" Description="" Domain="text" DefaultValue="NEA_SR_SANGUO_01" 		ConfigurationGroup="Map" ConfigurationId="MapName" GroupId="MapOptions" Visible="0" SortIndex="5010"/>
+
+		<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_02.Civ6Map" ParameterId="NEA_SR_SANGUO_02_MAP_Name" 		Name="MapName" Description="" Domain="text" DefaultValue="NEA_SR_SANGUO_02" 		ConfigurationGroup="Map" ConfigurationId="MapName" GroupId="MapOptions" Visible="0" SortIndex="5010"/>
+
+		<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" ParameterId="NEA_SR_SANGUO_PLUS_001_MAP_Name" 		Name="MapName" Description="" Domain="text" DefaultValue="NEA_SR_SANGUO_PLUS_001" 		ConfigurationGroup="Map" ConfigurationId="MapName" GroupId="MapOptions" Visible="0" SortIndex="5010"/>
+		<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_PLUS_01.Civ6Map" ParameterId="NEA_SR_SANGUO_01_MAP_Name" 		Name="MapName" Description="" Domain="text" DefaultValue="NEA_SR_SANGUO_01" 		ConfigurationGroup="Map" ConfigurationId="MapName" GroupId="MapOptions" Visible="0" SortIndex="5010"/>
+
+		<!--<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="GameMode_NEA_SR_7676WORLD_01" Name="LOC_GAMEMODE_NEA_SR_7676WORLD_01_NAME" Description="LOC_GAMEMODE_NEA_SR_7676WORLD_01_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="GAMEMODE_NEA_SR_7676WORLD_01" NameArrayConfigurationId="GAMEMODES_ENABLED_NAMES" GroupId="GameOptions" SortIndex="-100"/>-->
+		
+
+		<!--<Row Key1="Map" Key2="{8b42df6a-b17c-4004-8df3-56aa01fe9dc1}NEA_SR_SANGUO_01.Civ6Map" ParameterId="NEA_SR_WEST_EUR_MED00_MAP_Name" 		Name="MapName" Description="" Domain="text" DefaultValue="NEA_SR_EUROSR01" 		ConfigurationGroup="Map" ConfigurationId="MapName" GroupId="MapOptions" Visible="0" SortIndex="5010"/>-->
+		
+
+
+	</Parameters>
+
+
+</GameData>

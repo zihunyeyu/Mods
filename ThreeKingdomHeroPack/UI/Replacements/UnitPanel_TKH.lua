@@ -67,10 +67,18 @@ function GetUnitActionsTable(pUnit)
                     sToolTipString = sToolTipString .. '[NEWLINE][NEWLINE]' .. helpTooltip
 
                     local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
+
                     local commandCharges = actionCharges[commandType]
                     if commandCharges then
+                        local actionMax = commandCharges[2]
+
+                        local extraActions = pUnit:GetProperty('ExtraActions') or {}
+                        if extraActions[commandType] and extraActions[commandType][1] == EXTRA_ACTION_TYPE.MAX then
+                            actionMax = actionMax + extraActions[commandType][2]
+                        end
+
                         local actionChargesTooltip = Locale.Lookup('LOC_UNITCOMMAND_LEFT_ACTION_CHARGES_HELP',
-                            commandCharges[1], commandCharges[2])
+                            commandCharges[1], actionMax)
                         sToolTipString = sToolTipString .. '[NEWLINE][NEWLINE]' .. actionChargesTooltip
                     end
                 end
@@ -149,7 +157,6 @@ function ReadUnitData(unit)
 
     return kSubjectData
 end
-
 
 -- ===========================================================================
 

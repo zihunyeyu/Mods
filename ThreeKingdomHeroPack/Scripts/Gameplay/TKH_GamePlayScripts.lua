@@ -189,6 +189,7 @@ end
 function InitializeGreatCity()
     -- print('InitializeGreatCity..............')
     local InitializeGreatCityFlag = Game:GetProperty('InitializeGreatCity') or 0
+    -- local InitializeGreatCityFlag = Game:GetProperty('InitializeGreatCity') or 0
     if InitializeGreatCityFlag == 0 then
         local pAllPlayerIDs = PlayerManager.GetAliveIDs()
         for _, pPlyerID in ipairs(pAllPlayerIDs) do
@@ -197,13 +198,48 @@ function InitializeGreatCity()
                 local cities = player:GetCities()
                 for _, city in cities:Members() do
                     RegisteGreatCity(pPlyerID, city:GetID())
+                    SummonSHero(pPlyerID, city:GetID())
                 end
             end
         end
-
+        Game:SetProperty('InitializeShero', 1)
         Game:SetProperty('InitializeGreatCity', 1)
     else
         Events.TurnEnd.Remove(InitializeGreatCity)
+    end
+end
+
+function SummonSHero(playerID, cityID)
+    local city = CityManager.GetCity(playerID, cityID)
+    local player = Players[playerID]
+    if city then
+        local cityName = Locale.Lookup(city:GetName())
+        local s_heroes = S_HERO_SUMMON_CITY[cityName]
+        if s_heroes then
+            if type(s_heroes) == 'string' then
+                local summoned = Game:GetProperty('SUMMONED_' .. s_heroes)
+                if not summoned then
+                    local cUnit = UnitManager.InitUnit(playerID, s_heroes, city:GetX(), city:GetY())
+                    if cUnit and not player:IsHuman() then
+                        cUnit:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION)
+                    end
+
+                    Game:SetProperty('SUMMONED_' .. s_heroes, true)
+                end
+            elseif type(s_heroes) == 'table' then
+                for _, sType in ipairs(s_heroes) do
+                    local summoned = Game:GetProperty('SUMMONED_' .. sType)
+                    if not summoned then
+                        local cUnit = UnitManager.InitUnit(playerID, sType, city:GetX(), city:GetY())
+                        if cUnit and not player:IsHuman() then
+                            cUnit:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION)
+                        end
+
+                        Game:SetProperty('SUMMONED_' .. sType, true)
+                    end
+                end
+            end
+        end
     end
 end
 
@@ -327,8 +363,8 @@ function OnUnitPromotionChanged(playerID, unitID)
                         ChangeExtraMaxArmor(pUnit, v)
                         -- 额外恢复
                     elseif k == 'EXTRA_HEAL_TURNEND' then
-                        local currentHeal = pUnit:GetProperty('EXTRA_HEAL_TURNEND') or 0
-                        pUnit:SetProperty('EXTRA_HEAL_TURNEND', currentHeal + v)
+                        local currentHeal = pUnit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0
+                        pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', currentHeal + v)
                         -- 额外攻击几率
                     elseif k == 'EXTRA_CRIT_PERCENT' then
                         -- TKH_HeroEffectHandler.lua
@@ -340,6 +376,8 @@ function OnUnitPromotionChanged(playerID, unitID)
                         local currentExtraDamage = pUnit:GetProperty('EXTRA_DAMAGE_BOUNS') or {}
                         table.insert(currentExtraDamage, v)
                         pUnit:SetProperty('EXTRA_DAMAGE_BOUNS', currentExtraDamage)
+                    elseif K == 'EXTRA_DOOGE' then
+                        pUnit:SetProperty('EXTRA_DOOGE', v)
                     end
                 end
                 break
@@ -460,7 +498,7 @@ function OnTurnEndUnitEffectHandler()
                                 TreatUnit(unit, 20)
                             end
                             if IsUnitHaveAbility(unit, 'ABILITY_UNITS_GAIN_DEBUFF_IN_MASH') then
-                                if not IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_ABILITY_TKH_EQUIPMENT_SUIT_DADI4') then
+                                if not IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_PROMOTION_TK_DUO_SI_3_5') then
                                     DamageUnit(unit, FEATURE_MASH_DAMAGE)
                                 end
                             end
@@ -469,7 +507,7 @@ function OnTurnEndUnitEffectHandler()
 
                     -- 兵营增加单位经验
                     local pPlot = Map.GetPlot(unit:GetX(), unit:GetY())
-                    if pPlot:GetOwner() == unit:GetOwner() and pPlot:GetDistrictType() == GameInfo.Districts['DISTRICT_ENCAMPMENT'].Index then
+                    if pPlot and pPlot:GetOwner() == unit:GetOwner() and GameInfo.Districts['DISTRICT_ENCAMPMENT'] and pPlot:GetDistrictType() == GameInfo.Districts['DISTRICT_ENCAMPMENT'].Index then
                         -- 兵法二十四篇
                         if player:GetProperty('PROJECT_TKH_EA_BINGFAERSHISIPIAN') then
                             unit:GetExperience():ChangeExperience(6)
@@ -722,6 +760,7 @@ function Initialize()
     Events.TurnBegin.Add(RepairCastleProject)
     Events.TurnBegin.Add(CityProductionResource)
 
+    -- Events.TurnBegin
 
     Events.TurnEnd.Add(OnTurnEndUnitEffectHandler)
 
@@ -730,6 +769,10 @@ function Initialize()
     -- Great Cities(大城市功能)
     Events.CityAddedToMap.Add(RegisteGreatCity)
     Events.CityNameChanged.Add(RegisteGreatCity)
+
+    Events.CityAddedToMap.Add(SummonSHero)
+    Events.CityNameChanged.Add(SummonSHero)
+
 
     Events.UnitPromoted.Add(OnUnitPromotionChanged)
     Events.UnitKilledInCombat.Add(OnUnitKilledInCombat)

@@ -4,3 +4,6 @@
 --------------------------------------------------------------
 
 UPDATE Units SET Combat=35 WHERE UnitType='UNIT_SPEARMAN';
+UPDATE Units SET Combat=45 WHERE UnitType='UNIT_WARRIOR_MONK';
+UPDATE Units SET RangedCombat=32 WHERE UnitType='UNIT_ARCHER';
+

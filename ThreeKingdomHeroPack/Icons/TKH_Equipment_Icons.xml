@@ -192,8 +192,8 @@
 		<Row Name="ICON_EQUIPMENT_YuanYangJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="59" />
 		<Row Name="ICON_EQUIPMENT_YuanYangNeiJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="60" />
 		<Row Name="ICON_EQUIPMENT_BaWangZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="61" />
-		<Row Name="ICON_EQUIPMENT_WuZhuiMa" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="62" />
-		<Row Name="ICON_EQUIPMENT_BaWangZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="63" />
+		<Row Name="ICON_EQUIPMENT_BaWangZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="62" />
+		<Row Name="ICON_EQUIPMENT_WuZhuiMa" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="63" />
 		<Row Name="ICON_EQUIPMENT_PiLiZhanJia" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="64" />
 		<Row Name="ICON_EQUIPMENT_PiLiJu" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="65" />
 		<Row Name="ICON_EQUIPMENT_PiLiZhanXue" Atlas="ATLAS_ICON_EQUIPMENTS_EX2" Index="66" />

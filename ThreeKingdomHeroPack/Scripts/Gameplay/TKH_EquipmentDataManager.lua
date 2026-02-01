@@ -206,8 +206,8 @@ function HeroEquipment.PutOn(self, e)
     if equipment == nil then
         return
     end
-    ChangeHeroEquipmentAbility(e, self.HeroClass, EQUIPMENT_STATUS.PUT_ON)
     self[equipment.EquipmentType] = e
+    ChangeHeroEquipmentAbility(e, self.HeroClass, EQUIPMENT_STATUS.PUT_ON)
     Save()
 end
 
@@ -791,8 +791,11 @@ function ChangeSuitAbilitySatus(pUnit, heroEquipments)
         abilities[ability] = false
     end
 
+
     for row in GameInfo.TKH_EquipmentTypes() do
         local e = heroEquipments[row.EquipmentType]
+        -- print(row.EquipmentType, ' = ', e)
+
         if e and m_EquipmentManager[e] then
             local equipment = m_EquipmentManager[e]
             if equipment.Suit then
@@ -854,7 +857,6 @@ function ChangeHeroEquipmentAbility(e, heroClassIndex, status)
     if heroName == equipmentInfo.HeroExclusive then
         changeValue = changeValue + (equipmentInfo.Parameter2 or 0)
     end
-    -- print('ChangeHeroEquipmentAbility ', e, ' ', status, ' ChangeExtraMaxArmor ', changeValue)
 
     if status == EQUIPMENT_STATUS.TAKE_OFF then
         changeValue = -1 * changeValue
@@ -925,7 +927,7 @@ function ChangeHeroUnitKPSkill(pUnit, upgradeInfo)
                     "ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_EXTRA_MOVEMENT2",
                     true)
             end
-        elseif IsInTable({ 'UNIQUE_ZHAO_YUN_HEAL', 'UNIQUE_XU_CHU', 'UNIQUE_MU_LU', 'UNIQUE_ZHOU_TAI' }, upgradeInfo.Name) then
+        elseif IsInTable({ 'UNIQUE_ZHAO_YUN_HEAL', 'UNIQUE_MU_LU', 'UNIQUE_ZHOU_TAI' }, upgradeInfo.Name) then
             pUnit:SetProperty('TKH_KILL_POINT_FINAL_SKILL_COOL_TURN', 0)
         else
             if uniqueAbility and upgradeInfo.Ability and GameInfo.UnitAbilities[upgradeInfo.Ability] then

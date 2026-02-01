@@ -14,6 +14,9 @@ m_TKH_UnitCommands = {};
 --	BASE CHECK
 -- ===========================================================================
 
+--- 检查单位命令行动点数
+---@param pUnit table
+---@param commandType string
 function CheckCommandActions(pUnit, commandType)
     local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
     local commandCharges = actionCharges[commandType]
@@ -163,7 +166,6 @@ m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.IsDisabled = function(pUnit)
     return nil;
 end
 m_TKH_UnitCommands.UNITCOMMAND_DEAL_DAMAGE_AOE.ResetDescription = function(pUnit)
-    -- return GetCommandString(GetUnitType(pUnit), 'UNITCOMMAND_CREATE_RESOURCE')
     local aoe_range = 1
     local damage = 10
     local results = DB.Query(
@@ -264,16 +266,21 @@ m_TKH_UnitCommands.UNITCOMMAND_CREATE_RESOURCE.CanUse = function(pUnit)
     return IsUnitHasCommand(pUnit, 'UNITCOMMAND_CREATE_RESOURCE') and pUnit:GetMovesRemaining() > 0
 end
 m_TKH_UnitCommands.UNITCOMMAND_CREATE_RESOURCE.IsDisabled = function(pUnit)
+
+    local plot = Map.GetPlot(pUnit:GetX(), pUnit:GetY())
+
     if not CheckCommandActions(pUnit, 'UNITCOMMAND_CREATE_RESOURCE') then
         return 'LOC_NO_ENOUGH_ACTION_CHARGES'
     end
 
-    local improvementType = Map.GetPlot(pUnit:GetX(), pUnit:GetY()):GetImprovementType()
-    if improvementType ~= -1 then
+    if plot:GetResourceType() ~= -1 then
+        return 'LOC_PLOT_HAS_RESOURCE'
+    end
+
+    if plot:GetImprovementType() ~= -1 then
         return 'LOC_PLOT_HAS_IMPROVEMENT'
     end
-    local districtType = Map.GetPlot(pUnit:GetX(), pUnit:GetY()):GetDistrictType()
-    if districtType ~= -1 then
+    if plot:GetDistrictType() ~= -1 then
         return 'LOC_PLOT_HAS_DISTRICT'
     end
     return nil;
@@ -600,13 +607,15 @@ m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.IsVisible = function(pUnit)
     -- if pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") then
     --     return true
     -- end
-    return BaseVisibleCheck(pUnit) and pUnit:GetMovesRemaining() > 0 and (pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") ~= nil)
+    return BaseVisibleCheck(pUnit) and pUnit:GetMovesRemaining() > 0 and
+        (pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") ~= nil)
 end
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.CanUse = function(pUnit)
     -- if pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") then
     --     return true
     -- end
-    return IsUnitHasCommand(pUnit, 'UNITCOMMAND_ADD_BUFF') and pUnit:GetMovesRemaining() > 0 and (pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") ~= nil)
+    return IsUnitHasCommand(pUnit, 'UNITCOMMAND_ADD_BUFF') and pUnit:GetMovesRemaining() > 0 and
+        (pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN") ~= nil)
 end
 m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.IsDisabled = function(pUnit)
     local coolTurn = pUnit:GetProperty("TKH_KILL_POINT_FINAL_SKILL_COOL_TURN")
@@ -649,6 +658,45 @@ m_TKH_UnitCommands.UNITCOMMAND_ADD_BUFF.ResetDescription = function(pUnit)
     return Locale.Lookup('LOC_UNITCOMMAND_ADD_BUFF_HELP_EXTRA',
         string.gsub(Locale.Lookup(abilityDes), '。', ''),
         Locale.Lookup(lastedTurn), coolString)
+end
+
+-- ===========================================================================
+--	UNITCOMMAND_TKH_TELEPORT
+-- ===========================================================================
+m_TKH_UnitCommands.UNITCOMMAND_TKH_TELEPORT = {};
+m_TKH_UnitCommands.UNITCOMMAND_TKH_TELEPORT.Properties = {};
+m_TKH_UnitCommands.UNITCOMMAND_TKH_TELEPORT.EventName = nil
+m_TKH_UnitCommands.UNITCOMMAND_TKH_TELEPORT.IsVisible = function(pUnit)
+    -- UNIT_HERO_TKH_MENG_HUO_GUARD
+    local jumpParams = GetCommandParameters(GetUnitType(pUnit), 'UNITCOMMAND_TKH_TELEPORT')
+    if jumpParams then
+        for _, row in ipairs(jumpParams) do
+            if row.Name == 'Ability' then
+                if not IsUnitHaveAbility(pUnit, row.Value) then
+                    return false
+                end
+            elseif row.Name == 'Promotion' then
+                if not IsUnitHasPromotion(pUnit, row.Value) then
+                    return false
+                end
+            end
+        end
+    end
+
+
+    return BaseVisibleCheck(pUnit) and pUnit:GetMovesRemaining() > 0
+end
+m_TKH_UnitCommands.UNITCOMMAND_TKH_TELEPORT.CanUse = function(pUnit)
+    if pUnit == nil then
+        return false
+    end
+    return IsUnitHasCommand(pUnit, 'UNITCOMMAND_TKH_TELEPORT') and pUnit:GetMovesRemaining() > 0
+end
+m_TKH_UnitCommands.UNITCOMMAND_TKH_TELEPORT.IsDisabled = function(pUnit)
+    if not CheckCommandActions(pUnit, 'UNITCOMMAND_TKH_TELEPORT') then
+        return 'LOC_NO_ENOUGH_ACTION_CHARGES'
+    end
+    return nil;
 end
 
 

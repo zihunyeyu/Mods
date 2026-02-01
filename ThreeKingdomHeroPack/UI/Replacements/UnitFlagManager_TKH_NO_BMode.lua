@@ -9,7 +9,7 @@ print('Load file UnitFlagManager_TKH_NO_BMode.lua')
 --	INCLUDES
 -- ===========================================================================
 include("UnitFlagManager");
-
+include('TKH_Constant')
 -- ===========================================================================
 --	CONSTANTS	/ DEFINES
 -- ===========================================================================
@@ -227,6 +227,31 @@ function UnitFlag.UpdateName(self)
 			nameString = nameString ..
 				'[NEWLINE]- ' .. Locale.Lookup('LOC_TKH_UNIT_ARMOR', armor, maxArmor, extraMaxArmor)
 		end
+
+
+		-- 命中要害 概率
+
+		local basePercent = 0
+		if GameInfo.TKH_UnitTypeControlCrit[unitType] ~= nil then
+			basePercent = GameInfo.TKH_UnitTypeControlCrit[unitType].Percent or 0
+		end
+		local percent = basePercent + (pUnit:GetProperty('EXTRA_CRIT_PERCENT') or 0)
+
+		-- 技能增加几率
+		local unitAbilities = pUnit:GetAbility():GetAbilities()
+		for _, ability in ipairs(unitAbilities) do
+			local abilityType = GameInfo.UnitAbilities[ability].UnitAbilityType
+			if abilityType ~= nil then
+				local ability_percent = ABILITIES_CRIT_PERCENT[abilityType] or 0
+				percent = percent + ability_percent
+			end
+		end
+		-- print(percent, math.random(100), math.random(100) < percent)
+		if percent > 0 then
+			nameString = nameString ..
+				'[NEWLINE]- ' .. Locale.Lookup('LOC_TKH_UNIT_CRIT_PERCENT', math.min(100, percent))
+		end
+
 		-- ========================MODIFIER=====================
 
 		self.m_Instance.UnitIcon:SetToolTipString(Locale.Lookup(nameString));

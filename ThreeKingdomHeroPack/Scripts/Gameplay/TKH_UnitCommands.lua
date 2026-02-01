@@ -2,9 +2,16 @@ include('TKH_Constant')
 include('TKH_Helper')
 
 local m_CommandRecover = {}
+
+--- m_CommandRecover = m_CommandRecover[pUnit:GetOwner()],
+-- { pUnit:GetID(), row.ActionCharges, row.RecoverType, row.CommandType }
+
 local m_AbilityUnits = {}
 local m_BuffManager = {}
 
+--- 单位命令行动后，减少行动点数
+---@param pUnit table
+---@param commandType string
 function AfterAction(pUnit, commandType)
     local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
     local commandCharges = actionCharges[commandType]
@@ -12,13 +19,19 @@ function AfterAction(pUnit, commandType)
         return false
     end
 
+
     local remainCharges = commandCharges[1] - 1
+
+    -- print('actionCharges = ', actionCharges, remainCharges)
+
+
     actionCharges[commandType][1] = remainCharges
     pUnit:SetProperty('CustomCommandActionCharges', actionCharges)
 
+    --- 检测是否为伟人单位，如果为伟人单位，且行动点数为0，则死亡
     local totalActions = 0
-    for _, value in pairs(actionCharges) do
-        totalActions = totalActions + value[1]
+    for _, chargeInfo in pairs(actionCharges) do
+        totalActions = totalActions + chargeInfo[1]
     end
 
     if totalActions == 0 and IsCommandUnitGP(pUnit) then
@@ -30,6 +43,11 @@ end
 -- EVENTS
 -- ===========================================================================
 
+--- 伟人单位创建时，设置行动点数
+---@param playerID number
+---@param unitID number
+---@param greatPersonClassID number
+---@param greatPersonIndividualID number
 function OnUnitGreatPersonCreated(playerID, unitID, greatPersonClassID, greatPersonIndividualID)
     local pUnit = UnitManager.GetUnit(playerID, unitID)
     local gpType = GameInfo.GreatPersonIndividuals[greatPersonIndividualID].GreatPersonIndividualType
@@ -121,6 +139,34 @@ function OnTurnEnd()
     Game:SetProperty('TKH_BuffManager', m_BuffManager)
 end
 
+--- 恢复单位命令行动点
+---@param pUnit table
+---@param commandType string
+---@param commandBaseCharge number
+---@param recoverTimes number
+function RecoverUnitCommandAction(pUnit, commandType, recoverTimes, commandBaseCharge)
+    local actionChargeManager = pUnit:GetProperty('CustomCommandActionCharges') or {}
+    local extraAction = pUnit:GetProperty('ExtraActions') or {}
+    local extra_action_info = extraAction[commandType]
+
+    if actionChargeManager[commandType] then
+        if recoverTimes == -1 then
+            if extra_action_info then
+                actionChargeManager[commandType][1] = tonumber(commandBaseCharge) + extra_action_info[2]
+            else
+                actionChargeManager[commandType][1] = tonumber(commandBaseCharge)
+            end
+        else
+            actionChargeManager[commandType][1] = math.max(0, actionChargeManager[commandType][1] + recoverTimes)
+
+            print('RecoverUnitCommandAction', commandType, recoverTimes, commandBaseCharge,
+                actionChargeManager[commandType][1])
+        end
+    end
+
+    pUnit:SetProperty('CustomCommandActionCharges', actionChargeManager)
+end
+
 --- 时代更替时恢复单位行动点
 --- @param previousEraIndex integer
 --- @param newEraIndex integer
@@ -131,14 +177,33 @@ function OnGameEraChanged(previousEraIndex, newEraIndex)
             if not pUnit then
                 table.remove(unitInfos, i)
             else
-                if unitInfos[i][3] == CommandRecoverType.PER_ERA then
-                    local extraAction = pUnit:GetProperty('ExtraActions') or 0
-                    local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
-                    if actionCharges[unitInfos[i][4]] then
-                        actionCharges[unitInfos[i][4]][1] = tonumber(unitInfos[i][2]) + extraAction
-                    end
+                local recoverType = unitInfos[i][3]
+                local commandBaseCharge = unitInfos[i][2]
+                local commandType = unitInfos[i][4]
 
-                    pUnit:SetProperty('CustomCommandActionCharges', actionCharges)
+                if recoverType == CommandRecoverType.PER_ERA then
+                    RecoverUnitCommandAction(pUnit, commandType, -1, commandBaseCharge)
+                end
+            end
+        end
+    end
+
+    Game:SetProperty('CommandRecover', m_CommandRecover)
+end
+
+function OnTurnEnd_CommandRecovery()
+    for playerID, unitInfos in pairs(m_CommandRecover) do
+        for i = #unitInfos, 1, -1 do
+            local pUnit = UnitManager.GetUnit(playerID, unitInfos[i][1])
+            if not pUnit then
+                table.remove(unitInfos, i)
+            else
+                local recoverType = unitInfos[i][3]
+                local commandBaseCharge = unitInfos[i][2]
+                local commandType = unitInfos[i][4]
+                local propertyKey = playerID .. unitInfos[i][1] .. commandType
+                if recoverType == CommandRecoverType.PROPERTY and pUnit:GetProperty(propertyKey) then
+                    RecoverUnitCommandAction(pUnit, commandType, -1, commandBaseCharge)
                 end
             end
         end
@@ -155,14 +220,12 @@ function OnTurnBegin()
             if not pUnit then
                 table.remove(unitInfos, i)
             else
-                if unitInfos[i][3] == CommandRecoverType.PER_TURN then
-                    local extraAction = pUnit:GetProperty('ExtraActions') or 0
-                    local actionCharges = pUnit:GetProperty('CustomCommandActionCharges') or {}
-                    if actionCharges[unitInfos[i][4]] then
-                        actionCharges[unitInfos[i][4]][1] = tonumber(unitInfos[i][2]) + extraAction
-                    end
+                local recoverType = unitInfos[i][3]
+                local commandBaseCharge = unitInfos[i][2]
+                local commandType = unitInfos[i][4]
 
-                    pUnit:SetProperty('CustomCommandActionCharges', actionCharges)
+                if recoverType == CommandRecoverType.PER_TURN then
+                    RecoverUnitCommandAction(pUnit, commandType, -1, commandBaseCharge)
                 end
             end
         end
@@ -174,12 +237,13 @@ end
 -- UNITCOMMAND_EX_ACTION
 -- EXTRA ACTIONS FROM [CAOSHIHUWEI_CAO_CAO,YIMUTONGBAO_SUN_QUAN,NAN_MAN_RU_QIN_DUO_SI]
 
+
 local ex_action_extra_ability = {
-    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO = 1,
-    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN = 1,
-    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NAN_MAN_RU_QIN_DUO_SI = 1,
-    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YUAN_SHAO = 1,
-    ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_SUMMON_LV_LINGQI = 4,
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_CAOSHIHUWEI_CAO_CAO = { 'UNITCOMMAND_EX_ACTION', EXTRA_ACTION_TYPE.MAX, 1 },
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_YIMUTONGBAO_SUN_QUAN = { 'UNITCOMMAND_EX_ACTION', EXTRA_ACTION_TYPE.MAX, 1 },
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_NAN_MAN_RU_QIN_DUO_SI = { 'UNITCOMMAND_EX_ACTION', EXTRA_ACTION_TYPE.MAX, 1 },
+    ABILITY_MODIFIER_ABILITY_RELATIONSHIP_HEIBEITINGZHU_YUAN_SHAO = { 'UNITCOMMAND_EX_ACTION', EXTRA_ACTION_TYPE.MAX, 1 },
+    ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_UNIQUE_LV_LINGQI = { 'UNITCOMMAND_CREATE_UNIT', EXTRA_ACTION_TYPE.TEMP, 4 },
 }
 
 function OnUnitAbilityGained(playerID, unitID, unitAbilityIndex)
@@ -189,12 +253,23 @@ function OnUnitAbilityGained(playerID, unitID, unitAbilityIndex)
     end
     -- 羁绊效果增加使用次数
     local ability = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
-    for key, value in pairs(ex_action_extra_ability) do
-        if ability == key then
-            local extraActions = pUnit:GetProperty('ExtraActions') or 0
-            extraActions = extraActions + value
-            pUnit:SetProperty('ExtraActions', extraActions)
-        end
+
+    if ex_action_extra_ability[ability] == nil then
+        return
+    end
+    local extra_action_info = ex_action_extra_ability[ability]
+
+    local extraActions = pUnit:GetProperty('ExtraActions') or {}
+    local commandType = extra_action_info[1]
+    local extra_action_type = extra_action_info[2]
+    local extra_action = extra_action_info[3]
+
+    extraActions[commandType] = { extra_action_type, extra_action }
+    pUnit:SetProperty('ExtraActions', extraActions)
+
+
+    if extra_action_type == EXTRA_ACTION_TYPE.TEMP then
+        RecoverUnitCommandAction(pUnit, commandType, extra_action, nil)
     end
 end
 
@@ -204,13 +279,12 @@ function OnUnitAbilityLost(playerID, unitID, unitAbilityIndex)
         return
     end
     local ability = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
-    for key, value in pairs(ex_action_extra_ability) do
-        if ability == key then
-            local extraActions = pUnit:GetProperty('ExtraActions') or 0
-            extraActions = extraActions - value
-            pUnit:SetProperty('ExtraActions', math.max(0, extraActions))
-        end
+    if ex_action_extra_ability[ability] == nil then
+        return
     end
+    local extraActions = pUnit:GetProperty('ExtraActions') or {}
+    extraActions[commandType] = nil
+    pUnit:SetProperty('ExtraActions', extraActions)
 end
 
 -- ===========================================================================
@@ -247,17 +321,20 @@ function CommandChangeSelectedPlot(playerID, params)
     if plot == nil or commandUnit == nil then
         return
     end
+    local movement = commandUnit:GetMovesRemaining()
 
     local changeType, changeItemIndex, changeItemName = GetCommandPlotChangeInfo(GetUnitType(commandUnit), commandType)
     if changeType and changeItemIndex ~= -1 then
         if changeType == 'TerrainType' then
             TerrainBuilder.SetTerrainType(plot, changeItemIndex)
-            -- UnitManager.ChangeMovesRemaining(commandUnit, -commandUnit:GetMovesRemaining())
             AfterAction(commandUnit, params.CommandType)
+            UnitManager.ChangeMovesRemaining(commandUnit, -movement)
+            UnitManager.ChangeMovesRemaining(commandUnit, movement)
         elseif changeType == 'FeatureType' then
             TerrainBuilder.SetFeatureType(plot, changeItemIndex)
-            -- UnitManager.ChangeMovesRemaining(commandUnit, -commandUnit:GetMovesRemaining())
             AfterAction(commandUnit, params.CommandType)
+            UnitManager.ChangeMovesRemaining(commandUnit, -movement)
+            UnitManager.ChangeMovesRemaining(commandUnit, movement)
         end
     end
 end
@@ -268,18 +345,16 @@ function CommandCreateRandomResource(eOwner, iUnitID, parameters)
     if pUnit == nil then
         return
     end
-    local resourceIndex = GetCommandResourceIndex(GetUnitType(pUnit))
+    local resourceIndexes = GetCommandResourceIndex(GetUnitType(pUnit))
     local plot = Map.GetPlot(pUnit:GetX(), pUnit:GetY())
-    if resourceIndex ~= -1 then
-        WorldBuilder.MapManager():SetResourceType(plot, resourceIndex)
+    if table.count(resourceIndexes) > 0 then
+        WorldBuilder.MapManager():SetResourceType(plot, GetRandomTableElement(resourceIndexes))
         UnitManager.ChangeMovesRemaining(pUnit, -pUnit:GetMovesRemaining())
         AfterAction(pUnit, parameters.CommandType)
     else
         local resources = GetValidResources(plot:GetIndex())
         if resources ~= nil and #resources >= 1 then
-            math.randomseed(GetRandomSeed())
-            local randomResource = resources[math.random(#resources)]
-            WorldBuilder.MapManager():SetResourceType(plot, randomResource)
+            WorldBuilder.MapManager():SetResourceType(plot, GetRandomTableElement(resources))
             UnitManager.ChangeMovesRemaining(pUnit, -pUnit:GetMovesRemaining())
             AfterAction(pUnit, parameters.CommandType)
         end
@@ -501,14 +576,15 @@ function CommandDealDamageAoe(eOwner, iUnitID, parameters)
 
     local adjUnits = GetNeighborUnits(x, y, range)
 
-    local is_WU_TUGU_UPGRADE = IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_WU_TUGU_3_5')
 
     for _, adjUnit in ipairs(adjUnits) do
         if adjUnit and diplomacy:IsAtWarWith(adjUnit:GetOwner()) then
             DamageUnit(adjUnit, damage)
-            if is_WU_TUGU_UPGRADE then
+            if IsUnitHasPromotion(adjUnit, 'PROMOTION_TK_WU_TUGU_3_5') then
                 local lostMoves = math.max(0, adjUnit:GetMovesRemaining() - 1)
                 UnitManager.ChangeMovesRemaining(adjUnit, -lostMoves)
+                Game.AddWorldViewText(0, '旋风斩：此单位损失了[COLOR:Red]' .. lostMoves .. '[ENDCOLOR]移动力', adjUnit:GetX(),
+                    adjUnit:GetY())
             end
         end
     end
@@ -645,6 +721,19 @@ function CommandAddBuff(eOwner, iUnitID, parameters)
     Game:SetProperty('TKH_BuffManager', m_BuffManager)
 end
 
+-- 移动到指定地点
+function CommandTeleport(eOwner, iUnitID, parameters)
+    local success, pPlayer, pUnit, targetPlot = BaseCheck(eOwner, iUnitID, parameters)
+    if not success or not pUnit then
+        return false
+    end
+    local move = pUnit:GetMovesRemaining()
+    UnitManager.PlaceUnit(pUnit, parameters[UnitCommandTypes.PARAM_X], parameters[UnitCommandTypes.PARAM_Y])
+    UnitManager.ChangeMovesRemaining(pUnit, move)
+    AfterAction(pUnit, 'UNITCOMMAND_TKH_TELEPORT')
+    return true
+end
+
 function Initialize()
     if Game:GetProperty("WuZhangCoolTurns") == nil then
         Game:SetProperty("WuZhangCoolTurns", 0)
@@ -655,6 +744,7 @@ function Initialize()
     Events.UnitGreatPersonCreated.Add(OnUnitGreatPersonCreated)
     Events.UnitAddedToMap.Add(OnUnitAddedToMap)
     Events.TurnEnd.Add(OnTurnEnd)
+    Events.TurnEnd.Add(OnTurnEnd_CommandRecovery)
     Events.GameEraChanged.Add(OnGameEraChanged)
     Events.TurnBegin.Add(OnTurnBegin)
 
@@ -678,6 +768,7 @@ function Initialize()
     GameEvents.CommandSelfExplosion.Add(CommandSelfExplosion)
     GameEvents.CommandAddBuff.Add(CommandAddBuff)
     GameEvents.CommandDealDamageAoe.Add(CommandDealDamageAoe)
+    GameEvents.CommandTeleport.Add(CommandTeleport)
 end
 
 Events.LoadGameViewStateDone.Add(Initialize)

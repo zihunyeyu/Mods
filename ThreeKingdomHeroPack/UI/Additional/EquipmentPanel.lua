@@ -128,6 +128,15 @@ function GetEquiomentDescription(e)
         equipmentDescription = equipmentDescription .. '[NEWLINE]护甲值：' .. armorValue
     end
 
+    local ex_ability = 'LOC_ABILITY_TKH_' .. equipment.Equipment .. '_HeroExclusive_DESCRIPTION'
+    if Locale.HasTextKey(ex_ability) then
+        -- print(Locale.Lookup(ex_ability))
+        local ex_hero = Locale.Lookup('LOC_UNIT_HERO_TKH_' .. equipment.HeroExclusive .. '_NAME')
+        local ex_text = string.gsub(Locale.Lookup(ex_ability), '专属', ex_hero .. '专属')
+        equipmentDescription = equipmentDescription .. '[NEWLINE]' .. ex_text
+    end
+    -- LOC_ABILITY_TKH_EQUIPMENT_XiangYaShuangGou_HeroExclusive_DESCRIPTION
+
     return equipmentDescription
 end
 

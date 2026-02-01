@@ -16,6 +16,7 @@ INTERFACEMODE_HEAL_UNIT = DB.MakeHash("INTERFACEMODE_HEAL_UNIT")
 INTERFACEMODE_EX_ACTION = DB.MakeHash("INTERFACEMODE_EX_ACTION")
 INTERFACEMODE_DEAL_DAMAGE = DB.MakeHash("INTERFACEMODE_DEAL_DAMAGE")
 INTERFACEMODE_BURN_VOLCAND = DB.MakeHash("INTERFACEMODE_BURN_VOLCAND")
+INTERFACEMODE_TKH_TELEPORT = DB.MakeHash("INTERFACEMODE_TKH_TELEPORT")
 
 
 INTERFACEMODE_CHANGE_SELECTED_PLOT = DB.MakeHash("INTERFACEMODE_CHANGE_SELECTED_PLOT")
@@ -380,6 +381,83 @@ InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnInterfaceModeLeave = functio
     UILens.ClearLayerHexes(g_HexColoringAttack);
 end
 
+------------------------------------------------------------------------------------------------
+-- INTERFACEMODE_TKH_TELEPORT
+------------------------------------------------------------------------------------------------
+InterfaceModes.INTERFACEMODE_TKH_TELEPORT = {}
+InterfaceModes.INTERFACEMODE_TKH_TELEPORT.OnMouseEnd = function(pInputStruct)
+    if g_isMouseDragging then
+        g_isMouseDragging = false;
+    elseif IsSelectionAllowedAt(UI.GetCursorPlotID()) then
+        InterfaceModes.INTERFACEMODE_TKH_TELEPORT.Action(pInputStruct);
+    end
+    EndDragMap();
+    g_isMouseDownInWorld = false;
+    return true;
+end
+InterfaceModes.INTERFACEMODE_TKH_TELEPORT.Action = function(pInputStruct)
+    local plotID = UI.GetCursorPlotID();
+    if Map.IsPlot(plotID) and IsTargetPlot(plotID) then
+        local plot = Map.GetPlotByIndex(plotID);
+        local pSelectedUnit = UI.GetHeadSelectedUnit();
+
+        if (pSelectedUnit ~= nil) then
+            local tParameters = {};
+            tParameters[UnitCommandTypes.PARAM_X] = plot:GetX();
+            tParameters[UnitCommandTypes.PARAM_Y] = plot:GetY();
+            tParameters[UnitCommandTypes.PARAM_NAME] = "CommandTeleport";
+            UnitManager.RequestCommand(pSelectedUnit, UnitCommandTypes.EXECUTE_SCRIPT, tParameters);
+
+            UI.SetInterfaceMode(InterfaceModeTypes.SELECTION);
+            UI.PlaySound("Play_MP_Player_Ready");
+            UI.LookAtPlotScreenPosition(plot:GetX(), plot:GetY(), 0.5, 0.5);
+        else
+            print("ERROR: Missing head selected unit");
+        end
+    end
+    return true;
+end
+InterfaceModes.INTERFACEMODE_TKH_TELEPORT.OnInterfaceModeChange = function(eNewMode)
+    UIManager:SetUICursor(CursorTypes.RANGE_ATTACK);
+    g_targetPlots = {};
+    local pSelectedUnit = UI.GetHeadSelectedUnit();
+    if (pSelectedUnit == nil) then
+        return;
+    end
+
+    local jumpParams = GetCommandParameters(GetUnitType(pSelectedUnit), 'UNITCOMMAND_TKH_TELEPORT')
+    if not jumpParams then
+        return
+    end
+
+    local range = 3
+    for _, row in ipairs(jumpParams) do
+        if row.Name == 'Range' then
+            range = tonumber(row.Value) or 3
+        end
+    end
+
+    local pUnitAdjPlots = Map.GetNeighborPlots(pSelectedUnit:GetX(), pSelectedUnit:GetY(), range) or {}
+    for _, pAdjPlot in ipairs(pUnitAdjPlots) do
+        table.insert(g_targetPlots, pAdjPlot:GetIndex());
+    end
+
+    -- g_HexColoringAttack    = UILens.CreateLensLayerHash("Hex_Coloring_Attack");
+    -- g_HexColoringMovement  = UILens.CreateLensLayerHash("Hex_Coloring_Movement");
+    -- g_HexColoringPlacement = UILens.CreateLensLayerHash("Hex_Coloring_Placement");
+
+    if (table.count(g_targetPlots) ~= 0) then
+        local eLocalPlayer = Game.GetLocalPlayer();
+        UILens.ToggleLayerOn(g_HexColoringMovement);
+        UILens.SetLayerHexesArea(g_HexColoringMovement, eLocalPlayer, g_targetPlots);
+    end
+end
+InterfaceModes.INTERFACEMODE_TKH_TELEPORT.OnInterfaceModeLeave = function(eNewMode)
+    UIManager:SetUICursor(CursorTypes.NORMAL);
+    UILens.ToggleLayerOff(g_HexColoringMovement);
+    UILens.ClearLayerHexes(g_HexColoringMovement);
+end
+
 -- ===========================================================================
 --	OVERRIDE
 -- ===========================================================================
@@ -431,4 +509,13 @@ function LateInitialize()
     InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT][MouseEvents.LButtonUp] =
         InterfaceModes.INTERFACEMODE_CHANGE_SELECTED_PLOT.OnMouseEnd
     InterfaceModeMessageHandler[INTERFACEMODE_CHANGE_SELECTED_PLOT][KeyEvents.KeyUp] = OnPlacementKeyUp;
+
+    InterfaceModeMessageHandler[INTERFACEMODE_TKH_TELEPORT] = {};
+    InterfaceModeMessageHandler[INTERFACEMODE_TKH_TELEPORT][INTERFACEMODE_ENTER] =
+        InterfaceModes.INTERFACEMODE_TKH_TELEPORT.OnInterfaceModeChange;
+    InterfaceModeMessageHandler[INTERFACEMODE_TKH_TELEPORT][INTERFACEMODE_LEAVE] =
+        InterfaceModes.INTERFACEMODE_TKH_TELEPORT.OnInterfaceModeLeave;
+    InterfaceModeMessageHandler[INTERFACEMODE_TKH_TELEPORT][MouseEvents.LButtonUp] =
+        InterfaceModes.INTERFACEMODE_TKH_TELEPORT.OnMouseEnd
+    InterfaceModeMessageHandler[INTERFACEMODE_TKH_TELEPORT][KeyEvents.KeyUp] = OnPlacementKeyUp;
 end

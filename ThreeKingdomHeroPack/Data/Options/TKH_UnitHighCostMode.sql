@@ -24,7 +24,7 @@ UPDATE Units SET Maintenance=15, StrategicResource='RESOURCE_IRON' WHERE UnitTyp
 UPDATE Units SET Maintenance=10 WHERE UnitType='UNIT_CROSSBOWMAN'; 
 -- 骑士
 UPDATE Units SET Maintenance=10 WHERE UnitType='UNIT_KNIGHT'; 
-UPDATE Units_XP2 SET ResourceMaintenanceType='RESOURCE_HORSES', ResourceMaintenanceAmount=2 WHERE UnitType='UNIT_KNIGHT';
+UPDATE Units_XP2 SET ResourceMaintenanceType='RESOURCE_HORSES', ResourceMaintenanceAmount=1 WHERE UnitType='UNIT_KNIGHT';
 -- 长矛兵
 UPDATE Units SET Maintenance=6 WHERE UnitType='UNIT_PIKEMAN'; 
 -- 锐士

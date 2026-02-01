@@ -222,12 +222,34 @@ function UnitFlag.UpdateName(self)
 			end
 		end
 
+		-- 护甲值
 		local armor = pUnit:GetProperty('TKH_Armor')
 		local maxArmor = pUnit:GetProperty('TKH_MaxArmor')
 		local extraMaxArmor = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
 		if armor and maxArmor then
 			nameString = nameString ..
 				'[NEWLINE]- ' .. Locale.Lookup('LOC_TKH_UNIT_ARMOR', armor, maxArmor, extraMaxArmor)
+		end
+
+		-- 命中要害 概率
+
+		local basePercent = 0
+		if GameInfo.TKH_UnitTypeControlCrit[unitType] ~= nil then
+			basePercent = GameInfo.TKH_UnitTypeControlCrit[unitType].Percent or 0
+		end
+		local percent = basePercent + (pUnit:GetProperty('EXTRA_CRIT_PERCENT') or 0)
+
+		local unitAbilities = pUnit:GetAbility():GetAbilities()
+		for _, ability in ipairs(unitAbilities) do
+			local abilityType = GameInfo.UnitAbilities[ability].UnitAbilityType
+			if abilityType ~= nil then
+				local ability_percent = ABILITIES_CRIT_PERCENT[abilityType] or 0
+				percent = percent + ability_percent
+			end
+		end
+		if percent > 0 then
+			nameString = nameString ..
+				'[NEWLINE]- ' .. Locale.Lookup('LOC_TKH_UNIT_CRIT_PERCENT', math.min(100, percent))
 		end
 		-- ========================MODIFIER=====================
 

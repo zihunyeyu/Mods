@@ -4,7 +4,7 @@
     <Name>Three Kingdom Hero Mods</Name>
     <Description>This is a brief description of the mod.</Description>
     <CustomProperties></CustomProperties>
-    <Created>1769055998</Created>
+    <Created>1769965521</Created>
     <Teaser>This is a brief description of the mod.</Teaser>
     <Authors>purple soul</Authors>
     <CompatibleVersions>1.2,2.0</CompatibleVersions>
@@ -227,7 +227,6 @@
       <File>Data/TKH_UnitAbilities.sql</File>
       <File>Data/TKH_Projects.sql</File>
       <File>Data/TKH_Buildings.sql</File>
-      <File>Data/Equipments/TKH_EquipmentsCivilopedia.sql</File>
       <File>Data/Replace/TKH_HeroesReplace.sql</File>
       <File>Data/Options/TKH_LuxuryTax.sql</File>
     </UpdateDatabase>
@@ -279,7 +278,6 @@
       <File>UI/Additional/EquipmentPanel.lua</File>
       <File>UI/Additional/EquipmentPanel_Button.lua</File>
       <File>UI/Additional/Additional_Buttons.lua</File>
-      <File>UI/Additional/CivilopediaPage_Equipment.lua</File>
       <File>UI/Additional/TKH_UI_Scripts.lua</File>
     </ImportFiles>
     <ReplaceUIScript id="TKH_UnitPanel">
@@ -340,7 +338,6 @@
       <File>UI/Replacements/UnitPanel_TKH.lua</File>
       <File>UI/Replacements/WorldInput_UnitInterface.lua</File>
       <File>UI/Replacements/GreatPeoplePopup_TKH.lua</File>
-      <File>UI/Replacements/CivilopediaPage_Project.lua</File>
       <File>UI/Replacements/ProductionPanel_TKH.lua</File>
       <File>UI/Replacements/UnitFlagManager_TKH_BMode.lua</File>
       <File>UI/Replacements/UnitFlagManager_TKH_NO_BMode.lua</File>
@@ -351,6 +348,7 @@
       <File>UI/Replacements/NotificationPanel_TKH.lua</File>
       <File>UI/Replacements/GreatPeopleHeroPanel.lua</File>
       <File>UI/Replacements/GreatPeoplePopup_Babylon_Heroes.lua</File>
+      <File>UI/Replacements/UnitPromotionPopup_TKH.lua</File>
     </ImportFiles>
     <AddGameplayScripts id="GameplayScripts">
       <Properties>
@@ -558,6 +556,13 @@
       <Criteria>Heroes_Mode</Criteria>
       <File>Data/TKH_ModifierStrings.sql</File>
     </UpdateDatabase>
+    <ReplaceUIScript id="UnitPromotionPopup_TKH">
+      <Properties>
+        <LoadOrder>200200</LoadOrder>
+        <LuaContext>UnitPromotionPopup</LuaContext>
+        <LuaReplace>UI/Replacements/UnitPromotionPopup_TKH.lua</LuaReplace>
+      </Properties>
+    </ReplaceUIScript>
   </InGameActions>
   <Files>
     <File>ArtDefs/Improvements.artdef</File>
@@ -570,7 +575,6 @@
     <File>Data/Armors/TKH_UnitArmor.sql</File>
     <File>Data/Equipments/TKH_Equipments.sql</File>
     <File>Data/Equipments/TKH_EquipmentsAbilities.sql</File>
-    <File>Data/Equipments/TKH_EquipmentsCivilopedia.sql</File>
     <File>Data/NewUnits/TKH_Heroes_Base.sql</File>
     <File>Data/NewUnits/TKH_RelationshipAbilities.sql</File>
     <File>Data/NewUnits/TKH_RelationshipAbilitiesRegister.sql</File>
@@ -651,7 +655,6 @@
     <File>Three Kingdom Hero Mods.dep</File>
     <File>UI/Additional/Additional_Buttons.lua</File>
     <File>UI/Additional/Additional_Buttons.xml</File>
-    <File>UI/Additional/CivilopediaPage_Equipment.lua</File>
     <File>UI/Additional/EquipmentPanel.lua</File>
     <File>UI/Additional/EquipmentPanel.xml</File>
     <File>UI/Additional/EquipmentPanel_Button.lua</File>
@@ -671,6 +674,7 @@
     <File>UI/Replacements/UnitFlagManager_TKH_BMode.lua</File>
     <File>UI/Replacements/UnitFlagManager_TKH_NO_BMode.lua</File>
     <File>UI/Replacements/UnitPanel_TKH.lua</File>
+    <File>UI/Replacements/UnitPromotionPopup_TKH.lua</File>
     <File>UI/Replacements/WorldInput_UnitInterface.lua</File>
   </Files>
 </Mod>

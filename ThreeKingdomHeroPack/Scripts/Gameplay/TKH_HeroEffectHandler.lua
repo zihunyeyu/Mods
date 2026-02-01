@@ -56,6 +56,18 @@ function OnTurnEnd()
                     end
                 end
             end
+
+            -- 兀突骨技能冷却判断
+            local unitType = GetUnitType(pUnit)
+            if unitType == 'UNIT_HERO_TKH_WU_TUGU' then
+                -- _singleUseAbilityCooldown = 10
+                if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_UNIQUE_WU_TUGU') then
+                    pUnit:SetProperty(hero.Owner .. hero.ID .. 'UNITCOMMAND_DEAL_DAMAGE_AOE', true)
+                else
+                    pUnit:SetProperty(hero.Owner .. hero.ID .. 'UNITCOMMAND_DEAL_DAMAGE_AOE',
+                        Game.GetCurrentGameTurn() % 2 == 0)
+                end
+            end
         end
     end
 end
@@ -73,12 +85,20 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
     local unitInfo = GameInfo.Units[pUnit:GetType()]
     math.randomseed(GetRandomSeed())
 
+    local unitTypeManager = Game:GetProperty('TKH_unitTypeManager') or {}
+    if unitTypeManager[killedPlayerID] and unitTypeManager[killedPlayerID][killedUnitID] then
+        local killUnitType = unitTypeManager[killedPlayerID][killedUnitID]
+        if MatchUnitTag(killUnitType, 'CLASS_TKH_CAVALRY') and IsUnitHasPromotion(pUnit, 'PROMOTION_TK_SUN_SHANGXIANG_1_2') then
+            TreatUnit(pUnit, 20)
+        end
+    end
+
     -- 张飞：万人敌，击杀单位后恢复30点生命值。
-    if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_ZHANG_FEI_1_5"].Index) then
+    if IsUnitHasPromotion(pUnit, 'PROMOTION_TK_ZHANG_FEI_1_5') then
         TreatUnit(pUnit, 30)
     end
     -- 河北之虎，击杀单位后恢复20点生命值。
-    if pUnit:GetExperience():HasPromotion(GameInfo.UnitPromotions["PROMOTION_TK_YAN_LIANG_1_5"].Index) then
+    if IsUnitHasPromotion(pUnit, 'PROMOTION_TK_YAN_LIANG_1_5') then
         TreatUnit(pUnit, 20)
     end
 
@@ -93,7 +113,7 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         UnitManager.RestoreUnitAttacks(pUnit, true)
     elseif unitInfo.UnitType == 'UNIT_HERO_TKH_YAN_YUN_GUARD' then
         -- 给特种兵“燕云卫”+一个技能（要不然太弱了，粘贴的时候漏掉了）每击杀一个单位，回复80点生命或者护甲值。
-        TreatUnit(pUnit, YAN_YUN_GUARD_KILL_HEAL)
+        TreatUnit(pUnit, HeroConstants.YAN_YUN_GUARD_KILL_HEAL)
     end
 
     -- 武圣刀谱：攻击时+6 [ICON_Strength] 战斗力，每杀死1个单位，回复10点血量或者护甲值
@@ -107,7 +127,7 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         treasury:ChangeGoldBalance(100)
     end
 
-    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_SUIT_SHANGJIN4') then
+    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_SUIT_SHANGJIN3') then
         if math.random() < 0.2 then
             local cUnit = UnitManager.InitUnit(pUnit:GetOwner(), "UNIT_SETTLER", pUnit:GetX(), pUnit:GetY())
             if cUnit ~= nil then
@@ -175,15 +195,9 @@ function OnUnitAbilityGained(playerID, unitID, unitAbilityIndex)
     if not pUnit then
         return
     end
+    local unitAbilityType = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
     local heal_value = pUnit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0
-    for ability, value in pairs(TURN_END_HEAL) do
-        local ability_info = GameInfo.UnitAbilities[ability]
-        if ability_info and unitAbilityIndex == ability_info.Index then
-            heal_value = heal_value + value
-        end
-    end
-
-    pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', heal_value)
+    pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', heal_value + (TURN_END_HEAL[unitAbilityType] or 0))
 
     for ability, unitType in pairs(S_HERO_SUMMON) do
         local ability_info = GameInfo.UnitAbilities[ability]
@@ -198,16 +212,9 @@ function OnUnitAbilityLost(playerID, unitID, unitAbilityIndex)
     if not pUnit then
         return
     end
+    local unitAbilityType = GameInfo.UnitAbilities[unitAbilityIndex].UnitAbilityType
     local heal_value = pUnit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0
-    for ability, value in pairs(TURN_END_HEAL) do
-        local ability_info = GameInfo.UnitAbilities[ability]
-        if ability_info and unitAbilityIndex == ability_info.Index then
-            heal_value = math.max(0, heal_value - value)
-        end
-    end
-
-    pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', heal_value)
-    -- print(GetUnitType(pUnit) .. ' 失去能力，回合结束恢复生命值：' .. heal_value)
+    pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', math.max(0, heal_value - (TURN_END_HEAL[unitAbilityType] or 0)))
 end
 
 function Initialize()

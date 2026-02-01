@@ -67,6 +67,7 @@ function GetRandomTableElement(tTable)
     if tTable == nil or table.count(tTable) == 0 then
         return nil
     end
+    math.randomseed(GetRandomSeed())
     local index = math.random(1, #tTable)
     return tTable[index]
 end
@@ -272,7 +273,12 @@ function BaseCheck(eOwner, iUnitID, parameters)
     end
 
     local targetPlot = Map.GetPlot(parameters[UnitCommandTypes.PARAM_X], parameters[UnitCommandTypes.PARAM_Y]);
-    if not targetPlot or not targetPlot:IsUnit() then
+    -- if not targetPlot and not targetPlot:IsUnit() then
+    --     print("ERROR: Invalid target plot");
+    --     return false;
+    -- end
+
+    if not targetPlot then
         print("ERROR: Invalid target plot");
         return false;
     end
@@ -319,18 +325,31 @@ function AddWorldViewText(x, y, text, ...)
     if not _plot then
         return
     end
-
     Game.AddWorldViewText(0, Locale.Lookup(text, ...), x, y)
 end
 
+--- 单位收到伤害后
+---@param pUnit any
+function OnUnitGetArmorOrDamageDecreased(pUnit)
+    -- 无火洞主-晋升：战斗后回复5点生命值
+    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_S_HERO_SKILL_WU_HUO_DONG_ZHU_2') then
+        TreatUnit(pUnit, 5)
+    end
+    -- zhoutai
+    if IsUnitHasPromotion(pUnit, 'PROMOTION_TK_ZHOU_TAI_1_5') then
+        TreatUnit(pUnit, 3)
+    end
+end
+
+--- 显示护甲变换文本
+---@param pUnit table
+---@param changeValue number
 function UnitArmorChangeText(pUnit, changeValue)
     if not pUnit then
         return
     end
-
     local x = pUnit:GetX()
     local y = pUnit:GetY()
-
     if changeValue > 0 then
         AddWorldViewText(x, y, 'LOC_TKH_UNIT_GAIN_ARMOR', changeValue)
     elseif changeValue < 0 then
@@ -406,6 +425,11 @@ function DamageUnit(pUnit, damageValue)
         return
     end
 
+    -- 收到伤害单位触发效果
+    if damageValue > 0 then
+        OnUnitGetArmorOrDamageDecreased(pUnit)
+    end
+
     -- 先扣护甲值
     local currentArmor = pUnit:GetProperty('TKH_Armor') or 0
     if currentArmor > 0 then
@@ -438,23 +462,23 @@ function ChangeExtraMaxArmor(pUnit, changeValue)
         return
     end
 
-    local currentArmor = pUnit:GetProperty('TKH_Armor') or 0
-    local maxArmor = pUnit:GetProperty('TKH_MaxArmor') or 0
+    -- local currentArmor = pUnit:GetProperty('TKH_Armor') or 0
+    -- local maxArmor = pUnit:GetProperty('TKH_MaxArmor') or 0
     local old_extra_value = pUnit:GetProperty('TKH_ExtraMaxArmor') or 0
     -- 无论增减，额外最大护甲值最小为0
     local new_extra_value = math.max(old_extra_value + changeValue, 0)
     pUnit:SetProperty('TKH_ExtraMaxArmor', new_extra_value)
 
-    local extra_max_change_value = new_extra_value - old_extra_value
+    -- local extra_max_change_value = new_extra_value - old_extra_value
 
     -- 调整当前护甲值
-    if extra_max_change_value > 0 then
-        TreatArmor(pUnit, extra_max_change_value)
-    else
-        if currentArmor > maxArmor + new_extra_value then
-            pUnit:SetProperty('TKH_Armor', maxArmor + new_extra_value)
-        end
-    end
+    -- if extra_max_change_value > 0 then
+    --     TreatArmor(pUnit, extra_max_change_value)
+    -- else
+    --     if currentArmor > maxArmor + new_extra_value then
+    --         pUnit:SetProperty('TKH_Armor', maxArmor + new_extra_value)
+    --     end
+    -- end
 end
 
 --- 在指定坐标周围创建单位
@@ -703,6 +727,25 @@ function IsUnitHaveAbility(pUnit, ability)
     return false
 end
 
+--- 获取单位所有技能在指定table中的数值总和
+---@param pUnit table
+---@param tTable table
+---@param baseValue number|nil
+function GetUnitAbilitiesParameterSum(pUnit, tTable, baseValue)
+    local sum = baseValue or 0
+
+    local unitAbilities = pUnit:GetAbility():GetAbilities()
+    for _, ability in ipairs(unitAbilities) do
+        local abilityType = GameInfo.UnitAbilities[ability.Ability].UnitAbilityType
+        if abilityType ~= nil then
+            local ability_percent = tTable[abilityType] or 0
+            sum = sum + ability_percent
+        end
+    end
+
+    return sum
+end
+
 -- ===========================================================================
 --	FUNCTIONS   奢侈税
 -- ===========================================================================
@@ -842,9 +885,9 @@ end
 
 --- 获取UNITCOMMAND_CREATE_RESOURCE资源索引
 ---@param pUnitType string
----@return integer resourceIndex 资源索引
+---@return table resourceIndexes 资源索引
 function GetCommandResourceIndex(pUnitType)
-    local resourceType
+    local resourceTypes = {}
     local resourceIndex = -1
     local results = DB.Query(
         "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
@@ -852,24 +895,44 @@ function GetCommandResourceIndex(pUnitType)
     if results then
         for _, row in ipairs(results) do
             if row.Name == 'ResourceType' then
-                resourceType = row.Value
+                if string.match(row.Value, '|') then
+                    resourceTypes = SplitString(row.Value, '|')
+                else
+                    if GameInfo.Resources[row.Value] then
+                        table.insert(resourceTypes, row.Value)
+                    end
+                end
             elseif row.Name == 'ResourceClassType' then
                 if row.Value == 'RESOURCECLASS_BONUS' then
-                    resourceType = GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_BONUS'))
+                    table.insert(resourceTypes, GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_BONUS')))
                 elseif row.Value == 'RESOURCECLASS_LUXURY' then
-                    resourceType = GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_LUXURY'))
+                    table.insert(resourceTypes, GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_LUXURY')))
                 elseif row.Value == 'RESOURCECLASS_STRATEGIC' then
-                    resourceType = GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_STRATEGIC'))
+                    table.insert(resourceTypes, GetRandomTableElement(GetResouecesByClassType('RESOURCECLASS_STRATEGIC')))
                 end
             end
         end
     end
 
-    if resourceType and GameInfo.Resources[resourceType] then
-        resourceIndex = GameInfo.Resources[resourceType].Index
+    local resourceIndexes = {}
+    for _, resourceType in ipairs(resourceTypes) do
+        if GameInfo.Resources[resourceType] then
+            table.insert(resourceIndexes, GameInfo.Resources[resourceType].Index)
+
+            -- print(resourceType, GameInfo.Resources[resourceType].Index)
+        end
     end
 
-    return resourceIndex
+    return resourceIndexes
+end
+
+--- 获取command参数
+---@param pUnitType string
+---@param commandType string
+function GetCommandParameters(pUnitType, commandType)
+    return DB.Query(
+        "SELECT Name, Value from TKH_UnitTypeUnitCommandArguments where UnitType = ? and CommandType = ?", pUnitType,
+        commandType)
 end
 
 --- 获取UNITCOMMAND_CHANGE_PLOT信息
@@ -979,13 +1042,19 @@ function GetCommandString(pUnitType, commandType)
             helpTooltip = Locale.Lookup('LOC_UNITCOMMAND_CREATE_UNIT_HELP', count, unitName)
         end
     elseif commandType == 'UNITCOMMAND_CREATE_RESOURCE' then
-        local resourceIndex = GetCommandResourceIndex(pUnitType)
-        if resourceIndex == -1 then
+        local resourceIndexes = GetCommandResourceIndex(pUnitType)
+        if table.count(resourceIndexes) == 0 then
             return Locale.Lookup('LOC_UNITCOMMAND_CREATE_RESOURCE_HELP', '随机', '加成或奢侈品资源')
         else
-            local resource = GameInfo.Resources[resourceIndex]
-            return Locale.Lookup('LOC_UNITCOMMAND_CREATE_RESOURCE_HELP', '',
-                ' [ICON_' .. resource.ResourceType .. '] ' .. Locale.Lookup(resource.Name))
+            local resourceStrings = {}
+            for _, rIndex in ipairs(resourceIndexes) do
+                local resource = GameInfo.Resources[rIndex]
+                if resource then
+                    table.insert(resourceStrings,
+                        ' [ICON_' .. resource.ResourceType .. '] ' .. Locale.Lookup(resource.Name))
+                end
+            end
+            return Locale.Lookup('LOC_UNITCOMMAND_CREATE_RESOURCE_HELP', '', table.concat(resourceStrings, '或'))
         end
     elseif commandType == 'UNITCOMMAND_ENDOW_ABILITY' then
         local results = DB.Query(
@@ -1011,6 +1080,8 @@ end
 ---@param abilityName string
 ---@param recover boolean @覆盖添加：true|abilityAmount = 1，false|abilityAmount += 1
 function AddAbilityForUnit(playerID, unitID, abilityName, recover)
+    -- print('AddAbilityForUnit: abilityType = ', abilityName, playerID, unitID)
+
     local pUnit = UnitManager.GetUnit(playerID, unitID)
     if pUnit == nil then
         return
@@ -1195,7 +1266,7 @@ function GetRandomSeed()
         end
     end
     result = result + math.abs(tonumber(MapConfiguration.GetValue("RANDOM_SEED"))) *
-        (table.count(PlayerManager.GetAliveMajorIDs()) % 7 + 1)
+        (table.count(PlayerManager.GetAliveMajorIDs()) % 7 + 1) + os.time()
     return tonumber(tostring(result):reverse():sub(1, 6))
 end
 

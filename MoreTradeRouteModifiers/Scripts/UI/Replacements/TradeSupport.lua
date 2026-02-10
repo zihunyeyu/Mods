@@ -1,4 +1,6 @@
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_TradeRouteModifierInstance')
 
 GameEvents = ExposedMembers.GameEvents
@@ -107,6 +109,7 @@ function GetYieldsForRoute(pOriginCity, pDestinationCity, bReturnDestiationYield
     if m_TradeRouteModifierManager[tradeRouteID] then
         for _, trmInstance in pairs(m_TradeRouteModifierManager[tradeRouteID]) do
             setmetatable(trmInstance, TradeRouteModifierInstance)
+            -- print('Calculate, GetYieldsForRoute')
             trmInstance:Calculate()
         end
         trmInstans = m_TradeRouteModifierManager[tradeRouteID]

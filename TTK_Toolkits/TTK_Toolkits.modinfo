@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mod id="5d5452d7-d7e6-4da0-9a78-db8471044a8f" version="1">
+  <Properties>
+    <Name>Mod Toolkits</Name>
+    <Description>This is a brief description of the mod.</Description>
+    <Created>1770449611</Created>
+    <Teaser>This is a brief description of the mod.</Teaser>
+    <Authors>ps</Authors>
+    <CompatibleVersions>1.2,2.0</CompatibleVersions>
+  </Properties>
+  <Dependencies>
+    <Mod id="1B28771A-C749-434B-9053-D1380C553DE9" title="Expansion: Rise and Fall" />
+  </Dependencies>
+  <InGameActions>
+    <ImportFiles id="ImportFiles">
+      <File>Scripts/TTK_ToolkitsCore.lua</File>
+    </ImportFiles>
+  </InGameActions>
+  <Files>
+    <File>Scripts/TTK_ToolkitsCore.lua</File>
+  </Files>
+</Mod>

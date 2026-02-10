@@ -1,21 +1,35 @@
-IsChinese                 = Locale.GetCurrentLanguage().Type == 'zh_Hans_CN' or
+IsChinese           = Locale.GetCurrentLanguage().Type == 'zh_Hans_CN' or
     Locale.GetCurrentLanguage().Type == 'zh_Hant_HK'
-DistrictWonderIndex       = GameInfo.Districts['DISTRICT_WONDER'].Index
 
-MODIFIER_MAX              = 100
-MODIFIER_IN_COMING        = "MODIFIER_TRM_ADD_YIELD_FOR_IN_COMING_TRADE_CITY_%s%d"
-MODIFIER_OUT_GOING        = "MODIFIER_TRM_ADD_YIELD_FOR_OUT_GOING_TRADE_CITY_%s%d"
-MODIFIER_DECIMAL          = "MODIFIER_TRM_ADD_YIELD_FOR_TRADE_CITY_DECIMAL_%s%0.1f"
-YIELD_PREFIX              = "YIELD_"
+DistrictWonderIndex = GameInfo.Districts['DISTRICT_WONDER'].Index
 
-MetalTableNumber          = {}
-MetalTableNumber.__index  = function()
+CLASS_MOUNTAIN      = GameInfo.TerrainClasses["TERRAIN_CLASS_MOUNTAIN"].Index;
+CLASS_DESERT        = GameInfo.TerrainClasses["TERRAIN_CLASS_DESERT"].Index;
+CLASS_WATER         = GameInfo.TerrainClasses["TERRAIN_CLASS_WATER"].Index;
+
+
+
+MODIFIER_MAX             = 100
+MODIFIER_IN_COMING       = "MODIFIER_TRM_ADD_YIELD_FOR_IN_COMING_TRADE_CITY_%s%d"
+MODIFIER_OUT_GOING       = "MODIFIER_TRM_ADD_YIELD_FOR_OUT_GOING_TRADE_CITY_%s%d"
+MODIFIER_DECIMAL         = "MODIFIER_TRM_ADD_YIELD_FOR_TRADE_CITY_DECIMAL_%s%0.1f"
+YIELD_PREFIX             = "YIELD_"
+
+MetalTableNumber         = {}
+MetalTableNumber.__index = function()
     return 0
 end
-MetalTableString          = {}
-MetalTableString.__index  = function()
+MetalTableString         = {}
+MetalTableString.__index = function()
     return ''
 end
+
+GAME_ERA                 = {}
+GAME_ERA.Normal          = 1
+GAME_ERA.HeroicGoldenAge = 2
+GAME_ERA.GoldenAge       = 3
+GAME_ERA.DarkAge         = 4
+
 
 TRM_OperationType         = {}
 TRM_OperationType.APPLY   = 1
@@ -44,34 +58,45 @@ CalculationMultiplierType.COMPARE = 16 -- Multiplier = y 满足条件时获得�
 -- 贸易路线加成 限定检测范围
 CalculationRangeType              = {}
 setmetatable(CalculationRangeType, MetalTableNumber)
-CalculationRangeType.NULL             = -1
-CalculationRangeType.CITY             = 1 -- 起终点城市
-CalculationRangeType.CITIES           = 2 -- 起终点玩家所有城市
-CalculationRangeType.PLAYER           = 3 -- 起终点玩家
+CalculationRangeType.NULL               = -1
+CalculationRangeType.CITY               = 1 -- 起终点城市
+CalculationRangeType.CITIES             = 2 -- 起终点玩家所有城市
+CalculationRangeType.PLAYER             = 3 -- 起终点玩家
 -- 城市领土中3个单元格以内的每个加成资源将为从此城市发源的  贸易路线+2  金币。必须建在与商业中心区域（要求拥有市场）和  牛资源相邻的单元格上。
 
-CalculationRangeType.NEED_PLAYER_ID   = 100 -- 非限定玩家ID
-CalculationRangeType.TRADE_ROUTE_PATH = 101 -- 贸易路线
-CalculationRangeType.STATE            = 102 -- 终点城邦
+CalculationRangeType.NEED_PLAYER_ID     = 100 -- 非限定玩家ID
+CalculationRangeType.TRADE_ROUTE_PATH   = 101 -- 贸易路线
+CalculationRangeType.STATE              = 102 -- 终点城邦
+
+CalculationCityType                     = {}
+CalculationCityType.NULL                = -1
+CalculationCityType.ORIGINATION         = 1
+CalculationCityType.DESTINATION         = 2
+CalculationCityType.ORIGIN_DESTI_NATION = 0
+
 
 -- =========================================
 -- Calculation Item
 -- =========================================
 
 -- 限定检测目标
-CalculationItemType                   = {}
+CalculationItemType = {}
 setmetatable(CalculationItemType, MetalTableNumber)
 CalculationItemType.NULL                    = -1
 CalculationItemType.MATCH_PLOTS             = 0
-CalculationItemType.PLOT                    = 1 -- 单元格
-CalculationItemType.RESOURCE                = 2 -- 资源
-CalculationItemType.TERRAIN                 = 3 -- 地形
-CalculationItemType.IMPROVEMENT             = 4 -- 改良设施
-CalculationItemType.DISTRICT                = 5 -- 区域
-CalculationItemType.BUILDING                = 6 -- 建筑
-CalculationItemType.WONDER                  = 7 -- 奇观（区域）
-CalculationItemType.FEATURE                 = 8 -- 地貌
+CalculationItemType.PLOT                    = 1  -- 单元格
+CalculationItemType.RESOURCE                = 2  -- 资源
+CalculationItemType.TERRAIN                 = 3  -- 地形
+CalculationItemType.IMPROVEMENT             = 4  -- 改良设施
+CalculationItemType.DISTRICT                = 5  -- 区域
+CalculationItemType.BUILDING                = 6  -- 建筑
+CalculationItemType.WONDER                  = 7  -- 奇观（区域）
+CalculationItemType.FEATURE                 = 8  -- 地貌
 CalculationItemType.GREAT_WORK              = 15 -- 巨作
+CalculationItemType.MOUNTAIN                = 16 -- 山脉
+CalculationItemType.WATER                   = 17 -- 水域
+CalculationItemType.SEA                     = 18 -- 海洋
+
 CalculationItemType.MATCH_PLOT_COUNT        = 50
 CalculationItemType.TRADING_POST            = 51 -- 贸易站
 CalculationItemType.CONTINENT               = 52 -- 异大陆
@@ -91,13 +116,23 @@ CalculationItemType.AMENITIES               = 108 -- 宜居度
 CalculationItemType.FOLLOWER_OF_RELIGION    = 109 -- 信徒数量
 -- CalculationItemType.FOLLOWER_OF_DOMAIN_RELIGION = 110 -- 信徒数量（仅限本城市的主流宗教）
 -- CalculationItemType.FOLLOWER_OF_FOUNDED_RELIGION = 111 -- 信徒数量（仅限本城市所建宗教）
+CalculationItemType.TOTAL_RESOURCE_AMOUNT   = 120 -- 拥有的资源数量
+-- CalculationItemType.ERA_AGE                 = 121
+-- CalculationItemType.ERA                     = 122
+CalculationItemType.ERA_SCORE               = 123 -- 时代分
 
 CalculationItemType.COUNTERS                = 150
 CalculationItemType.FOUNDED_NATURAL_W0NDERS = 151 -- 已发现自然奇观数量
 CalculationItemType.UNITS_KILLED            = 152 -- 击杀单位数量
 CalculationItemType.TRADE_R0UTE             = 153 -- 贸易路线
+CalculationItemType.TRADER0UTE_ACT1VE       = 154 -- 已激活贸易路线
 
-CalculationItemName                         = {}
+CalculationItemType.UPDATE_TYPES            = 500
+CalculationItemType.GAME_ERA_CHANGE         = 501
+
+
+
+CalculationItemName = {}
 setmetatable(CalculationItemName, MetalTableString)
 CalculationItemName[CalculationItemType.NULL]                    = 'DEFAULT'
 CalculationItemName[CalculationItemType.RESOURCE]                = 'LOC_RESOURCE_NAME'
@@ -125,6 +160,10 @@ CalculationItemName[CalculationItemType.UNLOCK_TECH]             = 'LOC_GOSSIPDE
 CalculationItemName[CalculationItemType.UNLOCK_CIVIC]            = 'LOC_GOSSIPDESC_CULTURVATE_CIVIC'
 CalculationItemName[CalculationItemType.AMENITIES]               = 'LOC_TECH_FILTER_AMENITIES'
 CalculationItemName[CalculationItemType.FOLLOWER_OF_RELIGION]    = 'LOC_HOF_GRAPH_RELIGION_FOLLOWERS'
+CalculationItemName[CalculationItemType.TOTAL_RESOURCE_AMOUNT]   = 'LOC_WORLDBUILDER_ATTRIBUTE_RESOURCE_AMOUNT'
+CalculationItemName[CalculationItemType.MOUNTAIN]                = 'LOC_UI_PEDIA_TERRAIN_MOUNTAINS'
+CalculationItemName[CalculationItemType.SEA]                     = 'LOC_TERRAIN_OCEAN_NAME'
+CalculationItemName[CalculationItemType.WATER]                   = 'LOC_CLIMATE_SCREEN_WATER'
 
 
 
@@ -156,3 +195,4 @@ DescriptionIcon[CalculationItemType.UNLOCK_TECH]             = ' [ICON_TechBoost
 DescriptionIcon[CalculationItemType.UNLOCK_CIVIC]            = ' [ICON_CivicBoosted] '
 DescriptionIcon[CalculationItemType.AMENITIES]               = ' [ICON_Amenities] '
 DescriptionIcon[CalculationItemType.FOLLOWER_OF_RELIGION]    = ' [ICON_Religion] '
+DescriptionIcon[CalculationItemType.TOTAL_RESOURCE_AMOUNT]   = ' [ICON_RESOURCE_TOYS] '

@@ -26,6 +26,7 @@ include 'TKH_UnitCommandDefs'
 -- ===========================================================================
 --	CACHE BASE FUNCTIONS
 -- ===========================================================================
+TKH_AddActionToTable            = AddActionToTable;
 TKH_AddActionButton             = AddActionButton;
 TKH_FilterUnitStatsFromUnitData = FilterUnitStatsFromUnitData;
 -- TKH_GetCombatModifierList       = GetCombatModifierList;
@@ -46,8 +47,102 @@ local m_kCombatResults          = {};
 -- ===========================================================================
 --	OVERRIDE BASE FUNCTIONS
 -- ===========================================================================
+
+function AddActionToTable(actionsTable, action, disabled, toolTipString, actionHash, callbackFunc, callbackVoid1,
+                          callbackVoid2, overrideIcon)
+    -- local actionsCategoryTable;
+    -- if (actionsTable[action.CategoryInUI] ~= nil) then
+    --     actionsCategoryTable = actionsTable[action.CategoryInUI];
+    -- else
+    --     UI.DataError("Operation is in unsupported action category '" .. tostring(action.CategoryInUI) .. "'.");
+    --     actionsCategoryTable = actionsTable["SPECIFIC"];
+    -- end
+
+    -- -- Wrap every callback function with a call that guarantees the interface
+    -- -- mode is reset.  It prevents issues such as selecting range attack and
+    -- -- then instead of attacking, choosing another action, which would leave
+    -- -- up the range attack lens layer.
+    -- local wrappedCallback =
+    --     function(void1, void2)
+    --         local currentMode = UI.GetInterfaceMode();
+    --         if currentMode ~= InterfaceModeTypes.SELECTION then
+    --             UI.SetInterfaceMode(InterfaceModeTypes.SELECTION);
+    --         end
+    --         callbackFunc(void1, void2, currentMode);
+    --     end;
+
+    -- table.insert(actionsCategoryTable, {
+    --     IconId            = (overrideIcon and overrideIcon) or action.Icon,
+    --     Disabled          = disabled,
+    --     helpString        = toolTipString,
+    --     userTag           = actionHash,
+    --     CallbackFunc      = wrappedCallback,
+    --     CallbackVoid1     = callbackVoid1,
+    --     CallbackVoid2     = callbackVoid2,
+    --     IsBestImprovement = action.IsBestImprovement,
+    --     Sound             = action.Sound
+    -- });
+
+    -- -- Hotkey support
+    -- if (action.HotkeyId ~= nil) and disabled == false then
+    --     local actionId = Input.GetActionId(action.HotkeyId);
+    --     if actionId ~= nil then
+    --         m_kHotkeyActions[actionId] = wrappedCallback;
+    --         m_kHotkeyCV1[actionId] = callbackVoid1;
+    --         m_kHotkeyCV2[actionId] = callbackVoid2;
+    --         m_kSoundCV1[actionId] = action.Sound;
+    --     else
+    --         UI.DataError("Cannot set hotkey on Unitpanel for action with icon '" ..
+    --         action.IconId .. "' because engine doesn't have actionId of '" .. action.HotkeyId .. "'.");
+    --     end
+    -- end
+
+
+    TKH_AddActionToTable(actionsTable, action, disabled, toolTipString, actionHash, callbackFunc, callbackVoid1,
+        callbackVoid2, overrideIcon);
+
+
+    -- print(actionsTable, action, disabled, toolTipString, actionHash, callbackFunc, callbackVoid1,
+    --     callbackVoid2, overrideIcon)
+end
+
 function GetUnitActionsTable(pUnit)
     local pBaseActionsTable = TKH_GetUnitActionsTable(pUnit);
+
+    -- UnitPanel:         	1	SECONDARY
+    -- UnitPanel:         	1	ATTACK
+    -- UnitPanel:         	2	OFFENSIVESPY
+    -- UnitPanel:         	3	SPECIFIC
+    -- UnitPanel:         	4	MOVE
+    -- UnitPanel:         	5	INPLACE
+    -- UnitPanel:         	6	GAMEMODIFY
+    -- UnitPanel: GetUnitActionsTable:	SPECIFIC	table: 00000001B9472C90
+    -- UnitPanel:         	userTag	374670040
+    -- UnitPanel:         	Disabled	true
+    -- UnitPanel:         	CallbackVoid1	-1572680103
+    -- UnitPanel:         	CallbackFunc	function: 00000001B94721F0
+    -- UnitPanel:         	IconId	ICON_UNITCOMMAND_ACTIVATE_GREAT_PERSON
+    -- UnitPanel:         	helpString	隐退[NEWLINE][NEWLINE]把相邻蛮族转到您的控制之下。[NEWLINE][COLOR_RED]进行此操作后，伟人将无法再建造任何单元格改良设施。[ENDCOLOR][NEWLINE][NEWLINE][COLOR:Red]必须靠近一个蛮族单位。[ENDCOLOR]
+    -- UnitPanel:         	CallbackVoid2	374670040
+
+    for _, value in pairs(pBaseActionsTable['MOVE']) do
+        if value.userTag == UnitOperationTypes.TELEPORT_TO_CITY then
+            local lastTurn = pUnit:GetProperty('TeleportToCityTurn')
+            -- print('lastTurn', lastTurn, Game.GetCurrentGameTurn(), (lastTurn + 5) < Game.GetCurrentGameTurn())
+            if lastTurn and (lastTurn + 5) > Game.GetCurrentGameTurn() then
+                value.helpString = value.helpString ..
+                    '[NEWLINE][NEWLINE][COLOR:Red]' ..
+                    Locale.Lookup('LOC_ACTION_DISABLE_TOOLTIP_LEFT_TURN', (lastTurn + 5) - Game.GetCurrentGameTurn()) ..
+                    '[ENDCOLOR]';
+                value.Disabled = true;
+                break
+            else
+                value.Disabled = false;
+            end
+            break
+        end
+    end
+
 
     for commandType, pCommandTable in pairs(m_TKH_UnitCommands) do
         local bVisible = true;

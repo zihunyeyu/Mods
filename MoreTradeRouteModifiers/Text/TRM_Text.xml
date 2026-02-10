@@ -35,58 +35,9 @@
 				通往{1_leader}的贸易路线
 			</Text>
 		</Row>
-		<Row Tag="LOC_NEW_TRADE_ROUTE_CREATED" Language="zh_Hant_HK">
-			<Text>
-				{1_oCity}建立了一条与{2_dCity}的贸易路线
-			</Text>
-		</Row>
-		<Row Tag="LOC_TRADE_ROUTE_DESTROY_CREATED" Language="zh_Hant_HK">
-			<Text>
-				{1_oCity}与{2_dCity}的贸易路线已取消
-			</Text>
-		</Row>
-		<Row Tag="LOC_CALCULATION_DESCRIPTION" Language="zh_Hant_HK">
-			<Text>
-				{1_amount} {2_yieldIconString} {3_yieldName}来自{4_extendString}
-			</Text>
-		</Row>
-		<Row Tag="LOC_PLOT_NAME" Language="zh_Hant_HK">
-			<Text>
-				单元格
-			</Text>
-		</Row>
-		<Row Tag="LOC_DEFAULT_NAME" Language="zh_Hant_HK">
-			<Text>
-			</Text>
-		</Row>
-		<Row Tag="LOC_HUD_REPORTS_TRADE_IN_COMING" Language="zh_Hant_HK">
-			<Text>
-				来自{1_leader}的贸易路线
-			</Text>
-		</Row>
-		<Row Tag="LOC_HUD_REPORTS_TRADE_OUT_GOING" Language="zh_Hant_HK">
-			<Text>
-				通往{1_leader}的贸易路线
-			</Text>
-		</Row>
-		<Row Tag="LOC_TRIBUTARY_NAME" Language="zh_Hans_CN">
-			<Text>
-				附属城邦
-			</Text>
-		</Row>
 		<Row Tag="LOC_TRIBUTARY_NAME" Language="zh_Hant_HK">
 			<Text>
 				附属城邦
-			</Text>
-		</Row>
-		<Row Tag="LOC_TRADE_ROUTE_MODIFIER_ADD_1GOLD_FROM_ORIGINATION_CITY_EACH_TERRAIN_DESERT" Language="zh_Hant_HK">
-			<Text>
-				的{1_itemName} 个沙漠平原单元格
-			</Text>
-		</Row>
-		<Row Tag="LOC_TRADE_ROUTE_MODIFIER_ADD_1FOOD_FROM_ORIGINATION_CITY_EACH_TERRAIN_HILL" Language="zh_Hant_HK">
-			<Text>
-				的{1_itemName} 个山脉单元格
 			</Text>
 		</Row>
 		<Row Tag="LOC_CITY_SPECIALTY_DISTRICT" Language="zh_Hant_HK">
@@ -104,11 +55,6 @@
 				的{1_itemName} 个奢侈品资源
 			</Text>
 		</Row>
-		<Row Tag="LOC_EACH_IMPROVEMENT_TRADING_DOME" Language="zh_Hant_HK">
-			<Text>
-				的{1_itemName} 个圆顶市集
-			</Text>
-		</Row>
 		<Row Tag="LOC_ORIGINATION_CITY_EACH_FOLLOWER_OF_RELIGION" Language="zh_Hant_HK">
 			<Text>
 				的{1_itemName} 个宗教信徒
@@ -117,6 +63,101 @@
 		<Row Tag="LOC_FROM_RANGE3_CITY_PLOT_RESOURCES" Language="zh_Hant_HK">
 			<Text>
 				3个单元格以内的{1_itemName} 个加成资源
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_FOOD_FROM_DESTINATION_CITY_EACH_IMPROVEMENT" Language="zh_Hant_HK">
+			<Text>
+				庞德梅克
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_GOLD_FOR_ORIGINATION_CITY" Language="zh_Hant_HK">
+			<Text>
+				克利欧佩特拉（埃及）
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_YIELD_FROM_DESTINATION_CITY_SPECIALTY_DISTRICT_FOR_TRADE" Language="zh_Hant_HK">
+			<Text>
+				德川家康
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ORIGINAL_ABILITY_REMAKE_CIV_ROME" Language="zh_Hant_HK">
+			<Text>
+				罗马
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_FAITH_FOR_ORIGINATION_CITY_FROM_INTERNATIONAL" Language="zh_Hant_HK">
+			<Text>
+				埃塞俄比亚
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_YIELD_FOR_ORIGINATION_CITY_MUTI_BY_CONTINENT" Language="zh_Hant_HK">
+			<Text>
+				西班牙
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_SCIENCE_BY_DESTINATION_PLAYER_UNLOCK_TECH" Language="zh_Hant_HK">
+			<Text>
+				俄罗斯
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_CULTURE_BY_DESTINATION_PLAYER_UNLOCK_CIVIC" Language="zh_Hant_HK">
+			<Text>
+				俄罗斯
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_1GOLD_FROM_ORIGINATION_CITY_EACH_TERRAIN_DESERT" Language="zh_Hant_HK">
+			<Text>
+				曼沙·穆萨
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_FAITH_GOLD_FROM_CONQUERED_CITY" Language="zh_Hant_HK">
+			<Text>
+				纳迪尔沙阿
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_1FOOD_FROM_ORIGINATION_CITY_EACH_TERRAIN_HILL" Language="zh_Hant_HK">
+			<Text>
+				帕查库特克·印卡·尤潘基
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_2CULTURE_FROM_INTERNATIONAL_TRADE_ROUTE_INCOMING" Language="zh_Hant_HK">
+			<Text>
+				威廉明娜
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_2CULTURE_FROM_INTERNATIONAL_TRADE_ROUTE_OUTGOING" Language="zh_Hant_HK">
+			<Text>
+				威廉明娜
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_3GOLD_FROM_ORIGINATION_CITY_SPECIALTY_DISTRICT_FOR_TRADE" Language="zh_Hant_HK">
+			<Text>
+				伊丽莎白一世
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_2PRODUCTION_FROM_TRADE_ROUTE_PATH_EACH_CIVILIZATION" Language="zh_Hant_HK">
+			<Text>
+				新加坡
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_GOLD_FROM_TRADE_ROUTE_PATH_LEVEL_PLOT" Language="zh_Hant_HK">
+			<Text>
+				罕萨
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_1GOLD_FROM_ORIGINATION_CITY_EACH_IMPROVEMENT_TRADING_DOME" Language="zh_Hant_HK">
+			<Text>
+				撒马尔罕
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADD_1GOLD_FROM_DESTINATION_CITY_EACH_LUXUY_RESOURCE" Language="zh_Hant_HK">
+			<Text>
+				威尼斯
+			</Text>
+		</Row>
+		<Row Tag="LOC_TRM_ADJUST_TRADE_ROUTE_YIELD_ORIGINATION_CITY_PER_FOLLOWER" Language="zh_Hant_HK">
+			<Text>
+				欣盖提
 			</Text>
 		</Row>
 	</LocalizedText>

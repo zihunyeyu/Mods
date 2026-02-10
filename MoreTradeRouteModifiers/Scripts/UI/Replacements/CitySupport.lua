@@ -7,6 +7,8 @@ include("PortraitSupport");
 include("ToolTipHelper");
 
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_TradeRouteModifierInstance')
 -- ===========================================================================
 --	CONSTANTS

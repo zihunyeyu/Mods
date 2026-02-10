@@ -1,6 +1,8 @@
 include("Colors");
 
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_TradeRouteModifierInstance')
 
 GameEvents = ExposedMembers.GameEvents
@@ -1138,6 +1140,7 @@ function GetYieldsForOriginCity(routeInfo, buildTooltip, checkCache)
         if m_TradeRouteModifierManager[tradeRouteID] then
             for _, trmInstance in pairs(m_TradeRouteModifierManager[tradeRouteID]) do
                 setmetatable(trmInstance, TradeRouteModifierInstance)
+                -- print('Calculate, GetYieldsForOriginCity')
                 trmInstance:Calculate()
             end
             trmInstans = m_TradeRouteModifierManager[tradeRouteID]
@@ -1313,6 +1316,7 @@ function GetYieldsForDestinationCity(routeInfo, buildTooltip, checkCache)
         if m_TradeRouteModifierManager[tradeRouteID] then
             for _, trmInstance in pairs(m_TradeRouteModifierManager[tradeRouteID]) do
                 setmetatable(trmInstance, TradeRouteModifierInstance)
+                -- print('Calculate, GetYieldsForDestinationCity')
                 trmInstance:Calculate()
             end
             trmInstans = m_TradeRouteModifierManager[tradeRouteID]

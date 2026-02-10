@@ -618,6 +618,10 @@ function ModifierCombatResult(info)
         OnUnitArmorChanged(attack_unit)
     end
 
+    if GameConfiguration.GetValue("EQUIPMENT_DEBUG_MODE") then
+        info.DefenderDamageTaken = 100
+    end
+
     -- 经验值修改
     info.AttackerExperienceEarned = math.max(info.AttackerExperienceEarned, 4)
 
@@ -636,7 +640,10 @@ function Initialize()
 
     Events.UnitDamageChanged.Add(function(playerID, unitID, newDamage, prevDamage)
         local unit = UnitManager.GetUnit(playerID, unitID)
-        print('UnitDamageChanged: ', playerID, unitID, newDamage, prevDamage, UnitManager.GetOperationTypeName(unit))
+        if not unit or unit:IsDead() or unit:IsDelayedDeath() then
+            return
+        end
+        -- print('UnitDamageChanged: ', playerID, unitID, newDamage, prevDamage, UnitManager.GetOperationTypeName(unit))
         if newDamage > prevDamage then
             OnUnitGetArmorOrDamageDecreased(unit)
         end

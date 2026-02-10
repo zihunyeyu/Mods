@@ -575,6 +575,12 @@ function RefreshEquipmentInstance(e)
         instance.EquipmentName:SetToolTipCallback(function()
             OnEquipmentTooltip(e)
         end)
+
+        -- print(equipment.Equipment, equipment.Suit, m_EquipmentSuitManager, m_EquipmentSuitManager[equipment.Suit])
+        -- for key, value in pairs(m_EquipmentSuitManager) do
+        --     print(key, value)
+        -- end
+
         if equipment.Suit and m_EquipmentSuitManager[equipment.Suit] then
             instance.EquipmentName:SetOffsetY(-10)
             instance.EquipmentSuitName:SetHide(false)
@@ -1339,34 +1345,36 @@ end
 
 
 function PopulateData()
-    m_EquipmentManager = Game:GetProperty('EquipmentManager') or m_EquipmentManager
-    m_HeroEquipmentManager = Game:GetProperty('HeroEquipmentManager') or m_HeroEquipmentManager
-    m_EquipmentSuitManager = Game:GetProperty('EquipmentSuitManager') or m_EquipmentSuitManager
-    m_EquipmentAllocator = Game:GetProperty('EquipmentAllocator') or m_EquipmentAllocator
-    m_HeroRewardManager = Game:GetProperty('HeroRewardManager') or m_HeroRewardManager
-    m_EquipmentRewardManager = Game:GetProperty('EquipmentRewardManager') or m_EquipmentRewardManager
+    local data_Str = Players[0]:GetProperty('TKH_EquipmentData')
+    -- print('player = ', Game.GetLocalPlayer(), 'data_Str = ', data_Str)
+
+    if data_Str == nil then
+        print('Error: Sync players[0] data is nil.')
+        m_EquipmentManager = Game:GetProperty('EquipmentManager') or m_EquipmentManager
+        m_HeroEquipmentManager = Game:GetProperty('HeroEquipmentManager') or m_HeroEquipmentManager
+        m_EquipmentSuitManager = Game:GetProperty('EquipmentSuitManager') or m_EquipmentSuitManager
+        m_EquipmentAllocator = Game:GetProperty('EquipmentAllocator') or m_EquipmentAllocator
+        m_HeroRewardManager = Game:GetProperty('HeroRewardManager') or m_HeroRewardManager
+        m_EquipmentRewardManager = Game:GetProperty('EquipmentRewardManager') or m_EquipmentRewardManager
+    else
+        -- Events.GameCoreEventPublishComplete.Remove(KeepRead)
+        m_EquipmentManager, m_HeroEquipmentManager, m_EquipmentAllocator, m_HeroRewardManager,
+        m_EquipmentSuitManager, m_EquipmentRewardManager = unpack(deserialize(data_Str))
+
+        -- print(m_EquipmentManager,
+        --     m_HeroEquipmentManager,
+        --     m_EquipmentSuitManager,
+        --     m_EquipmentAllocator,
+        --     m_HeroRewardManager,
+        --     m_EquipmentRewardManager)
+    end
+
     SaveData()
     -- if Game:GetProperty("TKH_EquipmentData_Initialized") then
     --     RefreshAllPane()
     -- end
 
     RefreshAllPane()
-end
-
-function ReadData()
-    -- PopulateData()
-    local dataStr = GameConfiguration.GetValue('EquipmentData')
-    if dataStr then
-        local data = deserialize(dataStr)
-        if data then
-            m_EquipmentManager,
-            m_HeroEquipmentManager,
-            m_EquipmentSuitManager,
-            m_EquipmentAllocator,
-            m_HeroRewardManager,
-            m_EquipmentRewardManager = unpack(data)
-        end
-    end
 end
 
 function SaveData()
@@ -1377,19 +1385,26 @@ function SaveData()
     m_HeroRewardManager = Game:GetProperty('HeroRewardManager')
     m_EquipmentRewardManager = Game:GetProperty('EquipmentRewardManager')
 
-    local data = {
-        m_EquipmentManager,
-        m_HeroEquipmentManager,
-        m_EquipmentSuitManager,
-        m_EquipmentAllocator,
-        m_HeroRewardManager,
-        m_EquipmentRewardManager
-    }
 
-    local serializedModSyncUpdateDataStr = serialize(data)
+    local serializedModSyncUpdateDataStr = serialize({
+        m_EquipmentManager, m_HeroEquipmentManager, m_EquipmentAllocator, m_HeroRewardManager,
+        m_EquipmentSuitManager, m_EquipmentRewardManager
+    })
+
+    local player0Config = PlayerConfigurations[0]
+    player0Config:SetValue('EquipmentData', serializedModSyncUpdateDataStr)
+
+
+    -- local playerEquipmentData = {}
+    -- for _, playerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
+    --     PlayerConfigurations[playerID]:SetValue('EquipmentData', serializedModSyncUpdateDataStr)
+    --     playerEquipmentData[playerID] = serializedModSyncUpdateDataStr
+    -- end
+
     GameConfiguration.SetValue('EquipmentData', serializedModSyncUpdateDataStr)
-    local playerConfig = PlayerConfigurations[Game.GetLocalPlayer()]
-    playerConfig:SetValue('EquipmentData', serializedModSyncUpdateDataStr)
+    -- MapConfiguration.SetValue('PlayersEquipmentData', serialize(playerEquipmentData))
+    -- print('playerEquipmentData = ', playerEquipmentData, GameConfiguration.GetValue('PlayersEquipmentData'))
+
     if GameConfiguration.IsNetworkMultiplayer() then
         Network.BroadcastPlayerInfo()
         Network.BroadcastGameConfig()

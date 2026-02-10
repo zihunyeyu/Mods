@@ -12,7 +12,12 @@ include('ReportScreen_Expansion2')
 
 
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_TradeRouteModifierInstance')
+
+
+GameEvents                                 = ExposedMembers.GameEvents
 
 -- ===========================================================================
 --	DEBUG
@@ -1188,6 +1193,9 @@ function ViewResourcesPage()
     local kLuxuries          = {};
     local kStrategics        = {};
 
+    -- playerResources.Bonuses    = {}
+    -- playerResources.Luxuries   = {}
+    -- playerResources.Strategics = {}
 
     for eResourceType, kSingleResourceData in pairs(m_kResourceData) do
         if next(kSingleResourceData.EntryList) then
@@ -1248,14 +1256,21 @@ function ViewResourcesPage()
             RealizeGroup(instance);
         end
 
+        -- playerResources.Bonuses = {}
+        -- playerResources.Luxuries = {}
+        -- playerResources.Strategics = {}
+        -- print(GameInfo.Resources[eResourceType].ResourceType, kSingleResourceData.Total)
         if kSingleResourceData.IsStrategic then
             table.insert(kStrategics, GetStrategicString(kSingleResourceData));
+            -- table.insert()
         elseif kSingleResourceData.IsLuxury then
             table.insert(kLuxuries, kSingleResourceData.Icon .. tostring(kSingleResourceData.Total));
         else
             table.insert(kBonuses, kSingleResourceData.Icon .. tostring(kSingleResourceData.Total));
         end
     end
+
+
 
     m_strategicResourcesIM:ResetInstances();
     for i, v in ipairs(kStrategics) do

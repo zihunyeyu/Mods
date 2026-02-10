@@ -106,9 +106,9 @@ FOREIGN KEY(TradeRouteModifier) REFERENCES TRM_TradeRouteModifier(TradeRouteModi
 
 ### Custom/特殊
 1. `CityReligionFollowersType`/`宗教信徒类型`
-> `DOMINANT - 主流宗教`
-> 
 > `ALL - 全部宗教`
+> 
+> `DOMINANT - 主流宗教`
 >
 > `FOUNDER - 创建者`
 
@@ -124,6 +124,26 @@ FOREIGN KEY(TradeRouteModifier) REFERENCES TRM_TradeRouteModifier(TradeRouteModi
 > `NATURAL: 自然`/`MANMADE: 人造`/`Incomplete: 未完成` 
 
 ## Reqs
+> `TRM_TradeRouteModifierRequirements(Requirement, RequirementType, Name, Value, Inverse)`
+### `RequirementType`
+#### `Preload`
+1. `CityIsOriginalOwner`/`起始终点城市拥有者非原始创建者`
+> `ANY`|`起终任意玩家`
+> 
+> `ALL`|`起始终点均非原始创建者`
+> 
+> `ORIGINATION`|`起始城市`
+> 
+> `DESTINATION`|`终点城市`
+>
+2. `DestinationPlayerType`/`终点城市拥有者玩家类型`
+> `Minor`|`Major`|`AI`|`Human`
+> 
+> `城邦`|`文明`|`AI`|`人类玩家`
+#### `Onload`
+1. `DestinationCityRelationship`/`终点城市与起始城市玩家关系`
+> `Ally|Suzerain`
+
 
 ## ExtraMutilpier/额外加成倍数
 

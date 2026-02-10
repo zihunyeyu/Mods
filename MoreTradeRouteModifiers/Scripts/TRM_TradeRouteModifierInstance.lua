@@ -1,30 +1,47 @@
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_Constants')
 
-function GetCalculationRange(calculationType)
+function CalculationTypeStringProcessor(calculationTypeString, key)
+    calculationTypeString = string.gsub(calculationTypeString, key, '', 1)
+    local _res = string.find(calculationTypeString, '_')
+    if _res == 1 then
+        calculationTypeString = string.gsub(calculationTypeString, '_', '', 1)
+    end
+
+    return calculationTypeString
+end
+
+function GetCalculationRange(calculationTypeString)
     local range = CalculationRangeType.NULL
     for k, v in pairs(CalculationRangeType) do
-        if string.find(calculationType, k) then
+        local res = string.find(calculationTypeString, k)
+        if res == 1 then
             range = v
+            calculationTypeString = CalculationTypeStringProcessor(calculationTypeString, k)
+            break
         end
     end
 
-    return range
+    return range, calculationTypeString
 end
 
 --- 获取计算目标城市
 ---@param calculationTypeString string
 function GetCalculationCityIndex(calculationTypeString)
-    local cityIndex = -1
-    if string.find(calculationTypeString, 'ORIGINATION') then
-        cityIndex = 1
-    elseif string.find(calculationTypeString, 'DESTINATION') then
-        cityIndex = 2
-    elseif string.find(calculationTypeString, 'ORIGIN_DESTI_NATION') then
-        cityIndex = 0
+    local cityIndex = CalculationCityType.NULL
+
+    for k, v in pairs(CalculationCityType) do
+        local res = string.find(calculationTypeString, k)
+        if res == 1 then
+            cityIndex = v
+            calculationTypeString = CalculationTypeStringProcessor(calculationTypeString, k)
+            break
+        end
     end
 
-    return cityIndex
+    return cityIndex, calculationTypeString
 end
 
 --- 获取计算倍数类型
@@ -32,21 +49,26 @@ end
 function GetCalculationMutilpierType(calculationTypeString)
     local mutilpierType = CalculationMultiplierType.DEFAULT
     for k, v in pairs(CalculationMultiplierType) do
-        if string.find(calculationTypeString, k) then
+        local res = string.find(calculationTypeString, k)
+        if res == 1 then
             mutilpierType = v
+            calculationTypeString = CalculationTypeStringProcessor(calculationTypeString, k)
+            break
         end
     end
 
-    return mutilpierType
+    return mutilpierType, calculationTypeString
 end
 
 --- 获取计算目标并排序
----@param calculationType any
-function GetCalculationItemTypes(calculationType)
+---@param calculationTypeString any
+function GetCalculationItemTypes(calculationTypeString)
     local items = {}
     for k, v in pairs(CalculationItemType) do
-        if string.find(calculationType, k) then
+        local res = string.find(calculationTypeString, k)
+        if res == 1 then
             table.insert(items, v)
+            calculationTypeString = CalculationTypeStringProcessor(calculationTypeString, k)
         end
     end
     if table.count(items) >= 2 then
@@ -54,15 +76,15 @@ function GetCalculationItemTypes(calculationType)
             return a < b
         end)
     end
-    return items
+    return items, calculationTypeString
 end
 
 --- 检测计算类型是否有效
-function CheckValidCalculationType(originPlayerID, originCityID, destinationPlayerID, destinationCityID,
-                                   tradeRouteModifierInfo, owner)
+function CheckValidCalculationType(opID, ocID, dpID, dcID,
+                                   trmInfo, owner)
     local isCreate = true
     local result = {}
-    local arguments = GetTradeRouteModifierArguments(tradeRouteModifierInfo.TradeRouteModifier)
+    local arguments = GetTradeRouteModifierArguments(trmInfo.TradeRouteModifier)
     local calculationType = arguments['CalculationType'] or 'DEFAULT'
 
     local function printErrorMsg(msg)
@@ -92,39 +114,51 @@ function CheckValidCalculationType(originPlayerID, originCityID, destinationPlay
             filters = GetTradeRouteModifierFilters(arguments['Filter'])
         end
         if arguments['Requirements'] then
-            reqs = GetTradeRouteModifierReqss(arguments['Requirements'])
+            reqs = GetTradeRouteModifierReqs(arguments['Requirements'])
         end
     end
 
     local check = true
     if reqs['Preload'] then
         for key, value in pairs(reqs['Preload']) do
-            if key == 'CityIsNotOriginalOwner' then
+            -- print('Inverse = ', reqs['Preload'].Inverse)
+
+            if key == 'CityIsOriginalOwner' then
                 if value[1] == 'ANY' then
-                    check = CityManager.GetCity(originPlayerID, originCityID):GetOriginalOwner() ~= owner or
-                        CityManager.GetCity(destinationPlayerID, destinationCityID):GetOriginalOwner() ~= owner
+                    check = CityManager.GetCity(opID, ocID):GetOriginalOwner() == owner or
+                        CityManager.GetCity(dpID, dcID):GetOriginalOwner() == owner
+
+                    -- if not reqs['Inverse'] then
+
+                    -- end
                 elseif value[1] == 'ALL' then
-                    check = CityManager.GetCity(originPlayerID, originCityID):GetOriginalOwner() ~= owner and
-                        CityManager.GetCity(destinationPlayerID, destinationCityID):GetOriginalOwner() ~= owner
+                    check = CityManager.GetCity(opID, ocID):GetOriginalOwner() == owner and
+                        CityManager.GetCity(dpID, dcID):GetOriginalOwner() == owner
                 elseif value[1] == 'ORIGINATION' then
-                    check = CityManager.GetCity(originPlayerID, originCityID):GetOriginalOwner() ~= owner
+                    check = CityManager.GetCity(opID, ocID):GetOriginalOwner() == owner
                 elseif value[1] == 'DESTINATION' then
-                    check = CityManager.GetCity(destinationPlayerID, destinationCityID) ~= owner
+                    check = CityManager.GetCity(dpID, dcID) == owner
                 else
                     printErrorMsg(ERROR_Req)
                 end
             elseif key == 'DestinationPlayerType' then
                 if value[1] == 'Minor' then
-                    check = Players[destinationPlayerID]:IsMinor()
+                    check = Players[dpID]:IsMinor()
                 elseif value[1] == 'Major' then
-                    check = Players[destinationPlayerID]:IsMajor()
+                    check = Players[dpID]:IsMajor()
                 elseif value[1] == 'AI' then
-                    check = not Players[destinationPlayerID]:IsHuman()
+                    check = not Players[dpID]:IsHuman()
                 elseif value[1] == 'Human' then
-                    check = Players[destinationPlayerID]:IsHuman()
+                    check = Players[dpID]:IsHuman()
                 else
                     printErrorMsg(ERROR_Req)
                 end
+            end
+
+            -- print('Inverse = ', reqs['Preload'].Inverse, check, not check)
+
+            if reqs['Preload'].Inverse then
+                check = not check
             end
         end
     end
@@ -143,10 +177,22 @@ function CheckValidCalculationType(originPlayerID, originCityID, destinationPlay
         return result
     end
 
-    local rangeType = GetCalculationRange(calculationType)
-    local cityIndex = GetCalculationCityIndex(calculationType)
-    local multiplierType = GetCalculationMutilpierType(calculationType)
-    local itemTypes = GetCalculationItemTypes(calculationType)
+    local cityIndex, calculationType_1 = GetCalculationCityIndex(calculationType)
+    local rangeType, calculationType_2 = GetCalculationRange(calculationType_1)
+    local multiplierType, calculationType_3 = GetCalculationMutilpierType(calculationType_2)
+    local itemTypes, calculationType_4 = GetCalculationItemTypes(calculationType_3)
+
+    local itemTypeKeys = {}
+    for _, item in ipairs(itemTypes) do
+        table.insert(itemTypeKeys, GetKeyByValue(item, CalculationItemType, false))
+    end
+
+    -- print('spliting calculationType: ',
+    --     table.concat({ GetKeyByValue(cityIndex, CalculationCityType), GetKeyByValue(rangeType, CalculationRangeType),
+    --             GetKeyByValue(multiplierType, CalculationMultiplierType), table.concat(itemTypeKeys, '|'),
+    --             calculationType_4 },
+    --         ''))
+    -- print(calculationType, calculationType_1, calculationType_2, calculationType_3, calculationType_4)
 
     if #itemTypes == 0 then
         printErrorMsg(ERROR_Item)
@@ -157,7 +203,7 @@ function CheckValidCalculationType(originPlayerID, originCityID, destinationPlay
         printErrorMsg(ERROR_Range)
     end
 
-    if rangeType == CalculationRangeType.STATE and (cityIndex ~= 2 or Players[destinationPlayerID]:IsMajor()) then
+    if rangeType == CalculationRangeType.STATE and (cityIndex ~= 2 or Players[dpID]:IsMajor()) then
         -- printErrorMsg(ERROR_Range)
         isCreate = false
     end
@@ -214,49 +260,49 @@ TradeRouteModifierInstance = {}
 TradeRouteModifierInstance.__index = TradeRouteModifierInstance
 
 ---新建贸易修改器实例
----@param originPlayerID number @起始玩家ID
----@param originCityID number @起始城市ID
----@param destinationPlayerID number @终点玩家ID
----@param destinationCityID number @终点城市ID
----@param tradeRouteModifierInfo table @从数据库读取的修改器参数
+---@param opID number @起始玩家ID
+---@param ocID number @起始城市ID
+---@param dpID number @终点玩家ID
+---@param dcID number @终点城市ID
+---@param trmInfo table @从数据库读取的修改器参数
 ---@param multipliers table @贸易玩家的国际贸易路线额外倍数加成
 ---@param tradeRoutePath table @贸易路线
 ---@param owner number @Modifier拥有者
 ---@param index number @同一贸易路线的实例序号
 ---@return table|nil @返回实例
-function TradeRouteModifierInstance.new(self, originPlayerID, originCityID, destinationPlayerID, destinationCityID,
-                                        tradeRouteModifierInfo, multipliers, tradeRoutePath, owner, index)
-    local res = CheckValidCalculationType(originPlayerID, originCityID, destinationPlayerID, destinationCityID,
-        tradeRouteModifierInfo, owner)
+function TradeRouteModifierInstance.new(self, opID, ocID, dpID, dcID,
+                                        trmInfo, multipliers, tradeRoutePath, owner, index)
+    local isCalculationTypeValid = CheckValidCalculationType(opID, ocID, dpID, dcID,
+        trmInfo, owner)
 
-    if not res then
+    if not isCalculationTypeValid then
         return nil
     end
 
     local o = {}
     setmetatable(o, self)
 
-    o:Initialize(originPlayerID, originCityID, destinationPlayerID, destinationCityID, tradeRouteModifierInfo,
-        multipliers, tradeRoutePath, owner, index, res)
+    o:Initialize(opID, ocID, dpID, dcID, trmInfo,
+        multipliers, tradeRoutePath, owner, index, isCalculationTypeValid)
 
     return o
 end
 
-function TradeRouteModifierInstance.Initialize(self, originPlayerID, originCityID, destinationPlayerID,
-                                               destinationCityID, tradeRouteModifierInfo, multipliers, tradeRoutePath,
+function TradeRouteModifierInstance.Initialize(self, opID, ocID, dpID,
+                                               dcID, trmInfo, multipliers, tradeRoutePath,
                                                owner, index, calPack)
-    self.OriginPlayerID = originPlayerID
-    self.OriginCityID = originCityID
-    self.DestinationPlayerID = destinationPlayerID
-    self.DestinationCityID = destinationCityID
-    self.TradeRouteDirection = tradeRouteModifierInfo.TradeRouteDirection
-    self.BenefitCity = tradeRouteModifierInfo.BenefitCity
-    self.TradeRouteModifier = tradeRouteModifierInfo.TradeRouteModifier
+    self.OriginPlayerID = opID
+    self.OriginCityID = ocID
+    self.DestinationPlayerID = dpID
+    self.DestinationCityID = dcID
+    self.TradeRouteDirection = trmInfo.TradeRouteDirection
+    self.BenefitCity = trmInfo.BenefitCity
+    self.TradeRouteModifier = trmInfo.TradeRouteModifier
     self.Owner = owner
     self.Index = index
     self.InternationalMultipliers = multipliers
     self.TradeRoutePath = tradeRoutePath
-    self.TradeRouteID = table.concat({ originPlayerID, originCityID, destinationPlayerID, destinationCityID }, '-')
+    self.TradeRouteID = table.concat({ opID, ocID, dpID, dcID }, '-')
 
     self.MutilpierType = calPack.multiplierType
     self.BaseYields = calPack.baseYields
@@ -269,7 +315,7 @@ function TradeRouteModifierInstance.Initialize(self, originPlayerID, originCityI
     self.Filters = calPack.filters
     self.Reqs = calPack.reqs
 
-    self.CityPlots = { GetCityPlots(originPlayerID, originCityID), GetCityPlots(destinationPlayerID, destinationCityID) }
+    self.CityPlots = { GetCityPlots(opID, ocID), GetCityPlots(dpID, dcID) }
     self.CalculationType = calPack.calculationType
     self.Range = calPack.rangeType
     self.CityIndex = calPack.cityIndex
@@ -279,7 +325,7 @@ function TradeRouteModifierInstance.Initialize(self, originPlayerID, originCityI
     self.Updater = {}
 
     -- if self.MutilpierType ~= CalculationMultiplierType.DEFAULT then
-    --     self.CityPlots = { GetCityPlots(originPlayerID, originCityID), GetCityPlots(destinationPlayerID, destinationCityID) }
+    --     self.CityPlots = { GetCityPlots(opID, ocID), GetCityPlots(dpID, dcID) }
     --     self.CalculationType = calPack.calculationType
     --     self.Range = calPack.rangeType
     --     self.CityIndex = calPack.cityIndex
@@ -288,6 +334,8 @@ function TradeRouteModifierInstance.Initialize(self, originPlayerID, originCityI
     --     self.ExtraInfo = {}
     --     self.Updater = {}
     -- end
+    -- print('Calculate, Initialize')
+
     self:Calculate()
 
     -- print(self.TradeRouteModifier, ' - has created.')
@@ -459,6 +507,14 @@ function TradeRouteModifierInstance.SetDescription(self, locText, ...)
             yieldInfo.Description = Locale.Lookup(locText, yieldInfo.Amount, GameInfo.Yields[yieldType].IconString,
                 -- Locale.Lookup(GameInfo.Yields[yieldType].Name), ...) .. string.format('<%s>', leaderName)
                 Locale.Lookup(GameInfo.Yields[yieldType].Name), ...)
+            local trmInfo = GameInfo.TRM_TradeRouteModifier[self.TradeRouteModifier]
+            if trmInfo.Name then
+                -- print(Locale.Lookup(trmInfo.Name))
+                if Locale.HasTextKey(trmInfo.Name) then
+                    yieldInfo.Description = yieldInfo.Description ..
+                        string.format('[COLOR_Civ6DarkRed]<%s>[ENDCOLOR]', Locale.Lookup(trmInfo.Name))
+                end
+            end
         end
     end
 end
@@ -589,7 +645,7 @@ function TradeRouteModifierInstance.GetMatchItemsPlot(self, cityIndex)
                     local tNextMatchItems = GetMatchPlots(GetCityPlots(playerID, pCity:GetID()))
 
                     for _, cItem in ipairs(self.Items) do
-                        tempNextMatchItems = GetItemMatchPlots(self.Filters, cItem, tempNextMatchItems, playerID)
+                        tNextMatchItems = GetItemMatchPlots(self.Filters, cItem, tNextMatchItems, playerID)
                     end
                     setmetatable(tempNextMatchItems, TableHelper)
                     tempNextMatchItems = tempNextMatchItems + tNextMatchItems
@@ -705,6 +761,13 @@ function TradeRouteModifierInstance.GetItemYieldMultiplier(self, cityIndex)
                 yieldMultiplier = yieldMultiplier + GetPlayerUnlockTechCount(pID)
             elseif cItem == CalculationItemType.UNLOCK_CIVIC then
                 yieldMultiplier = yieldMultiplier + GetPlayerUnlockCivicCount(pID)
+            elseif cItem == CalculationItemType.TOTAL_RESOURCE_AMOUNT then
+                yieldMultiplier = yieldMultiplier + GetPlayerResourceAmount(pID, self.Filters, self.Params)
+            elseif cItem == CalculationItemType.ERA_SCORE then
+                local eraData = ExposedMembers.TRM.GetPlayerEraData(pID)
+                if eraData and eraData.EraScore then
+                    yieldMultiplier = yieldMultiplier + eraData.EraScore
+                end
             end
         elseif self.Range == CalculationRangeType.TRADE_ROUTE_PATH then
             if cItem > CalculationItemType.MATCH_PLOT_COUNT and cItem < CalculationItemType.SPEC1AL_DATA then
@@ -805,10 +868,11 @@ function TradeRouteModifierInstance.GetCounterYieldMultiplier(self, cityIndex)
         if counterItem == CalculationItemType.UNITS_KILLED then
             yieldMultiplier = yieldMultiplier + GetPlayerGameSummary(pID, 'REPLAYDATASET_TOTALUNITSDESTROYED')
         elseif counterItem == CalculationItemType.FOUNDED_NATURAL_W0NDERS then
-            local foundedNWonder = PlayerConfigurations[pID]:GetValue('FOUNDED_NATURAL_W0NDERS') or 0
-            yieldMultiplier = yieldMultiplier + foundedNWonder
-        elseif counterItem == CalculationItemType.TRADE_ROUTE then
-
+            yieldMultiplier = yieldMultiplier + (PlayerConfigurations[pID]:GetValue('FOUNDED_NATURAL_W0NDERS') or 0)
+        elseif counterItem == CalculationItemType.TRADE_R0UTE then
+            yieldMultiplier = yieldMultiplier + (Players[pID]:GetTrade():GetOutgoingRouteCapacity() or 0)
+        elseif counterItem == CalculationItemType.TRADER0UTE_ACT1VE then
+            yieldMultiplier = yieldMultiplier + (PlayerConfigurations[pID]:GetValue('TRADE_ROUTES_ACTIVE') or 0)
         end
     end
 
@@ -846,20 +910,19 @@ function TradeRouteModifierInstance.CalculateCompare(self)
     if self.Items[1] < CalculationItemType.MATCH_PLOT_COUNT then
         local o_MatchPlots = self:GetMatchItemsPlot(1)
         local d_MatchPlots = self:GetMatchItemsPlot(2)
-        yieldMultiplier = LimitMutilpierCompare(#o_MatchPlots, #d_MatchPlots, self.Filters, self.MutilpierType,
-            self.CalculationType)
+        yieldMultiplier = LimitMutilpierCompare(#o_MatchPlots, #d_MatchPlots, self)
         itemDescription = self:GetYieldDescriptionByMatchPlots(math.abs(#o_MatchPlots - #d_MatchPlots))
     elseif self.Items[1] > CalculationItemType.COUNTERS then
         local oAmount = self:GetCounterYieldMultiplier(1)
         local dAmount = self:GetCounterYieldMultiplier(2)
         yieldMultiplier =
-            LimitMutilpierCompare(oAmount, dAmount, self.Filters, self.MutilpierType, self.CalculationType)
+            LimitMutilpierCompare(oAmount, dAmount, self)
         itemDescription = self:GetYieldDescriptionByCounter(math.abs(oAmount - dAmount))
     else
         local oAmount = self:GetItemYieldMultiplier(1)
         local dAmount = self:GetItemYieldMultiplier(2)
         yieldMultiplier =
-            LimitMutilpierCompare(oAmount, dAmount, self.Filters, self.MutilpierType, self.CalculationType)
+            LimitMutilpierCompare(oAmount, dAmount, self)
         itemDescription = self:GetYieldDescriptionByItems(math.abs(oAmount - dAmount))
     end
 
@@ -875,7 +938,7 @@ function TradeRouteModifierInstance.CalculateCompare(self)
     end
 end
 
-function TradeRouteModifierInstance.CheckReqs(self)
+function TradeRouteModifierInstance.CheckOnloadReqs(self)
     local check = true
     if self.Reqs['Onload'] then
         local _or = false
@@ -926,10 +989,14 @@ function TradeRouteModifierInstance.CheckReqs(self)
 end
 
 -- 计算总加值
-function TradeRouteModifierInstance.Calculate(self)
-    if not self:CheckReqs() then
+function TradeRouteModifierInstance.Calculate(self, params)
+    self.Params = params
+
+    if not self:CheckOnloadReqs() then
         return
     end
+
+
 
     if self.MutilpierType == CalculationMultiplierType.DEFAULT then
         self:CalculateDefault()
@@ -941,25 +1008,28 @@ function TradeRouteModifierInstance.Calculate(self)
         self.CityPlots = { GetCityPlots(self.OriginPlayerID, self.OriginCityID),
             GetCityPlots(self.DestinationPlayerID, self.DestinationCityID) }
 
+        -- 匹配单元格内容
         if self.Items[1] < CalculationItemType.MATCH_PLOT_COUNT then
             local matchPlots = self:GetMatchItemsPlot(self.CityIndex)
-            yieldMultiplier = LimitMutilpier(#matchPlots, self.Filters, self.MutilpierType, self.CalculationType)
+            yieldMultiplier = LimitMutilpier(#matchPlots, self)
             if self.ModifierArguments['ItemDes'] and Locale.HasTextKey(self.ModifierArguments['ItemDes']) then
                 itemDescription = Locale.Lookup(self.ModifierArguments['ItemDes'], #matchPlots)
             else
                 itemDescription = self:GetYieldDescriptionByMatchPlots(#matchPlots)
             end
+            -- 非计数内容
         elseif self.Items[1] > CalculationItemType.COUNTERS then
             local itemAmount = self:GetCounterYieldMultiplier(self.CityIndex)
-            yieldMultiplier = LimitMutilpier(itemAmount, self.Filters, self.MutilpierType, self.CalculationType)
+            yieldMultiplier = LimitMutilpier(itemAmount, self)
             if self.ModifierArguments['ItemDes'] and Locale.HasTextKey(self.ModifierArguments['ItemDes']) then
                 itemDescription = Locale.Lookup(self.ModifierArguments['ItemDes'], itemAmount)
             else
                 itemDescription = self:GetYieldDescriptionByCounter(itemAmount)
             end
         else
+            -- 计数内容
             local itemAmount = self:GetItemYieldMultiplier(self.CityIndex)
-            yieldMultiplier = LimitMutilpier(itemAmount, self.Filters, self.MutilpierType, self.CalculationType)
+            yieldMultiplier = LimitMutilpier(itemAmount, self)
             if self.ModifierArguments['ItemDes'] and Locale.HasTextKey(self.ModifierArguments['ItemDes']) then
                 itemDescription = Locale.Lookup(self.ModifierArguments['ItemDes'], itemAmount)
             else
@@ -990,6 +1060,14 @@ function TradeRouteModifierInstance.SetUpdater(self, m_TradeRouteModifierUpdater
         if self.Filters['Custom'] then
             if self.Updater[CalculationItemType.RESOURCE] and self.Filters['Custom']['IsImproved'] then
                 self.Updater[CalculationItemType.IMPROVEMENT] = true
+            end
+        end
+
+        if self.Filters['TIME_LIMIT'] then
+            for key, _ in pairs(self.Filters['TIME_LIMIT']) do
+                if string.match(key, 'ERA_AGE') then
+                    m_TradeRouteModifierUpdater[CalculationItemType.GAME_ERA_CHANGE][self.TradeRouteID] = true
+                end
             end
         end
 
@@ -1032,6 +1110,7 @@ function TradeRouteModifierInstance.Apply(self)
             cityYieldsDecimal[self.TradeRouteID][modifierID] = {}
             cityYieldsDecimal[self.TradeRouteID][modifierID][cityKey] = {}
 
+
             for yieldType, yieldInfo in pairs(self.Yields[cityKey]) do
                 local totalAmount = yieldInfo.Amount + (yieldInfo.Multiplier or 0)
                 local amountInteger, amountDecimal = math.modf(totalAmount)
@@ -1050,6 +1129,8 @@ function TradeRouteModifierInstance.Apply(self)
                     amountInteger = amountInteger - amount
                 end
             end
+
+
             bCity:SetProperty('CityYields', cityYields)
             bCity:SetProperty('CityYieldsDecimal', cityYieldsDecimal)
         end

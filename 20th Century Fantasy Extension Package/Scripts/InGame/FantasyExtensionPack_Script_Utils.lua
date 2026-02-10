@@ -40,7 +40,7 @@ GameEvents.SetCityProperty.Add(function(playerID, cityID, propertyName, property
 end)
 
 -- =========================TKKIKCore.Utils=========================
-ExposedMembers.TKKIKCore.Utils.DeepCopy = function (object)
+ExposedMembers.TKKIKCore.Utils.DeepCopy = function(object)
     -- 已经复制过的table，key为复制源table，value为复制后的table
     -- 为了防止table中的某个属性为自身时出现死循环
     -- 避免本该是同一个table的属性，在复制时变成2个不同的table(内容同，但是地址关系和原来的不一样了)
@@ -50,19 +50,19 @@ ExposedMembers.TKKIKCore.Utils.DeepCopy = function (object)
             return object
         elseif lookup_table[object] then
             return lookup_table[object]
-        end 
+        end
         local new_table = {}
         lookup_table[object] = new_table
-        for k,v in pairs(object) do
-            new_table[_copy(k)] = _copy(v) 
-        end 
+        for k, v in pairs(object) do
+            new_table[_copy(k)] = _copy(v)
+        end
         -- 这里直接拿mt来用是因为一般对table操作不会很粗暴的修改mt的相关内容
         return setmetatable(new_table, getmetatable(object))
-    end 
-    return _copy(object)                 
+    end
+    return _copy(object)
 end
 
-ExposedMembers.TKKIK.Utils.IsInTable =function (tTable: table, element)
+ExposedMembers.TKKIK.Utils.IsInTable = function(tTable, element)
     if tTable == nil or table.count(tTable) == 0 then
         return false
     end
@@ -78,7 +78,7 @@ end
 
 -- =========================TKKIK.Utils=========================
 
-ExposedMembers.TKKIK.Utils.IsLeaderInGame = function (leaderType: string)
+ExposedMembers.TKKIK.Utils.IsLeaderInGame = function(leaderType)
     if GameInfo.Leaders[leaderType] == nil then
         return false
     end
@@ -93,7 +93,7 @@ ExposedMembers.TKKIK.Utils.IsLeaderInGame = function (leaderType: string)
     return false
 end
 
-ExposedMembers.TKKIK.Utils.GetPlayerIDsByLeaderType = function (leaderType: string)
+ExposedMembers.TKKIK.Utils.GetPlayerIDsByLeaderType = function(leaderType)
     if GameInfo.Leaders[leaderType] == nil then
         return nil
     end
@@ -108,7 +108,7 @@ ExposedMembers.TKKIK.Utils.GetPlayerIDsByLeaderType = function (leaderType: stri
     return playerIDs
 end
 
-ExposedMembers.TKKIK.Utils.HasBuilding = function (iPlayerID, iCityID, buildingIndex)
+ExposedMembers.TKKIK.Utils.HasBuilding = function(iPlayerID, iCityID, buildingIndex)
     local pCity = CityManager.GetCity(iPlayerID, iCityID)
     if pCity ~= nil then
         local cBuildings = pCity:GetBuildings()
@@ -120,7 +120,7 @@ ExposedMembers.TKKIK.Utils.HasBuilding = function (iPlayerID, iCityID, buildingI
     return false
 end
 
-ExposedMembers.TKKIK.Utils.GetBuildingPlotIndex = function (iPlayerID, iCityID, buildingIndex)
+ExposedMembers.TKKIK.Utils.GetBuildingPlotIndex = function(iPlayerID, iCityID, buildingIndex)
     local pCity = CityManager.GetCity(iPlayerID, iCityID)
     if Utils.HasBuilding(iPlayerID, iCityID, buildingIndex) then
         local prereqDistrict = GameInfo.Buildings[buildingIndex].PrereqDistrict
@@ -137,13 +137,13 @@ ExposedMembers.TKKIK.Utils.GetBuildingPlotIndex = function (iPlayerID, iCityID, 
     return -1
 end
 
-ExposedMembers.TKKIK.Utils.ChangeGreatPeoplePointsTotal = function (iPlayerID: number, greatPersonClass: string, amout: number)
+ExposedMembers.TKKIK.Utils.ChangeGreatPeoplePointsTotal = function(iPlayerID, greatPersonClass, amout)
     local greatePerson = GameInfo.GreatPersonClasses[greatPersonClass]
     if greatePerson ~= nil and Players[iPlayerID] ~= nil then
         Players[iPlayerID]:GetGreatPeoplePoints():ChangePointsTotal(greatePerson.Index, amout)
     end
 end
-ExposedMembers.TKKIK.Utils.GetMajorIDs = function ()
+ExposedMembers.TKKIK.Utils.GetMajorIDs = function()
     local majorIDs = {}
     for _, player in ipairs(Players) do
         if player:IsMajor() then
@@ -153,22 +153,22 @@ ExposedMembers.TKKIK.Utils.GetMajorIDs = function ()
     return majorIDs
 end
 
-ExposedMembers.TKKIK.Utils.GetCivAndLeaderName = function (iPlayerID)
+ExposedMembers.TKKIK.Utils.GetCivAndLeaderName = function(iPlayerID)
     local playerConfig = PlayerConfigurations[iPlayerID];
     return Locale.Lookup(playerConfig:GetCivilizationDescription()), Locale.Lookup(playerConfig:GetLeaderName())
 end
 
-ExposedMembers.TKKIK.Utils.PlayerAttachModifierByID =function (iPlayerID: number, modifierID: string)
+ExposedMembers.TKKIK.Utils.PlayerAttachModifierByID = function(iPlayerID, modifierID)
     local iPlayer = Players[iPlayerID]
     if iPlayer == nil or not (iPlayer:IsMajor() and iPlayer:IsAlive()) then
         return false
     end
     if modifierID ~= nil then
-        iPlayer:AttachModifierByID(modifierID)   
+        iPlayer:AttachModifierByID(modifierID)
     end
 end
 
-ExposedMembers.TKKIK.Utils.CreateDistrict = function (iPlayerID, iCityID, districtType, progress, plotIndex)
+ExposedMembers.TKKIK.Utils.CreateDistrict = function(iPlayerID, iCityID, districtType, progress, plotIndex)
     local pCity = CityManager.GetCity(iPlayerID, iCityID)
     if pCity == nil then
         return
@@ -176,7 +176,7 @@ ExposedMembers.TKKIK.Utils.CreateDistrict = function (iPlayerID, iCityID, distri
 
     local pPlot = Map.GetPlotByIndex(plotIndex)
     if pPlot == nil then
-        return 
+        return
     end
 
     local pDistrict = CityManager.GetDistrictAt(pPlot);
@@ -187,7 +187,7 @@ ExposedMembers.TKKIK.Utils.CreateDistrict = function (iPlayerID, iCityID, distri
     WorldBuilder.CityManager():CreateDistrict(pCity, districtType, progress, pPlot);
 end
 
-ExposedMembers.TKKIK.Utils.CreateUnit = function (iPlayerID, unitType, iX, iY)
+ExposedMembers.TKKIK.Utils.CreateUnit = function(iPlayerID, unitType, iX, iY)
     local unit = UnitManager.InitUnit(iPlayerID, unitType, iX, iY)
     if unit ~= nil then
         return unit:GetID()
@@ -195,14 +195,14 @@ ExposedMembers.TKKIK.Utils.CreateUnit = function (iPlayerID, unitType, iX, iY)
     return nil
 end
 
-ExposedMembers.TKKIK.Utils.KillUnit = function (iPlayerID, iUnitID)
+ExposedMembers.TKKIK.Utils.KillUnit = function(iPlayerID, iUnitID)
     local pUnit = UnitManager.GetUnit(iPlayerID, iUnitID)
     if pUnit ~= nil then
         UnitManager.Kill(pUnit)
     end
 end
 
-ExposedMembers.TKKIK.Utils.GetAbilityCount = function (iPlayerID, iUnitID, abilityName)
+ExposedMembers.TKKIK.Utils.GetAbilityCount = function(iPlayerID, iUnitID, abilityName)
     local pUnit = UnitManager.GetUnit(iPlayerID, iUnitID)
     if pUnit == nil then
         return
@@ -210,26 +210,26 @@ ExposedMembers.TKKIK.Utils.GetAbilityCount = function (iPlayerID, iUnitID, abili
     return pUnit:GetAbility():GetAbilityCount(abilityName);
 end
 
-ExposedMembers.TKKIK.Utils.SetCityName = function (iPlayerID, iCityID, newName)
+ExposedMembers.TKKIK.Utils.SetCityName = function(iPlayerID, iCityID, newName)
     local city = CityManager.GetCity(iPlayerID, iCityID)
     if city ~= nil then
         city:SetName(newName)
     end
 end
 
-ExposedMembers.TKKIK.Utils.ChangePlotVisibility = function (iPlayerID, iPlotIndex)
+ExposedMembers.TKKIK.Utils.ChangePlotVisibility = function(iPlayerID, iPlotIndex)
     local pPlayerVisibility = PlayersVisibility[iPlayerID];
-    if(pPlayerVisibility ~= nil) then
+    if (pPlayerVisibility ~= nil) then
         -- 设为1表示完全可见，设0则是已探索但有迷雾
         pPlayerVisibility:ChangeVisibilityCount(iPlotIndex, 1);
     end
 end
 
-ExposedMembers.TKKIK.Utils.GetRandomNumber = function (iRange)
+ExposedMembers.TKKIK.Utils.GetRandomNumber = function(iRange)
     return Game.GetRandNum(iRange) + 1
 end
 
-ExposedMembers.TKKIK.Utils.GetNearCitiesInRange = function (playerID, cityID, iRange)
+ExposedMembers.TKKIK.Utils.GetNearCitiesInRange = function(playerID, cityID, iRange)
     local player = Players[playerID]
     local cCity = CityManager.GetCity(playerID, cityID)
     if player == nil or cCity == nil then
@@ -250,7 +250,7 @@ ExposedMembers.TKKIK.Utils.GetNearCitiesInRange = function (playerID, cityID, iR
     return rangeCities
 end
 
-ExposedMembers.TKKIK.Utils.GetNearCitiesInRangeByPos = function (playerID, cX, cY, iRange)
+ExposedMembers.TKKIK.Utils.GetNearCitiesInRangeByPos = function(playerID, cX, cY, iRange)
     local player = Players[playerID]
     if player == nil then
         return
@@ -309,5 +309,3 @@ function GetPlayerCitiyNum(pPlayerID)
 
     return hasCitiesNum, lostCitiesNum
 end
-
-

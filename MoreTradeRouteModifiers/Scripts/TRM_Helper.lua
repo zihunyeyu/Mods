@@ -1,450 +1,12 @@
 include('TRM_Constants')
+include('TTK_ToolkitsCore')
+-- include('TTK_ToolkitsCore')
 
--- ==========================
--- COMMON FUNCTIONS
--- ==========================
-
-TableHelper = {}
-TableHelper.__add = function(self, otherTable)
-    if not type(otherTable) == 'table' then
-        return self
-    end
-
-    for _, value in pairs(otherTable) do
-        if value then
-            table.insert(self, value)
-        end
-    end
-
-    return self
-end
-
---- 多重逻辑判断
----@param logicT table @逻辑列表
----@param _or boolean @是否或逻辑
----@return boolean @返回逻辑结果
-function MutiLogic(logicT, _or)
-    local res
-    for _, value in ipairs(logicT) do
-        if res == nil then
-            res = value
-        else
-            if _or then
-                res = res or value
-            else
-                res = res and value
-            end
-        end
-    end
-
-    return res
-end
-
-function GetPreciseDecimalRound(nNum, n)
-    n = n or 0;
-    n = math.floor(n)
-    if n < 0 then
-        n = 0;
-    end
-    local format = "%." .. n .. "f"
-    return string.format(format, nNum)
-end
-
----保留小数
----@param nNum number @输入数值
----@param n number @保留的小数位数
----@return number
-function GetPreciseDecimalFloor(nNum, n)
-    if type(nNum) ~= "number" then
-        return nNum
-    end
-    n = n or 0
-    n = math.floor(n)
-    if n < 0 then
-        n = 0
-    end
-    local nDecimal = 10 ^ n
-    local nTemp = math.floor(nNum * nDecimal)
-    local nRet = nTemp / nDecimal
-    return nRet
-end
-
-function RemoveByLengthEfficient(tbl, conditionFunc)
-    local newTable = {}
-    for _, item in ipairs(tbl) do
-        if not conditionFunc(item) then
-            table.insert(newTable, item)
-        end
-    end
-    return newTable
-end
-
---- 检测table是否包含元素
----@param pTable table
----@param element any
-function Contains(pTable, element)
-    for _, v in pairs(pTable) do
-        if v == element then
-            return true
-        end
-    end
-    return false
-end
-
---- table去重
----@param pTable table
-function Unique(pTable)
-    local temp = {}
-    for key, val in pairs(pTable) do
-        temp[val] = true
-    end
-    local result = {}
-    for key, val in pairs(temp) do
-        table.insert(result, key)
-    end
-    return result
-end
-
----获取table长度
----@param pTable table|any
----@return number
-function GetTableLength(pTable)
-    if not type(pTable) == 'table' then
-        return 0
-    end
-
-    local length = 0
-    for _, value in pairs(pTable) do
-        if value then
-            length = length + 1
-        end
-    end
-
-    return length
-end
-
-function RemoveByValue(array, value, removeadll)
-    local i, max = 1, #array
-    while i <= max do
-        if array[i] == value then
-            --    通过索引操作表的删除元素
-            table.remove(array, i)
-            --    标记删除次数
-            i = i - 1
-            --    控制while循环操作
-            max = max - 1
-            --    判断是否删除所有相同的value值
-            if not removeadll then
-                break
-            end
-        end
-        i = i + 1
-    end
-end
-
----分割字符串
----@param str string @目标字符串
----@param reps string @分隔符
----@return table
-function SplitString(str, reps)
-    local resultStrList = {}
-    string.gsub(str, '[^' .. reps .. ']+', function(w)
-        table.insert(resultStrList, w)
-    end)
-    return resultStrList
-end
-
----提取字符串数字（整数及小数）
----@param input string
----@return number
-function ExtractNumbers(input)
-    local numbers = {}             -- 用于存储提取的数字
-    local pattern = "%-?%d+%.?%d*" -- 匹配整数和小数的正则表达式
-
-    -- 遍历字符串中的所有匹配项
-    for number in string.gmatch(input, pattern) do
-        -- 将提取的字符串转换为数字并插入表中
-        table.insert(numbers, tonumber(number))
-    end
-
-    if next(numbers) then
-        return numbers[1]
-    else
-        return 0
-    end
-end
-
--- ==========================
--- GAME FUNCTIONS
--- ==========================
-
-function GetReligionFounders()
-    local religions = Game.GetReligion():GetReligions();
-
-    -- CustomName	LOC_RELIGION_CATHOLICISM
-    -- Religion	2
-    -- Beliefs	table: 0000000105486DA0
-    -- Founder	0
-    local res = {}
-    for _, religion in ipairs(religions) do
-        res[religion.Religion .. '_'] = religion.Founder
-    end
-
-    return res
-end
-
-function GetCityReligionFollowers(pCity, filters)
-    if not pCity then
-        return 0
-    end
-
-    local pReligions               = pCity:GetReligion():GetReligionsInCity();
-    local eDominantReligion        = pCity:GetReligion():GetMajorityReligion();
-
-    local followersAll             = 0
-    local domainReligionFollowers  = 0
-    local founderReligionFollowers = 0
-
-    local religionFounders         = GetReligionFounders()
-    for _, religionData in pairs(pReligions) do
-        -- Religion	2
-        -- Followers	3
-        -- Pressure	500
-        local religionType = (religionData.Religion > 0) and GameInfo.Religions[religionData.Religion].ReligionType or
-            "RELIGION_PANTHEON";
-
-        if religionData.Religion == eDominantReligion and eDominantReligion > -1 then
-            domainReligionFollowers = religionData.Followers;
-        end
-
-        if religionFounders[religionData.Religion .. '_'] and religionFounders[religionData.Religion .. '_'] == pCity:GetOwner() then
-            founderReligionFollowers = religionData.Followers;
-        end
-
-        if religionType ~= "RELIGION_PANTHEON" then
-            followersAll = followersAll + religionData.Followers;
-        end
-    end
-
-    if filters and filters['Custom'] then
-        local followerType = filters['Custom']['CityReligionFollowersType'][1]
-        if followerType == 'FOUNDER' then
-            return founderReligionFollowers
-        elseif followerType == 'DOMINANT' then
-            return domainReligionFollowers
-        end
-    end
-
-    return followersAll
-end
-
---- 获取玩家游戏参数
----@param playerID number @玩家ID
----@param key string @参数Key
-function GetPlayerGameSummary(playerID, key)
-    local cTurn = Game.GetCurrentGameTurn()
-
-    for i = 0, GameSummary.GetDataSetCount() - 1, 1 do
-        local name = GameSummary.GetDataSetName(i);
-        if name == key then
-            local gdata = GameSummary.CoalesceDataSet(i, cTurn, cTurn)
-            if gdata then
-                return gdata[playerID][1]
-            else
-                return 0
-            end
-        end
-    end
-
-    return 0
-end
-
---- 获取玩家解锁科技数量
----@param playerID number @玩家ID
-function GetPlayerUnlockTechCount(playerID)
-    local player = Players[playerID]
-    local techNums = 0
-    for row in GameInfo.Technologies() do
-        if player:GetTechs():HasTech(row.Index) then
-            techNums = techNums + 1
-        end
-    end
-    return techNums
-end
-
-function GetPlayerUnlockCivicCount(playerID)
-    local player = Players[playerID]
-    local civicNums = 0
-    for row in GameInfo.Civics() do
-        if player:GetCulture():HasCivic(row.Index) then
-            civicNums = civicNums + 1
-        end
-    end
-    return civicNums
-end
-
----获取城邦GameInfo
----@param civType string
----@return table
-function GetCityStateData(civType)
-    -- Refresh the cache if needed
-    local stateInfo = {}
-    local query = "SELECT * from CityStates where CivilizationType = ?";
-    local kResults = DB.ConfigurationQuery(query, civType);
-    if (kResults) then
-        for i, t in ipairs(kResults) do
-            for key, value in pairs(t) do
-                stateInfo[key] = value
-            end
-        end
-    end
-    return stateInfo
-end
-
----获取玩家下属城邦数量
----@param majorPlayerID number
----@param filters table|nil
----@return table
-function GetPlayerTributaryAmount(majorPlayerID, filters)
-    local tAmount = 0
-
-    local Tributarys = {}
-
-    for _, playerID in ipairs(PlayerManager.GetAliveMinorIDs()) do
-        local minorPlayer = Players[playerID]
-        local minorPlayerInfluence = minorPlayer:GetInfluence()
-        local isMatch = true
-        if minorPlayerInfluence:GetSuzerain() ~= majorPlayerID then
-            isMatch = false
-        end
-
-        local minorInfo = GetCityStateData(PlayerConfigurations[playerID]:GetCivilizationTypeName())
-        if filters then
-            if filters['GameInfo'] then
-                isMatch = CheckItemIsMatchFilter(minorInfo, filters['GameInfo'])
-            end
-        end
-        if isMatch and minorInfo.CityStateCategory then
-            tAmount = tAmount + 1
-            if not Tributarys[minorInfo.CityStateCategory] then
-                Tributarys[minorInfo.CityStateCategory] = 0
-            end
-            Tributarys[minorInfo.CityStateCategory] = Tributarys[minorInfo.CityStateCategory] + 1
-        end
-    end
-
-    return { tAmount, Tributarys }
-end
-
-function CheckMinorPlayerInTrade(gPlayerID, rPlayerID)
-    if Players[gPlayerID]:IsMajor() and not Players[rPlayerID]:IsMajor() then
-        return Players[rPlayerID]
-    elseif Players[rPlayerID]:IsMajor() and not Players[gPlayerID]:IsMajor() then
-        return Players[gPlayerID]
-    end
-    return nil
-end
-
----获取宗主国加成倍数
----@param gPlayerID any
----@param rPlayerID any
----@param tempMutilpier any
----@return number, boolean @倍数，是否为宗主国
-function GetExtraMutilpierFromSuzerain(gPlayerID, rPlayerID, tempMutilpier)
-    local rPlayer = CheckMinorPlayerInTrade(gPlayerID, rPlayerID)
-    if not rPlayer then
-        return 0, false
-    end
-    local mutilpier = 0
-    local rPlayerInfluence = rPlayer:GetInfluence()
-    local isSuzerain = rPlayerInfluence:GetSuzerain() == gPlayerID
-    if tempMutilpier and tonumber(tempMutilpier) then
-        tempMutilpier = tonumber(tempMutilpier)
-        if tempMutilpier == 0 then
-            mutilpier = isSuzerain and 0 or 1
-        elseif tempMutilpier == 1 then
-            mutilpier = not isSuzerain and 0 or 1
-        else
-            mutilpier = isSuzerain and tempMutilpier or 1
-        end
-    end
-
-    return mutilpier, isSuzerain
-end
-
----获取使者数量
----@param gPlayerID number @主文明
----@param rPlayerID number @城邦
----@param filters table|nil @过滤器
----@return number|nil
-function GetStateTokensReceived(gPlayerID, rPlayerID, filters)
-    local rPlayer = CheckMinorPlayerInTrade(gPlayerID, rPlayerID)
-    if not rPlayer then
-        return 0
-    end
-    local tAmount = 0
-    local rPlayerInfluence = rPlayer:GetInfluence()
-    if rPlayerInfluence then
-        tAmount = rPlayerInfluence:GetTokensReceived(gPlayerID)
-    end
-    if filters and filters['GameInfo'] then
-        local minorInfo = GetCityStateData(PlayerConfigurations[rPlayerID]:GetCivilizationTypeName())
-        if not CheckItemIsMatchFilter(minorInfo, filters['GameInfo']) then
-            tAmount = 0
-        end
-    end
-
-    return tAmount
-end
-
----获取玩家伟人点数
----@param playerID number
----@param filters table
-function GetPlayerGreatPeoplePoints(playerID, filters)
-    local player = Players[playerID]
-    local greatPeoplePoints = player:GetGreatPeoplePoints()
-    local pAmount = 0
-    local classPoint = {}
-    for row in GameInfo.GreatPersonClasses() do
-        local isMatch = true
-        if filters['GameInfo'] then
-            isMatch = CheckItemIsMatchFilter(row, filters['GameInfo'])
-        end
-        if isMatch then
-            local point = greatPeoplePoints:GetPointsTotal(row.Index)
-            classPoint[row.GreatPersonClassType] = point
-            pAmount = pAmount + point
-        end
-    end
-
-    return pAmount, classPoint
-end
-
-function GetPlayerRelationshipAmount(playerID, tPlayerID)
-    local ms_SelectedPlayer = Players[tPlayerID]
-    local selectedPlayerDiplomaticAI = ms_SelectedPlayer:GetDiplomaticAI()
-    local toolTips = selectedPlayerDiplomaticAI:GetDiplomaticModifiers(playerID)
-    local totalScore = 0
-
-    if (toolTips) then
-        table.sort(toolTips, function(a, b)
-            return a.Score > b.Score;
-        end)
-        for i, tip in ipairs(toolTips) do
-            local score = tip.Score
-
-            if (score ~= 0) then
-                totalScore = totalScore + score
-            end
-        end
-    end
-
-    return math.abs(totalScore)
-end
 
 -- ==========================
 -- GAME FUNCTIONS MATCH ITEMS
 -- ==========================
+
 
 ---获取匹配单元格
 ---@param plots table
@@ -493,6 +55,7 @@ function GetItemMatchPlots(filters, matchType, preMatchPlots, playerID)
         for _, preMatchPlot in ipairs(preMatchPlots) do
             local plotIndex = preMatchPlot[CalculationItemType.PLOT]
             local plot = Map.GetPlotByIndex(plotIndex)
+            local territory = Territories.GetTerritoryAt(plotIndex)
             -- 资源
             if matchType == CalculationItemType.RESOURCE then
                 matchItemIndex = plot:GetResourceType() or -1
@@ -666,6 +229,39 @@ function GetItemMatchPlots(filters, matchType, preMatchPlots, playerID)
                         end
                     end
                 end
+            elseif matchType == CalculationItemType.MOUNTAIN then
+                if plot:IsMountain() then
+                    isMatch = true
+                    local record = {}
+                    for key, value in pairs(preMatchPlot) do
+                        record[key] = value
+                    end
+                    record[CalculationItemType.MOUNTAIN] = true
+                    table.insert(nextMatchPlots, record)
+                end
+            elseif matchType == CalculationItemType.WATER then
+                if plot:IsWater() then
+                    isMatch = true
+                    local record = {}
+                    for key, value in pairs(preMatchPlot) do
+                        record[key] = value
+                    end
+                    record[CalculationItemType.WATER] = true
+                    table.insert(nextMatchPlots, record)
+                end
+            elseif matchType == CalculationItemType.SEA then
+                -- print(territory, territory:IsSea(), IsPlotSea(plot))
+                if IsPlotSea(plot) then
+                    isMatch = true
+                    local record = {}
+                    for key, value in pairs(preMatchPlot) do
+                        record[key] = value
+                    end
+                    record[CalculationItemType.SEA] = true
+                    table.insert(nextMatchPlots, record)
+                end
+
+                -- GetTerritoryAt
             else
                 return preMatchPlots
             end
@@ -676,6 +272,10 @@ function GetItemMatchPlots(filters, matchType, preMatchPlots, playerID)
             end
         end
     end
+
+    -- if matchType == CalculationItemType.IMPROVEMENT then
+    --     print('#nextMatchPlots = ', table.count(nextMatchPlots))
+    -- end
 
     return nextMatchPlots
 end
@@ -739,8 +339,10 @@ end
 ---@param mutilpierType integer
 ---@param calculationType integer
 ---@return integer
-function LimitMutilpierCompare(oAmount, dAmount, filters, mutilpierType, calculationType)
+function LimitMutilpierCompare(oAmount, dAmount, trmInstance)
     local mutilpier = 0
+    local filters, mutilpierType, calculationType = trmInstance.Filters, trmInstance.MutilpierType,
+        trmInstance.CalculationType
     if filters['CompareLimitByAmount'] then
         for key, value in pairs(filters['CompareLimitByAmount']) do
             if key == 'EACH_X_MORE' and oAmount > dAmount then
@@ -770,8 +372,13 @@ end
 ---@param filters table @根据LIMIT条件限制
 ---@param mutilpierType number
 ---@return number
-function LimitMutilpier(amount, filters, mutilpierType, calculationType)
+function LimitMutilpier(amount, trmInstance)
     local mutilpier = amount
+
+    local filters, mutilpierType, calculationType = trmInstance.Filters, trmInstance.MutilpierType,
+        trmInstance.CalculationType
+
+    -- print(filters, mutilpierType, calculationType, filters['TIME_LIMIT'])
 
     if filters['MutilpierLimitByAmount'] then
         for key, value in pairs(filters['MutilpierLimitByAmount']) do
@@ -788,19 +395,19 @@ function LimitMutilpier(amount, filters, mutilpierType, calculationType)
     end
 
     if mutilpierType == CalculationMultiplierType.EXIST then
-        mutilpier = amount >= 1 and 1 or 0
+        mutilpier = aORb(amount >= 1, 1, 0)
     end
 
     if mutilpierType == CalculationMultiplierType.TIME then
         mutilpier = 1
-        if filters['TimeLimitByAmount'] then
-            for key, value in pairs(filters['TimeLimitByAmount']) do
+        if filters['TIME_LIMIT'] then
+            for key, value in pairs(filters['TIME_LIMIT']) do
                 -- 至少
-                if key == 'AT_LEAST' and amount > tonumber(value[1]) then
+                if key == 'AT_LEAST' and amount >= tonumber(value[1]) then
                     mutilpier = tonumber(value[2])
                 end
                 -- 至多
-                if key == 'AT_MOST' and amount < tonumber(value[1]) then
+                if key == 'AT_MOST' and amount <= tonumber(value[1]) then
                     mutilpier = tonumber(value[2])
                 end
                 -- 相等
@@ -810,6 +417,27 @@ function LimitMutilpier(amount, filters, mutilpierType, calculationType)
                 -- 每份
                 if key == 'EACH_X' then
                     mutilpier = math.floor(amount / tonumber(value[1])) * tonumber(value[2])
+                end
+
+                if string.match(key, 'ERA_AGE') then
+                    local playerID = trmInstance.OriginPlayerID
+                    if string.match(key, 'DESTINATION_PLAYER') then
+                        playerID = trmInstance.DestinationPlayerID
+                    end
+                    --  ExposedMembers.TRM.GetPlayerEraData
+                    if table.count(value) < 4 then
+                        print("ERROR: 错误FILTER %s", filters.FilterType)
+                        return amount * 0
+                    else
+                        -- local m_TradeRouteModifierUpdater =
+                        -- m_TradeRouteModifierUpdater[item][self.TradeRouteID] = true
+
+                        -- setmetatable(trmInstance, TradeRouteModifierInstance)
+                        -- trmInstance:SetUpdater
+                        local eraData = ExposedMembers.TRM.GetPlayerEraData(playerID)
+                        return amount *
+                        tonumber(value[aORb(eraData ~= nil and eraData.EraType ~= nil, eraData.EraType, 1)])
+                    end
                 end
             end
         end
@@ -840,19 +468,6 @@ function CheckItemIsMatchFilter(itemInfo, filterInfo)
         end
     end
     return isMatch
-end
-
--- 获取玩家所有城市的单元格
-function GetPlayerAllCityPlots(playerID)
-    local cPlots = {}
-    setmetatable(cPlots, TableHelper)
-    local player = Players[playerID]
-    local cities = player:GetCities()
-    for _, city in cities:Members() do
-        local cityPlots = GetCityPlots(playerID, city:GetID())
-        cPlots = cPlots + cityPlots
-    end
-    return cPlots
 end
 
 ---获取城市所有的贸易路线修改器指定加成
@@ -1003,155 +618,6 @@ function GetCityTradeRouteModifierYieldsByTradeRouteID(pCity, tradeRouteID, type
     return trmTotalYields
 end
 
-function GetBuildingTypes(buildings, plotID)
-    local buildingTypes = {}
-    if buildings and buildings.GetBuildingsAtLocation then
-        buildingTypes = buildings:GetBuildingsAtLocation(plotID)
-    end
-    return buildingTypes
-end
-
---- 判断单元格是否有指定建筑
----@param buildingType any
----@param plotIndex any
-function IsBuildingInPlot(buildingType, plotIndex)
-    local plot = Map.GetPlotByIndex(plotIndex)
-    if not plot then
-        return false
-    end
-
-    local pCity = Cities.GetPlotPurchaseCity(plot)
-    if not pCity then
-        return false
-    end
-
-    local cityBuildings = pCity:GetBuildings();
-    if (cityBuildings) then
-        local buildingTypes = cityBuildings:GetBuildingsAtLocation(plotIndex);
-        for _, type in ipairs(buildingTypes) do
-            local building = GameInfo.Buildings[type];
-            if building.BuildingType == buildingType then
-                return true
-            end
-        end
-    end
-    return false
-end
-
---- 获取城市内的所有巨作
----@param pCity table @城市
----@return table {buildingIndex: {greatWorkIndex, ...}, ...}
-function GetGreatWorksInCity(pCity)
-    local result = {};
-    if pCity then
-        local pCityBldgs = pCity:GetBuildings();
-        for buildingInfo in GameInfo.Buildings() do
-            local buildingIndex = buildingInfo.Index;
-            if (pCityBldgs:HasBuilding(buildingIndex)) then
-                local numSlots = pCityBldgs:GetNumGreatWorkSlots(buildingIndex);
-                if (numSlots ~= nil and numSlots > 0) then
-                    local greatWorksInBuilding = {};
-
-                    -- populate great works
-                    for index = 0, numSlots - 1 do
-                        local greatWorkIndex = pCityBldgs:GetGreatWorkInSlot(buildingIndex, index);
-                        if greatWorkIndex ~= -1 then
-                            table.insert(greatWorksInBuilding, greatWorkIndex);
-                        end
-                    end
-
-                    -- create association between building type and great works
-                    if table.count(greatWorksInBuilding) > 0 then
-                        result[buildingIndex] = greatWorksInBuilding;
-                    end
-                end
-            end
-        end
-    end
-    return result;
-end
-
---- 获取单元格内的所有巨作
----@param plotID any
----@return table {buildingType: {greatWorkInfo, ...}, ...}
-function GetGreatWorksInPlot(plotID)
-    local result = {}
-    local plot = Map.GetPlotByIndex(plotID)
-    if not plot then
-        return result
-    end
-
-    local pCity = Cities.GetPlotPurchaseCity(plot)
-    if not pCity then
-        return result
-    end
-
-    if pCity then
-        local pCityBldgs = pCity:GetBuildings();
-        local plotBuildings = pCityBldgs:GetBuildingsAtLocation(plotID)
-        for _, buildingType in ipairs(plotBuildings) do
-            local buildingInfo = GameInfo.Buildings[buildingType]
-            if buildingInfo then
-                local buildingIndex = buildingInfo.Index;
-                local numSlots = pCityBldgs:GetNumGreatWorkSlots(buildingIndex);
-                if (numSlots ~= nil and numSlots > 0) then
-                    local greatWorksInBuilding = {};
-
-                    -- populate great works
-                    for index = 0, numSlots - 1 do
-                        local greatWorkIndex = pCityBldgs:GetGreatWorkInSlot(buildingIndex, index);
-                        if greatWorkIndex ~= -1 then
-                            local greatWorkType = pCityBldgs:GetGreatWorkTypeFromIndex(greatWorkIndex);
-                            table.insert(greatWorksInBuilding, GameInfo.GreatWorks[greatWorkType]);
-                        end
-                    end
-
-                    -- create association between building type and great works
-                    if table.count(greatWorksInBuilding) > 0 then
-                        result[buildingType] = greatWorksInBuilding;
-                    end
-                end
-            end
-        end
-    end
-
-    return result
-end
-
----获取城市单元格
----@param playerID number
----@param cityID number
----@return table @[plotIndex, ...]
-function GetCityPlots(playerID, cityID)
-    local city = CityManager.GetCity(playerID, cityID)
-    if city then
-        return Map.GetCityPlots():GetPurchasedPlots(city)
-    else
-        return {}
-    end
-end
-
----获取领袖名（短）
----@param playerID number
----@param length number|nil
----@return string
-function GetShortLeaderName(playerID, length)
-    local shortLen = length ~= nil and length or 10
-    local leaderName = Locale.Lookup(PlayerConfigurations[playerID]:GetLeaderName())
-    if #leaderName > shortLen then
-        leaderName = string.sub(leaderName, 1, shortLen - 1) .. '...'
-    end
-
-    return leaderName
-end
-
----获取加成名称
----@param yieldType string @加成类型
----@return string
-function GetYieldName(yieldType)
-    return string.gsub(yieldType, YIELD_PREFIX, "")
-end
-
 ---获取贸易修改器参数
 ---@param trmID string @贸易修改器ID
 ---@return table @贸易修改器参数
@@ -1169,12 +635,13 @@ function GetTradeRouteModifierArguments(trmID)
 end
 
 ---获取贸易修改器目标要求
-function GetTradeRouteModifierReqss(fString)
+function GetTradeRouteModifierReqs(fString)
     local reqs = {}
     local filterList = SplitString(fString, ',')
     for _, filter in ipairs(filterList) do
         local results = DB.Query(
-            "SELECT RequirementType, Name, Value from TRM_TradeRouteModifierRequirements where Requirement = ?", filter)
+            "SELECT RequirementType, Name, Value, Inverse from TRM_TradeRouteModifierRequirements where Requirement = ?",
+            filter)
 
         if results then
             for _, row in ipairs(results) do
@@ -1183,6 +650,9 @@ function GetTradeRouteModifierReqss(fString)
                 end
                 local values = SplitString(row.Value, ',')
                 reqs[row.RequirementType][row.Name] = values
+                -- print(row.Name, row.Value)
+                reqs[row.RequirementType].Inverse = row.Inverse
+                -- print('row.Inverse = ', reqs[row.RequirementType].Inverse, row.Inverse)
             end
         end
     end
@@ -1212,6 +682,7 @@ function GetTradeRouteModifierFilters(fString)
         end
     end
 
+    filters.FilterType = fString
     return filters
 end
 
@@ -1374,7 +845,8 @@ function CreateTradeRouteModifier(originOwnerID, originCityID, destOwnerID, dest
         destCityID) }
 
     local index = 0
-    for i = 1, 2 do
+    local playerNum = aORb(originOwnerID == destOwnerID, 1, 2)
+    for i = 1, playerNum do
         local owner = originOwnerID
         if i == 2 then
             owner = destOwnerID
@@ -1409,24 +881,202 @@ function CreateTradeRouteModifier(originOwnerID, originCityID, destOwnerID, dest
     return m_TradeRouteModifierManager
 end
 
---- 为玩家解锁科技
----@param playerID integer
----@param techName string
-function UnlockTech(playerID, techName)
-    local playerTechs = Players[playerID]:GetTechs();
-    local tech = GameInfo.Technologies[techName];
-    if (tech ~= nil) then
-        playerTechs:SetTech(tech.Index, true)
+---获取玩家下属城邦数量
+---@param majorPlayerID number
+---@param filters table|nil
+---@return table
+function GetPlayerTributaryAmount(majorPlayerID, filters)
+    local tAmount = 0
+
+    local Tributarys = {}
+
+    for _, playerID in ipairs(PlayerManager.GetAliveMinorIDs()) do
+        local minorPlayer = Players[playerID]
+        local minorPlayerInfluence = minorPlayer:GetInfluence()
+        local isMatch = true
+        if minorPlayerInfluence:GetSuzerain() ~= majorPlayerID then
+            isMatch = false
+        end
+
+        local minorInfo = GetCityStateData(PlayerConfigurations[playerID]:GetCivilizationTypeName())
+        if filters then
+            if filters['GameInfo'] then
+                isMatch = CheckItemIsMatchFilter(minorInfo, filters['GameInfo'])
+            end
+        end
+        if isMatch and minorInfo.CityStateCategory then
+            tAmount = tAmount + 1
+            if not Tributarys[minorInfo.CityStateCategory] then
+                Tributarys[minorInfo.CityStateCategory] = 0
+            end
+            Tributarys[minorInfo.CityStateCategory] = Tributarys[minorInfo.CityStateCategory] + 1
+        end
     end
+
+    return { tAmount, Tributarys }
 end
 
---- 为玩家解锁市政
----@param playerID integer
----@param civicName string
-function UnlockCivc(playerID, civicName)
-    local playerCulture = Players[playerID]:GetCulture();
-    local civic = GameInfo.Civics[civicName];
-    if (civic ~= nil) then
-        playerCulture:SetCivic(civic.Index, true);
+--- 获取玩家资源数量
+---@param playerID number
+---@param filters table
+---@param params table|nil
+function GetPlayerResourceAmount(playerID, filters, params)
+    local amount = 0
+    local playerResources
+
+    -- print('params = ', params)
+    -- if params and params.PlayerResources then
+    --     -- print('GetPlayerResourceAmount params.PlayerResources = ', params.PlayerResources)
+    --     playerResources = deserialize(params.PlayerResources or '') or {}
+    -- else
+    --     playerResources = deserialize(Game:GetProperty('TRM_PLAYER_RESOURCES_' .. playerID) or '') or {}
+    -- end
+    playerResources = deserialize(ExposedMembers.TRM.GetPlayerResourcesData(playerID) or '')
+
+
+    -- TRM_UIScript: 30	Icon	[ICON_RESOURCE_TOBACCO]
+    -- TRM_UIScript: 30	IsLuxury	true
+    -- TRM_UIScript: 30	IsBonus	false
+    -- TRM_UIScript: 30	IsStrategic	false
+    -- TRM_UIScript: 30	Total	2
+
+    if filters and filters['GameInfo'] then
+        for key, values in pairs(filters['GameInfo']) do
+            for _, value in ipairs(values) do
+                -- amount = amount + (playerResources[resourceType] or 0)
+                for resourceType, p_resourceInfo in pairs(playerResources) do
+                    local resourceInfo = GameInfo.Resources[resourceType]
+                    if resourceInfo[key] and resourceInfo[key] == value then
+                        amount = amount + p_resourceInfo.Total
+                    end
+                end
+            end
+        end
     end
+
+    -- print('amount = ', amount, params)
+    return amount
+end
+
+--- 获取宗教信徒数量
+---@param pCity any
+---@param filters any
+function GetCityReligionFollowers(pCity, filters)
+    if not pCity then
+        return 0
+    end
+
+    local pReligions               = pCity:GetReligion():GetReligionsInCity();
+    local eDominantReligion        = pCity:GetReligion():GetMajorityReligion();
+
+    local followersAll             = 0
+    local domainReligionFollowers  = 0
+    local founderReligionFollowers = 0
+
+    local religionFounders         = GetReligionFounders()
+    for _, religionData in pairs(pReligions) do
+        -- Religion	2
+        -- Followers	3
+        -- Pressure	500
+        local religionType = (religionData.Religion > 0) and GameInfo.Religions[religionData.Religion].ReligionType or
+            "RELIGION_PANTHEON";
+
+        if religionData.Religion == eDominantReligion and eDominantReligion > -1 then
+            domainReligionFollowers = religionData.Followers;
+        end
+
+        if religionFounders[religionData.Religion .. '_'] and religionFounders[religionData.Religion .. '_'] == pCity:GetOwner() then
+            founderReligionFollowers = religionData.Followers;
+        end
+
+        if religionType ~= "RELIGION_PANTHEON" then
+            followersAll = followersAll + religionData.Followers;
+        end
+    end
+
+    if filters and filters['Custom'] then
+        local followerType = filters['Custom']['CityReligionFollowersType'][1]
+        if followerType == 'FOUNDER' then
+            return founderReligionFollowers
+        elseif followerType == 'DOMINANT' then
+            return domainReligionFollowers
+        end
+    end
+
+    return followersAll
+end
+
+---获取宗主国加成倍数
+---@param gPlayerID any
+---@param rPlayerID any
+---@param tempMutilpier any
+---@return number, boolean @倍数，是否为宗主国
+function GetExtraMutilpierFromSuzerain(gPlayerID, rPlayerID, tempMutilpier)
+    local rPlayer = GetMinorPlayerInTrade(gPlayerID, rPlayerID)
+    if not rPlayer then
+        return 0, false
+    end
+    local mutilpier = 0
+    local rPlayerInfluence = rPlayer:GetInfluence()
+    local isSuzerain = rPlayerInfluence:GetSuzerain() == gPlayerID
+    if tempMutilpier and tonumber(tempMutilpier) then
+        tempMutilpier = tonumber(tempMutilpier)
+        if tempMutilpier == 0 then
+            mutilpier = aORb(isSuzerain, 0, 1)
+        elseif tempMutilpier == 1 then
+            mutilpier = aORb(isSuzerain, 1, 0)
+        else
+            mutilpier = aORb(isSuzerain, tempMutilpier, 1)
+        end
+    end
+
+    return mutilpier, isSuzerain
+end
+
+---获取使者数量
+---@param gPlayerID number @主文明
+---@param rPlayerID number @城邦
+---@param filters table|nil @过滤器
+---@return number|nil
+function GetStateTokensReceived(gPlayerID, rPlayerID, filters)
+    local rPlayer = GetMinorPlayerInTrade(gPlayerID, rPlayerID)
+    if not rPlayer then
+        return 0
+    end
+    local tAmount = 0
+    local rPlayerInfluence = rPlayer:GetInfluence()
+    if rPlayerInfluence then
+        tAmount = rPlayerInfluence:GetTokensReceived(gPlayerID)
+    end
+    if filters and filters['GameInfo'] then
+        local minorInfo = GetCityStateData(PlayerConfigurations[rPlayerID]:GetCivilizationTypeName())
+        if not CheckItemIsMatchFilter(minorInfo, filters['GameInfo']) then
+            tAmount = 0
+        end
+    end
+
+    return tAmount
+end
+
+---获取玩家伟人点数
+---@param playerID number
+---@param filters table
+function GetPlayerGreatPeoplePoints(playerID, filters)
+    local player = Players[playerID]
+    local greatPeoplePoints = player:GetGreatPeoplePoints()
+    local pAmount = 0
+    local classPoint = {}
+    for row in GameInfo.GreatPersonClasses() do
+        local isMatch = true
+        if filters['GameInfo'] then
+            isMatch = CheckItemIsMatchFilter(row, filters['GameInfo'])
+        end
+        if isMatch then
+            local point = greatPeoplePoints:GetPointsTotal(row.Index)
+            classPoint[row.GreatPersonClassType] = point
+            pAmount = pAmount + point
+        end
+    end
+
+    return pAmount, classPoint
 end

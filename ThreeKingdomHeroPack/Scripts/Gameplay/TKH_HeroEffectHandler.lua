@@ -32,46 +32,6 @@ local HeroSummons = {}
 --	EFFECT Events
 -- ===========================================================================
 
-
-function OnTurnEnd()
-    local m_HeroManager = Game:GetProperty('HeroManager') or {}
-    for _, hero in pairs(m_HeroManager) do
-        local pUnit = UnitManager.GetUnit(hero.Owner, hero.ID)
-        if pUnit then
-            -- 装备效果
-            -- 1. 烈焰战锤(祝融专属)、火焱铠甲、烈焱神驹：1个单元格以内的敌方单位回合结束时受到20点伤害。
-            local damage_bounes = aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_HuoYan'), 1, 0) +
-                aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_LieYanZhanChui'), 1, 0) +
-                aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_LieYanShenJu'), 1, 0) +
-                aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_LieYanZhanChui_HeroExclusive'), 1, 0)
-
-            if damage_bounes > 0 then
-                -- 相邻格位上的敌军单位受到伤害
-                local diplomacy = Players[pUnit:GetOwner()]:GetDiplomacy()
-                local adjUnits = GetNeighborUnits(pUnit:GetX(), pUnit:GetY(), 1)
-
-                for _, adjUnit in ipairs(adjUnits) do
-                    if (adjUnit ~= nil and diplomacy:IsAtWarWith(adjUnit:GetOwner())) then
-                        DamageUnit(adjUnit, 20 * damage_bounes)
-                    end
-                end
-            end
-
-            -- 兀突骨技能冷却判断
-            local unitType = GetUnitType(pUnit)
-            if unitType == 'UNIT_HERO_TKH_WU_TUGU' then
-                -- _singleUseAbilityCooldown = 10
-                if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_UNIQUE_WU_TUGU') then
-                    pUnit:SetProperty(hero.Owner .. hero.ID .. 'UNITCOMMAND_DEAL_DAMAGE_AOE', true)
-                else
-                    pUnit:SetProperty(hero.Owner .. hero.ID .. 'UNITCOMMAND_DEAL_DAMAGE_AOE',
-                        Game.GetCurrentGameTurn() % 2 == 0)
-                end
-            end
-        end
-    end
-end
-
 --- 击杀单位后效果
 ---@param killedPlayerID number
 ---@param killedUnitID number
@@ -123,13 +83,13 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
 
     -- ABILITY_TKH_EQUIPMENT_JinZhanBei_HeroExclusive 金盏杯 专属效果：每击杀一个单位，额外再+100金币。）
     if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_JinZhanBei_HeroExclusive') then
-        local treasury = Players[pUnit:GetOwner()]:GetTreasury()
+        local treasury = Players[playerID]:GetTreasury()
         treasury:ChangeGoldBalance(100)
     end
 
     if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_SUIT_SHANGJIN3') then
         if math.random() < 0.2 then
-            local cUnit = UnitManager.InitUnit(pUnit:GetOwner(), "UNIT_SETTLER", pUnit:GetX(), pUnit:GetY())
+            local cUnit = UnitManager.InitUnit(playerID, "UNIT_SETTLER", pUnit:GetX(), pUnit:GetY())
             if cUnit ~= nil then
                 UnitManager.ChangeMovesRemaining(cUnit, -cUnit:GetMovesRemaining())
             end
@@ -141,9 +101,9 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         if math.random() < EquipmentConstants.LIANG_HAO_DAO_RATE then
             local cUnit;
             if math.random() < EquipmentConstants.LIANG_HAO_DAO_RATE_SETTLER then
-                cUnit = UnitManager.InitUnit(pUnit:GetOwner(), "UNIT_SETTLER", pUnit:GetX(), pUnit:GetY())
+                cUnit = UnitManager.InitUnit(playerID, "UNIT_SETTLER", pUnit:GetX(), pUnit:GetY())
             else
-                cUnit = UnitManager.InitUnit(pUnit:GetOwner(), "UNIT_BUILDER", pUnit:GetX(), pUnit:GetY())
+                cUnit = UnitManager.InitUnit(playerID, "UNIT_BUILDER", pUnit:GetX(), pUnit:GetY())
             end
 
             if cUnit ~= nil then
@@ -179,6 +139,9 @@ end
 
 function OnUnitAddedToMap(playerID, unitID)
     local unit = UnitManager.GetUnit(playerID, unitID)
+    if not unit then
+        return
+    end
     local unitInfo = GameInfo.Units[unit:GetType()]
     if MatchUnitTag(unitInfo.UnitType, 'CLASS_TKH_SP_UNIT') then
         unit:SetProperty('COMBAT_STRENGTH_BY_ERA', UnitEraStrength[Game.GetEras():GetCurrentEra() + 1])
@@ -219,7 +182,6 @@ end
 
 function Initialize()
     Events.UnitKilledInCombat.Add(OnUnitKilledInCombat)
-    Events.TurnEnd.Add(OnTurnEnd)
 
     -- 回合结束时恢复生命值或护甲值
     Events.UnitAbilityGained.Add(OnUnitAbilityGained)

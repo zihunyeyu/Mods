@@ -81,6 +81,9 @@ end
 -- 创建英雄
 function OnUnitCreated(playerID, unitID)
     local pUnit = UnitManager.GetUnit(playerID, unitID)
+    if not pUnit then
+        return
+    end
     local heroClassIndex = pUnit:GetHeroClassType()
     local unitInfo = GameInfo.Units[pUnit:GetType()]
 

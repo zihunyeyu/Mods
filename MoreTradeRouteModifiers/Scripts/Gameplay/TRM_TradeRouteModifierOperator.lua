@@ -1,6 +1,8 @@
 print('Load TRM_TradeRouteModifierInstanceOperator.lua')
 
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_Constants')
 include('TRM_TradeRouteModifierInstance')
 
@@ -69,6 +71,7 @@ function TradeRouteModifierExecuteOperation(playerID, params)
 
     m_TradeRouteModifierManager = Game:GetProperty('TradeRouteModifierInstanceManager') or {}
 
+
     for _, tradeRouteID in ipairs(tradeRouteIDs) do
         if operationType == TRM_OperationType.DESTROY then
             if m_TradeRouteModifierManager[tradeRouteID] then
@@ -122,9 +125,7 @@ function ApplyAllTRMs(playerID, params)
 
     for tradeRouteID, trmInstances in pairs(m_TradeRouteModifierManager) do
         ChangeModifierDecimalYields(tradeRouteID, 0)
-        for index, trmInstance in pairs(trmInstances) do
-            -- print(tradeRouteID, trmInstance, index)
-            -- TradeRouteModifierInstance
+        for _, trmInstance in pairs(trmInstances) do
             setmetatable(trmInstance, TradeRouteModifierInstance)
             m_TradeRouteModifierUpdater = trmInstance:SetUpdater(m_TradeRouteModifierUpdater)
             trmInstance:Apply()

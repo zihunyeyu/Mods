@@ -19,6 +19,8 @@ include('UnitPanel_TKH.lua')
 
 -- =============UnitPanel=============
 include('TRM_Helper')
+include('TTK_ToolkitsCore')
+
 include('TRM_TradeRouteModifierInstance')
 
 TRM_TradeUnitView = TradeUnitView

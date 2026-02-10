@@ -49,9 +49,7 @@ function Equipment.new(self, eData)
     local o = {}
     setmetatable(o, self)
     o:Initialize(eData)
-    if not o.MustReward then
-        m_EquipmentAllocator[#m_EquipmentAllocator + 1] = eData.Equipment
-    end
+
 
     m_EquipmentManager[o.Equipment] = o
 end
@@ -66,7 +64,7 @@ function Equipment.Initialize(self, eData)
     self.HeroExclusive = eData.HeroExclusive
     self.Icon = eData.Icon
     self.Suit = eData.Suit
-    self.MustReward = eData.MustReward == 1
+    self.MustReward = (eData.MustReward == 1)
     self.Price = eData.Price
     self.Level = eData.Level
     self.Owner = -1
@@ -77,6 +75,12 @@ function Equipment.Initialize(self, eData)
     self.GetTurn = -1
     self.Locked = false
     self.Sold = false
+
+    -- print(self.Equipment, self.MustReward)
+
+    if not self.MustReward then
+        m_EquipmentAllocator[#m_EquipmentAllocator + 1] = eData.Equipment
+    end
 end
 
 function Equipment.ChangeOwner(self, playerID)
@@ -267,8 +271,11 @@ end
 ---@param unitID number
 function OnHeroCreated(playerID, unitID)
     local unit = UnitManager.GetUnit(playerID, unitID)
+    if not unit then
+        return
+    end
     local heroClassIndex = unit:GetHeroClassType()
-    if not unit or not heroClassIndex or heroClassIndex == -1 then
+    if not heroClassIndex or heroClassIndex == -1 then
         return
     end
 
@@ -620,23 +627,27 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         if unit:GetHeroClassType() ~= -1 then
             if m_HeroRewardManager[unitType] then
                 for _, info in pairs(m_HeroRewardManager[unitType]) do
-                    local rewardReq = info['RewardNeed']
+
                     info['Prograss'] = info['Prograss'] + 1
-                    if info['Prograss'] == rewardReq then
+                    if info['Prograss'] == info['RewardNeed'] then
                         local equipment = m_EquipmentManager[info['Equipment']]
                         if equipment and equipment.Owner == -1 then
-                            local e_index = IndexOf(m_EquipmentAllocator, info['Equipment'])
-                            if e_index then
-                                table.remove(m_EquipmentAllocator, e_index)
-                                AllocateEquipmentToPlayerForReward(playerID, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
-                                    info['Equipment'])
-                                SendEquipmentCreatedNotification(playerID, info['Equipment'],
-                                    EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
-                                    unit:GetX(),
-                                    unit:GetY())
-                            end
+                            -- local e_index = IndexOf(m_EquipmentAllocator, info['Equipment'])
+                            -- if e_index then
+                            --     table.remove(m_EquipmentAllocator, e_index)
+                            -- end
+                            AllocateEquipmentToPlayerForReward(playerID, EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
+                                info['Equipment'])
+                            SendEquipmentCreatedNotification(playerID, info['Equipment'],
+                                EQUIPMENT_REWARD_TYPES.HERO_TOTAL_KILL,
+                                unit:GetX(),
+                                unit:GetY())
                         end
                     end
+
+                    -- for key, value in pairs(info) do
+                    --     print(unitType, key, value)
+                    -- end
                 end
 
                 Game:SetProperty('HeroRewardManager', m_HeroRewardManager)
@@ -697,6 +708,10 @@ function InitializeEquipmentData()
                     Prograss = 0,
                     RewardType = 'TOTAL_KILL'
                 })
+
+            -- for key, value in pairs(m_HeroRewardManager['UNIT_HERO_TKH_' .. row.HeroExclusive]) do
+            --     print('UNIT_HERO_TKH_' .. row.HeroExclusive, key, value)
+            -- end
         end
     end
 
@@ -740,12 +755,13 @@ function SetSoldEquipments(isInitialized)
     local sumSold = 0
     for e, equipment in pairs(m_EquipmentManager) do
         if equipment.Sold then
-            if equipment.MustReward then
-                equipment.MustReward = false
+            -- 奖励装备不参与重新洗牌
+            if not equipment.MustReward then
+                -- equipment.MustReward = false
+                sumSold = sumSold + 1
+                equipment.Sold = false
+                table.insert(m_EquipmentAllocator, e)
             end
-            sumSold = sumSold + 1
-            equipment.Sold = false
-            table.insert(m_EquipmentAllocator, e)
         end
     end
 
@@ -798,7 +814,7 @@ function ChangeSuitAbilitySatus(pUnit, heroEquipments)
 
         if e and m_EquipmentManager[e] then
             local equipment = m_EquipmentManager[e]
-            if equipment.Suit then
+            if equipment.Suit and m_EquipmentSuitManager[equipment.Suit] then
                 local suit = m_EquipmentSuitManager[equipment.Suit]
                 local suitName = Locale.Lookup(suit.Name) .. ' 套装'
                 if not suitAmount[suitName] then
@@ -1101,6 +1117,10 @@ function Save()
     Game:SetProperty('HeroRewardManager', m_HeroRewardManager)
     Game:SetProperty('EquipmentSuitManager', m_EquipmentSuitManager)
     Game:SetProperty('EquipmentRewardManager', m_EquipmentRewardManager)
+
+    Players[0]:SetProperty('TKH_EquipmentData',
+        serialize({ m_EquipmentManager, m_HeroEquipmentManager, m_EquipmentAllocator, m_HeroRewardManager,
+            m_EquipmentSuitManager, m_EquipmentRewardManager }))
 end
 
 local repeatTimes = 0
@@ -1108,7 +1128,10 @@ local repeatTimes = 0
 function KeepRead()
     repeatTimes = repeatTimes + 1
     local data_Str = GameConfiguration.GetValue('EquipmentData')
-    local version = GameConfiguration.GetValue('TKH_SaveVersion')
+    -- print('data_Str = ', data_Str)
+    -- local playerEquipmentData = GameConfiguration.GetValue('PlayersEquipmentData') or {}
+    -- local data_Str = playerEquipmentData[0]
+    -- local version = GameConfiguration.GetValue('TKH_SaveVersion')
 
     if data_Str == nil then
         if repeatTimes == 10 * 60 then
@@ -1119,19 +1142,15 @@ function KeepRead()
         end
     else
         Events.GameCoreEventPublishComplete.Remove(KeepRead)
-        m_EquipmentManager,
-        m_HeroEquipmentManager,
-        m_EquipmentSuitManager,
-        m_EquipmentAllocator,
-        m_HeroRewardManager,
-        m_EquipmentRewardManager = unpack(deserialize(data_Str))
+        m_EquipmentManager, m_HeroEquipmentManager, m_EquipmentAllocator, m_HeroRewardManager,
+        m_EquipmentSuitManager, m_EquipmentRewardManager = unpack(deserialize(data_Str))
         Save()
 
-        for e, equipment in pairs(m_EquipmentManager) do
-            if equipment.Owner ~= -1 then
-                print(e, equipment.Owner, Locale.Lookup(equipment.Name))
-            end
-        end
+        -- for e, equipment in pairs(m_EquipmentManager) do
+        --     if equipment.Owner ~= -1 then
+        --         print(e, equipment.Owner, Locale.Lookup(equipment.Name))
+        --     end
+        -- end
     end
 end
 
@@ -1181,7 +1200,51 @@ function ReadEquipmentData(playerID, params)
     end
 end
 
+function OnPlayerTurnStarted(playerID)
+    -- print('OnPlayerTurnStarted: ', playerID, Game.GetLocalPlayer(), MapConfiguration.GetValue('PlayersEquipmentData'))
+    -- local playerEquipmentData = deserialize(MapConfiguration.GetValue('PlayersEquipmentData') or '')
+
+    -- for key, value in pairs(playerEquipmentData) do
+    --     print(key, value)
+    -- end
+
+    -- local data_Str = playerEquipmentData[0]
+    -- m_EquipmentManager,
+    -- m_HeroEquipmentManager,
+    -- m_EquipmentSuitManager,
+    -- m_EquipmentAllocator,
+    -- m_HeroRewardManager,
+    -- m_EquipmentRewardManager = unpack(deserialize(data_Str))
+    -- print(PlayerConfigurations[playerID]:GetValue('EquipmentData'))
+end
+
+function SyncData(turn)
+    -- local
+    -- Players[0]:SetProperty('TKH_EquipmentData',
+    --     serialize({ m_EquipmentManager, m_HeroEquipmentManager, m_EquipmentAllocator, m_HeroRewardManager,
+    --         m_EquipmentSuitManager, m_EquipmentRewardManager }))
+
+    local data_Str = Players[0]:GetProperty('TKH_EquipmentData')
+    -- print('player = ', Game.GetLocalPlayer(), 'data_Str = ', data_Str)
+
+    if data_Str == nil then
+        print('Error: Sync players[0] data is nil.')
+        -- if repeatTimes == 10 * 60 then
+        --     Events.GameCoreEventPublishComplete.Remove(KeepRead)
+        --     InitializeEquipmentData()
+        -- else
+        --     return
+        -- end
+    else
+        -- Events.GameCoreEventPublishComplete.Remove(KeepRead)
+        m_EquipmentManager, m_HeroEquipmentManager, m_EquipmentAllocator, m_HeroRewardManager,
+        m_EquipmentSuitManager, m_EquipmentRewardManager = unpack(deserialize(data_Str))
+    end
+end
+
 function Initialize()
+    -- GameEvents.PlayerTurnStarted.Add(OnPlayerTurnStarted)
+
     Events.UnitAddedToMap.Add(OnHeroCreated)
     Events.UnitRemovedFromMap.Add(OnHeroRemoved)
     Events.PlayerDefeat.Add(OnPlayerDefeat)
@@ -1196,6 +1259,12 @@ function Initialize()
     Events.UnitKilledInCombat.Add(OnUnitKilledInCombat)
     Events.NotificationAdded.Add(OnNotificationAdded)
 
+    GameEvents.OnGameTurnStarted.Add(SyncData)
+    GameEvents.PlayerTurnStarted.Add(function(playerID)
+        -- Players[playerID]:GetTreasury():ChangeGoldBalance(100000)
+        -- print('PlayerTurnStarted, player = ', playerID)
+        SyncData()
+    end)
     Events.TurnBegin.Add(ShufflShopEquipments)
     Events.TurnEnd.Add(Save)
 

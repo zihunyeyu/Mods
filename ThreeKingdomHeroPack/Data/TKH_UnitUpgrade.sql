@@ -89,6 +89,9 @@ INSERT INTO UnitAbilities(UnitAbilityType, Description, Inactive, Permanent)
 SELECT 'ABILITY_TKH_EA_'||Name, 'LOC_PROJECT_TKH_EA_'||Name||'_DESCRIPTION', 1, 1
 FROM TKH_ArmouryProjects;
 
+-- INSERT INTO UnitAbilityModifiers(UnitAbilityType, ModifierId)
+-- SELECT 'ABILITY_TKH_EA_'||Name, 'MODIFIER_PROJECT_TKH_EA_'||Name
+-- FROM TKH_ArmouryProjects;
 
 -- LOC_PROJECT_TKH_EA_LIUDANPAO_NAME
 
@@ -108,14 +111,7 @@ INSERT INTO ModifierArguments(ModifierId, Name, Value)
 SELECT 'MODIFIER_PROJECT_TKH_EA_'||Name, 'AbilityType', 'ABILITY_TKH_EA_'||Name
 FROM TKH_ArmouryProjects;
 
-INSERT INTO UnitAbilityModifiers(UnitAbilityType, ModifierId)
-SELECT 'ABILITY_TKH_EA_'||Name, 'MOD_ABILITY_TKH_EA_'||Name
-FROM TKH_ArmouryProjects
-WHERE EXISTS (
-    SELECT 1
-    FROM Modifiers
-    WHERE Modifiers.ModifierId = 'MOD_ABILITY_TKH_EA_'||Name
-);
+
 
 INSERT INTO Modifiers(ModifierId, ModifierType, SubjectRequirementSetId)
 VALUES
@@ -157,23 +153,23 @@ VALUES
 
 INSERT INTO ModifierArguments(ModifierId, Name, Value)
 VALUES
-('MOD_ABILITY_TKH_EA_YILIAOBAO', 'Amount', '0'),
-('MOD_ABILITY_TKH_EA_LIUDANPAO', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_RANSHAODAN', 'Amount', '5'),
+('MOD_ABILITY_TKH_EA_YILIAOBAO', 'Amount', 0),
+('MOD_ABILITY_TKH_EA_LIUDANPAO', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_RANSHAODAN', 'Amount', 5),
 ('MOD_ABILITY_TKH_EA_ZHUANJIAZU', 'Amount', 1),
-('MOD_ABILITY_TKH_EA_PIJIA', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_LIANJIA', 'Amount', '3'),
-('MOD_ABILITY_TKH_EA_ZHONGBANJIA', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_QISHIDUN', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_QISHIJIAN', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_GANGJIANTOU', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_DUJIANTOU', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_WUSHU', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_SHENFA', 'Amount', '10'),
-('MOD_ABILITY_TKH_EA_CHANGQIANGZHEN', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_GOULIANQIANG', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_GUIJIAZHEN', 'Amount', '5'),
-('MOD_ABILITY_TKH_EA_GANGJIAN', 'Amount', '5'),
+('MOD_ABILITY_TKH_EA_PIJIA', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_LIANJIA', 'Amount', 3),
+('MOD_ABILITY_TKH_EA_ZHONGBANJIA', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_QISHIDUN', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_QISHIJIAN', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_GANGJIANTOU', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_DUJIANTOU', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_WUSHU', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_SHENFA', 'Amount', 10),
+('MOD_ABILITY_TKH_EA_CHANGQIANGZHEN', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_GOULIANQIANG', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_GUIJIAZHEN', 'Amount', 5),
+('MOD_ABILITY_TKH_EA_GANGJIAN', 'Amount', 5),
 ('MOD_ABILITY_TKH_EA_JUNXUE', 'Amount', 1),
 ('MOD_ABILITY_TKH_EA_TONGXUE', 'Amount', 1),
 ('MOD_ABILITY_TKH_EA_BAIJIAXING', 'Amount', 50),
@@ -213,3 +209,13 @@ VALUES
 ('MOD_ABILITY_TKH_EA_QIBINGZHEN', 'Preview', 'LOC_QIBINGZHEN_ADJACENCY_STRENGTH_DESCRIPTION'),
 ('MOD_ABILITY_TKH_EA_JIANYUZHEN', 'Preview', 'LOC_JIANYUZHEN_ADJACENCY_STRENGTH_DESCRIPTION');
 
+
+INSERT INTO UnitAbilityModifiers(UnitAbilityType, ModifierId)
+SELECT 'ABILITY_TKH_EA_'||TAP.Name, 'MOD_ABILITY_TKH_EA_'||TAP.Name
+FROM TKH_ArmouryProjects AS TAP  -- 给外层表起别名TAP
+WHERE EXISTS (
+    SELECT 1
+    FROM Modifiers AS M  -- 给子查询表起别名M
+    -- 显式引用外层表TAP的Name，消除歧义
+    WHERE M.ModifierId = 'MOD_ABILITY_TKH_EA_'||TAP.Name
+);

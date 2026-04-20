@@ -21,6 +21,7 @@
 		<Row ParameterId="WAR_AND_CHAOS_MODE" Name="LOC_WAR_AND_CHAOS_MODE_NAME" Description="LOC_WAR_AND_CHAOS_MODE_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="WAR_AND_CHAOS_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2080" />
 		<Row ParameterId="WAR_AND_CHAOS_LOWER_MODE" Name="LOC_WAR_AND_CHAOS_LOWER_MODE_NAME" Description="LOC_WAR_AND_CHAOS_LOWER_MODE_DESCRIPTION" Domain="bool" DefaultValue="1" ConfigurationGroup="Game" ConfigurationId="WAR_AND_CHAOS_LOWER_MODE" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2080" />
 		<Row ParameterId="GIFT_EQUIPMENT_COUNT" Name="LOC_GIFT_EQUIPMENT_COUNT_NAME" Description="LOC_GIFT_EQUIPMENT_COUNT_DESCRIPTION" Domain="GiftEquipmentCountRange" ConfigurationGroup="Game" DefaultValue="0" ConfigurationId="GIFT_EQUIPMENT_COUNT" Hash="0" GroupId="AdvancedOptions" SortIndex="2081" />
+		<Row ParameterId="AI_UNIT_AMOUNT_LIMIT" Name="LOC_AI_UNIT_AMOUNT_LIMIT_NAME" Description="LOC_AI_UNIT_AMOUNT_LIMIT_DESCRIPTION" Domain="AiUnitAmountLimitRange" ConfigurationGroup="Game" DefaultValue="0" ConfigurationId="AI_UNIT_AMOUNT_LIMIT" Hash="0" GroupId="AdvancedOptions" SortIndex="2082" />
 		<!-- <Row ParameterId="TKH_EXTENSION1" Name="LOC_TKH_EXTENSION1_NAME" Description="LOC_TKH_EXTENSION1_DESCRIPTION" Domain="bool" DefaultValue="0" ConfigurationGroup="Game" ConfigurationId="TKH_EXTENSION1" GroupId="AdvancedOptions" ChangeableAfterGameStart="0" SortIndex="2077" /> -->
 		<Update>
 			<Where ParameterId="GameMode_Heroes" />
@@ -29,6 +30,7 @@
 	</Parameters>
 	<DomainRanges>
 		<Row Domain="GiftEquipmentCountRange" MinimumValue="0" MaximumValue="10" />
+		<Row Domain="AiUnitAmountLimitRange" MinimumValue="10" MaximumValue="20" />
 	</DomainRanges>
 	<DomainValues>
 		<Row Domain="AiEnhanceLevels" Value="0" Name="LOC_AI_NO_ENHANCE_NAME" Description="LOC_AI_NO_ENHANCE_DESCRIPTION" SortIndex="1"/>

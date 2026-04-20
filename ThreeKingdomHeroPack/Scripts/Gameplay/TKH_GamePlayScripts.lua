@@ -10,11 +10,20 @@ include("TKH_Helper")
 --	CONSTANTS	/ DEFINES
 -- ===========================================================================
 
+local m_iBarbarianID = 63; --蛮族的id
+local m_iImpBarbCamp =
+    GameInfo.Improvements["IMPROVEMENT_BARBARIAN_CAMP"].Index;
+
 local BUILDING_HERO_MONUMENT_TKH_INDEX = -1
+
+local m_WorldLordManager = {}
+
+
 local DISTRICT_CITY_CENTER_INDEX = GameInfo.Districts['DISTRICT_CITY_CENTER'].Index
 local PROJECT_UPGRADE_UNIT_PHANTA_RUISHI_INDEX = GameInfo.Projects['PROJECT_UPGRADE_UNIT_PHANTA_RUISHI'].Index
 local PROJECT_UPGRADE_UNIT_PHANTA_YOUXIA_INDEX = GameInfo.Projects['PROJECT_UPGRADE_UNIT_PHANTA_YOUXIA'].Index
 local FEATURE_MASH_INDEX = GameInfo.Features['FEATURE_MARSH'].Index
+local FEATURE_MASH_DAMAGE = 20
 local AI_INFERNO_MODE_FLEX_STRENGTH_MAX = 15
 
 local SECONDARY_HERO_FULL_PROMOTED_ARMOR = 100
@@ -23,12 +32,45 @@ for row in GameInfo.TKH_S_Heroes() do
     table.insert(s_Heroer, 'CLASS_UNIT_HERO_TKH_' .. row.Name)
 end
 
-local INFERNO_MODE = GameConfiguration.GetValue("TKH_AI_ENHANCE_MODE") and
-    GameConfiguration.GetValue("TKH_AI_ENHANCE_MODE") ~= 0
-
 -- ===========================================================================
 --	Events
 -- ===========================================================================
+
+--- 维修城墙
+function RepairCastleProject()
+    for _, playerID in ipairs(PlayerManager.GetAliveMajorIDs()) do
+        local player = Players[playerID]
+        local cities = player:GetCities()
+        for _, city in cities:Members() do
+            local buildQ = city:GetBuildQueue()
+            if buildQ then
+                local cB = buildQ:CurrentlyBuilding()
+                if cB == 'PROJECT_REPAIR_CASTLE' then
+                    -- buildQ:FinishProgress()
+                    local districts = city:GetDistricts()
+                    local center = districts:GetDistrict(DISTRICT_CITY_CENTER_INDEX)
+
+                    local districtHitpoints = center:GetMaxDamage(DefenseTypes.DISTRICT_GARRISON);
+                    local currentDistrictDamage = center:GetDamage(DefenseTypes.DISTRICT_GARRISON);
+                    local wallHitpoints = center:GetMaxDamage(DefenseTypes.DISTRICT_OUTER);
+                    local currentWallDamage = center:GetDamage(DefenseTypes.DISTRICT_OUTER);
+                    local pYield = city:GetYield(YieldTypes.PRODUCTION)
+
+                    if currentWallDamage == 0 then
+                        buildQ:FinishProgress()
+                    elseif currentWallDamage > 0 then
+                        center:ChangeDamage(DefenseTypes.DISTRICT_OUTER, -(pYield / 2))
+                        local treasury = player:GetTreasury()
+                        treasury:ChangeGoldBalance(-(pYield * 2))
+
+                        Game.AddWorldViewText(0, Locale.Lookup('LOC_REPAIR_CASTLE_RESULT', pYield, pYield * 2,
+                            pYield / 2), city:GetX(), city:GetY())
+                    end
+                end
+            end
+        end
+    end
+end
 
 --- TKH城市项目相关
 ---@param playerID integer
@@ -53,6 +95,60 @@ function OnCityProjectCompleted(playerID, cityID, projectID, buildingIndex, X, Y
     end
 end
 
+--- AI增强模式生成单位
+function AiCreatUnitInferno()
+    local turn = Game.GetCurrentGameTurn()
+    if turn % 10 ~= 0 then
+        return
+    end
+
+    local pAllPlayerIDs = PlayerManager.GetAliveIDs()
+    for _, pPlyerID in ipairs(pAllPlayerIDs) do
+        local player = Players[pPlyerID]
+        if player ~= nil and not player:IsHuman() then
+            -- +5马、+5铁
+            -- local playerResources = player:GetResources()
+            -- playerResources:ChangeResourceAmount(RESOURCE_IRON_INDEX, 5)
+            -- playerResources:ChangeResourceAmount(RESOURCE_HORSES_INDEX, 5)
+
+            local cities = player:GetCities()
+            if cities == nil then
+                return
+            end
+            local capCity = cities:GetCapitalCity()
+            if capCity == nil then
+                return
+            end
+
+            if turn % 10 == 0 then
+                CreatUnitAtXY(pPlyerID, 'UNIT_CROSSBOWMAN', capCity:GetX(), capCity:GetY())
+                CreatUnitAtXY(pPlyerID, 'UNIT_KNIGHT', capCity:GetX(), capCity:GetY())
+
+                if turn % 30 == 0 then
+                    CreatUnitAtXY(pPlyerID, 'UNIT_CAVALRY', capCity:GetX(), capCity:GetY())
+                    CreatUnitAtXY(pPlyerID, 'UNIT_CUIRASSIER', capCity:GetX(), capCity:GetY())
+                end
+                if turn % 50 == 0 then
+                    local UNIT_CAVALRY = CreatUnitAtXY(pPlyerID, 'UNIT_CAVALRY', capCity:GetX(), capCity:GetY())
+                    if UNIT_CAVALRY ~= nil then
+                        UNIT_CAVALRY:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION);
+                    end
+                    local UNIT_CUIRASSIER = CreatUnitAtXY(pPlyerID, 'UNIT_CUIRASSIER', capCity:GetX(), capCity:GetY())
+                    if UNIT_CUIRASSIER ~= nil then
+                        UNIT_CUIRASSIER:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION);
+                    end
+                end
+
+                -- 每回合增加攻击力
+                for _, unit in player:GetUnits():Members() do
+                    unit:SetProperty("TKH_AI_INFERNO_MODE_FLEX_STRENGTH",
+                        math.min(turn, AI_INFERNO_MODE_FLEX_STRENGTH_MAX))
+                end
+            end
+        end
+    end
+end
+
 --- 获取大城市PLOT PropertyKey
 ---@param cityName string
 function GetGreatCityProperty(cityName)
@@ -67,8 +163,6 @@ function GetGreatCityProperty(cityName)
     return level, proeprty
 end
 
---- 移除大城市属性
----@param pCity City
 function RemoveGreatCityProperties(pCity)
     if not pCity then
         return
@@ -79,9 +173,38 @@ function RemoveGreatCityProperties(pCity)
     end
 end
 
---- 召唤副将
----@param playerID integer
----@param cityID integer
+function PlotHasUnit(playerID, pPlot)
+    for loop, unit in ipairs(Units.GetUnitsInPlot(pPlot)) do
+        if playerID ~= unit:GetOwner() then
+            return unit:GetOwner()
+        end
+    end
+    return -1
+end
+
+function InitializeGreatCity()
+    -- print('InitializeGreatCity..............')
+    local InitializeGreatCityFlag = Game:GetProperty('InitializeGreatCity') or 0
+    -- local InitializeGreatCityFlag = Game:GetProperty('InitializeGreatCity') or 0
+    if InitializeGreatCityFlag == 0 then
+        local pAllPlayerIDs = PlayerManager.GetAliveIDs()
+        for _, pPlyerID in ipairs(pAllPlayerIDs) do
+            local player = Players[pPlyerID]
+            if player ~= nil then
+                local cities = player:GetCities()
+                for _, city in cities:Members() do
+                    RegisteGreatCity(pPlyerID, city:GetID())
+                    SummonSHero(pPlyerID, city:GetID())
+                end
+            end
+        end
+        Game:SetProperty('InitializeShero', 1)
+        Game:SetProperty('InitializeGreatCity', 1)
+    else
+        Events.TurnEnd.Remove(InitializeGreatCity)
+    end
+end
+
 function SummonSHero(playerID, cityID)
     local city = CityManager.GetCity(playerID, cityID)
     local player = Players[playerID]
@@ -282,9 +405,6 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
         math.min(SECONDARY_HERO_COMBAT_STRENGTH_PER_KILL_MAX, TOTAL_KILL))
 end
 
---- 删除城市
----@param playerID integer
----@param params table|nil
 function OnDeleteCityButtonClicked(playerID, params)
     local cityID = params.CityID
     local pCity = CityManager.GetCity(playerID, cityID)
@@ -310,12 +430,6 @@ function OnGreatPeoplePointsChanged(playerID)
     end
 end
 
---- 为相邻单位设置property
----@param pUnit Unit
----@param key string
----@param bouns integer
----@param tags string|table
----@param flag any
 function SetPropertyByAdjacentUnits(pUnit, key, bouns, tags, flag)
     local num = 0
     local adjUnits = GetNeighborUnits(pUnit:GetX(), pUnit:GetY(), 1)
@@ -365,137 +479,75 @@ function OnUnitMoveComplete(playerID, unitID, X, Y)
 end
 
 function OnTurnEndUnitEffectHandler()
-    local turn = Game.GetCurrentGameTurn()
-
     local pAllPlayerIDs = PlayerManager.GetAliveIDs()
     for _, pPlyerID in ipairs(pAllPlayerIDs) do
         local player = Players[pPlyerID]
         if player ~= nil then
-            local diplomacy = player:GetDiplomacy()
             local units = player:GetUnits()
-
-
-            for _, pUnit in units:Members() do
-                local unitType = GetUnitType(pUnit)
-                local pPlot = Map.GetPlot(pUnit:GetX(), pUnit:GetY())
-
-                -- =============HERO EFFECT=============
-                -- 装备效果
-                -- 1. 烈焰战锤(祝融专属)、火焱铠甲、烈焱神驹：1个单元格以内的敌方单位回合结束时受到20点伤害。
-                local damage_bounes = aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_HuoYan'), 1, 0) +
-                    aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_LieYanZhanChui'), 1, 0) +
-                    aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_LieYanShenJu'), 1, 0) +
-                    aORb(IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EQUIPMENT_LieYanZhanChui_HeroExclusive'), 1, 0)
-
-                if damage_bounes > 0 then
-                    -- 相邻格位上的敌军单位受到伤害
-                    local adjUnits = GetNeighborUnits(pUnit:GetX(), pUnit:GetY(), 1)
-
-                    for _, adjUnit in ipairs(adjUnits) do
-                        if (adjUnit ~= nil and diplomacy:IsAtWarWith(adjUnit:GetOwner())) then
-                            DamageUnit(adjUnit, 20 * damage_bounes)
-                        end
-                    end
-                end
-
-                -- 兀突骨技能冷却判断
-                if unitType == 'UNIT_HERO_TKH_WU_TUGU' then
-                    -- _singleUseAbilityCooldown = 10
-                    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_UNIQUE_WU_TUGU') then
-                        pUnit:SetProperty(pPlyerID .. pUnit:GetID() .. 'UNITCOMMAND_DEAL_DAMAGE_AOE', true)
-                    else
-                        pUnit:SetProperty(pPlyerID .. pUnit:GetID() .. 'UNITCOMMAND_DEAL_DAMAGE_AOE', turn % 2 == 0)
-                    end
-                end
-                -- =============HERO EFFECT=============
-
-
-
-                -- 回合结束生命回复效果
-                local healPoint = pUnit:GetProperty(GameInfo.TKH_HeroKillPointSkill['HEAL'].PropertyKey) or 0
-
-                if player:IsHuman() then
-                    -- 单位位于沼泽
-
-                    if pPlot and pPlot:GetFeatureType() == FEATURE_MASH_INDEX then
-                        if IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_ABILITY_TKH_EQUIPMENT_SUIT_DADI4') then
-                            healPoint = healPoint + 20
-                        end
-                        if IsUnitHaveAbility(pUnit, 'ABILITY_UNITS_GAIN_DEBUFF_IN_MASH') then
-                            if not IsUnitHaveAbility(pUnit, 'ABILITY_MODIFIER_PROMOTION_TK_DUO_SI_3_5') then
-                                healPoint = healPoint - 20
+            for _, unit in units:Members() do
+                if unit then
+                    -- 沼泽伤害
+                    if player:IsHuman() then
+                        local plot = Map.GetPlot(unit:GetX(), unit:GetY())
+                        if plot and plot:GetFeatureType() == FEATURE_MASH_INDEX then
+                            if IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_ABILITY_TKH_EQUIPMENT_SUIT_DADI4') then
+                                TreatUnit(unit, 20)
+                            end
+                            if IsUnitHaveAbility(unit, 'ABILITY_UNITS_GAIN_DEBUFF_IN_MASH') then
+                                if not IsUnitHaveAbility(unit, 'ABILITY_MODIFIER_PROMOTION_TK_DUO_SI_3_5') then
+                                    DamageUnit(unit, FEATURE_MASH_DAMAGE)
+                                end
                             end
                         end
                     end
-                else
-                    -- 炼狱模式下，电脑单位每回合增加攻击力
-                    if INFERNO_MODE then
-                        pUnit:SetProperty("TKH_AI_INFERNO_MODE_FLEX_STRENGTH",
-                            math.min(turn, AI_INFERNO_MODE_FLEX_STRENGTH_MAX))
+
+                    -- 兵营增加单位经验
+                    local pPlot = Map.GetPlot(unit:GetX(), unit:GetY())
+                    if pPlot and pPlot:GetOwner() == unit:GetOwner() and GameInfo.Districts['DISTRICT_ENCAMPMENT'] and pPlot:GetDistrictType() == GameInfo.Districts['DISTRICT_ENCAMPMENT'].Index then
+                        -- 兵法二十四篇
+                        if IsUnitHaveAbility(unit, 'ABILITY_TKH_EA_ARMOR_BINGFAERSHISIPIAN') then
+                            unit:GetExperience():ChangeExperience(6)
+                        else
+                            unit:GetExperience():ChangeExperience(3)
+                        end
+                        if unit:GetMovesRemaining() >= unit:GetMaxMoves() then
+                            TreatUnit(unit, 10)
+                        end
                     end
-                end
-                -- 单位位于兵营
-                if pPlot and pPlot:GetOwner() == pUnit:GetOwner() and GameInfo.Districts['DISTRICT_ENCAMPMENT'] and pPlot:GetDistrictType() == GameInfo.Districts['DISTRICT_ENCAMPMENT'].Index then
-                    -- 兵法二十四篇
-                    if IsUnitHaveAbility(pUnit, 'ABILITY_TKH_EA_ARMOR_BINGFAERSHISIPIAN') then
-                        pUnit:GetExperience():ChangeExperience(6)
-                    else
-                        pUnit:GetExperience():ChangeExperience(3)
+
+                    -- 满移动力恢复
+                    if unit:GetMaxMoves() <= unit:GetMovesRemaining() then
+                        TreatUnit(unit, 15)
                     end
-                    if pUnit:GetMaxMoves() <= pUnit:GetMovesRemaining() then
-                        healPoint = healPoint + 10
+
+                    -- 回合结束时恢复生命值或护甲值
+                    -- 1. 技能点
+                    local healPoint = unit:GetProperty(GameInfo.TKH_HeroKillPointSkill['HEAL'].PropertyKey) or 0
+                    -- 2. 各种技能效果
+                    healPoint = healPoint + (unit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0)
+
+                    for promotion, value in pairs(TURN_END_HEAL_PROMOTION) do
+                        if IsUnitHasPromotion(unit, promotion) then
+                            healPoint = healPoint + value
+                        end
                     end
-                end
 
-
-                -- 回合结束时恢复生命值或护甲值
-                -- 1. 技能点
-                -- 2. 各种技能效果
-                -- 3. 满移动力恢复
-                if pUnit:GetMaxMoves() <= pUnit:GetMovesRemaining() then
-                    healPoint = healPoint + 15
-                end
-
-                healPoint = healPoint + (pUnit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0)
-
-                for promotion, value in pairs(TURN_END_HEAL_PROMOTION) do
-                    if IsUnitHasPromotion(pUnit, promotion) then
-                        healPoint = healPoint + value
+                    if healPoint > 0 then
+                        TreatUnit(unit, healPoint)
                     end
-                end
-
-                -- print('healPoint = ', healPoint)
-
-                if healPoint >= 0 then
-                    TreatUnit(pUnit, healPoint)
-                else
-                    DamageUnit(pUnit, healPoint)
                 end
             end
         end
     end
 end
 
-function CityTurnBeginEffectHandler()
-    local isGreatCityInitialized = Game:GetProperty('InitializeGreatCity') or 0
-    local turn = Game.GetCurrentGameTurn()
-
+function CityProductionResource()
     local pAllPlayerIDs = PlayerManager.GetAliveIDs()
     for _, pPlyerID in ipairs(pAllPlayerIDs) do
         local player = Players[pPlyerID]
         if player ~= nil then
             local cities = player:GetCities()
-            local capCity = cities:GetCapitalCity()
-
-            -- 大城市效果 GreatCity
             for _, city in cities:Members() do
-                if isGreatCityInitialized == 0 then
-                    RegisteGreatCity(pPlyerID, city:GetID())
-                    SummonSHero(pPlyerID, city:GetID())
-                else
-                    Game:SetProperty('InitializeGreatCity', 1)
-                end
-
                 local cityName = Locale.Lookup(city:GetName())
                 if GREAT_CITIES_RESOURCE[cityName] then
                     local cityResource = GREAT_CITIES_RESOURCE[cityName]
@@ -508,58 +560,56 @@ function CityTurnBeginEffectHandler()
                             Locale.Lookup(reosuce.Name)),
                         city:GetX(), city:GetY())
                 end
-
-
-                -- 维修城墙
-                local buildQ = city:GetBuildQueue()
-                if buildQ then
-                    local cB = buildQ:CurrentlyBuilding()
-                    if cB == 'PROJECT_REPAIR_CASTLE' then
-                        -- buildQ:FinishProgress()
-                        local districts = city:GetDistricts()
-                        local center = districts:GetDistrict(DISTRICT_CITY_CENTER_INDEX)
-
-                        -- local districtHitpoints = center:GetMaxDamage(DefenseTypes.DISTRICT_GARRISON);
-                        -- local currentDistrictDamage = center:GetDamage(DefenseTypes.DISTRICT_GARRISON);
-                        -- local wallHitpoints = center:GetMaxDamage(DefenseTypes.DISTRICT_OUTER);
-                        local currentWallDamage = center:GetDamage(DefenseTypes.DISTRICT_OUTER);
-                        local pYield = city:GetYield(YieldTypes.PRODUCTION)
-
-                        if currentWallDamage == 0 then
-                            buildQ:FinishProgress()
-                        elseif currentWallDamage > 0 then
-                            center:ChangeDamage(DefenseTypes.DISTRICT_OUTER, -(pYield / 2))
-                            local treasury = player:GetTreasury()
-                            treasury:ChangeGoldBalance(-(pYield * 2))
-
-                            Game.AddWorldViewText(0, Locale.Lookup('LOC_REPAIR_CASTLE_RESULT', pYield, pYield * 2,
-                                pYield / 2), city:GetX(), city:GetY())
-                        end
-                    end
-                end
             end
+        end
+    end
+end
 
-            -- INFERNO_MODE 每10回合创建单位
-            if INFERNO_MODE and not player:IsHuman() and turn % 10 == 0 then
-                if turn % 10 == 0 then
-                    CreatUnitAtXY(pPlyerID, 'UNIT_CROSSBOWMAN', capCity:GetX(), capCity:GetY())
-                    CreatUnitAtXY(pPlyerID, 'UNIT_KNIGHT', capCity:GetX(), capCity:GetY())
+function OnEquipmentUpdated(playerID, params)
+    local eStatus = params.EquipmentStatus
+    local player = Players[playerID]
+    if eStatus == EQUIPMENT_STATUS.SOLD then
+        player:GetTreasury():ChangeGoldBalance(EQUIPMENT_SOLD_PRICE)
+    elseif eStatus == EQUIPMENT_STATUS.BUY then
+        player:GetTreasury():ChangeGoldBalance(-EQUIPMENT_BUY_PRICE)
+    elseif eStatus == EQUIPMENT_STATUS.TAKE_OFF then
+        player:GetTreasury():ChangeGoldBalance(-TAKE_OFF_COST)
+    end
+end
 
-                    if turn % 30 == 0 then
-                        CreatUnitAtXY(pPlyerID, 'UNIT_CAVALRY', capCity:GetX(), capCity:GetY())
-                        CreatUnitAtXY(pPlyerID, 'UNIT_CUIRASSIER', capCity:GetX(), capCity:GetY())
-                    end
-                    if turn % 50 == 0 then
-                        local UNIT_CAVALRY = CreatUnitAtXY(pPlyerID, 'UNIT_CAVALRY', capCity:GetX(), capCity:GetY())
-                        if UNIT_CAVALRY ~= nil then
-                            UNIT_CAVALRY:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION);
-                        end
-                        local UNIT_CUIRASSIER = CreatUnitAtXY(pPlyerID, 'UNIT_CUIRASSIER', capCity:GetX(), capCity:GetY())
-                        if UNIT_CUIRASSIER ~= nil then
-                            UNIT_CUIRASSIER:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION);
-                        end
-                    end
-                end
+function ChangeHeroSuitAbilities(playerID, params)
+    local abilities = params.Abilities
+    local unitID = params.UnitID
+    local unit = UnitManager.GetUnit(playerID, unitID)
+    local recorder = {}
+    if unit then
+        for ability, isGain in pairs(abilities) do
+            if isGain then
+                AddAbilityForUnit(playerID, unitID, ability, true)
+                table.insert(recorder, ability)
+            else
+                RemoveAbilityFromUnit(playerID, unitID, ability, true)
+            end
+        end
+    end
+
+    unit:SetProperty('SuitAbilitiesRecorder', recorder)
+end
+
+--- 变化单位能力
+---@param playerID any
+---@param params any
+function ChangeunitAbilities(playerID, params)
+    local unitID = params.UnitID
+    local status = params.Status
+    local abilities = params.Abilities
+    local unit = UnitManager.GetUnit(playerID, unitID)
+    if unit then
+        for _, ability in pairs(abilities) do
+            if status == EQUIPMENT_STATUS.PUT_ON then
+                AddAbilityForUnit(playerID, unitID, ability, true)
+            elseif status == EQUIPMENT_STATUS.TAKE_OFF then
+                RemoveAbilityFromUnit(playerID, unitID, ability, true)
             end
         end
     end
@@ -582,11 +632,114 @@ function ChangePlayerBalance(playerID, params)
     end
 end
 
---- 为真人玩家创建英雄纪念碑
----@param playerID any
----@param cityID any
----@param X any
----@param Y any
+--- 变化玩家资源数量，最多减至0
+---@param playerID number
+---@param params table
+function ChangePlayerResource(playerID, params)
+    local player = Players[playerID]
+    local value = params.Value
+    local resourceTypeIndex = params.ResourceTypeIndex
+    local reason = params.Reason
+    if player then
+        local resource = player:GetResources()
+        if resource:GetResourceAmount(resourceTypeIndex) + value <= 0 then
+            resource:ChangeResourceAmount(resourceTypeIndex, -resource:GetResourceAmount(resourceTypeIndex))
+        else
+            resource:ChangeResourceAmount(resourceTypeIndex, value)
+        end
+    end
+end
+
+function SetGameplayObjectProperty(playerID, params)
+    local key = params.key
+    local value = params.Value
+    local otype = params.OType
+    local oid = params.OID
+
+    local _obj
+
+    if otype == TKH_ObjectType.Player then
+        _obj = Players[oid]
+    elseif otype == TKH_ObjectType.City then
+        _obj = CityManager.GetCity(playerID, oid)
+    elseif otype == TKH_ObjectType.Unit then
+        _obj = UnitManager.GetUnit(playerID, oid)
+    elseif otype == TKH_ObjectType.Plot then
+        _obj = Map.GetPlotByIndex(oid)
+    elseif otype == TKH_ObjectType.Game then
+        -- _obj = Game
+        Game:SetProperty(key, value)
+    end
+
+    if _obj then
+        _obj:SetProperty(key, value)
+    end
+
+    Players[playerID]:SetProperty('IsPropertyIsChanged', true)
+end
+
+function CreateHuangJingJun()
+    local plots = GameConfiguration.GetValue('CreateUnitVlaidPlots')
+    if plots then
+        local length = HUANG_JING_ARMY.COUNT
+        if #plots <= HUANG_JING_ARMY.COUNT then
+            length = #plots
+        end
+
+        m_WorldLordManager = Game:GetProperty('m_WorldLordManager') or m_WorldLordManager
+
+
+        math.randomseed(GetRandomSeed())
+        for i = 1, length do
+            local index = table.remove(plots, math.random(1, #plots))
+            local plot = Map.GetPlotByIndex(index)
+            if plot then
+                local x, y = plot:GetX(), plot:GetY()
+                local bossUnit = UnitManager.InitUnit(m_iBarbarianID, 'UNIT_CAVALRY', x, y)
+                bossUnit:SetMilitaryFormation(MilitaryFormationTypes.ARMY_FORMATION);
+                local bossUnitPlot = Map.GetPlot(bossUnit:GetX(), bossUnit:GetY())
+                ImprovementBuilder.SetImprovementType(bossUnitPlot, m_iImpBarbCamp,
+                    m_iBarbarianID)
+
+                m_WorldLordManager['Units'] = m_WorldLordManager['Units'] or {}
+                m_WorldLordManager['Rewards'] = m_WorldLordManager['Rewards'] or {}
+
+                table.insert(m_WorldLordManager['Rewards'], bossUnitPlot:GetIndex())
+                table.insert(m_WorldLordManager['Units'], bossUnit:GetID())
+
+                local tNeighborPlots = Map.GetAdjacentPlots(bossUnit:GetX(), bossUnit:GetY());
+                local counter = 6
+                while counter ~= 0 do
+                    for _, pNeighborPlot in ipairs(tNeighborPlots) do
+                        local normalUnitTypes = { 'UNIT_CROSSBOWMAN', 'UNIT_MAN_AT_ARMS', 'UNIT_KNIGHT', 'UNIT_PIKEMAN' }
+                        local normalUnit = UnitManager.InitUnit(m_iBarbarianID,
+                            normalUnitTypes[math.random(1, #normalUnitTypes)], pNeighborPlot:GetX(),
+                            pNeighborPlot:GetY())
+                        if normalUnit then
+                            counter = counter - 1
+                            normalUnit:SetMilitaryFormation(MilitaryFormationTypes.CORPS_FORMATION);
+                            table.insert(m_WorldLordManager['Units'], normalUnit:GetID())
+                        end
+                    end
+                end
+            end
+        end
+
+        Game:SetProperty('m_WorldLordManager', m_WorldLordManager)
+        Game:SetProperty('IsHUANGJINGCreated', true)
+        Events.TurnBegin.Remove(CreateHuangJingJun)
+    end
+end
+
+function GameEventsCreateUnit(playerID, params)
+    local pPlayerID = params.PlayerID
+    local unitType = params.UnintType
+    local x = params.X
+    local y = params.Y
+    local cUnit = UnitManager.InitUnit(pPlayerID, unitType, x, y)
+end
+
+--
 function ReBuiltHeroMonument(playerID, cityID, X, Y)
     local player = Players[playerID]
     if player:IsHuman() then
@@ -597,24 +750,21 @@ function ReBuiltHeroMonument(playerID, cityID, X, Y)
                 buildings:RemoveBuilding(BUILDING_HERO_MONUMENT_TKH_INDEX)
             end
             -- buildings:CreateBuilding(BUILDING_HERO_MONUMENT_TKH_INDEX)
-            WorldBuilder.CityManager():CreateBuilding(pCity, BUILDING_HERO_MONUMENT_TKH_INDEX,
+            local bStatus, sStatus = WorldBuilder.CityManager():CreateBuilding(pCity, BUILDING_HERO_MONUMENT_TKH_INDEX,
                 100, Map.GetPlot(pCity:GetX(), pCity:GetY()));
         end
     end
 end
 
-function UnitSetProperty(playerID, params)
-    -- for key, value in pairs(params) do
-    --     print('UnitSetProperty ', key, value)
-    -- end
-    local pUnit = UnitManager.GetUnit(playerID, params.UnitID)
-    if pUnit then
-        pUnit:SetProperty(params.Key, params.Value)
-    end
-end
-
 function Initialize()
-    Events.TurnBegin.Add(CityTurnBeginEffectHandler)
+    m_WorldLordManager = Game:GetProperty('m_WorldLordManager') or m_WorldLordManager
+
+    Events.TurnBegin.Add(InitializeGreatCity)
+    Events.TurnBegin.Add(RepairCastleProject)
+    Events.TurnBegin.Add(CityProductionResource)
+
+    -- Events.TurnBegin
+
     Events.TurnEnd.Add(OnTurnEndUnitEffectHandler)
 
     Events.CityProjectCompleted.Add(OnCityProjectCompleted)
@@ -634,9 +784,16 @@ function Initialize()
     -- Custom GameEvents
     GameEvents.SetPropertyByAdjacentUnitsUI.Add(SetPropertyByAdjacentUnitsUI)
     GameEvents.OnDeleteCityButtonClicked.Add(OnDeleteCityButtonClicked)
+    GameEvents.ChangePlayerResource.Add(ChangePlayerResource)
     GameEvents.ChangePlayerBalance.Add(ChangePlayerBalance)
+    GameEvents.ChangeunitAbilities.Add(ChangeunitAbilities)
+    GameEvents.ChangeHeroSuitAbilities.Add(ChangeHeroSuitAbilities)
+    GameEvents.SetGameplayObjectProperty.Add(SetGameplayObjectProperty)
 
-    GameEvents.UnitSetProperty.Add(UnitSetProperty)
+
+    if GameConfiguration.GetValue("TKH_AI_ENHANCE_MODE") and GameConfiguration.GetValue("TKH_AI_ENHANCE_MODE") ~= 0 then
+        Events.TurnBegin.Add(AiCreatUnitInferno)
+    end
 
     -- 每回合扣除AI伟人点数
     if GameConfiguration.GetValue("AI_BAN_GPP_MODE") then

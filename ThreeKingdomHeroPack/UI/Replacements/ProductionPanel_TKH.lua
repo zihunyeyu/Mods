@@ -13,6 +13,7 @@ TKH_GetData = GetData
 
 
 local UNIT_LIMIT_MODE = GameConfiguration.GetValue("UNIT_LIMIT_MODE")
+local AI_UNIT_LIMIT_AMOUNT = GameConfiguration.GetValue("AI_UNIT_AMOUNT_LIMIT")
 
 function GetData()
     local playerID = Game.GetLocalPlayer();
@@ -79,7 +80,7 @@ function GetData()
         end
     end
 
-
+    -- 单位建造限制
     if pPlayer:IsHuman() and UNIT_LIMIT_MODE then
         local total_cities_num, total_units_num = GetPlayerCitiesAndNotCivilianUnitsNum(playerID)
         local allow_count_max = CAPITAL_MAX_UNIT_NUM + (total_cities_num - 1) * PER_CITY_MAX_UNIT_NUM
@@ -92,6 +93,28 @@ function GetData()
                     unitItem.ToolTip = unitItem.ToolTip ..
                         "[NEWLINE][NEWLINE][COLOR:Red]" ..
                         Locale.Lookup('LOC_NOT_ALLOW_MORE_UNIT', total_units_num, allow_count_max) .. "[ENDCOLOR]";
+                end
+                table.insert(newUnitItems, unitItem)
+            end
+        end
+
+        new_data.UnitItems = newUnitItems
+    end
+
+    -- AI单位建造限制
+    if not pPlayer:IsHuman() and AI_UNIT_LIMIT_AMOUNT and AI_UNIT_LIMIT_AMOUNT > 0 then
+        local total_cities_num, total_units_num = GetPlayerCitiesAndNotCivilianUnitsNum(playerID)
+        local limit_count = total_cities_num * AI_UNIT_LIMIT_AMOUNT
+        local unitItems = new_data.UnitItems
+        local newUnitItems = {}
+        if unitItems ~= nil then
+            for _, unitItem in ipairs(unitItems) do
+                if not unitItem.Civilian and total_units_num >= limit_count then
+                -- if not unitItem.Civilian and total_units_num >= 0 then
+                    unitItem.Disabled = true
+                    -- unitItem.ToolTip = unitItem.ToolTip ..
+                    --     "[NEWLINE][NEWLINE][COLOR:Red]" ..
+                    --     Locale.Lookup('LOC_AI_NOT_ALLOW_MORE_UNIT', total_units_num, limit_count) .. "[ENDCOLOR]";
                 end
                 table.insert(newUnitItems, unitItem)
             end

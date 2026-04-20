@@ -24,7 +24,7 @@ INTERFACEMODE_CHANGE_SELECTED_PLOT = DB.MakeHash("INTERFACEMODE_CHANGE_SELECTED_
 --	CACHE BASE FUNCTIONS
 -- ===========================================================================
 TKH_LateInitialize = LateInitialize;
-TKH_TeleportToCity = TeleportToCity;
+
 -- ===========================================================================
 --	HELPER FUNCTIONS
 -- ===========================================================================
@@ -44,37 +44,6 @@ function IsTargetPlot(plotID)
 end
 
 local InterfaceModes = {}
-
-
-
-function TeleportToCity()
-    local plotID = UI.GetCursorPlotID();
-    if (Map.IsPlot(plotID)) then
-        local plot = Map.GetPlotByIndex(plotID);
-
-        local tParameters = {};
-        tParameters[UnitOperationTypes.PARAM_X] = plot:GetX();
-        tParameters[UnitOperationTypes.PARAM_Y] = plot:GetY();
-
-        local eOperation = UI.GetInterfaceModeParameter(UnitOperationTypes.PARAM_OPERATION_TYPE);
-
-        local pSelectedUnit = UI.GetHeadSelectedUnit();
-        if (UnitManager.CanStartOperation(pSelectedUnit, eOperation, nil, tParameters)) then
-            UnitManager.RequestOperation(pSelectedUnit, eOperation, tParameters);
-            UI.SetInterfaceMode(InterfaceModeTypes.SELECTION);
-            UI.PlaySound("Unit_Relocate");
-
-            local params = {}
-            params.OnStart = "UnitSetProperty"
-            params.Key = 'TeleportToCityTurn'
-            params.Value = Game.GetCurrentGameTurn()
-            params.UnitID = pSelectedUnit:GetID()
-            UI.RequestPlayerOperation(pSelectedUnit:GetOwner(), PlayerOperations.EXECUTE_SCRIPT, params)
-        end
-    end
-    return true;
-end
-
 ------------------------------------------------------------------------------------------------
 -- INTERFACEMODE_HEAL_UNIT
 ------------------------------------------------------------------------------------------------
@@ -190,19 +159,13 @@ InterfaceModes.INTERFACEMODE_EX_ACTION.OnInterfaceModeChange = function(eNewMode
     end
 
     local pUnitAdjPlots = Map.GetNeighborPlots(pSelectedUnit:GetX(), pSelectedUnit:GetY(), 2);
-    for _, pAdjPlot in ipairs(pUnitAdjPlots) do
+    for i, pAdjPlot in ipairs(pUnitAdjPlots) do
         local len = 0
-        for _, pUnit in ipairs(Units.GetUnitsInPlot(pAdjPlot)) do
+        for loop, pUnit in ipairs(Units.GetUnitsInPlot(pAdjPlot)) do
             if (pUnit ~= nil) then
                 if pUnit:GetOwner() == pSelectedUnit:GetOwner() then
                     if pUnit:GetAttacksRemaining() == 0 or pUnit:GetMovesRemaining() == 0 then
-                        if not IsInTable({ 'UNIT_HERO_TKH_SHA_MOKE', 'UNIT_HERO_TKH_HUANG_ZHONG', 'UNIT_HERO_TKH_TAISHI_CI', 'UNIT_HERO_TKH_DIAO_CHAN', 'UNIT_HERO_TKH_XIAHOU_YUAN', 'UNIT_HERO_TKH_MENG_HUO' }, GetUnitType(pUnit)) then
-                            -- return true
-                            len = len + 1
-                        else
-                            len = 0
-                            break
-                        end
+                        len = len + 1
                     end
                 end
             end

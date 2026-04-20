@@ -376,24 +376,21 @@ end
 ---@param pUnit table
 ---@param treatValue integer
 function TreatUnit(pUnit, treatValue)
+
     local treatHealth = 0
     local treatArmor = 0
 
     if not pUnit or treatValue <= 0 then
         return treatHealth, treatArmor
     end
-    local maxArmor = (pUnit:GetProperty('TKH_MaxArmor') or 0) + (pUnit:GetProperty('TKH_ExtraMaxArmor') or 0)
 
     -- 治疗生命值，超出部分用于恢复护甲值
     local currentDamage = pUnit:GetDamage()
     treatHealth = math.min(currentDamage, treatValue)
-
-
-    -- print(string.format('treatValue = %s, currentDamage = %s, maxArmor = %s', treatValue, currentDamage, maxArmor))
-
     pUnit:ChangeDamage(-treatHealth)
     local currentArmor = pUnit:GetProperty('TKH_Armor')
     if (treatValue - treatHealth) > 0 and currentArmor then
+        local maxArmor = (pUnit:GetProperty('TKH_MaxArmor') or 0) + (pUnit:GetProperty('TKH_ExtraMaxArmor') or 0)
         treatArmor = math.min(maxArmor - currentArmor, treatValue - treatHealth)
         if treatArmor > 0 then
             UnitArmorChangeText(pUnit, treatValue)
@@ -621,10 +618,7 @@ function IsExistAttackedOrMovedUnitInRangeX(pUnit, iRange)
     for _, adjUnit in ipairs(adjUnits) do
         if adjUnit:GetOwner() == pUnit:GetOwner() then
             if adjUnit:GetAttacksRemaining() == 0 or adjUnit:GetMovesRemaining() == 0 then
-                -- 非特定远程单位
-                if not IsInTable({ 'UNIT_HERO_TKH_SHA_MOKE', 'UNIT_HERO_TKH_HUANG_ZHONG', 'UNIT_HERO_TKH_TAISHI_CI', 'UNIT_HERO_TKH_DIAO_CHAN', 'UNIT_HERO_TKH_XIAHOU_YUAN', 'UNIT_HERO_TKH_MENG_HUO' }, GetUnitType(pUnit)) then
-                    return true
-                end
+                return true
             end
         end
     end
@@ -702,7 +696,6 @@ end
 --- 判断单位是否拥有某能力
 --- @param pUnit table
 --- @param ability string|table
---- @return boolean
 function IsUnitHaveAbility(pUnit, ability)
     if not pUnit then
         return

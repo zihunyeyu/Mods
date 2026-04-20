@@ -187,6 +187,18 @@
 				游戏开始时赠送选择数量的随机装备
 			</Text>
 		</Replace>
+
+		<Replace Tag="LOC_AI_UNIT_AMOUNT_LIMIT_NAME" Language="zh_Hans_CN">
+			<Text>
+				AI单位数量限制
+			</Text>
+		</Replace>
+		<Replace Tag="LOC_AI_UNIT_AMOUNT_LIMIT_DESCRIPTION" Language="zh_Hans_CN">
+			<Text>
+				限制AI单位建造单位的最大数量
+			</Text>
+		</Replace>
+
 		<Replace Tag="LOC_AI_MAINTAINCE_FREE_MODE_NAME" Language="zh_Hans_CN">
 			<Text>
 				AI单位无消耗

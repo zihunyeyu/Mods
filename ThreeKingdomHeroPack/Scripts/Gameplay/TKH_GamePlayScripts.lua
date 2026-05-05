@@ -351,32 +351,55 @@ function OnUnitPromotionChanged(playerID, unitID)
             ChangeExtraMaxArmor(pUnit, SECONDARY_HERO_FULL_PROMOTED_ARMOR)
         end
 
-        for tag, rewards in pairs(FULL_PROMOTED_REWARD) do
-            if MatchUnitTag(pUnitType, tag) then
-                for k, v in pairs(rewards) do
-                    -- 额外护甲
-                    if k == 'EXTRA_ARMOR' then
-                        ChangeExtraMaxArmor(pUnit, v)
-                        -- 额外恢复
-                    elseif k == 'EXTRA_HEAL_TURNEND' then
-                        local currentHeal = pUnit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0
-                        pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', currentHeal + v)
-                        -- 额外攻击几率
-                    elseif k == 'EXTRA_CRIT_PERCENT' then
-                        -- TKH_HeroEffectHandler.lua
-                        -- function OnCombat(pCombatResult)
-                        local currentPercent = pUnit:GetProperty('EXTRA_CRIT_PERCENT') or 0
-                        pUnit:SetProperty('EXTRA_CRIT_PERCENT', currentPercent + v)
-                        -- 额外伤害加成
-                    elseif k == 'EXTRA_DAMAGE_BOUNS' then
-                        local currentExtraDamage = pUnit:GetProperty('EXTRA_DAMAGE_BOUNS') or {}
-                        table.insert(currentExtraDamage, v)
-                        pUnit:SetProperty('EXTRA_DAMAGE_BOUNS', currentExtraDamage)
-                    elseif K == 'EXTRA_DOOGE' then
-                        pUnit:SetProperty('EXTRA_DOOGE', v)
-                    end
-                end
+        -- 优先匹配专属满级奖励
+        local specificRewardTags = {
+            'CLASS_UNIT_HERO_TKH_HUN_TIE_CHONG_JI',
+            'CLASS_UNIT_HERO_TKH_XI_LIANG_SI_SHI',
+            'CLASS_UNIT_HERO_TKH_LIANG_ZHOU_SHEN_SHE_SHOU',
+            'CLASS_UNIT_HERO_TKH_MAN_ZU_HUO_JIAN_SHOU',
+            'CLASS_UNIT_HERO_TKH_WEI_LIE_YI_JUN',
+        }
+        local rewardsToApply = nil
+        for _, tag in ipairs(specificRewardTags) do
+            if FULL_PROMOTED_REWARD[tag] and MatchUnitTag(pUnitType, tag) then
+                rewardsToApply = FULL_PROMOTED_REWARD[tag]
                 break
+            end
+        end
+        if not rewardsToApply then
+            for tag, rewards in pairs(FULL_PROMOTED_REWARD) do
+                if MatchUnitTag(pUnitType, tag) then
+                    rewardsToApply = rewards
+                    break
+                end
+            end
+        end
+        if rewardsToApply then
+            for k, v in pairs(rewardsToApply) do
+                -- 额外护甲
+                if k == 'EXTRA_ARMOR' then
+                    ChangeExtraMaxArmor(pUnit, v)
+                    -- 额外恢复
+                elseif k == 'EXTRA_HEAL_TURNEND' then
+                    local currentHeal = pUnit:GetProperty('TKH_TUEN_END_HEAL_VALUE') or 0
+                    pUnit:SetProperty('TKH_TUEN_END_HEAL_VALUE', currentHeal + v)
+                    -- 额外攻击几率
+                elseif k == 'EXTRA_CRIT_PERCENT' then
+                    -- TKH_HeroEffectHandler.lua
+                    -- function OnCombat(pCombatResult)
+                    local currentPercent = pUnit:GetProperty('EXTRA_CRIT_PERCENT') or 0
+                    pUnit:SetProperty('EXTRA_CRIT_PERCENT', currentPercent + v)
+                    -- 额外伤害加成
+                elseif k == 'EXTRA_DAMAGE_BOUNS' then
+                    local currentExtraDamage = pUnit:GetProperty('EXTRA_DAMAGE_BOUNS') or {}
+                    table.insert(currentExtraDamage, v)
+                    pUnit:SetProperty('EXTRA_DAMAGE_BOUNS', currentExtraDamage)
+                elseif k == 'EXTRA_MOVEMENT' then
+                    pUnit:SetProperty('EXTRA_MOVEMENT', v)
+                    UnitManager.ChangeMovesRemaining(pUnit, v)
+                elseif K == 'EXTRA_DOOGE' then
+                    pUnit:SetProperty('EXTRA_DOOGE', v)
+                end
             end
         end
 
@@ -399,8 +422,13 @@ function OnUnitKilledInCombat(killedPlayerID, killedUnitID, playerID, unitID)
     pUnit:SetProperty('TOTAL_KILL', TOTAL_KILL)
     pUnit:SetProperty('MELEES_UTNI_COMBAT_STRENGTH_BY_PER_KILL',
         math.min(MELEES_UTNI_COMBAT_STRENGTH_BY_PER_KILL_MAX, TOTAL_KILL))
-    pUnit:SetProperty('SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL',
-        math.min(SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL_MAX, TOTAL_KILL))
+    if MatchUnitTag(GameInfo.Units[pUnit:GetType()].UnitType, 'CLASS_UNIT_HERO_TKH_XI_LIANG_SI_SHI') then
+        pUnit:SetProperty('SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL',
+            math.min(10, TOTAL_KILL))
+    else
+        pUnit:SetProperty('SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL',
+            math.min(SPECIAL_UNIT_COMBAT_STRENGTH_BY_PER_KILL_MAX, TOTAL_KILL))
+    end
     pUnit:SetProperty('SECONDARY_HERO_COMBAT_STRENGTH_PER_KILL',
         math.min(SECONDARY_HERO_COMBAT_STRENGTH_PER_KILL_MAX, TOTAL_KILL))
 end
@@ -448,6 +476,24 @@ function SetPropertyByAdjacentUnits(pUnit, key, bouns, tags, flag)
     pUnit:SetProperty(key, num * bouns)
 end
 
+function UpdateXiLiangLoneWolf(pUnit)
+    if not pUnit or pUnit:IsDead() then
+        return
+    end
+    if not IsUnitHaveAbility(pUnit, 'ABILITY_TKH_SPECIAL_UNIT_XI_LIANG_GULANG') then
+        return
+    end
+    local adjUnits = GetNeighborUnits(pUnit:GetX(), pUnit:GetY(), 1)
+    local hasFriendly = false
+    for _, adjUnit in ipairs(adjUnits) do
+        if adjUnit:GetOwner() == pUnit:GetOwner() and adjUnit:GetID() ~= pUnit:GetID() then
+            hasFriendly = true
+            break
+        end
+    end
+    pUnit:SetProperty('XI_LIANG_SI_SHI_LONE_WOLF', hasFriendly and 0 or 10)
+end
+
 function SetPropertyByAdjacentUnitsUI(playerID, params)
     -- local index = params.Index
     local unitID = params.tUnitID
@@ -475,6 +521,13 @@ function OnUnitMoveComplete(playerID, unitID, X, Y)
         if IsUnitHaveAbility(pUnit, value.ABILITY) then
             SetPropertyByAdjacentUnits(pUnit, value.KEY, value.BOUNS, value.TAGS, true)
         end
+    end
+
+    -- 更新西凉死士孤狼状态
+    UpdateXiLiangLoneWolf(pUnit)
+    local adjUnits = GetNeighborUnits(X, Y, 1)
+    for _, adjUnit in ipairs(adjUnits) do
+        UpdateXiLiangLoneWolf(adjUnit)
     end
 end
 
@@ -535,6 +588,25 @@ function OnTurnEndUnitEffectHandler()
                     if healPoint > 0 then
                         TreatUnit(unit, healPoint)
                     end
+
+                    -- 更新西凉死士孤狼状态
+                    UpdateXiLiangLoneWolf(unit)
+                end
+            end
+        end
+    end
+end
+
+function OnTurnBeginUnitMovement()
+    local pAllPlayerIDs = PlayerManager.GetAliveIDs()
+    for _, pPlyerID in ipairs(pAllPlayerIDs) do
+        local player = Players[pPlyerID]
+        if player ~= nil then
+            local units = player:GetUnits()
+            for _, unit in units:Members() do
+                local extraMovement = unit:GetProperty('EXTRA_MOVEMENT')
+                if extraMovement and extraMovement > 0 then
+                    UnitManager.ChangeMovesRemaining(unit, extraMovement)
                 end
             end
         end
@@ -766,6 +838,7 @@ function Initialize()
     -- Events.TurnBegin
 
     Events.TurnEnd.Add(OnTurnEndUnitEffectHandler)
+    Events.TurnBegin.Add(OnTurnBeginUnitMovement)
 
     Events.CityProjectCompleted.Add(OnCityProjectCompleted)
 

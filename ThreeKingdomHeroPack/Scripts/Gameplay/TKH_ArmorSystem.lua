@@ -205,12 +205,27 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
         end
         -- print('兵种克制' .. '进攻 = ' .. attack_damage .. ' 防御 = ' .. defend_damage)
 
+        -- 凉州神射手破甲伤害
+        if MatchUnitTag(aUnitType, 'CLASS_UNIT_HERO_TKH_LIANG_ZHOU_SHEN_SHE_SHOU') then
+            if MatchUnitTag(dUnitType, 'CLASS_ANTI_CAVALRY') then
+                defend_damage = defend_damage + 10
+            end
+            if MatchUnitTag(dUnitType, 'CLASS_RANGED') then
+                defend_damage = defend_damage + 10
+            end
+        end
+
+        -- 威烈义军威烈斩
+        if MatchUnitTag(aUnitType, 'CLASS_UNIT_HERO_TKH_WEI_LIE_YI_JUN') and MatchUnitTag(dUnitType, 'CLASS_MELEE') then
+            defend_damage = defend_damage + 20
+        end
 
         -- 固定伤害类技能（无判断条件）
         local CONSTANT_DAMAGE_ABILITIES = {
             ABILITY_TKH_EQUIPMENT_SUIT_WUZHUI4 = 10,
             ABILITY_TKH_HERO_UNIT_KILL_POINT_UPGRADE_UNIQUE_XU_CHU = 15,
             ABILITY_TKH_EQUIPMENT_SUIT_POJIA4 = 20,
+            ABILITY_TKH_SPECIAL_UNIT_XI_LIANG_CRIT = 30,
         }
         defend_damage = defend_damage + GetUnitAbilitiesParameterSum(aUnit, CONSTANT_DAMAGE_ABILITIES, 0)
 
@@ -230,6 +245,13 @@ function UnitCombatDamageModifier(aUnit, dUnit, info)
         -- 卑弥呼
         if IsUnitHaveAbility(aUnit, 'ABILITY_TKH_S_HERO_SKILL_BEI_MI_HU_2') and MatchUnitTag(dUnitType, 'CLASS_TKH_CAVALRY') then
             defend_damage = defend_damage + 40
+        end
+
+        -- 浑铁重戟军满级奖励：反制近战，攻击近战单位+20点破甲伤害
+        if MatchUnitTag(aUnitType, 'CLASS_UNIT_HERO_TKH_HUN_TIE_CHONG_JI') and MatchUnitTag(dUnitType, 'CLASS_MELEE') then
+            if aUnit and aUnit:GetProperty('IS_FULL_PROMOTED') then
+                defend_damage = defend_damage + 20
+            end
         end
 
         -- 对护甲或血量不满的单位额外造成破甲伤害
@@ -564,6 +586,23 @@ function ModifierCombatResult(info)
                 for _, adjUnit in ipairs(adjUnits) do
                     if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
                         DamageUnit(adjUnit, HeroConstants.SHA_MOKE_DAMAGE)
+                    end
+                end
+            end
+
+            -- 蛮族火箭手：攻击时对目标一个单元格内的所有敌方单位造成5点伤害，若目标位于森林或雨林则造成10点
+            if aUnitType == 'UNIT_HERO_TKH_MAN_ZU_HUO_JIAN_SHOU' then
+                local aoeDamage = 5
+                local defendPlot = Map.GetPlot(defend_unit:GetX(), defend_unit:GetY())
+                if defendPlot then
+                    local featureType = defendPlot:GetFeatureType()
+                    if featureType == GameInfo.Features['FEATURE_FOREST'].Index or featureType == GameInfo.Features['FEATURE_JUNGLE'].Index then
+                        aoeDamage = 10
+                    end
+                end
+                for _, adjUnit in ipairs(adjUnits) do
+                    if diplomacy:IsAtWarWith(adjUnit:GetOwner()) and (adjUnit:GetID() ~= defend_unit:GetID()) then
+                        DamageUnit(adjUnit, aoeDamage)
                     end
                 end
             end
